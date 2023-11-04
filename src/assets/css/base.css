@@ -1,0 +1,18 @@
+/* IMPORTATION DES POLICES */
+
+@import url('https://fonts.cdnfonts.com/css/steamflix-montserrat');
+@import url('https://fonts.cdnfonts.com/css/montserrat-ace');
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat Ace', sans-serif; */
+  /* font-family: 'SteamFlix-Montserrat', sans-serif; */
+}
