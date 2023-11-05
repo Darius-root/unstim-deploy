@@ -66,6 +66,48 @@ const router = createRouter({
               path: 'personnel',
               name: 'personnel',
               component: () => import('@/views/modules/rha/personnel-action.vue')
+            },
+
+            {
+              path: 'create-employee',
+              name: 'create-employee',
+              component: () => import('@/views/modules/rha/create-employee.vue')
+            },
+
+            {
+              path: 'departs-retraite',
+              name: 'departs-retraite',
+              component: () => import('@/views/modules/rha/depart-retraite.vue')
+            },
+
+            {
+              path: 'deductions',
+              name: 'deductions',
+              component: () => import('@/views/modules/rha/deductions-employee.vue')
+            },
+
+            {
+              path: 'statistiques',
+              name: 'statistiques',
+              component: () => import('@/views/modules/rha/rha-statistiques.vue')
+            },
+
+            {
+              path: 'situation-enfants',
+              name: 'situation-enfants',
+              component: () => import('@/views/modules/rha/situation-enfants.vue')
+            },
+
+            {
+              path: 'avancements',
+              name: 'avancements',
+              component: () => import('@/views/modules/rha/rha-avancement.vue')
+            },
+
+            {
+              path: 'modifier-echelon',
+              name: 'modifier-echelon',
+              component: () => import('@/views/modules/rha/edit-echelon.vue')
             }
           ]
         }

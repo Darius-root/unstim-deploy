@@ -68,7 +68,7 @@ const modules = useModuleStore().modules
             :key="index"
           >
             <RouterLink
-              :to="{ name: item.to}"
+              :to="{ name: item.to }"
               active-class="my-link-active"
               class="flex items-center gap-3"
               aria-expanded="false"

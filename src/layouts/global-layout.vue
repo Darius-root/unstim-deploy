@@ -7,7 +7,6 @@ import { reactive } from 'vue'
 const navItems = useNavigationStore().navigations
 
 const noSidebarRoute = reactive(['home'])
-
 </script>
 
 <template>
@@ -17,13 +16,17 @@ const noSidebarRoute = reactive(['home'])
     </div>
 
     <div class="w-full pt-28 content">
-      <div v-if="!noSidebarRoute.includes($route.name as string)"
-        class="fixed w-[300px] top-0 bottom-0 pt-28 z-10 shadow-xl hidden xl:block bg-unstim-info unstim-sidebar ">
+      <div
+        v-if="!noSidebarRoute.includes($route.name as string)"
+        class="fixed w-[300px] top-0 bottom-0 pt-28 z-10 shadow-xl hidden xl:block bg-unstim-info unstim-sidebar"
+      >
         <DashboardSidebar :navigations="navItems" />
       </div>
 
-      <main :class="{ 'ml-[300px]': !noSidebarRoute.includes($route.name as string) }"
-        class="flex-1 px-4 py-5 unstim-main">
+      <main
+        :class="{ 'xl:ml-[300px]': !noSidebarRoute.includes($route.name as string) }"
+        class="flex-1 px-4 py-5 unstim-main"
+      >
         <RouterView v-slot="{ Component }">
           <template v-if="Component">
             <Transition appear name="fade" mode="out-in">

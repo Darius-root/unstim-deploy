@@ -17,42 +17,6 @@ export const useNavigationStore = defineStore('navigation', () => {
     },
 
     {
-      title: 'Evaluation',
-      icon: icons.HiSolidUserGroup,
-      to: 'personnel',
-      underMenu: [
-        {
-          title: 'sous menu 1',
-          icon: icons.HiSolidUserGroup,
-          to: 'personnel'
-        },
-        {
-          title: 'sous menu 2',
-          icon: icons.HiSolidUserGroup,
-          to: 'personnel'
-        }
-      ]
-    },
-
-    {
-      title: 'Formation',
-      icon: icons.GraduationCapIcon,
-      to: 'personnel',
-      underMenu: [
-        {
-          title: 'sous menu 1',
-          icon: icons.HiSolidUserGroup,
-          to: 'personnel'
-        },
-        {
-          title: 'sous menu 2',
-          icon: icons.HiSolidUserGroup,
-          to: 'personnel'
-        }
-      ]
-    },
-
-    {
       title: 'Gestion de la paie',
       icon: icons.InvoiceIcon,
       to: '/gestions-paies-2',
@@ -71,38 +35,81 @@ export const useNavigationStore = defineStore('navigation', () => {
     },
 
     {
+      title: 'Evaluations',
+      icon: icons.HiSolidUserGroup,
+      to: 'personnel',
+      underMenu: [
+        {
+          title: 'Evaluations',
+          icon: icons.HiSolidUserGroup,
+          to: 'personnel'
+        },
+        {
+          title: 'Objectifs',
+          icon: icons.HiSolidUserGroup,
+          to: 'personnel'
+        },
+
+        {
+          title: 'Suivi des performances',
+          icon: icons.HiSolidUserGroup,
+          to: 'personnel'
+        }
+      ]
+    },
+
+    {
+      title: 'Formation',
+      icon: icons.GraduationCapIcon,
+      to: 'personnel',
+      underMenu: [
+        {
+          title: 'Plan de formation',
+          icon: icons.HiSolidUserGroup,
+          to: 'personnel'
+        },
+        {
+          title: 'Formations',
+          icon: icons.HiSolidUserGroup,
+          to: 'personnel'
+        }
+      ]
+    },
+
+    {
       title: 'Congés et permission',
       icon: icons.FaUmbrellaBeach,
       to: 'personnel'
     },
 
     {
-      title: 'Ponctualité',
+      title: 'Sanctions',
       icon: icons.FaUserClock,
       to: 'personnel'
     },
-    {
-      title: 'Recrutement',
-      icon: icons.MdPersonsearch,
-      to: 'personnel'
-    },
 
-    {
-      title: 'Reporting',
-      icon: icons.FaFileSignature,
-      to: 'personnel'
-    },
-    {
-      title: 'Annonces',
-      icon: icons.FaBullhorn,
-      to: 'personnel'
-    },
+    // {
+    //   title: 'Recrutement',
+    //   icon: icons.MdPersonsearch,
+    //   to: 'personnel'
+    // },
 
-    {
-      title: ' Notifications',
-      icon: icons.MdNotificationaddRound,
-      to: 'personnel'
-    },
+    // {
+    //   title: 'Reporting',
+    //   icon: icons.FaFileSignature,
+    //   to: 'personnel'
+    // },
+    // {
+    //   title: 'Annonces',
+    //   icon: icons.FaBullhorn,
+    //   to: 'personnel'
+    // },
+
+    // {
+    //   title: ' Notifications',
+    //   icon: icons.MdNotificationaddRound,
+    //   to: 'personnel'
+    // },
 
     {
       title: 'Gestion utilisateurs',
@@ -110,12 +117,12 @@ export const useNavigationStore = defineStore('navigation', () => {
       to: 'personnel',
       underMenu: [
         {
-          title: 'sous menu 1',
+          title: 'Utilisateurs',
           icon: icons.HiSolidUserGroup,
           to: 'personnel'
         },
         {
-          title: 'sous menu 2',
+          title: 'Roles',
           icon: icons.HiSolidUserGroup,
           to: 'personnel'
         }

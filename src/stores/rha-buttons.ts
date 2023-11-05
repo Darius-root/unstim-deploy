@@ -3,92 +3,98 @@ import { defineStore } from 'pinia'
 import { icons } from '@/assets/icons/oh-vue-icons'
 
 export const useRhaButtonStore = defineStore('rhaButton', () => {
+  const rhaButtonsType = reactive({
+    link: 'link',
+    modal: 'modal',
+    action: 'action'
+  })
+
   const rhaButtons = reactive([
     {
-      type: 'button',
+      type: rhaButtonsType.link,
       color: '#2b9eff',
-      title: ' Enregistrer un agent ',
-      icon: icons.FaUserCircle,
-      to: '/lien'
+      title: ' Enregistrer un agent',
+      icon: icons.PersonPlus,
+      to: 'create-employee'
     },
     {
-      type: 'button',
+      type: rhaButtonsType.link,
       color: '#2b9eff',
       title: ' Depart à la retraite ',
       icon: icons.FaUserCircle,
-      to: '/lien'
+      to: 'departs-retraite'
     },
-  
+
     {
-      type: 'button',
+      type: rhaButtonsType.modal,
       color: '#2b9eff',
       title: 'Affectations',
       icon: icons.FaUserCircle,
-      to: '/lien'
+      to: 'create-employee'
     },
-  
+
     {
-      type: 'button',
+      type: rhaButtonsType.modal,
       color: '#2b9eff',
       title: 'Intérims',
       icon: icons.FaUserCircle,
-      to: '/lien'
+      to: 'create-employee'
     },
     {
-      type: 'button',
+      type: rhaButtonsType.modal,
       color: '#2b9eff',
       title: 'Promotion',
       icon: icons.FaUserCircle,
-      to: '/lien'
+      to: 'create-employee'
     },
     {
-      type: 'button',
+      type: rhaButtonsType.modal,
       color: '#0cba66',
       title: 'Entrées - sorties',
       icon: icons.FaUserCircle,
-      to: '/lien'
+      to: 'create-employee'
     },
-  
+
     {
-      type: 'button',
+      type: rhaButtonsType.link,
       color: '#2b9eff',
       title: 'Avancements',
       icon: icons.FaUserCircle,
-      to: '/lien'
+      to: 'avancements'
     },
-  
+
     {
-      type: 'button',
+      type: rhaButtonsType.modal,
       color: '#0cba66',
       title: 'Avancées',
       icon: icons.FaUserCircle,
-      to: '/lien'
+      to: 'create-employee'
     },
-  
+
     {
-      type: 'button',
+      type: rhaButtonsType.link,
       color: '#ee4e4e',
       title: 'Déductions',
       icon: icons.FaUserCircle,
-      to: '/lien'
+      to: 'deductions'
     },
-  
+
     {
-      type: 'button',
+      type: rhaButtonsType.link,
       color: '#3f3e45',
       title: 'Situations des enfants',
       icon: icons.FaUserCircle,
-      to: '/lien'
+      to: 'situation-enfants'
     },
-  
+
     {
-      type: 'button',
+      type: rhaButtonsType.link,
       color: '#0cba66',
       title: 'Statistiques',
       icon: icons.FaUserCircle,
-      to: '/lien'
+      to: 'statistiques'
     }
   ])
 
-  return { rhaButtons }
+  return { rhaButtons, rhaButtonsType }
 })
