@@ -108,6 +108,12 @@ const router = createRouter({
               path: 'modifier-echelon',
               name: 'modifier-echelon',
               component: () => import('@/views/modules/rha/edit-echelon.vue')
+            },
+
+            {
+              path: 'infos-employee',
+              name: 'infos-employee',
+              component: () => import('@/views/modules/rha/infos-employee.vue')
             }
           ]
         }

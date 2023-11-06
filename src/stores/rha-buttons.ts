@@ -15,7 +15,10 @@ export const useRhaButtonStore = defineStore('rhaButton', () => {
       color: '#2b9eff',
       title: ' Enregistrer un agent',
       icon: icons.PersonPlus,
-      to: 'create-employee'
+      to: 'create-employee',
+      action: () => {
+        console.log('Enregistrer un agent')
+      }
     },
     {
       type: rhaButtonsType.link,

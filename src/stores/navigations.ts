@@ -137,6 +137,7 @@ export const useNavigationStore = defineStore('navigation', () => {
           title: 'Diplomes',
           icon: icons.HiSolidUserGroup,
           to: 'personnel'
+          
         },
         {
           title: 'Type de pret',
