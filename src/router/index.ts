@@ -114,7 +114,78 @@ const router = createRouter({
               path: 'infos-employee',
               name: 'infos-employee',
               component: () => import('@/views/modules/rha/infos-employee.vue')
-            }
+            },
+
+            {
+              path: 'create-diplome',
+              name: 'create-diplome',
+              component: () => import('@/views/modules/rha/create-diplome.vue')
+            },
+            
+            {
+              path: 'config-distinction',
+              name: 'config-distinction',
+              component: () => import('@/views/modules/rha/distinction-config.vue')
+            },
+            {
+              path: 'config/:id',
+              name: 'config',
+              component: () => import('@/views/modules/rha/config-page.vue')
+            },
+
+           /*  {
+              path: 'config-direction',
+              name: 'config-direction',
+              component: () => import('@/views/modules/rha/direction-config.vue')
+            },
+            {
+              path: 'config-departement',
+              name: 'config-departement',
+              component: () => import('@/views/modules/rha/departement-config.vue')
+            },
+             {
+              path: 'config-departement',
+              name: 'config-departement',
+              component: () => import('@/views/modules/rha/departement-config.vue')
+            }, {
+              path: 'config-delegation',
+              name: 'config-delegation',
+              component: () => import('@/views/modules/rha/delegation-config.vue')
+            }, {
+              path: 'config-section',
+              name: 'config-section',
+              component: () => import('@/views/modules/rha/section-config.vue')
+            }, {
+              path: 'config-agences',
+              name: 'config-agences',
+              component: () => import('@/views/modules/rha/agences-config.vue')
+            }, {
+              path: 'config-typeposte',
+              name: 'config-typeposte',
+              component: () => import('@/views/modules/rha/typeposte-config.vue')
+            }, {
+              path: 'config-ficheposte',
+              name: 'config-ficheposte',
+              component: () => import('@/views/modules/rha/ficheposte-config.vue')
+            }, {
+              path: 'config-categorieagent',
+              name: 'config-categorieagent',
+              component: () => import('@/views/modules/rha/categorieagent-config.vue')
+            }, {
+              path: 'config-conge-permis',
+              name: 'config-conge-permis',
+              component: () => import('@/views/modules/rha/departeconge-permis.vue')
+            },
+            {
+              path: 'config-cessat',
+              name: 'config-cessat',
+              component: () => import('@/views/modules/rha/cessat-config.vue')
+            },
+            {
+              path: 'config-banque',
+              name: 'config-banque',
+              component: () => import('@/views/modules/rha/banque-config.vue')
+            }, */
           ]
         }
       ]
