@@ -66,12 +66,12 @@ export const useNavigationStore = defineStore('navigation', () => {
         {
           title: 'Plan de formation',
           icon: icons.HiSolidUserGroup,
-          to: 'personnel'
+          to: 'plan-formation'
         },
         {
           title: 'Formations',
           icon: icons.HiSolidUserGroup,
-          to: 'personnel'
+          to: 'syste-formation'
         }
       ]
     },
@@ -87,29 +87,6 @@ export const useNavigationStore = defineStore('navigation', () => {
       icon: icons.FaUserClock,
       to: 'personnel'
     },
-
-    // {
-    //   title: 'Recrutement',
-    //   icon: icons.MdPersonsearch,
-    //   to: 'personnel'
-    // },
-
-    // {
-    //   title: 'Reporting',
-    //   icon: icons.FaFileSignature,
-    //   to: 'personnel'
-    // },
-    // {
-    //   title: 'Annonces',
-    //   icon: icons.FaBullhorn,
-    //   to: 'personnel'
-    // },
-
-    // {
-    //   title: ' Notifications',
-    //   icon: icons.MdNotificationaddRound,
-    //   to: 'personnel'
-    // },
 
     {
       title: 'Gestion utilisateurs',
@@ -207,20 +184,20 @@ export const useNavigationStore = defineStore('navigation', () => {
         {
           title: 'Type de cessat. serv.',
           icon: icons.HiSolidUserGroup,
-          to: 'personnel'
-        },
+          to: 'config',
+          params:{id:'typecessation'},},
 
         {
           title: 'Banque',
           icon: icons.HiSolidUserGroup,
-          to: 'personnel'
-        },
+          to: 'config',
+          params:{id:'banque'},},
 
         {
           title: 'Autres paramètres',
           icon: icons.HiSolidUserGroup,
-          to: 'personnel'
-        }
+          to: 'config', 
+          params:{id:'autreparam'},}  
       ]
     }
   ])

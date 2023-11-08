@@ -4,16 +4,15 @@
       <div class="flex py-2 border-b top-line">
         <span class="text-base font-medium "> {{ props.title }}</span>
       </div>
-  
-      <div class="flex justify-end my-3">
-  
-        <RouterLink style="background-color: #2b9eff" :to="$props.routeCreate"
-          class="flex items-center gap-2 p-2 text-white rounded shadow hover:bg-opacity-60">
-          <span class="text-sm font-medium">Ajouter un {{props.title.toLocaleLowerCase() }}</span>
-        </RouterLink>
-  
-      </div>
-  
+ 
+      <div class="flex justify-end my-3" v-if="props.button">
+  <template v-for="(btn, item) in props.button">
+    <RouterLink :style="{ backgroundColor: btn.color }" :to="btn.to"
+  class="flex items-center gap-2 p-2 text-white rounded shadow hover:bg-opacity-60 mx-1">
+  <span class="text-sm font-medium"> {{ btn.title }}</span>
+</RouterLink>
+  </template>
+</div>
       <div class="max-w-full p-5 mt-3 border row">
         <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white bg-slate-500 hover:bg-slate-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" type="button">Exporter <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
@@ -46,7 +45,7 @@
         <easy-data-table alternating border-cell :headers="props.headers" class="text-lg" theme-color="#2f9fff"   :items="props.items"
           buttons-pagination searchable
           :search-value="searchValue"
-  >njndkjzn
+  >
           <template #item-action="" >
             <div class="flex gap-3 row justify-center items-center">
 
@@ -85,6 +84,7 @@
   <script lang="ts"  setup>
   import { ref, toRef } from 'vue';
   import { icons } from '@/assets/icons/oh-vue-icons'
+import type { RouteLocationRaw } from 'vue-router';
 
   const props = defineProps({
   headers: {
@@ -106,9 +106,11 @@
     required: true
 
   },
-  routeCreate: {
-    type: String,
-    required: true
+ 
+
+  button: {
+    type: Array as () => btnType [],
+    required: false
 
   },
 });
@@ -124,10 +126,14 @@ interface actionType {
   update: boolean;
   delete: boolean;
 }
+
+interface btnType {
+  title: String;
+  color: String;
+   to: RouteLocationRaw;
+}
   const searchValue = ref("");
-  const headers =toRef(props,'headers')
-  const items = toRef(props, 'items')
-  
+ 
   
   </script>
   
