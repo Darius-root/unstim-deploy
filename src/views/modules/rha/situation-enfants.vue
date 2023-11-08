@@ -79,7 +79,7 @@ const items = ref([
 <template>
   <div class="mx-auto xl:container">
     <div class="flex py-2 border-b top-line">
-      <span class="text-base font-medium"> Liste de tous les employées </span>
+      <span class="text-lg font-medium"> Liste de tous les employées </span>
     </div>
 
     <div class="flex gap-3">

@@ -119,12 +119,12 @@ export const useNavigationStore = defineStore('navigation', () => {
         {
           title: 'Utilisateurs',
           icon: icons.HiSolidUserGroup,
-          to: 'personnel'
+          to: 'users'
         },
         {
           title: 'Roles',
           icon: icons.HiSolidUserGroup,
-          to: 'personnel'
+          to: 'roles'
         }
       ]
     },

@@ -79,7 +79,7 @@ const items = ref([
 <template>
   <div class="mx-auto xl:container">
     <div class="flex py-2 border-b top-line">
-      <span class="text-base font-medium"> Statistiques </span>
+      <span class="text-lg font-medium"> Statistiques </span>
     </div>
 
     <div class="flex gap-3">

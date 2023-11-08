@@ -65,7 +65,7 @@ const items = ref([
   }
 ])
 
-const itemsSelected = ref([])
+// const itemsSelected = ref([])
 
 
 </script>

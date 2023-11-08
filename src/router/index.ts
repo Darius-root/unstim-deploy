@@ -114,6 +114,50 @@ const router = createRouter({
               path: 'infos-employee',
               name: 'infos-employee',
               component: () => import('@/views/modules/rha/infos-employee.vue')
+            },
+
+            {
+              path: 'users',
+              name: 'users',
+              component: () => import('@/views/modules/rha/list-users.vue')
+            },
+
+
+            {
+              path: 'create-user',
+              name: 'create-user',
+              component: () => import('@/views/modules/rha/create-user.vue')
+            },
+
+            {
+              path: 'edit-user',
+              name: 'edit-user',
+              component: () => import('@/views/modules/rha/edit-user.vue')
+            },
+
+            {
+              path: 'roles',
+              name: 'roles',
+              component: () => import('@/views/modules/rha/list-roles.vue')
+            },
+
+            {
+              path: 'create-role',
+              name: 'create-role',
+              component: () => import('@/views/modules/rha/create-role.vue')
+            },
+
+
+            {
+              path: 'edit-role',
+              name: 'edit-role',
+              component: () => import('@/views/modules/rha/edit-role.vue')
+            },
+
+            {
+              path: 'permissions-roles',
+              name: 'permissions-roles',
+              component: () => import('@/views/modules/rha/permissions-role.vue')
             }
           ]
         }

@@ -152,7 +152,7 @@ const infosTabAgent = reactive(
   <div class="mx-auto xl:container">
 
     <div class="flex py-2 border-b top-line">
-      <span class="text-base font-medium"> Informations de l'agent : Nom Agent </span>
+      <span class="text-lg font-medium"> Informations de l'agent : Nom Agent </span>
     </div>
 
     <div class="flex gap-3">

@@ -80,7 +80,7 @@ const items = ref([
 <template>
   <div class="mx-auto xl:container">
     <div class="flex py-2 border-b top-line">
-      <span class="text-base font-medium"> Départs à la retraite </span>
+      <span class="text-lg font-medium"> Départs à la retraite </span>
     </div>
 
     <RouterLink

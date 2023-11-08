@@ -95,7 +95,7 @@ const itemsSelected = ref([])
 <template>
   <div class="mx-auto xl:container">
     <div class="flex py-2 border-b top-line">
-      <span class="text-base font-medium"> Liste du personnel </span>
+      <span class="text-lg font-medium"> Liste du personnel </span>
     </div>
 
     <div class="flex flex-wrap items-center justify-center gap-3 py-6 mx-auto actions-button">
