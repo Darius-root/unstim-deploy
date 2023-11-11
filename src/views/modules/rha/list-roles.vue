@@ -2,36 +2,34 @@
 import { icons } from '@/assets/icons/oh-vue-icons'
 import { ref } from 'vue'
 
-
 const headers = ref([
   { text: 'Actions', sortable: true, value: 'action', width: 50 },
-  { text: 'Roles', sortable: true, value: 'role_label' },
+  { text: 'Roles', sortable: true, value: 'role_label' }
 ])
 
 const items = ref([
   {
-    role_label: "livbelfel@el.tl",
+    role_label: 'livbelfel@el.tl',
     action: ''
   },
 
   {
-    role_label: "be@takekoro.be",
+    role_label: 'be@takekoro.be',
     action: ''
   },
 
   {
-    role_label: "pez@cuw.cc",
+    role_label: 'pez@cuw.cc',
     action: ''
   },
 
   {
-
-    role_label: "baj@gibif.eh",
+    role_label: 'baj@gibif.eh',
     action: ''
   },
 
   {
-    role_label: "ol@rum.yt",
+    role_label: 'ol@rum.yt',
     action: ''
   }
 ])
@@ -39,25 +37,27 @@ const items = ref([
 
 <template>
   <div class="mx-auto xl:container">
-
     <div class="flex py-2 border-b top-line">
       <span class="text-lg font-medium"> Liste des rôles </span>
     </div>
 
     <div class="flex justify-between">
-
-      <RouterLink @click.prevent="$router.back()" to=""
-        class="flex items-center gap-2 p-2 mt-5 border rounded shadow text-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60">
+      <RouterLink
+        @click.prevent="$router.back()"
+        to=""
+        class="flex items-center gap-2 p-2 mt-5 border rounded shadow text-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60"
+      >
         <v-icon :name="icons.ChevronUp" class="-rotate-90" scale="1.1" />
         <span class="text-sm font-medium"> Retour </span>
       </RouterLink>
 
-      <RouterLink :to="{ name: 'create-role' }"
-        class="flex items-center gap-2 p-2 mt-5 bg-unstim-primary rounded shadow border-unstim-primary w-fit hover:bg-opacity-60">
+      <RouterLink
+        :to="{ name: 'create-role' }"
+        class="flex items-center gap-2 p-2 mt-5 bg-unstim-primary rounded shadow border-unstim-primary w-fit hover:bg-opacity-60"
+      >
         <v-icon :name="icons.PersonPlus" class="text-white" scale="1.1" />
         <span class="text-sm font-medium text-white"> Creer un role </span>
       </RouterLink>
-
     </div>
 
     <div class="w-full mt-5 border border-gray-300 bg-unstim-light card">
@@ -66,24 +66,35 @@ const items = ref([
       </div>
 
       <div class="card-content">
-        <easy-data-table alternating border-cell :headers="headers" class="text-lg" theme-color="#2f9fff" :items="items"
-          buttons-pagination>
+        <easy-data-table
+          alternating
+          border-cell
+          :headers="headers"
+          class="text-lg"
+          theme-color="#2f9fff"
+          :items="items"
+          buttons-pagination
+        >
           <template #item-action="">
             <div class="flex gap-3">
-
-              <RouterLink :to="{name: 'permissions-roles'}"
-                class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
+              <RouterLink
+                :to="{ name: 'permissions-roles' }"
+                class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary"
+              >
                 <v-icon :name="icons.FormPWShowIcon" scale="1.0" />
-
               </RouterLink>
 
-              <RouterLink :to="{name: 'edit-role'}"
-                class="flex items-center gap-2 p-2 my-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500">
+              <RouterLink
+                :to="{ name: 'edit-role' }"
+                class="flex items-center gap-2 p-2 my-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500"
+              >
                 <v-icon :name="icons.EditIcon" scale="1.0" />
               </RouterLink>
 
-              <RouterLink to=""
-                class="flex items-center gap-2 p-2 my-2 text-white bg-black/75 rounded shadow-md w-fit hover:bg-black/75">
+              <RouterLink
+                to=""
+                class="flex items-center gap-2 p-2 my-2 text-white bg-black/75 rounded shadow-md w-fit hover:bg-black/75"
+              >
                 <v-icon :name="icons.DeleteIcon" scale="1.0" />
               </RouterLink>
             </div>

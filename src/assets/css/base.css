@@ -28,6 +28,10 @@ select {
   @apply py-2 rounded focus:py-2 transition-all border-gray-400 text-sm shadow focus:border focus:border-unstim-primary outline-none focus:ring-0
 } */
 
+/* [type='text'].multiselect-tags-search {
+  @apply focus:border-none focus:ring-0 outline-none appearance-none;
+} */
+
 :root {
   --easy-table-body-row-font-size: 0.85rem;
 }

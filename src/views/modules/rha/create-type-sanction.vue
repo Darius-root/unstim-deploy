@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 import { icons } from '@/assets/icons/oh-vue-icons'
+import unstimText from '@/components/inputs/unstim-text.vue'
 </script>
 
 <template>
   <div class="mx-auto xl:container">
     <div class="flex py-2 border-b top-line">
-      <span class="text-lg font-medium"> Ajouter un nouveau rôle </span>
+      <span class="text-lg font-medium"> Enregistrement d'un type de sanction </span>
     </div>
 
     <div class="flex justify-between">
@@ -26,11 +27,12 @@ import { icons } from '@/assets/icons/oh-vue-icons'
       </p>
 
       <div class="personal-infos-group">
-        <div class="grid grid-cols-1 gap-4 py-5 md:grid-cols-2">
-          <div class="flex col-span-full flex-col space-y-2 input-group">
-            <label for="" class="text-sm"> Nom du rôle </label>
-            <input type="text" class="form-unstim" />
-          </div>
+        <div class="grid grid-cols-1 gap-4 py-5 md:grid-cols-2 lg:grid-cols-3">
+          <unstim-text isRequired label="Nom de la sanction" @valueChanged="(e) => {}" />
+
+          <unstim-text isRequired label="Code de la sanction" @valueChanged="(e) => {}" />
+
+          <unstim-text isRequired label="Taux applicable" @valueChanged="(e) => {}" />
         </div>
 
         <div class="flex gap-3 border-t form-btn">

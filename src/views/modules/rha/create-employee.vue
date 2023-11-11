@@ -294,7 +294,6 @@ const employeFormData = reactive({
         </button>
       </div>
     </div>
-    
   </div>
 </template>
 

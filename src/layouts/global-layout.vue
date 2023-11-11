@@ -7,7 +7,6 @@ import { reactive } from 'vue'
 const navItems = useNavigationStore().navigations
 
 const noSidebarRoute = reactive(['home'])
-
 </script>
 
 <template>

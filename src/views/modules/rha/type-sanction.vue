@@ -2,62 +2,75 @@
 import { icons } from '@/assets/icons/oh-vue-icons'
 import { ref } from 'vue'
 
+import {
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogOverlay,
+  AlertDialogPortal,
+  AlertDialogRoot,
+  AlertDialogTitle,
+  AlertDialogTrigger
+} from 'radix-vue'
+
 const headers = ref([
   { text: 'Actions', sortable: true, value: 'action' },
-  { text: 'Noms & Prénoms', sortable: true, value: 'employe' },
-  { text: 'Email', sortable: true, value: 'email' },
-  { text: 'Role', sortable: true, value: 'role' },
-  { text: 'Créer le', sortable: true, value: 'created_at' },
-  { text: 'Mise à jour le', sortable: true, value: 'updated_at' }
+  { text: 'Numéro', sortable: true, value: 'numero' },
+  { text: 'Matricule', sortable: true, value: 'matricule' },
+  { text: 'Employe', sortable: true, value: 'employe' },
+  { text: 'Cumul', sortable: true, value: 'cumul' },
+  { text: 'Trimestre', sortable: true, value: 'trimestre' }
 ])
 
 const items = ref([
   {
+    matricule: '#64035',
     employe: 'HOUNDJO M Stephen',
-    email: 'livbelfel@el.tl',
-    role: 'Super-Admin',
-    created_at: '12/12/2023',
-    updated_at: '12/12/2023',
-
+    sexe: 'M',
+    cumul: '2.5',
+    trimestre: '2',
+    numero: '012000',
     action: ''
   },
 
   {
+    matricule: '#64034',
     employe: 'BIAOU Hamidou',
-    email: 'be@takekoro.be',
-    role: 'Super-Admin',
-    created_at: '12/12/2023',
-    updated_at: '12/12/2023',
+    sexe: 'M',
+    cumul: '2.5',
+    trimestre: '2',
+    numero: '012000',
     action: ''
   },
 
   {
+    matricule: '#64032',
     employe: 'TOSSOU Valentin',
-    email: 'pez@cuw.cc',
-    role: 'Super-Admin',
-    created_at: '12/12/2023',
-    updated_at: '12/12/2023',
-
+    sexe: 'M',
+    cumul: '2.5',
+    trimestre: '2',
+    numero: '012000',
     action: ''
   },
 
   {
+    matricule: '#64031',
     employe: 'CODJIA Orens Eudie',
-    email: 'baj@gibif.eh',
-    role: 'Super-Admin',
-    created_at: '12/12/2023',
-    updated_at: '12/12/2023',
-
+    sexe: 'F',
+    cumul: '2.5',
+    trimestre: '2',
+    numero: '012000',
     action: ''
   },
 
   {
+    matricule: '#64131',
     employe: "D'ALMEIDA Mensen Gilberte",
-    email: 'ol@rum.yt',
-    role: 'Super-Admin',
-    created_at: '12/12/2023',
-    updated_at: '12/12/2023',
-
+    sexe: 'F',
+    cumul: '2.5',
+    trimestre: '2',
+    numero: '012000',
     action: ''
   }
 ])
@@ -66,31 +79,22 @@ const items = ref([
 <template>
   <div class="mx-auto xl:container">
     <div class="flex py-2 border-b top-line">
-      <span class="text-lg font-medium"> Liste de utilisateurs </span>
+      <span class="text-lg font-medium"> Les types de sanctions </span>
     </div>
 
-    <div class="flex justify-between">
+    <div class="flex justify-end gap-3">
       <RouterLink
-        @click.prevent="$router.back()"
-        to=""
+        :to="{ name: 'create-type-sanction' }"
         class="flex items-center gap-2 p-2 mt-5 border rounded shadow text-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60"
       >
-        <v-icon :name="icons.ChevronUp" class="-rotate-90" scale="1.1" />
-        <span class="text-sm font-medium"> Retour </span>
-      </RouterLink>
-
-      <RouterLink
-        :to="{ name: 'create-user' }"
-        class="flex items-center gap-2 p-2 mt-5 bg-unstim-primary rounded shadow border-unstim-primary w-fit hover:bg-opacity-60"
-      >
-        <v-icon :name="icons.PersonPlus" class="text-white" scale="1.1" />
-        <span class="text-sm font-medium text-white"> Ajouter un utilisateur </span>
+        <!-- <v-icon :name="icons.ChevronUp" class="-rotate-90" scale="1.1" /> -->
+        <span class="text-sm font-medium"> Ajouter un type de sanction </span>
       </RouterLink>
     </div>
 
     <div class="w-full mt-5 border border-gray-300 bg-unstim-light card">
       <div class="flex items-center gap-3 px-4 py-3 card-header">
-        <span class="">Exporter</span>
+        <span class=""> </span>
       </div>
 
       <div class="card-content">
@@ -106,7 +110,7 @@ const items = ref([
           <template #item-action="">
             <div class="flex gap-3">
               <RouterLink
-                :to="{ name: 'edit-user' }"
+                to=""
                 class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary"
               >
                 <v-icon :name="icons.EditIcon" scale="1.0" />
@@ -118,18 +122,28 @@ const items = ref([
               >
                 <v-icon :name="icons.DeleteIcon" scale="1.0" />
               </RouterLink>
+
+              <RouterLink
+                to=""
+                class="flex items-center gap-2 p-2 my-2 text-white bg-yellow-600 rounded shadow-md w-fit hover:bg-red-500"
+              >
+                <v-icon :name="icons.FormPWShowIcon" scale="1.0" />
+              </RouterLink>
             </div>
 
             <!-- <AlertDialogRoot>
               <AlertDialogTrigger
-                class="flex items-center gap-2 p-2 my-2 text-white rounded shadow w-fit bg-unstim-info hover:bg-unstim-primary">
+                class="flex items-center gap-2 p-2 my-2 text-white rounded shadow w-fit bg-unstim-info hover:bg-unstim-primary"
+              >
                 <v-icon :name="icons.EditIcon" scale="1.0" />
               </AlertDialogTrigger>
               <AlertDialogPortal>
                 <AlertDialogOverlay
-                  class="bg-black/50 backdrop-blur-sm data-[state=open]:animate-overlayShow fixed inset-0 z-30" />
+                  class="bg-black/50 backdrop-blur-sm data-[state=open]:animate-overlayShow fixed inset-0 z-30"
+                />
                 <AlertDialogContent
-                  class="z-[100] text-[15px] data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[500px] translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none">
+                  class="z-[100] text-[15px] data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[500px] translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none"
+                >
                   <AlertDialogTitle class="text-mauve12 m-0 text-[17px] font-semibold">
                     Actions personnalisé
                   </AlertDialogTitle>
@@ -139,11 +153,13 @@ const items = ref([
                   </AlertDialogDescription>
                   <div class="flex justify-end gap-[25px]">
                     <AlertDialogCancel
-                      class="bg-slate-400 shadow hover:bg-slate-500 inline-flex h-[35px] items-center justify-center rounded-[4px] px-[15px] font-semibold">
+                      class="bg-slate-400 shadow hover:bg-slate-500 inline-flex h-[35px] items-center justify-center rounded-[4px] px-[15px] font-semibold"
+                    >
                       Cancel
                     </AlertDialogCancel>
                     <AlertDialogAction
-                      class="text-red11 bg-red-400 shadow hover:bg-red-500 inline-flex h-[35px] items-center justify-center rounded-[4px] px-[15px] font-semibold">
+                      class="text-red11 bg-red-400 shadow hover:bg-red-500 inline-flex h-[35px] items-center justify-center rounded-[4px] px-[15px] font-semibold"
+                    >
                       Yes, delete account
                     </AlertDialogAction>
                   </div>

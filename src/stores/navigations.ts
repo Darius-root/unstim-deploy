@@ -85,7 +85,7 @@ export const useNavigationStore = defineStore('navigation', () => {
     {
       title: 'Sanctions',
       icon: icons.FaUserClock,
-      to: 'personnel'
+      to: 'sanctions'
     },
 
     // {
@@ -137,7 +137,6 @@ export const useNavigationStore = defineStore('navigation', () => {
           title: 'Diplomes',
           icon: icons.HiSolidUserGroup,
           to: 'personnel'
-          
         },
         {
           title: 'Type de pret',

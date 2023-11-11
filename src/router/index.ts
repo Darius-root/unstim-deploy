@@ -122,7 +122,6 @@ const router = createRouter({
               component: () => import('@/views/modules/rha/list-users.vue')
             },
 
-
             {
               path: 'create-user',
               name: 'create-user',
@@ -147,7 +146,6 @@ const router = createRouter({
               component: () => import('@/views/modules/rha/create-role.vue')
             },
 
-
             {
               path: 'edit-role',
               name: 'edit-role',
@@ -158,6 +156,30 @@ const router = createRouter({
               path: 'permissions-roles',
               name: 'permissions-roles',
               component: () => import('@/views/modules/rha/permissions-role.vue')
+            },
+
+            {
+              path: 'sanctions',
+              name: 'sanctions',
+              component: () => import('@/views/modules/rha/list-sanctions.vue')
+            },
+
+            {
+              path: 'create-sanction',
+              name: 'create-sanction',
+              component: () => import('@/views/modules/rha/create-sanction.vue')
+            },
+
+            {
+              path: 'types-sanctions',
+              name: 'types-sanctions',
+              component: () => import('@/views/modules/rha/type-sanction.vue')
+            },
+
+            {
+              path: 'create-type-sanction',
+              name: 'create-type-sanction',
+              component: () => import('@/views/modules/rha/create-type-sanction.vue')
             }
           ]
         }
