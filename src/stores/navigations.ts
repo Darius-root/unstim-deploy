@@ -37,12 +37,12 @@ export const useNavigationStore = defineStore('navigation', () => {
     {
       title: 'Evaluations',
       icon: icons.HiSolidUserGroup,
-      to: 'personnel',
+      to: 'evaluation',
       underMenu: [
         {
           title: 'Evaluations',
           icon: icons.HiSolidUserGroup,
-          to: 'personnel'
+          to: 'evaluation'
         },
         {
           title: 'Objectifs',

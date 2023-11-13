@@ -213,7 +213,17 @@ const router = createRouter({
               component: () => import('@/views/modules/rha/create-formation.vue')
             },
             
+            {
+              path: 'evaluation',
+              name: 'evaluation',
+              component: () => import('@/views/modules/rha/rha-evaluation.vue')
             
+            },
+            {
+              path:'create-evaluation',
+              name: 'create-evaluation',
+              component: () => import('@/views/modules/rha/create-evaluation.vue')
+            }
             
             
             
