@@ -25,7 +25,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         delete: true
                     },
 
-                    buttons: [{ title: 'Ajouter un diplome', color: '#2b9eff', to: '' },],
+                    buttons: [{ title: 'Ajouter un diplome', color: '#2b9eff', to: 'create-diplome  ' },],
                 }],
 
 
@@ -54,7 +54,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         update: true,
                         delete: true
                     },
-                    buttons: [{ title: 'Ajouter un type de prêt', color: '#2b9eff', to: '' },],
+                    buttons: [{ title: 'Ajouter un type de prêt', color: '#2b9eff', to: 'create-typepret' },],
 
                 }],
 
@@ -84,7 +84,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         update: true,
                         delete: true
                     }
-                    , buttons: [{ title: 'Ajouter une distinction', color: '#2b9eff', to: '' },],
+                    , buttons: [{ title: 'Ajouter une distinction', color: '#2b9eff', to: 'create-distinction' },],
 
                 }],
 
@@ -116,7 +116,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         update: true,
                         delete: true
                     }
-                    , buttons: [{ title: 'Ajouter une direction', color: '#2b9eff', to: '' },],
+                    , buttons: [{ title: 'Ajouter une direction', color: '#2b9eff', to: 'create-direction' },],
 
                 }],
 
@@ -145,7 +145,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         update: true,
                         delete: true
                     }
-                    , buttons: [{ title: 'Ajouter un département', color: '#2b9eff', to: '' },],
+                    , buttons: [{ title: 'Ajouter un département', color: '#2b9eff', to: 'create-departement' },],
 
                 }],
 
@@ -177,7 +177,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         update: true,
                         delete: true
                     }
-                    , buttons: [{ title: 'Ajouter une délégation', color: '#2b9eff', to: '' },],
+                    , buttons: [{ title: 'Ajouter une délégation', color: '#2b9eff', to: 'create-delegation' },],
 
                 }],
 
@@ -209,7 +209,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         update: true,
                         delete: true
                     }
-                    , buttons: [{ title: 'Ajouter une section', color: '#2b9eff', to: '' },],
+                    , buttons: [{ title: 'Ajouter une section', color: '#2b9eff', to: 'create-section' },],
 
                 }],
 
@@ -241,7 +241,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         update: true,
                         delete: false
                     }
-                    , buttons: [{ title: 'Ajouter une agence', color: '#2b9eff', to: '' },],
+                    , buttons: [{ title: 'Ajouter une agence', color: '#2b9eff', to: 'create-agence' },],
 
                 }],
 
@@ -271,7 +271,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         update: true,
                         delete: true
                     }
-                    , buttons: [{ title: 'Ajouter un poste', color: '#2b9eff', to: '' },],
+                    , buttons: [{ title: 'Ajouter un poste', color: '#2b9eff', to: 'create-typeposte' },],
 
                 }],
 
@@ -306,7 +306,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         update: true,
                         delete: true
                     }
-                    , buttons: [{ title: 'Ajouter une fiche de poste', color: '#2b9eff', to: '' },],
+                    , buttons: [{ title: 'Ajouter une fiche de poste', color: '#2b9eff', to: 'create-ficheposte' },],
 
                 }],
 
@@ -337,7 +337,6 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         update: true,
                         delete: false
                     }
-                    , buttons: [{ title: 'Ajouter une categorie', color: '#2b9eff', to: '' },],
 
                 }],
 
@@ -373,7 +372,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         edit: true,
                         update: true,
                         delete: false
-                    }, buttons: [{ title: 'Ajouter un congé', color: '#2b9eff', to: '' },],
+                    }, buttons: [{ title: 'Ajouter un congé', color: '#2b9eff', to: 'create-typeconge' },],
                 }],
 
 
@@ -403,7 +402,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         update: true,
                         delete: true
                     }
-                    , buttons: [{ title: 'Ajouter un contrat', color: '#2b9eff', to: '' },],
+                    , buttons: [{ title: 'Ajouter un contrat', color: '#2b9eff', to: 'create-typecessation' },],
 
                 }],
 
@@ -438,7 +437,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         update: true,
                         delete: true
                     }
-                    , buttons: [{ title: 'Ajouter une banque', color: '#2b9eff', to: '' },],
+                    , buttons: [{ title: 'Ajouter une banque', color: '#2b9eff', to: 'create-banque' },],
 
                 }],
 
@@ -471,7 +470,6 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
                         delete: false
                     }
 
-                    , buttons: [{ title: 'Ajouter un paramètre', color: '#2b9eff', to: '' },],
 
                 }],
 

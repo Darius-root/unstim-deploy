@@ -1,8 +1,11 @@
 <template>
-    <TemplatePagesConfig :headers="currentPage[0].headers" :action="currentPage[0].action" :items="currentPage[0].items"
+    {{ currentPage[0].headers }}
+    <TemplatePagesConfig 
+    :headers="currentPage[0].headers"
+      :action="currentPage[0].action" 
+     :items="currentPage[0].items"
         :title="currentPage[0].title"
-        v-if="currentPage[0].buttons"  
-    :button="currentPage[0].buttons"
+       :button="currentPage[0].buttons"
         />
 </template>
 

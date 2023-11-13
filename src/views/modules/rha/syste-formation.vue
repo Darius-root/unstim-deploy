@@ -166,7 +166,7 @@ const data =ref( { title: 'Liste des plans de formation',
                         update: true,
                         delete: true
                     },
-                    buttons: [{ title: 'Ajouter une formation', color: '#2b9eff', to: '' },
+                    buttons: [{ title: 'Ajouter une formation', color: '#2b9eff', to: 'create-formation' },
                     { title: 'Liste des formations ', color: '#2b9eff', to: '' },],})
 
                     const searchValue = ref("");
