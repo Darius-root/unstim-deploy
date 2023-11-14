@@ -252,7 +252,11 @@ const router = createRouter({
               
             },
             
-            
+            {
+              path: 'conge-permission',
+              name: 'conge-permission',
+              component: () => import('@/views/modules/rha/conge-permission.vue')
+            },
          
           ]
         }

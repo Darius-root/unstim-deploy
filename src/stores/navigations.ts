@@ -79,7 +79,7 @@ export const useNavigationStore = defineStore('navigation', () => {
     {
       title: 'Congés et permission',
       icon: icons.FaUmbrellaBeach,
-      to: 'personnel'
+      to: 'conge-permission'
     },
 
     {
