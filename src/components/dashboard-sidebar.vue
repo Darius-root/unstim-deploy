@@ -50,7 +50,11 @@ defineProps({
                     :key="index"
                   >
                     <RouterLink
-                      :to="{ name: elts.to }"
+                      :to="
+                        elts.params
+                          ? { name: elts.to, params: { id: elts.params.id || '' } }
+                          : { name: elts.to }
+                      "
                       class="flex font-medium transition-all w-full h-[45px] px-5 text-sm"
                     >
                       <div class="flex items-center gap-2 elt-nav">

@@ -180,6 +180,112 @@ const router = createRouter({
               path: 'create-type-sanction',
               name: 'create-type-sanction',
               component: () => import('@/views/modules/rha/create-type-sanction.vue')
+            },
+
+            {
+              path: 'config/:id',
+              name: 'config',
+              component: () => import('@/views/modules/rha/config-page.vue')
+            },
+            {
+              path: 'plan-formation',
+              name: 'plan-formation',
+              component: () => import('@/views/modules/rha/plan-formation.vue')
+            },
+            {
+              path: 'syste-formation',
+              name: 'syste-formation',
+              component: () => import('@/views/modules/rha/syste-formation.vue')
+            },
+            {
+              path: 'config/create-diplome',
+              name: 'create-diplome',
+              component: () => import('@/views/modules/rha/create-diplome.vue')
+            },
+            {
+              path: 'config/create-typepret',
+              name: 'create-typepret',
+              component: () => import('@/views/modules/rha/create-typepret.vue')
+            },
+
+            {
+              path: 'config/create-distinction',
+              name: 'create-distinction',
+              component: () => import('@/views/modules/rha/create-distinction.vue')
+            },
+
+            {
+              path: 'config/create-direction',
+              name: 'create-direction',
+              component: () => import('@/views/modules/rha/create-direction.vue')
+            },
+            {
+              path: 'config/create-departement',
+              name: 'create-departement',
+              component: () => import('@/views/modules/rha/create-departement.vue')
+            },
+
+            {
+              path: 'config/create-delegation',
+              name: 'create-delegation',
+              component: () => import('@/views/modules/rha/create-delegation.vue')
+            },
+
+            {
+              path: 'config/create-section',
+              name: 'create-section',
+              component: () => import('@/views/modules/rha/create-section.vue')
+            },
+
+            {
+              path: 'config/create-agence',
+              name: 'create-agence',
+              component: () => import('@/views/modules/rha/create-agence.vue')
+            },
+
+            {
+              path: 'config/create-typeposte',
+              name: 'create-typeposte',
+              component: () => import('@/views/modules/rha/create-typeposte.vue')
+            },
+            {
+              path: 'config/create-ficheposte',
+              name: 'create-ficheposte',
+              component: () => import('@/views/modules/rha/create-ficheposte.vue')
+            },
+
+            {
+              path: 'config/create-typeconge',
+              name: 'create-typeconge',
+              component: () => import('@/views/modules/rha/create-typeconge.vue')
+            },
+            {
+              path: 'config/create-banque',
+              name: 'create-banque',
+              component: () => import('@/views/modules/rha/create-banque.vue')
+            },
+
+            {
+              path: 'config/create-typecessation',
+              name: 'create-typecessation',
+              component: () => import('@/views/modules/rha/create-typecessation.vue')
+            },
+
+            {
+              path: 'create-formation',
+              name: 'create-formation',
+              component: () => import('@/views/modules/rha/create-formation.vue')
+            },
+
+            {
+              path: 'evaluation',
+              name: 'evaluation',
+              component: () => import('@/views/modules/rha/rha-evaluation.vue')
+            },
+            {
+              path: 'create-evaluation',
+              name: 'create-evaluation',
+              component: () => import('@/views/modules/rha/create-evaluation.vue')
             }
           ]
         }
