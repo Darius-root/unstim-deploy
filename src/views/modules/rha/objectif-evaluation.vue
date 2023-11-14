@@ -26,16 +26,14 @@
   } from 'radix-vue'
   
   
-  const data =ref( { title: 'Liste des années d\'évaluations',
+  const data =ref( { title: 'Définition des objectifs',
                       
                       headers: [{ text: 'Année', sortable: true, value: 'annee' },
-                      { text: 'Personnel d\'exploitation', sortable: true, value: 'exploi' },
-                      { text: 'Personnel administrative', sortable: true, value: 'admin' },
+                      { text: 'Nombre', sortable: true, value: 'nb' },
                       { text: 'Actions', sortable: true, value: 'action' },],
                       items: [{
                           annee: '2023',
-                          exploi: '54dd',
-                          admin: 'djnd',
+                          nb: '55',
                       },
   
                       ], action: {
@@ -44,7 +42,7 @@
                           delete: true
                       },
                       buttons: [
-                      { title: 'Ajouter une évaluation', color: '#2b9eff', to: 'create-evaluation' },],})
+                      { title: 'Ajouter une attente ',color: '#2b9eff', to: 'create-objectif' },],})
   </script>
   
   

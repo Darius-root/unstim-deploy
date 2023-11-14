@@ -9,6 +9,8 @@
   <template v-for="(btn, item) in props.button">
     <RouterLink :style="{ backgroundColor: btn.color }" :to="btn.to"
   class="flex items-center gap-2 p-2 text-white rounded shadow hover:bg-opacity-60 mx-1">
+  <v-icon :name="icons.AddIcon" class="-rotate-90" scale="1.1" />
+
   <span class="text-sm font-medium"> {{ btn.title }}</span>
 </RouterLink>
   </template>

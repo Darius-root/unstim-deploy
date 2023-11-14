@@ -223,9 +223,34 @@ const router = createRouter({
               path:'create-evaluation',
               name: 'create-evaluation',
               component: () => import('@/views/modules/rha/create-evaluation.vue')
-            }
+            },
+            {
+              path: 'objectif-evaluation',
+              name: 'objectif-evaluation',  
+              component: () => import('@/views/modules/rha/objectif-evaluation.vue')
+              
+            },
+
+            {
+              path:'create-objectif',
+              name: 'create-objectif',
+              component: () => import('@/views/modules/rha/create-objectif.vue')
+              
+            },
             
-            
+            {
+              path: 'performance-evaluation',
+              name: 'performance-evaluation',  
+              component: () => import('@/views/modules/rha/performance-evaluation.vue')
+              
+            },
+
+            {
+              path:'create-performance',
+              name: 'create-performance',
+              component: () => import('@/views/modules/rha/create-performance.vue')
+              
+            },
             
             
          
