@@ -22,12 +22,42 @@ export const useNavigationStore = defineStore('navigation', () => {
       to: '/gestions-paies-2',
       underMenu: [
         {
-          title: 'sous menu 1',
+          title: 'Grille indicaire',
+          icon: icons.HiSolidUserGroup,
+          to: 'salary-scales'
+        },
+
+        {
+          title: 'Voir les salaires',
+          icon: icons.HiSolidUserGroup,
+          to: 'mouth-salary'
+        },
+
+        {
+          title: 'Gains',
+          icon: icons.HiSolidUserGroup,
+          to: 'allowance'
+        },
+
+        {
+          title: 'Retenues',
+          icon: icons.HiSolidUserGroup,
+          to: 'personnel'
+        },
+
+        {
+          title: 'Rappels',
           icon: icons.HiSolidUserGroup,
           to: 'personnel'
         },
         {
-          title: 'sous menu 2',
+          title: 'Prets',
+          icon: icons.HiSolidUserGroup,
+          to: 'personnel'
+        },
+
+        {
+          title: 'IDR',
           icon: icons.HiSolidUserGroup,
           to: 'personnel'
         }

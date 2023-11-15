@@ -18,13 +18,13 @@ const noSidebarRoute = reactive(['home'])
     <div class="w-full pt-28 content">
       <div
         v-if="!noSidebarRoute.includes($route.name as string)"
-        class="fixed w-[300px] top-0 bottom-0 pt-28 z-10 shadow-xl hidden xl:block bg-unstim-info unstim-sidebar"
+        class="fixed w-[280px] top-0 bottom-0 pt-28 z-10 shadow-xl hidden xl:block bg-unstim-info unstim-sidebar"
       >
         <DashboardSidebar :navigations="navItems" />
       </div>
 
       <main
-        :class="{ 'xl:ml-[300px]': !noSidebarRoute.includes($route.name as string) }"
+        :class="{ 'xl:ml-[280px]': !noSidebarRoute.includes($route.name as string) }"
         class="flex-1 px-4 py-5 unstim-main"
       >
         <RouterView v-slot="{ Component }">

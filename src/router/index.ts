@@ -286,7 +286,28 @@ const router = createRouter({
               path: 'create-evaluation',
               name: 'create-evaluation',
               component: () => import('@/views/modules/rha/create-evaluation.vue')
-            }
+            },
+
+            {
+              path: 'salary-scales',
+              name: 'salary-scales',
+              component: () => import('@/views/modules/rha/grille-indiciaire.vue')
+            },
+
+            {
+              path: 'mouth-salary',
+              name: 'mouth-salary',
+              component: () => import('@/views/modules/rha/grille-salaire.vue')
+            },
+
+            {
+              path: 'allowance',
+              name: 'allowance',
+              component: () => import('@/views/modules/rha/list-indemnite.vue')
+            },
+
+           
+
           ]
         }
       ]
