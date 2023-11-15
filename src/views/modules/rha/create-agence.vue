@@ -24,8 +24,14 @@
    
    <script setup lang="ts">
     import  selecteImput from '@/components/inputs/unstim-select.vue'
-   const parameters={name:'1', direct:'2'}
+   const parameters=reactive({
+  options: ['Darius', 'ZKP', 'JOHN Doe'],
+  placeholder: '--Choississez un employe--',
+  searchable: true
+})
+
    import  imput from '@/components/inputs/unstim-text.vue'
+import { reactive } from 'vue';
    
    
    </script>

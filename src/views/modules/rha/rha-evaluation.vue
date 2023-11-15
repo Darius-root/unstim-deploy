@@ -13,18 +13,7 @@
   import TemplatePagesConfig from "@/components/templatePagesTab.vue";
   
   
-  import {
-    AlertDialogAction,
-    AlertDialogCancel,
-    AlertDialogContent,
-    AlertDialogDescription,
-    AlertDialogOverlay,
-    AlertDialogPortal,
-    AlertDialogRoot,
-    AlertDialogTitle,
-    AlertDialogTrigger
-  } from 'radix-vue'
-  
+
   
   const data =ref( { title: 'Liste des années d\'évaluations',
                       

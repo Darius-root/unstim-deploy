@@ -15,9 +15,9 @@ class="flex items-center gap-2 p-2 text-white rounded shadow hover:bg-opacity-60
 </template>
 
 
-<modalForm class="ml-1" :title-btn="'Rechercher'" :color-btn="'rgb(255, 193, 7)'" :title-modal="'Imprimer le suivi par saison'" :icons="icons.CoPrint">
+<modalForm class="ml-1" :title-btn="'Liste des types d\'absences'" :title-modal="'Imprimer le suivi par saison'" :icons="icons.CoPrint">
   <selecteImput :label="'Saison'" :parameters='parameters'  :isRequired="true"/>        
-<imput :label="'Année '"  :isRequired="true"  class="flex-grow" /></modalForm>
+<imput :label="'Année '"  :isRequired="true" :type="'date'" class="flex-grow" /></modalForm>
 
 
 
@@ -106,17 +106,6 @@ import imput from '@/components/inputs/unstim-text.vue'
 import selecteImput from '@/components/inputs/unstim-select.vue'
 import modalForm from '@/components/modals/modal-form.vue'
 
-import {
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogOverlay,
-  AlertDialogPortal,
-  AlertDialogRoot,
-  AlertDialogTitle,
-  AlertDialogTrigger
-} from 'radix-vue'
 
 const searchValue = ref("");
 
@@ -180,9 +169,7 @@ const data =ref( { title: ' Suivi des Performances',
                       },
                       buttons: [
                       { title: 'Voir les point des congés ',color: '#2b9eff', to: 'conge-annuel' },
-                      { title: 'Enrégistrement congé/Pemission ',color: '#2b9eff', to: 'create-performance' },
-                      { title: 'Voir les congés à terme',color: 'red', to: 'conge-annuel' },
-                      { title: 'Ajouter une performance ',color: '#2b9eff', to: 'create-performance' },
+                      
                     ],})
 
 </script>

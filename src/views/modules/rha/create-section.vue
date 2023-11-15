@@ -21,11 +21,17 @@
    </template> 
    
    <script setup lang="ts">
-   import { ref } from 'vue';
+   import { reactive, ref } from 'vue';
    import { icons } from '@/assets/icons/oh-vue-icons'
-   import  selecteImput from '@/components/inputs/unstim-select.vue'
-   const parameters={name:'1', direct:'2'}
-   import  imput from '@/components/inputs/unstim-text.vue'
+   import  selecteImput from '@/components/inputs/unstim-select.vue' 
+     import  imput from '@/components/inputs/unstim-text.vue'
+
+   const parameters=reactive({
+  options: ['Darius', 'ZKP', 'JOHN Doe'],
+  placeholder: '--Choississez un employe--',
+  searchable: true
+})
+
    
    
    </script>
