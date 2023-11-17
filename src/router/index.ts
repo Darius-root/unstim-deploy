@@ -304,6 +304,7 @@ const router = createRouter({
               name: 'edit-congepermission',
               component: () => import('@/views/modules/rha/edit-congepermission.vue')
             },
+           
           ]
         }
       ]

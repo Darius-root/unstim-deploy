@@ -307,7 +307,245 @@ const dataTable =[
         reliquat:'22/55',
 
       }}
+,{matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
 
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }},{matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }},
+      {matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }},
+      {matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }},
+      {matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }},
+      {matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }},
+      {matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }},
+      {matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }},
+      {matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }},
+      {matricule: '152-55',
+      name: 'kassaa',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }},
 
 ]
 

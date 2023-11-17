@@ -112,11 +112,7 @@ import { icons } from '@/assets/icons/oh-vue-icons'
 
 const searchValue = ref("");
 
-const parameters = reactive({
-    options: ['Darius', 'ZKP', 'JOHN Doe'],
-    placeholder: '--Choississez un employe--',
-    searchable: true
-})
+
 const data = ref({
     title: 'Types de Congés / Permissions'
     ,
