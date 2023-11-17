@@ -15,9 +15,12 @@ class="flex items-center gap-2 p-2 text-white rounded shadow hover:bg-opacity-60
 </template>
 
 
-<modalForm class="ml-1" :title-btn="'Rechercher'" :color-btn="'rgb(255, 193, 7)'" :title-modal="'Imprimer le suivi par saison'" :icons="icons.CoPrint">
-  <selecteImput :label="'Saison'" :parameters='parameters'  :isRequired="true"/>        
-<imput :label="'Année '"  :isRequired="true"  class="flex-grow" /></modalForm>
+<modalForm class="ml-1" :title-btn="'Rechercher'"  :title-modal="'Imprimer le suivi par saison'" :icons="icons.UserSearch">
+  <selecteImput :label="'Employés'" :parameters='parameters'  :isRequired="true"/>        
+  <selecteImput :label="'Type'" :parameters='parameters'  :isRequired="true"/>        
+  <selecteImput :label="'Statut'" :parameters='parameters'  :isRequired="true"/>        
+  <selecteImput :label="'Année'" :parameters='parameters'  :isRequired="true"/>        
+</modalForm>
 
 
 
@@ -66,7 +69,7 @@ Accepté    </span>
         <template #item-action="" >
           <div class="flex gap-3 row justify-center items-center">
 
-              <RouterLink to="" v-if="data.action.update"
+              <RouterLink to="view-congepermission" v-if="data.action.update"
               class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
               <v-icon :name="icons.FormPWShowIcon" scale="1.0" />
 
@@ -102,21 +105,8 @@ Accepté    </span>
 import { reactive, ref } from 'vue';
 import { icons } from '@/assets/icons/oh-vue-icons'
 
-import imput from '@/components/inputs/unstim-text.vue'
 import selecteImput from '@/components/inputs/unstim-select.vue'
 import modalForm from '@/components/modals/modal-form.vue'
-
-import {
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogOverlay,
-  AlertDialogPortal,
-  AlertDialogRoot,
-  AlertDialogTitle,
-  AlertDialogTrigger
-} from 'radix-vue'
 
 const searchValue = ref("");
 
@@ -125,7 +115,7 @@ const parameters=reactive({
   placeholder: '--Choississez un employe--',
   searchable: true
 }) 
-const data =ref( { title: ' Suivi des Performances',
+const data =ref( { title: 'Demandes de Congés / Permissions',
                       
                       headers: [{ text: 'Matricule', sortable: true, value: 'MA' },
                       { text: 'Nom', sortable: true, value: 'NO' },
@@ -174,15 +164,17 @@ const data =ref( { title: ' Suivi des Performances',
                       },
   
                       ], action: {
-                          edit: true,
+                          edit: false,
                           update: true,
                           delete: true
                       },
                       buttons: [
                       { title: 'Voir les point des congés ',color: '#2b9eff', to: 'conge-annuel' },
-                      { title: 'Enrégistrement congé/Pemission ',color: '#2b9eff', to: 'create-performance' },
-                      { title: 'Voir les congés à terme',color: 'red', to: 'conge-annuel' },
-                      { title: 'Ajouter une performance ',color: '#2b9eff', to: 'create-performance' },
+                      { title: 'Enrégistrement congé/Pemission ',color: '#2b9eff', to: 'save-conge' },
+                      { title: 'Voir les types de congés ',color: '#2b9eff', to: 'type-conge' }
+                    ,
+                    { title: 'Voir les congés arrivant à terme',color: 'red', to: 'end-conge' },
+
                     ],})
 
 </script>

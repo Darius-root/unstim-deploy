@@ -3,7 +3,7 @@
 <AlertDialogRoot class="">
     <AlertDialogTrigger  :style="{ backgroundColor: props.colorBtn }"
       class="flex items-center gap-2 p-2 text-white rounded shadow hover:bg-opacity-60">
-      <v-icon :name="$props.icons" class="-rotate-90" scale="1.1" />
+      <v-icon :name="$props.icons"  scale="1.1" />
     
       <span class="text-sm font-medium">{{ props.titleBtn }} </span>
     </AlertDialogTrigger>

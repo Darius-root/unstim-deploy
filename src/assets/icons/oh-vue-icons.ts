@@ -53,7 +53,8 @@ import {
   IoSettingsSharp,
   CoCalendar,
   FaCalendarAlt,
-  CoPrint
+  CoPrint,
+  BiPaperclip,
 } from 'oh-vue-icons/icons'
 
 addIcons(
@@ -110,7 +111,9 @@ addIcons(
   IoSettingsSharp,
   CoCalendar,
   FaCalendarAlt,
-  CoPrint
+  CoPrint,
+  BiPaperclip
+
 )
 
 const icons = {
@@ -166,7 +169,8 @@ const icons = {
   IoSettingsSharp: 'io-settings-sharp',
   CoCalendar: 'co-calendar',
   FaCalendarAlt: 'fa-calendar-alt',
-  CoPrint: 'co-print'
+  CoPrint: 'co-print',
+  BiPaperclip: 'bi-paperclip'
 }
 
 export { icons }

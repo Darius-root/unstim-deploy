@@ -1,7 +1,7 @@
 <template>
     <div class="mx-auto xl:container">
        <div class="flex py-2 border-b top-line">
-         <span class="text-base font-normal ">Créer un type de congé / permission</span>
+         <span class="text-base font-normal ">Modifier le type de congé / permission</span>
        </div>
    
    

@@ -262,6 +262,48 @@ const router = createRouter({
               name: 'conge-annuel',
               component: () => import('@/views/modules/rha/conge-annuel.vue')
             },
+            {
+              path: 'conge-service',
+              name: 'conge-service',
+              component: () => import('@/views/modules/rha/conge-service.vue')
+            },
+            {
+              path: 'save-conge',
+              name: 'save-conge',
+              component: () => import('@/views/modules/rha/save-conge.vue')
+            },
+
+            {
+              path: 'type-conge',
+              name: 'type-conge',
+              component: () => import('@/views/modules/rha/type-conge.vue')
+            },
+            {
+              path: 'view-typeconge',
+              name: 'view-typeconge',
+              component: () => import('@/views/modules/rha/view-typeconge.vue')
+            },   {
+              path: 'edit-typeconge',
+              name: 'edit-typeconge',
+              component: () => import('@/views/modules/rha/edit-typeconge.vue')
+            },
+
+            {
+              path: 'end-conge',
+              name: 'end-conge',
+              component: () => import('@/views/modules/rha/end-conge.vue')
+            },
+
+            {
+              path: 'view-congepermission',
+              name: 'view-congepermission',
+              component: () => import('@/views/modules/rha/view-congepermission.vue')
+            },
+            {
+              path: 'edit-congepermission',
+              name: 'edit-congepermission',
+              component: () => import('@/views/modules/rha/edit-congepermission.vue')
+            },
           ]
         }
       ]

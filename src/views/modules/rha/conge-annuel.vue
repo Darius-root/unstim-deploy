@@ -1,13 +1,18 @@
 
 <template>
+
+    <RouterLink @click.prevent="$router.back()" to=""
+    class="flex items-center mb- gap-2 p-2 mb-9 border rounded shadow text-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60">
+    <v-icon :name="icons.ChevronUp" class="-rotate-90" scale="1.1" />
+    <span class="text-sm font-medium"> Retour </span>
+  </RouterLink>
   <div class="mx-auto xl:container">
 
     <div class="flex py-2 border-b top-line">
-      <span class="text-base font-medium "> {{ data.title }}</span>
+      <span class="text-base font-medium "> {{ dataPage.title }}</span>
     </div>
 
-    <div class="flex  flex-wrap my-3  justify-center" v-if="data.buttons">
-
+    <div class="flex  flex-wrap my-3  justify-center" v-if="dataPage.buttons">
 
       <modalForm class="ml-1 mt-2" :title-btn="'Liste des types d\'absences'" :color-btn="'rgba(15, 199, 199, 0.726)'"
         :title-modal="'Liste des types d\'absences'" :icons="icons.CoPrint">
@@ -89,9 +94,9 @@
         <imput :label="'Choisissez le mois de départ '" :isRequired="true" :type="'date'" class="flex-grow" />
         <imput :label="'Choisissez le mois de fin '" :isRequired="true" :type="'date'" class="flex-grow" />
       </modalForm>
+   
 
-
-      <template v-for="(btn, item) in data.buttons">
+      <template v-for="(btn, item) in dataPage.buttons" :key="item">
         <RouterLink :style="{ backgroundColor: btn.color }" :to="btn.to"
           class="flex items-center gap-2 p-2 text-white rounded shadow hover:bg-opacity-60 mx-1 mt-2">
           <span class="text-sm font-medium"> {{ btn.title }}</span>
@@ -99,133 +104,12 @@
       </template>
 
     </div>
-    <div class="max-w-full p-5 mt-3 border row">
-      <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
-        class="text-white bg-slate-500 hover:bg-slate-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
-        type="button">Exporter <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-          fill="none" viewBox="0 0 10 6">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-        </svg>
-      </button>
+    
 
-      <!-- Dropdown menu -->
-      <div id="dropdownHover"
-        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
-          <li>
-            <a href="#"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-          </li>
-          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-              out</a>
-          </li>
-        </ul>
-      </div>
-
-
-      <div class="flex justify-end my-3 items-center space-x-2">
-        <span class="text-base font-medium">Filtrer:</span>
-        <input type="text" v-model="searchValue" class=" border-gray-300 rounded-md px-3 py-2">
-      </div>
-      <easy-data-table alternating border-cell :headers="data.headers" class="text-lg" theme-color="#2f9fff"
-        :items="data.items" buttons-pagination searchable :search-value="searchValue">
-
-        <template #header="header">
-      {{ header.text.toUpperCase() }}fefeufh
-    </template>
-
-    <!--     <template #customize-headers>
-
-          <thead class="text-sm">
-            <tr >
-              <th rowspan="2" class="text-center" 
-                colspan="1" 
->Nº</th>
-              <th rowspan="2" class="text-center">Matricule
-              </th>
-              <th >Nom &amp; Prénoms</th>
-              <th rowspan="2" >Département/Section/Agence</th>
-              <th colspan="3" class="text-center" rowspan="1">2020</th>
-              <th colspan="3" class="text-center" rowspan="1">2021</th>
-              <th colspan="3" class="text-center" rowspan="1">2022</th>
-              <th colspan="3" class="text-center" rowspan="1">2023</th>
-              <th rowspan="2"  style="width: 29px;">1ère date
-              </th>
-              <th rowspan="2" >2nde date
-              </th>
-              <th rowspan="2" >
-                Total global solde</th>
-            </tr>
-            <tr role="row">
-              <th class="text-center" >Total du</th>
-              <th >Joui</th>
-              <th>Reliquat</th>
-              <th >Total du</th>
-              <th >Joui</th>
-              <th >Reliquat</th>
-              <th >Total du</th>
-              <th >Joui</th>
-              <th >Reliquat</th>
-              <th >Total du</th>
-              <th >Joui</th>
-              <th >Reliquat</th>
-            </tr>
-          </thead>
-
-        </template> -->
+    <tabPointUser :datatable="dataTable"  />
 
 
 
-
-        <template #item-statut="">
-
-
-
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-green-600 text-white">
-            Accepté </span>
-
-        </template>
-        <template #item-action="action">gnjbjggbjg
-          <div class="flex gap-3 row justify-center items-center">
-
-            <RouterLink to="" v-if="data.action.update"
-              class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
-              <v-icon :name="icons.FormPWShowIcon" scale="1.0" />
-
-            </RouterLink>
-
-            <RouterLink v-if="data.action.edit" to=""
-              class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
-              <v-icon :name="icons.EditIcon" scale="1.0" />
-
-            </RouterLink>
-
-            <RouterLink to="" v-if="data.action.delete"
-              class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-red-600 hover:bg-red-400">
-              <v-icon :name="icons.DeleteIcon" scale="1.0" />
-
-            </RouterLink>
-          </div>
-
-        </template>
-      </easy-data-table>
-
-
-
-
-
-
-
-    </div>
 
 
 
@@ -237,15 +121,14 @@
 </template>
 
 <script lang="ts"  setup>
-import { reactive, ref } from 'vue';
+import {  reactive, ref } from 'vue';
 import { icons } from '@/assets/icons/oh-vue-icons'
-
+import tabPointUser from '@/components/tabs-rha/tab-point-user.vue'
 import imput from '@/components/inputs/unstim-text.vue'
 import selecteImput from '@/components/inputs/unstim-select.vue'
 import modalForm from '@/components/modals/modal-form.vue'
 
 
-const searchValue = ref("");
 
 const paramType = reactive({
   options: ['Congé annuel', 'congé spécial', 'Disponibilité', 'Permission', 'Permission réglémentaire', 'Récupération', 'Sanitare'],
@@ -281,69 +164,163 @@ const paramService = reactive(
 )
 
 
+const dataTable =[
+
+{matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }}
+,{matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }},{matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }},{matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }},{matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }},
+      {matricule: '152-55',
+      name: 'Darius',
+      departement: 'Akassato',
+      date1:'15/22/23',
+      date2:'25/32/23',
+      totalGlobal: '52',
+      anne1: {
+        total:'25/25',
+        joui:'25',
+        reliquat:'22'
+
+      },
+      anne2: {
+        total:'25/255/2',
+        joui:'25',
+        reliquat:'65',
+
+      },
+        anne3: {
+          total:'8/55',
+        joui:'65',
+        reliquat:'22/55',
+
+      }}
 
 
+]
 
 
-const data = ref({
+const dataPage = ref({
   title: 'Point des congés annuel',
 
-  headers: [{ text: 'Matricule', sortable: true, value: 'MA' },
-  { text: 'Nom', sortable: true, value: 'NO' },
-  { text: 'Prenom', sortable: true, value: 'PR' },
-  { text: 'Service', sortable: true, value: 'SE' },
-  { text: 'Type', sortable: true, value: 'TY' },
-  { text: 'Début', sortable: true, value: 'DE' },
-  { text: 'Reprendre le', sortable: true, value: 'RE' },
-  { text: 'Nombre de jour', sortable: true, value: 'NJ' },
-  { text: 'Statut', sortable: true, value: 'statut' },
-
-  { text: 'Actions', sortable: true, value: 'action' },],
-  items: [{
-    MA: '1566AJ-S',
-    NO: 'EKP',
-    PR: 'DARIUS',
-    SE: 'xx',
-    TY: 'xx',
-    DE: 'xx',
-    RE: 'xx',
-    NJ: '25',
-    statut: 'accepte',
-
-  }, {
-    MA: '1566AJ-S',
-    NO: 'EKP',
-    PR: 'DARIUS',
-    SE: 'xx',
-    TY: 'xx',
-    DE: 'xx',
-    RE: 'xx',
-    NJ: '25',
-    statut: 'termine',
-
-  }, {
-    MA: '1566AJ-S',
-    NO: 'EKP',
-    PR: 'DARIUS',
-    SE: 'xx',
-    TY: 'xx',
-    DE: 'xx',
-    RE: 'xx',
-    NJ: '25',
-    statut: 'encours',
-
-  },
-
-  ], action: {
-    edit: true,
-    update: true,
-    delete: true
-  },
+  
   buttons: [
-    { title: 'Point des congés Section/Département/Agence ', color: '#2b9eff', to: '' },
+    { title: 'Point des congés Section/Département/Agence ', color: '#2b9eff', to: 'conge-service' },
     { title: 'Calculer les congés dus de l\'annee en cours', color: '#2b9eff', to: '' },
     { title: 'Imprimer point simple ', color: 'rgb(255, 193, 7)', to: '' },
-    { title: '  Imprimer point  Détaillé ', color: 'rgb(255, 193, 7)', to: '' },
+    { title: '  Imprimer point  Détaillé ', color: 'rgb(255, 193, 7)', to: 'create-typeconge' },
 
   ],
 })
