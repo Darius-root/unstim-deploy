@@ -77,13 +77,13 @@ export const useNavigationStore = defineStore('navigation', () => {
         {
           title: 'Objectifs',
           icon: icons.HiSolidUserGroup,
-          to: 'personnel'
+          to: 'objectif-evaluation'
         },
 
         {
           title: 'Suivi des performances',
           icon: icons.HiSolidUserGroup,
-          to: 'personnel'
+          to: 'performance-evaluation'
         }
       ]
     },
@@ -109,7 +109,7 @@ export const useNavigationStore = defineStore('navigation', () => {
     {
       title: 'Congés et permission',
       icon: icons.FaUmbrellaBeach,
-      to: 'personnel'
+      to: 'conge-permission'
     },
 
     {

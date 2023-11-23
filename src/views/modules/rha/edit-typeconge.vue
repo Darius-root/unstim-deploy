@@ -1,21 +1,25 @@
 <template>
   <div class="mx-auto xl:container">
     <div class="flex py-2 border-b top-line">
-      <span class="text-base font-normal"> Créer une agence</span>
+      <span class="text-base font-normal">Modifier le type de congé / permission</span>
     </div>
 
     <div class="bg-white shadow-md rounded-lg mt-3 p-6">
       <form>
         <div class="grid grid-cols-2 gap-6">
-          <imput :label="'Nom de l\'agence'" :isRequired="true" class="flex-grow" />
-          <imput :label="'Abréviation'" :isRequired="true" class="flex-grow" />
+          <selecteImput :label="'Categorie'" :parameters="parameters" :isRequired="true" />
+          <imput :label="'Nom'" :isRequired="true" class="flex-grow" />
+
+          <imput :label="'Nombre du jour'" :isRequired="true" :type="'number'" class="flex-grow" />
+
           <selecteImput
-            :label="'Nom de la delégation'"
+            :label="'Déduction sur prime'"
             :parameters="parameters"
             :isRequired="true"
           />
+
           <selecteImput
-            :label="'Couberture (commune)'"
+            :label="'Déduction sur condés'"
             :parameters="parameters"
             :isRequired="true"
           />
@@ -33,15 +37,14 @@
 </template>
 
 <script setup lang="ts">
+import imput from '@/components/inputs/unstim-text.vue'
 import selecteImput from '@/components/inputs/unstim-select.vue'
+import { reactive } from 'vue'
 const parameters = reactive({
-  options: ['Darius', 'ZKP', 'JOHN Doe'],
+  options: ['Activer', 'Desactiver'],
   placeholder: '--Choississez un employe--',
   searchable: true
 })
-
-import imput from '@/components/inputs/unstim-text.vue'
-import { reactive } from 'vue'
 </script>
 
 <style scoped></style>

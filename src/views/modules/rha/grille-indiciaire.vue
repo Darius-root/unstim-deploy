@@ -420,7 +420,8 @@ const items = ref([
           :headers="headers"
           class="text-lg"
           theme-color="#2f9fff"
-          :items="items">
+          :items="items"
+        >
           <template #item-action="">
             <div class="flex gap-3">
               <RouterLink
@@ -444,7 +445,6 @@ const items = ref([
                 <v-icon :name="icons.DeleteIcon" scale="1.0" />
               </RouterLink>
             </div>
-
           </template>
         </easy-data-table>
       </div>

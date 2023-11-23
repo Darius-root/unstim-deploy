@@ -52,7 +52,9 @@ import {
   FaUserCircle,
   IoSettingsSharp,
   CoCalendar,
-  FaCalendarAlt
+  FaCalendarAlt,
+  CoPrint,
+  BiPaperclip
 } from 'oh-vue-icons/icons'
 
 addIcons(
@@ -108,7 +110,9 @@ addIcons(
   FaUserCircle,
   IoSettingsSharp,
   CoCalendar,
-  FaCalendarAlt
+  FaCalendarAlt,
+  CoPrint,
+  BiPaperclip
 )
 
 const icons = {
@@ -163,7 +167,9 @@ const icons = {
   FaUserCircle: 'fa-user-circle',
   IoSettingsSharp: 'io-settings-sharp',
   CoCalendar: 'co-calendar',
-  FaCalendarAlt: 'fa-calendar-alt'
+  FaCalendarAlt: 'fa-calendar-alt',
+  CoPrint: 'co-print',
+  BiPaperclip: 'bi-paperclip'
 }
 
 export { icons }

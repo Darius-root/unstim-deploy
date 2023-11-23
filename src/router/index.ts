@@ -306,8 +306,83 @@ const router = createRouter({
               component: () => import('@/views/modules/rha/list-indemnite.vue')
             },
 
-           
+            {
+              path: 'objectif-evaluation',
+              name: 'objectif-evaluation',
+              component: () => import('@/views/modules/rha/objectif-evaluation.vue')
+            },
 
+            {
+              path: 'create-objectif',
+              name: 'create-objectif',
+              component: () => import('@/views/modules/rha/create-objectif.vue')
+            },
+
+            {
+              path: 'performance-evaluation',
+              name: 'performance-evaluation',
+              component: () => import('@/views/modules/rha/performance-evaluation.vue')
+            },
+
+            {
+              path: 'create-performance',
+              name: 'create-performance',
+              component: () => import('@/views/modules/rha/create-performance.vue')
+            },
+
+            {
+              path: 'conge-permission',
+              name: 'conge-permission',
+              component: () => import('@/views/modules/rha/conge-permission.vue')
+            },
+            {
+              path: 'conge-annuel',
+              name: 'conge-annuel',
+              component: () => import('@/views/modules/rha/conge-annuel.vue')
+            },
+            {
+              path: 'conge-service',
+              name: 'conge-service',
+              component: () => import('@/views/modules/rha/conge-service.vue')
+            },
+            {
+              path: 'save-conge',
+              name: 'save-conge',
+              component: () => import('@/views/modules/rha/save-conge.vue')
+            },
+
+            {
+              path: 'type-conge',
+              name: 'type-conge',
+              component: () => import('@/views/modules/rha/type-conge.vue')
+            },
+            {
+              path: 'view-typeconge',
+              name: 'view-typeconge',
+              component: () => import('@/views/modules/rha/view-typeconge.vue')
+            },
+            {
+              path: 'edit-typeconge',
+              name: 'edit-typeconge',
+              component: () => import('@/views/modules/rha/edit-typeconge.vue')
+            },
+
+            {
+              path: 'end-conge',
+              name: 'end-conge',
+              component: () => import('@/views/modules/rha/end-conge.vue')
+            },
+
+            {
+              path: 'view-congepermission',
+              name: 'view-congepermission',
+              component: () => import('@/views/modules/rha/view-congepermission.vue')
+            },
+            {
+              path: 'edit-congepermission',
+              name: 'edit-congepermission',
+              component: () => import('@/views/modules/rha/edit-congepermission.vue')
+            }
           ]
         }
       ]

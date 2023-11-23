@@ -7,10 +7,9 @@ const headers = ref([
   { text: 'Compatibilite', sortable: true, value: 'comptabilite' },
   { text: 'Nom', sortable: true, value: 'nom' },
   { text: 'Rubrique', sortable: true, value: 'rubrique' },
-  { text: 'Type', sortable: true, value: 'type', },
-  { text: 'Statut', sortable: true, value: 'statut', },
-  { text: 'Mois', sortable: true, value: 'mois', },
-
+  { text: 'Type', sortable: true, value: 'type' },
+  { text: 'Statut', sortable: true, value: 'statut' },
+  { text: 'Mois', sortable: true, value: 'mois' }
 ])
 
 const items = ref([
@@ -25,7 +24,7 @@ const items = ref([
   },
   {
     comptabilite: '1234567890',
-    nom: 'Prime d\'attachement',
+    nom: "Prime d'attachement",
     rubrique: '344',
     type: 'Variable',
     statut: 'Non',
@@ -43,7 +42,6 @@ const items = ref([
     action: ''
   },
 
-
   {
     comptabilite: '1234567890',
     nom: 'Allocations Familiales',
@@ -54,17 +52,15 @@ const items = ref([
     action: ''
   },
 
-
   {
     comptabilite: '1234567890',
-    nom: 'Indemnité d\'Electricité',
+    nom: "Indemnité d'Electricité",
     rubrique: '344',
     type: 'Variable',
     statut: 'Non',
     mois: 'Tout les mois',
     action: ''
   },
-
 
   {
     comptabilite: '1234567890',
@@ -76,7 +72,6 @@ const items = ref([
     action: ''
   },
 
-
   {
     comptabilite: '1234567890',
     nom: 'Indemnité de Résidence',
@@ -86,7 +81,6 @@ const items = ref([
     mois: 'Tout les mois',
     action: ''
   },
-
 
   {
     comptabilite: '1234567890',
@@ -98,7 +92,6 @@ const items = ref([
     action: ''
   },
 
-
   {
     comptabilite: '1234567890',
     nom: 'Moins Perçu INDTE EAU',
@@ -107,8 +100,7 @@ const items = ref([
     statut: 'Non',
     mois: 'Tout les mois',
     action: ''
-  },
-
+  }
 ])
 </script>
 
@@ -119,14 +111,19 @@ const items = ref([
     </div>
 
     <div class="flex justify-between">
-      <RouterLink @click.prevent="$router.back()" to=""
-        class="flex items-center gap-2 p-2 mt-5 border rounded shadow text-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60">
+      <RouterLink
+        @click.prevent="$router.back()"
+        to=""
+        class="flex items-center gap-2 p-2 mt-5 border rounded shadow text-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60"
+      >
         <v-icon :name="icons.ChevronUp" class="-rotate-90" scale="1.1" />
         <span class="text-sm font-medium"> Retour </span>
       </RouterLink>
 
-      <RouterLink :to="{ name: 'create-role' }"
-        class="flex items-center gap-2 p-2 mt-5 bg-unstim-primary rounded shadow border-unstim-primary w-fit hover:bg-opacity-60">
+      <RouterLink
+        :to="{ name: 'create-role' }"
+        class="flex items-center gap-2 p-2 mt-5 bg-unstim-primary rounded shadow border-unstim-primary w-fit hover:bg-opacity-60"
+      >
         <v-icon :name="icons.PersonPlus" class="text-white" scale="1.1" />
         <span class="text-sm font-medium text-white"> Ajouter un gain </span>
       </RouterLink>
@@ -134,28 +131,39 @@ const items = ref([
 
     <div class="w-full mt-5 border border-gray-300 bg-unstim-light card">
       <div class="card-content">
-        <easy-data-table alternating border-cell :headers="headers" class="text-lg" theme-color="#2f9fff" :items="items"
-          buttons-pagination>
+        <easy-data-table
+          alternating
+          border-cell
+          :headers="headers"
+          class="text-lg"
+          theme-color="#2f9fff"
+          :items="items"
+          buttons-pagination
+        >
           <template #item-action="">
             <div class="flex gap-2">
-              <RouterLink :to="{ name: 'permissions-roles' }"
-                class="flex items-center gap-2 p-2 my-2 text-white rounded shadow w-fit bg-unstim-info hover:bg-unstim-primary">
+              <RouterLink
+                :to="{ name: 'permissions-roles' }"
+                class="flex items-center gap-2 p-2 my-2 text-white rounded shadow w-fit bg-unstim-info hover:bg-unstim-primary"
+              >
                 <v-icon :name="icons.FormPWShowIcon" scale="1.0" />
               </RouterLink>
 
-              <RouterLink :to="{ name: 'edit-role' }"
-                class="flex items-center gap-2 p-2 my-2 text-white bg-red-400 rounded shadow w-fit hover:bg-red-500">
+              <RouterLink
+                :to="{ name: 'edit-role' }"
+                class="flex items-center gap-2 p-2 my-2 text-white bg-red-400 rounded shadow w-fit hover:bg-red-500"
+              >
                 <v-icon :name="icons.EditIcon" scale="1.0" />
               </RouterLink>
 
-              <RouterLink to=""
-                class="flex items-center gap-2 p-2 my-2 text-white bg-black/75 rounded shadow w-fit hover:bg-black/75">
+              <RouterLink
+                to=""
+                class="flex items-center gap-2 p-2 my-2 text-white bg-black/75 rounded shadow w-fit hover:bg-black/75"
+              >
                 <v-icon :name="icons.DeleteIcon" scale="1.0" />
               </RouterLink>
             </div>
           </template>
-
-
         </easy-data-table>
       </div>
     </div>
