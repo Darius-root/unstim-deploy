@@ -45,7 +45,7 @@ const employeFormData = reactive({
 <template>
   <div class="mx-auto xl:container">
     <div class="flex py-2 border-b top-line">
-      <span class="text-base font-medium"> Enrégistrement des informations de l'employé </span>
+      <span class="text-lg font-medium"> Enrégistrement des informations de l'employé </span>
     </div>
 
     <RouterLink

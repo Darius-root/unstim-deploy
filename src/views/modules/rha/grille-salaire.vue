@@ -2,27 +2,47 @@
 import { icons } from '@/assets/icons/oh-vue-icons'
 import { ref } from 'vue'
 
-const headers = ref([{ text: 'Permissions', sortable: true, value: 'libelle_permission' }])
+const headers = ref([
+  { text: 'Mois', sortable: true, value: 'mois' },
+  { text: 'Statut', sortable: true, value: 'statut' },
+  { text: 'Actions', sortable: true, value: 'action', width: 350 }
+])
 
 const items = ref([
   {
-    libelle_permission: 'HOUNDJO M Stephen'
+    mois: 'Septembre 2023',
+    statut: 'Salaire cloturé',
+    action: ''
   },
 
   {
-    libelle_permission: 'BIAOU Hamidou'
+    mois: 'Octobre 2023',
+    statut: 'Salaire non cloturé',
+    action: ''
   },
 
   {
-    libelle_permission: 'TOSSOU Valentin'
+    mois: 'Juin 2023',
+    statut: 'Salaire non cloturé',
+    action: ''
   },
 
   {
-    libelle_permission: 'CODJIA Orens Eudie'
+    mois: 'Mai 2023',
+    statut: 'Salaire cloturé',
+    action: ''
   },
 
   {
-    libelle_permission: "D'ALMEIDA Mensen Gilberte"
+    mois: 'Avril 2023',
+    statut: 'Salaire non cloturé',
+    action: ''
+  },
+
+  {
+    mois: 'Décembre 2022',
+    statut: 'Salaire cloturé',
+    action: ''
   }
 ])
 </script>
@@ -30,7 +50,7 @@ const items = ref([
 <template>
   <div class="mx-auto xl:container">
     <div class="flex py-2 border-b top-line">
-      <span class="text-lg font-medium"> Permissions du rôle : Super Admin </span>
+      <span class="text-lg font-medium"> Voir les salaires du mois de : </span>
     </div>
 
     <div class="flex justify-between">
@@ -44,19 +64,15 @@ const items = ref([
       </RouterLink>
 
       <RouterLink
-        :to="{ name: 'edit-role' }"
+        :to="{ name: 'create-role' }"
         class="flex items-center gap-2 p-2 mt-5 bg-unstim-primary rounded shadow border-unstim-primary w-fit hover:bg-opacity-60"
       >
         <v-icon :name="icons.PersonPlus" class="text-white" scale="1.1" />
-        <span class="text-sm font-medium text-white"> Modifier le role </span>
+        <span class="text-sm font-medium text-white"> Générer le salaire du mois </span>
       </RouterLink>
     </div>
 
     <div class="w-full mt-5 border border-gray-300 bg-unstim-light card">
-      <div class="flex items-center gap-3 px-4 py-3 card-header">
-        <!-- <span class="">Exporter</span> -->
-      </div>
-
       <div class="card-content">
         <easy-data-table
           alternating
@@ -70,17 +86,31 @@ const items = ref([
           <template #item-action="">
             <div class="flex gap-3">
               <RouterLink
-                :to="{ name: 'edit-user' }"
+                :to="{ name: 'permissions-roles' }"
                 class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary"
               >
-                <v-icon :name="icons.EditIcon" scale="1.0" />
+                <v-icon :name="icons.FormPWShowIcon" scale="0.9" />
+                <span>Cloturer</span>
               </RouterLink>
 
               <RouterLink
-                to=""
-                class="flex items-center gap-2 p-2 my-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500"
+                :to="{ name: 'edit-role' }"
+                class="flex items-center gap-2 py-0 my-2.5 px-2.5 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500"
               >
-                <v-icon :name="icons.DeleteIcon" scale="1.0" />
+                <v-icon :name="icons.DeleteIcon" scale="0.9" />
+                <span class="">Supprimer le salaire</span>
+              </RouterLink>
+            </div>
+          </template>
+
+          <template #item-mois="item">
+            <div class="flex gap-3">
+              <RouterLink
+                :to="{ name: 'permissions-roles' }"
+                class="flex items-center gap-2 py-1.5 px-2.5 text-white rounded w-fit hover:bg-unstim-info bg-unstim-primary"
+              >
+                <!-- <v-icon :name="icons.FormPWShowIcon" scale="0.9" /> -->
+                <span> {{ item.mois }} </span>
               </RouterLink>
             </div>
           </template>

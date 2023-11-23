@@ -22,12 +22,42 @@ export const useNavigationStore = defineStore('navigation', () => {
       to: '/gestions-paies-2',
       underMenu: [
         {
-          title: 'sous menu 1',
+          title: 'Grille indicaire',
+          icon: icons.HiSolidUserGroup,
+          to: 'salary-scales'
+        },
+
+        {
+          title: 'Voir les salaires',
+          icon: icons.HiSolidUserGroup,
+          to: 'mouth-salary'
+        },
+
+        {
+          title: 'Gains',
+          icon: icons.HiSolidUserGroup,
+          to: 'allowance'
+        },
+
+        {
+          title: 'Retenues',
+          icon: icons.HiSolidUserGroup,
+          to: 'personnel'
+        },
+
+        {
+          title: 'Rappels',
           icon: icons.HiSolidUserGroup,
           to: 'personnel'
         },
         {
-          title: 'sous menu 2',
+          title: 'Prets',
+          icon: icons.HiSolidUserGroup,
+          to: 'personnel'
+        },
+
+        {
+          title: 'IDR',
           icon: icons.HiSolidUserGroup,
           to: 'personnel'
         }
@@ -85,7 +115,7 @@ export const useNavigationStore = defineStore('navigation', () => {
     {
       title: 'Sanctions',
       icon: icons.FaUserClock,
-      to: 'personnel'
+      to: 'sanctions'
     },
 
     {
@@ -96,12 +126,12 @@ export const useNavigationStore = defineStore('navigation', () => {
         {
           title: 'Utilisateurs',
           icon: icons.HiSolidUserGroup,
-          to: 'personnel'
+          to: 'users'
         },
         {
           title: 'Roles',
           icon: icons.HiSolidUserGroup,
-          to: 'personnel'
+          to: 'roles'
         }
       ]
     },
@@ -114,90 +144,101 @@ export const useNavigationStore = defineStore('navigation', () => {
           title: 'Diplomes',
           icon: icons.HiSolidUserGroup,
           to: 'config',
-          params:{id:'diplomes'}
-          
+          params: { id: 'diplomes' }
         },
         {
           title: 'Type de pret',
           icon: icons.HiSolidUserGroup,
           to: 'config',
-          params:{id:'typeprets'}
-
+          params: { id: 'typeprets' }
         },
 
         {
           title: 'Distinctions',
           icon: icons.HiSolidUserGroup,
           to: 'config',
-          params:{id:'distinction'},},
+          params: { id: 'distinction' }
+        },
 
         {
           title: 'Directions',
           icon: icons.HiSolidUserGroup,
           to: 'config',
-          params:{id:'direction'},},
+          params: { id: 'direction' }
+        },
         {
           title: 'Départements',
           icon: icons.HiSolidUserGroup,
           to: 'config',
-          params:{id:'departement'},},
+          params: { id: 'departement' }
+        },
         {
           title: 'Délégations',
           icon: icons.HiSolidUserGroup,
           to: 'config',
-          params:{id:'delegation'},},
+          params: { id: 'delegation' }
+        },
         {
           title: 'Sections',
           icon: icons.HiSolidUserGroup,
           to: 'config',
-          params:{id:'section'},},
+          params: { id: 'section' }
+        },
         {
           title: 'Agences',
           icon: icons.HiSolidUserGroup,
           to: 'config',
-          params:{id:'agence'},},
+          params: { id: 'agence' }
+        },
 
         {
           title: 'Type de postes',
           icon: icons.HiSolidUserGroup,
           to: 'config',
-          params:{id:'typeposte'},},
+          params: { id: 'typeposte' }
+        },
 
         {
           title: 'Fiches de postes',
           icon: icons.HiSolidUserGroup,
           to: 'config',
-          params:{id:'ficheposte'},},
+          params: { id: 'ficheposte' }
+        },
 
         {
           title: "Catégorie d'agents",
           icon: icons.HiSolidUserGroup,
           to: 'config',
-          params:{id:'categorieagent'},},
+          params: { id: 'categorieagent' }
+        },
 
         {
           title: 'Type de congés/Permis.',
           icon: icons.HiSolidUserGroup,
           to: 'config',
-          params:{id:'typeconge'},},
+          params: { id: 'typeconge' }
+        },
 
         {
           title: 'Type de cessat. serv.',
           icon: icons.HiSolidUserGroup,
           to: 'config',
-          params:{id:'typecessation'},},
+          params: { id: 'typecessation' }
+        },
 
         {
           title: 'Banque',
           icon: icons.HiSolidUserGroup,
           to: 'config',
-          params:{id:'banque'},},
+          params: { id: 'banque' }
+        },
 
         {
           title: 'Autres paramètres',
           icon: icons.HiSolidUserGroup,
-          to: 'config', 
-          params:{id:'autreparam'},}  
+          to: 'config',
+          params: { id: 'autreparam' }
+        }
       ]
     }
   ])

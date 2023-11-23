@@ -115,12 +115,79 @@ const router = createRouter({
               name: 'infos-employee',
               component: () => import('@/views/modules/rha/infos-employee.vue')
             },
- 
+
+            {
+              path: 'users',
+              name: 'users',
+              component: () => import('@/views/modules/rha/list-users.vue')
+            },
+
+            {
+              path: 'create-user',
+              name: 'create-user',
+              component: () => import('@/views/modules/rha/create-user.vue')
+            },
+
+            {
+              path: 'edit-user',
+              name: 'edit-user',
+              component: () => import('@/views/modules/rha/edit-user.vue')
+            },
+
+            {
+              path: 'roles',
+              name: 'roles',
+              component: () => import('@/views/modules/rha/list-roles.vue')
+            },
+
+            {
+              path: 'create-role',
+              name: 'create-role',
+              component: () => import('@/views/modules/rha/create-role.vue')
+            },
+
+            {
+              path: 'edit-role',
+              name: 'edit-role',
+              component: () => import('@/views/modules/rha/edit-role.vue')
+            },
+
+            {
+              path: 'permissions-roles',
+              name: 'permissions-roles',
+              component: () => import('@/views/modules/rha/permissions-role.vue')
+            },
+
+            {
+              path: 'sanctions',
+              name: 'sanctions',
+              component: () => import('@/views/modules/rha/list-sanctions.vue')
+            },
+
+            {
+              path: 'create-sanction',
+              name: 'create-sanction',
+              component: () => import('@/views/modules/rha/create-sanction.vue')
+            },
+
+            {
+              path: 'types-sanctions',
+              name: 'types-sanctions',
+              component: () => import('@/views/modules/rha/type-sanction.vue')
+            },
+
+            {
+              path: 'create-type-sanction',
+              name: 'create-type-sanction',
+              component: () => import('@/views/modules/rha/create-type-sanction.vue')
+            },
+
             {
               path: 'config/:id',
               name: 'config',
               component: () => import('@/views/modules/rha/config-page.vue')
             },
+
             {
               path: 'plan-formation',
               name: 'plan-formation',
@@ -141,13 +208,13 @@ const router = createRouter({
               name: 'create-typepret',
               component: () => import('@/views/modules/rha/create-typepret.vue')
             },
-            
+
             {
               path: 'config/create-distinction',
               name: 'create-distinction',
               component: () => import('@/views/modules/rha/create-distinction.vue')
             },
-            
+
             {
               path: 'config/create-direction',
               name: 'create-direction',
@@ -158,13 +225,13 @@ const router = createRouter({
               name: 'create-departement',
               component: () => import('@/views/modules/rha/create-departement.vue')
             },
-            
+
             {
               path: 'config/create-delegation',
               name: 'create-delegation',
               component: () => import('@/views/modules/rha/create-delegation.vue')
             },
-            
+
             {
               path: 'config/create-section',
               name: 'create-section',
@@ -197,61 +264,73 @@ const router = createRouter({
               path: 'config/create-banque',
               name: 'create-banque',
               component: () => import('@/views/modules/rha/create-banque.vue')
-            }, 
-      
+            },
 
             {
               path: 'config/create-typecessation',
               name: 'create-typecessation',
               component: () => import('@/views/modules/rha/create-typecessation.vue')
-            }, 
-            
-            
+            },
+
             {
               path: 'create-formation',
               name: 'create-formation',
               component: () => import('@/views/modules/rha/create-formation.vue')
             },
-            
+
             {
               path: 'evaluation',
               name: 'evaluation',
               component: () => import('@/views/modules/rha/rha-evaluation.vue')
-            
             },
             {
-              path:'create-evaluation',
+              path: 'create-evaluation',
               name: 'create-evaluation',
               component: () => import('@/views/modules/rha/create-evaluation.vue')
             },
+
+            {
+              path: 'salary-scales',
+              name: 'salary-scales',
+              component: () => import('@/views/modules/rha/grille-indiciaire.vue')
+            },
+
+            {
+              path: 'mouth-salary',
+              name: 'mouth-salary',
+              component: () => import('@/views/modules/rha/grille-salaire.vue')
+            },
+
+            {
+              path: 'allowance',
+              name: 'allowance',
+              component: () => import('@/views/modules/rha/list-indemnite.vue')
+            },
+
             {
               path: 'objectif-evaluation',
-              name: 'objectif-evaluation',  
+              name: 'objectif-evaluation',
               component: () => import('@/views/modules/rha/objectif-evaluation.vue')
-              
             },
 
             {
-              path:'create-objectif',
+              path: 'create-objectif',
               name: 'create-objectif',
               component: () => import('@/views/modules/rha/create-objectif.vue')
-              
-            },
-            
-            {
-              path: 'performance-evaluation',
-              name: 'performance-evaluation',  
-              component: () => import('@/views/modules/rha/performance-evaluation.vue')
-              
             },
 
             {
-              path:'create-performance',
+              path: 'performance-evaluation',
+              name: 'performance-evaluation',
+              component: () => import('@/views/modules/rha/performance-evaluation.vue')
+            },
+
+            {
+              path: 'create-performance',
               name: 'create-performance',
               component: () => import('@/views/modules/rha/create-performance.vue')
-              
             },
-            
+
             {
               path: 'conge-permission',
               name: 'conge-permission',
@@ -282,7 +361,8 @@ const router = createRouter({
               path: 'view-typeconge',
               name: 'view-typeconge',
               component: () => import('@/views/modules/rha/view-typeconge.vue')
-            },   {
+            },
+            {
               path: 'edit-typeconge',
               name: 'edit-typeconge',
               component: () => import('@/views/modules/rha/edit-typeconge.vue')
@@ -303,8 +383,7 @@ const router = createRouter({
               path: 'edit-congepermission',
               name: 'edit-congepermission',
               component: () => import('@/views/modules/rha/edit-congepermission.vue')
-            },
-           
+            }
           ]
         }
       ]

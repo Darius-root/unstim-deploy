@@ -117,9 +117,9 @@ const items = ref([
     </div>
 
     <div class="w-full mt-5 border border-gray-300 bg-unstim-light card">
-      <div class="flex items-center gap-3 px-4 py-3 card-header">
+      <!-- <div class="flex items-center gap-3 px-4 py-3 card-header">
         <span class=""> </span>
-      </div>
+      </div> -->
 
       <div class="card-content">
         <easy-data-table

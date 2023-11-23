@@ -25,7 +25,7 @@ const items = ref([
 <template>
   <div class="mx-auto xl:container">
     <div class="flex py-2 border-b top-line">
-      <span class="text-base font-medium">
+      <span class="text-lg font-medium">
         Modifications de l'echelon et du nombre d'enfant des agents
       </span>
     </div>

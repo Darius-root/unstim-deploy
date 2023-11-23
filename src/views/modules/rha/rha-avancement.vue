@@ -79,7 +79,7 @@ const items = ref([
 <template>
   <div class="mx-auto xl:container">
     <div class="flex py-2 border-b top-line">
-      <span class="text-base font-medium"> Avancements de l'année 2024 </span>
+      <span class="text-lg font-medium"> Avancements de l'année 2024 </span>
     </div>
 
     <div class="flex gap-3">

@@ -79,7 +79,7 @@ const items = ref([
 <template>
   <div class="mx-auto xl:container">
     <div class="flex py-2 border-b top-line">
-      <span class="text-base font-medium"> Liste des déductions </span>
+      <span class="text-lg font-medium"> Liste des déductions </span>
     </div>
 
     <div class="flex justify-between">

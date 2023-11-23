@@ -54,7 +54,7 @@ import {
   CoCalendar,
   FaCalendarAlt,
   CoPrint,
-  BiPaperclip,
+  BiPaperclip
 } from 'oh-vue-icons/icons'
 
 addIcons(
@@ -113,7 +113,6 @@ addIcons(
   FaCalendarAlt,
   CoPrint,
   BiPaperclip
-
 )
 
 const icons = {

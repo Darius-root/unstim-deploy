@@ -19,7 +19,7 @@ const modules = useModuleStore().modules
         <span class="text-xl font-extrabold text-white lg:text-2xl">SIG UNSTIM</span>
       </RouterLink>
 
-      <div class="flex-1 h-0.5 hidden lg:block bg-white divider"></div>
+      <div class="flex-1 h-[1px] hidden lg:block bg-white divider"></div>
 
       <div class="flex items-center gap-2 ends">
         <span class="hidden font-semibold text-white lg:block">
@@ -41,13 +41,13 @@ const modules = useModuleStore().modules
       </div>
     </div>
 
-    <div class="flex bg-white relative items-center h-[42px] justify-center w-full">
+    <div class="flex bg-white space-x-12 relative items-center h-[42px] justify-center w-full">
       <div class="hidden h-full lg:block group" v-for="(module, item) in modules" :key="item">
         <button
           class="flex items-center h-full px-3 py-1 bg-white rounded-sm outline-none focus:outline-none min-w-32"
         >
           <span class="flex-1 pr-1 font-semibold">{{ module.label }}</span>
-          <span>
+          <span v-if="module.submenus">
             <svg
               class="w-4 h-4 transition duration-150 ease-in-out transform fill-current group-hover:-rotate-180"
               xmlns="http://www.w3.org/2000/svg"
