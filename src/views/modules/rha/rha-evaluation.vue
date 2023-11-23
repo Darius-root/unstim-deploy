@@ -1,28 +1,12 @@
 <template>
-  <TemplatePagesConfig
-    :headers="data.headers"
-    :action="data.action"
-    :items="data.items"
-    :title="data.title"
-    :button="data.buttons"
-  />
+  <TemplatePagesConfig :headers="data.headers" :action="data.action" :items="data.items" :title="data.title"
+    :button="data.buttons" />
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import TemplatePagesConfig from '@/components/templatePagesTab.vue'
 
-import {
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogOverlay,
-  AlertDialogPortal,
-  AlertDialogRoot,
-  AlertDialogTitle,
-  AlertDialogTrigger
-} from 'radix-vue'
 
 const data = ref({
   title: "Liste des années d'évaluations",
@@ -45,7 +29,7 @@ const data = ref({
     update: true,
     delete: true
   },
-  buttons: [{ title: 'Ajouter une évaluation', color: '#2b9eff', to: 'create-evalution' }]
+  buttons: [{ title: 'Ajouter une évaluation', color: '#2b9eff', to: 'create-evaluation' }]
 })
 </script>
 

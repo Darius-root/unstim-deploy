@@ -187,6 +187,7 @@ const router = createRouter({
               name: 'config',
               component: () => import('@/views/modules/rha/config-page.vue')
             },
+
             {
               path: 'plan-formation',
               name: 'plan-formation',
