@@ -52,8 +52,8 @@ const router = createRouter({
         // ROUTES CONCERNANT LE MODULE RHA (RESSOURCE HUMAINE ET ADMINISTRATION)
 
         {
-          path: '/module-rha',
-          name: 'module-rha',
+          path: '/module_rha',
+          name: 'module_rha',
           meta: { requireAuth: true },
           redirect: { name: 'tableauBord' },
           children: [
@@ -385,7 +385,24 @@ const router = createRouter({
               component: () => import('@/views/modules/rha/edit-congepermission.vue')
             }
           ]
-        }
+        },
+
+
+ // ROUTES CONCERNANT LE MODULE GF-SUIVI-EVELUATION 
+
+ {
+  path: '/module-suivi-evaluation',
+  name: 'module-suivi-evaluation',
+  meta: { requireAuth: true },
+  redirect: { name: 'no' },
+  children: [
+    {
+      path: 'no',
+      name: 'no',
+      component: () => import('@/views/modules/gf/suivi-evaluation/test.vue')
+    },]}
+
+        
       ]
     }
   ]

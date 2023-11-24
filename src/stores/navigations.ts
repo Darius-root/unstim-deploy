@@ -3,7 +3,9 @@ import { defineStore } from 'pinia'
 import { icons } from '@/assets/icons/oh-vue-icons'
 
 export const useNavigationStore = defineStore('navigation', () => {
-  const navigations = reactive([
+  const navigations = reactive(
+{
+  module_rha:[
     {
       title: 'Tableau de bord',
       icon: icons.TachometerIcon,
@@ -241,7 +243,34 @@ export const useNavigationStore = defineStore('navigation', () => {
         }
       ]
     }
-  ])
+  ],
+  Gf:[
+    
+
+    {
+      title: 'Gestion utilisateurs',
+      icon: icons.FaUserCircle,
+      to: 'personnel',
+      underMenu: [
+        {
+          title: 'Utilisateurs',
+          icon: icons.HiSolidUserGroup,
+          to: 'users'
+        },
+        {
+          title: 'Roles',
+          icon: icons.HiSolidUserGroup,
+          to: 'roles'
+        }
+      ]
+    },
+  
+  ],
+
+},
+
+    
+  )
 
   return {
     navigations

@@ -24,18 +24,18 @@ export const useModuleStore = defineStore('module', () => {
     },
     {
       id: 2,
-      short: 'module-rha',
+      short: 'module-gf',
       label: 'Gestion Financière',
       submenus: [
         {
           title: 'Comptabilté',
           icon: icons.HiSolidUserGroup,
-          to: 'tableauBord'
+          to: 'module-suivi-evaluation'
         },
         {
           title: 'Suivi-Evaluation',
           icon: icons.HiSolidUserGroup,
-          to: 'tableauBord'
+          to: 'module-suivi-evaluation'
         },
         {
           title: 'Trésoreie',
