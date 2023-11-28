@@ -127,7 +127,7 @@
           <table class="table mt-3 w-full">
             <tbody>
               <tr class="h-12">
-                <th class="py-2 text-left border-b">Nom &amp; Prénoms:</th>
+                <th class="py-2 text-left font-medium border-b">Nom &amp; Prénoms:</th>
                 <td class="border-b">
                   Cliquez ici pour aller sur la page de l'agent ==>
 
@@ -139,23 +139,23 @@
                 </td>
               </tr>
               <tr>
-                <th class="py-2 text-left border-b">Date d'entrée :</th>
+                <th class="py-2 text-left font-medium border-b">Date d'entrée :</th>
                 <td class="border-b"></td>
               </tr>
               <tr>
-                <th class="py-2 text-left border-b">Ancienneté (en années) :</th>
+                <th class="py-2 text-left font-medium border-b">Ancienneté (en années) :</th>
                 <td class="border-b">10</td>
               </tr>
               <tr>
-                <th class="py-2 text-left border-b">Date de naissance :</th>
+                <th class="py-2 text-left font-medium border-b">Date de naissance :</th>
                 <td class="border-b">09 mars 1981</td>
               </tr>
               <tr>
-                <th class="py-2 text-left border-b">Date de retraite :</th>
+                <th class="py-2 text-left font-medium border-b">Date de retraite :</th>
                 <td class="border-b">10 mars 2041</td>
               </tr>
               <tr>
-                <th class="py-2 text-left border-b">Type de contrat :</th>
+                <th class="py-2 text-left font-medium border-b">Type de contrat :</th>
                 <td class="border-b">cdi</td>
               </tr>
             </tbody>

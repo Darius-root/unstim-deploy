@@ -77,40 +77,6 @@ const modules = useModuleStore().modules
               <span class="text-sm"> {{ item.title }} </span>
             </RouterLink>
           </li>
-
-          <!-- <li class="relative px-3 py-1 rounded-sm hover:bg-gray-100">
-            <button class="flex items-center w-full text-left outline-none focus:outline-none">
-              <span class="flex-1 pr-1">Langauges</span>
-              <span class="mr-auto">
-                <svg class="w-4 h-4 transition duration-150 ease-in-out fill-current" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20">
-                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                </svg>
-              </span>
-            </button>
-            <ul
-              class="absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left bg-white border rounded-sm min-w-32 ">
-              <li class="px-3 py-1 hover:bg-gray-100">Javascript</li>
-              <li class="relative px-3 py-1 rounded-sm hover:bg-gray-100">
-                <button class="flex items-center w-full text-left outline-none focus:outline-none">
-                  <span class="flex-1 pr-1">Python</span>
-                  <span class="mr-auto">
-                    <svg class="w-4 h-4 transition duration-150 ease-in-out fill-current"
-                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                    </svg>
-                  </span>
-                </button>
-                <ul
-                  class="absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left bg-white border rounded-sm min-w-32 ">
-                  <li class="px-3 py-1 hover:bg-gray-100">2.7</li>
-                  <li class="px-3 py-1 hover:bg-gray-100">3+</li>
-                </ul>
-              </li>
-              <li class="px-3 py-1 hover:bg-gray-100">Go</li>
-              <li class="px-3 py-1 hover:bg-gray-100">Rust</li>
-            </ul>
-          </li> -->
         </ul>
       </div>
     </div>

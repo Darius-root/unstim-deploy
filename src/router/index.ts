@@ -52,8 +52,8 @@ const router = createRouter({
         // ROUTES CONCERNANT LE MODULE RHA (RESSOURCE HUMAINE ET ADMINISTRATION)
 
         {
-          path: '/module-rha',
-          name: 'module-rha',
+          path: '/module_rha',
+          name: 'module_rha',
           meta: { requireAuth: true },
           redirect: { name: 'tableauBord' },
           children: [
@@ -384,6 +384,219 @@ const router = createRouter({
               name: 'edit-congepermission',
               component: () => import('@/views/modules/rha/edit-congepermission.vue')
             }
+          ]
+        },
+
+        // ROUTES CONCERNANT LE MODULE finance-SUIVI-EVELUATION
+
+        {
+          path: '/module_finance_suivi_evaluation',
+          name: 'module_finance_suivi_evaluation',
+          meta: { requireAuth: true },
+          redirect: { name: 'plan-strategique' },
+          children: [
+            {
+              path: '/plan-strategique',
+              name: 'plan-strategique',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/plan-strategique.vue')
+            },
+            {
+              path: '/plan-strategique-create',
+              name: 'plan-strategique-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/plan-strategique-create.vue')
+            },
+            {
+              path: '/plan-strategique-edit',
+              name: 'plan-strategique-edit',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/plan-strategique-edit.vue')
+            },
+            {
+              path: '/plan-strategique-view',
+              name: 'plan-strategique-view',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/plan-strategique-view.vue')
+            },
+            {
+              path: '/element-analytique-create',
+              name: 'element-analytique-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/element-analytique-create.vue')
+            },
+            {
+              path: '/element-analytique-update',
+              name: 'element-analytique-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/element-analytique-update.vue')
+            },
+
+            {
+              path: '/element-analytique-view',
+              name: 'element-analytique-view',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/element-analytique-view.vue')
+            },
+
+            {
+              path: '/plan-sectoriel',
+              name: 'plan-sectoriel',
+              component: () => import('@/views/modules/finance/suivi-evaluation/plan-sectoriel.vue')
+            },
+            {
+              path: '/plan-sectoriel-create',
+              name: 'plan-sectoriel-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/plan-sectoriel-create.vue')
+            },
+
+            {
+              path: '/plan-sectoriel-view',
+              name: 'plan-sectoriel-view',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/plan-sectoriel-view.vue')
+            },
+            {
+              path: '/plan-sectoriel-edit',
+              name: 'plan-sectoriel-edit',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/plan-sectoriel-edit.vue')
+            },
+            {
+              path: '/plan-sectoriel-join',
+              name: 'plan-sectoriel-join',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/plan-sectoriel-join.vue')
+            },
+
+            {
+              path: '/niveau-analytique',
+              name: 'niveau-analytique',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/niveau-analytique.vue')
+            },
+            {
+              path: '/niveau-analytique-create',
+              name: 'niveau-analytique-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/niveau-analytique-create.vue')
+            },
+            {
+              path: '/niveau-analytique-view',
+              name: 'niveau-analytique-view',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/niveau-analytique-view.vue')
+            },
+
+            {
+              path: '/source-financement',
+              name: 'source-financement',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/source-financement.vue')
+            },
+            {
+              path: '/source-financement-create',
+              name: 'source-financement-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/source-financement-create.vue')
+            },
+
+            {
+              path: '/source-financement-update',
+              name: 'source-financement-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/source-financement-update.vue')
+            },
+
+            {
+              path: '/bailleur-create',
+              name: 'bailleur-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/bailleur-create.vue')
+            },
+            {
+              path: '/bailleur',
+              name: 'bailleur',
+              component: () => import('@/views/modules/finance/suivi-evaluation/bailleur.vue')
+            },
+            {
+              path: '/bailleur-update',
+              name: 'bailleur-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/bailleur-update.vue')
+            },
+
+            {
+              path: '/mode-financement-create',
+              name: 'mode-financement-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/mode-financement-create.vue')
+            },
+
+            {
+              path: '/mode-financement-update',
+              name: 'mode-financement-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/mode-financement-update.vue')
+            }
+
+            ,
+
+            {
+              path: '/mode-financement-update',
+              name: 'mode-financement-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/mode-financement-update.vue')
+            }
+,
+
+
+            {
+              path: '/unite-mesure',
+              name: 'unite-mesure',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/unite-mesure.vue')
+            },
+            {
+              path: '/unite-mesure-create',
+              name: 'unite-mesure-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/unite-mesure-create.vue')
+            },
+
+            {
+              path: '/unite-mesure-update',
+              name: 'unite-mesure-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/unite-mesure-update.vue')
+            },
+            {
+              path: '/directions-services',
+              name: 'directions-services',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/directions-services.vue')
+            },
+
+            {
+              path: '/directions-view',
+              name: 'directions-view',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/directions-view.vue')
+            },
+            {
+              path: '/directions-create',
+              name: 'directions-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/directions-create.vue')
+            },
+            {
+              path: '/directions-update',
+              name: 'directions-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/directions-update.vue')
+            },
+
           ]
         }
       ]

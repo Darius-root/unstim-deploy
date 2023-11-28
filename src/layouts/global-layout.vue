@@ -20,7 +20,10 @@ const noSidebarRoute = reactive(['home'])
         v-if="!noSidebarRoute.includes($route.name as string)"
         class="fixed w-[280px] top-0 bottom-0 pt-28 z-10 shadow-xl hidden xl:block bg-unstim-info unstim-sidebar"
       >
-        <DashboardSidebar :navigations="navItems" />
+        <!--    Le nom de la clé doit correspondre à la route parent
+ -->
+
+        <DashboardSidebar :navigations="navItems[$router.currentRoute.value.matched[1]?.name]" />
       </div>
 
       <main

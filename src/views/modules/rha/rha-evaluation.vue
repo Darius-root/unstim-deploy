@@ -1,12 +1,16 @@
 <template>
-  <TemplatePagesConfig :headers="data.headers" :action="data.action" :items="data.items" :title="data.title"
-    :button="data.buttons" />
+  <TemplatePagesConfig
+    :headers="data.headers"
+    :action="data.action"
+    :items="data.items"
+    :title="data.title"
+    :button="data.buttons"
+  />
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import TemplatePagesConfig from '@/components/templatePagesTab.vue'
-
 
 const data = ref({
   title: "Liste des années d'évaluations",
