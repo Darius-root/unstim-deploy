@@ -69,7 +69,7 @@
 
     <div class="flex justify-end my-3 items-center space-x-2">
       <span class="text-base font-medium">Filtrer:</span>
-      <input type="text" v-model="search" class="border-gray-300 rounded-md " />
+      <input type="text" v-model="search" class="border-gray-300 rounded-md" />
     </div>
 
     <el-table

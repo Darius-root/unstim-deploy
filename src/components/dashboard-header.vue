@@ -77,7 +77,7 @@ const modules = useModuleStore().modules
               <span class="text-sm"> {{ item.title }} </span>
             </RouterLink>
           </li>
- </ul>
+        </ul>
       </div>
     </div>
   </header>

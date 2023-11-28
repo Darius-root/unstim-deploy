@@ -7,9 +7,6 @@ import { reactive } from 'vue'
 const navItems = useNavigationStore().navigations
 
 const noSidebarRoute = reactive(['home'])
-
-
-
 </script>
 
 <template>
@@ -23,13 +20,16 @@ const noSidebarRoute = reactive(['home'])
         v-if="!noSidebarRoute.includes($route.name as string)"
         class="fixed w-[280px] top-0 bottom-0 pt-28 z-10 shadow-xl hidden xl:block bg-unstim-info unstim-sidebar"
       >
-        <DashboardSidebar :navigations="navItems.module_rha" />
+        <!--    Le nom de la clé doit correspondre à la route parent
+ -->
+
+        <DashboardSidebar :navigations="navItems[$router.currentRoute.value.matched[1]?.name]" />
       </div>
 
       <main
         :class="{ 'xl:ml-[280px]': !noSidebarRoute.includes($route.name as string) }"
         class="flex-1 px-4 py-5 unstim-main"
-      >{{$router.currentRoute.value.matched[1].name}}
+      >
         <RouterView v-slot="{ Component }">
           <template v-if="Component">
             <Transition appear name="fade" mode="out-in">
