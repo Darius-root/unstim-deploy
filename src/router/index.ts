@@ -597,6 +597,110 @@ const router = createRouter({
                 import('@/views/modules/finance/suivi-evaluation/directions-update.vue')
             },
 
+
+            {
+              path: '/pta',
+              name: 'pta',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-finance.vue')
+            },
+
+            {
+              path: '/pta-view',
+              name: 'pta-view',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-view.vue')
+            },
+            {
+              path: '/pta-create',
+              name: 'pta-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-create.vue')
+            },
+            {
+              path: '/pta-view',
+              name: 'pta-view',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-view.vue')
+            },
+
+
+{
+  path: '/pta-version-create',
+  name: 'pta-version-create',
+  component: () =>
+    import('@/views/modules/finance/suivi-evaluation/pta-version-create.vue')
+},
+
+            {
+              path: '/pta-activite-create',
+              name: 'pta-activite-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-activite-create.vue')
+            },
+            {
+              path: '/pta-activite-update',
+              name: 'pta-activite-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-activite-update.vue')
+            },
+
+            {
+              path: '/pta-activite-view',
+              name: 'pta-activite-view',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-activite-view.vue')
+            },
+            {
+              path: '/pta-execution-financiere-create',
+              name: 'pta-execution-financiere-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-execution-financiere-create.vue')
+            }, 
+            {
+              path: '/pta-execution-financiere-update',
+              name: 'pta-execution-financiere-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-execution-financiere-update.vue')
+            },
+
+            {
+              path: '/pta-tache-create',
+              name: 'pta-tache-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-tache-create.vue')
+            },
+            {
+              path: '/pta-tache-view',
+              name: 'pta-tache-view',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-tache-view.vue')
+            },
+            
+            {
+              path: '/pta-tache-update',
+              name: 'pta-tache-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-tache-update.vue')
+            },
+
+            {
+              path: '/pta-rapport',
+              name: 'pta-rapport',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-rapport.vue')
+            },
+
+
+            {
+              path: '/indicateur-abssa',
+              name: 'indicateur-abssa',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/indicateur-abssa.vue')
+            },
+
+
+
           ]
         }
       ]

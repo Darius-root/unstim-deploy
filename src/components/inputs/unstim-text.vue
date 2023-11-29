@@ -7,6 +7,10 @@ const props = defineProps({
   type: {
     type: String,
     default: 'text'
+  },
+  status: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -37,7 +41,8 @@ onMounted(() => {})
       class="form-unstim"
       rows="6"
     ></textarea>
-    <input v-else :type="props.type" v-model="modelVariable" class="form-unstim" />
+    <input v-else :type="props.type" v-model="modelVariable" :disabled="props.status" class="form-unstim"
+    :class="{'bg-gray-100': props.status}"  />
   </div>
 </template>
 

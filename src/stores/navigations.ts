@@ -246,7 +246,7 @@ export const useNavigationStore = defineStore('navigation', () => {
     module_finance_suivi_evaluation: [
       {
         title: 'Parametrage',
-        icon: icons.FaUserCircle,
+        icon: icons.MenuFold,
         to: 'personnel',
         underMenu: [
           {
@@ -282,7 +282,50 @@ export const useNavigationStore = defineStore('navigation', () => {
             to: 'unite-mesure'
           }
         ]
+      },
+      {
+        title: 'PTA',
+        icon: icons.MenuFold,
+        to: 'pta',
+        underMenu: [
+          {
+            title: 'PTA',
+            icon: icons.EditIcon,
+            to: 'pta'         },
+          {
+            title: 'Rapport PTA',
+            icon: icons.SortAscIcon,
+            to: 'pta-rapport'
+          },
+        
+        ]
       }
+,
+
+{
+  title: 'Indicateurs',
+  icon: icons.MenuFold,
+  to: 'pta',
+  underMenu: [
+    {
+      title: 'Indicateurs ABSSA',
+      icon: icons.HiSolidUserGroup,
+      to: 'indicateur-abssa'
+    },
+  
+    {
+      title: 'Indicateurs Sensoriels',
+      icon: icons.HiSolidUserGroup,
+      to: 'plan-strategique'
+    },
+    {
+      title: 'Rapport indicateurs ',
+      icon: icons.HiSolidUserGroup,
+      to: 'plan-strategique'
+    },
+  ]
+}
+      
     ]
   })
 
