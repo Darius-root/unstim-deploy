@@ -457,12 +457,7 @@ const router = createRouter({
               component: () =>
                 import('@/views/modules/finance/suivi-evaluation/plan-sectoriel-view.vue')
             },
-            {
-              path: '/plan-sectoriel-edit',
-              name: 'plan-sectoriel-edit',
-              component: () =>
-                import('@/views/modules/finance/suivi-evaluation/plan-sectoriel-edit.vue')
-            },
+           
             {
               path: '/plan-sectoriel-join',
               name: 'plan-sectoriel-join',
