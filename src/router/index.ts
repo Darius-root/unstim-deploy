@@ -699,8 +699,70 @@ const router = createRouter({
                 import('@/views/modules/finance/suivi-evaluation/indicateur-abssa.vue')
             },
 
+            {
+              path: '/indicateur-abssa-create',
+              name: 'indicateur-abssa-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/indicateur-abssa-create.vue')
+            },
+            {
+              path: '/indicateur-abssa-update',
+              name: 'indicateur-abssa-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/indicateur-abssa-update.vue')
+            },
+
+            {
+              path: '/indicateur-abssa-view',
+              name: 'indicateur-abssa-view',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/indicateur-abssa-view.vue')
+            },
 
 
+
+
+
+            {
+              path: '/cadre-resultat-create',
+              name: 'cadre-resultat-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/cadre-resultat-create.vue')
+            },
+            {
+              path: '/cadre-resultat-update',
+              name: 'cadre-resultat-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/cadre-resultat-update.vue')
+            },
+
+            {
+              path: '/cadre-resultat-view',
+              name: 'cadre-resultat-view',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/cadre-resultat-view.vue')
+            },
+
+            {
+              path: '/operandes-multiple-create',
+              name: 'operandes-multiple-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/operandes-multiple-create.vue')
+            },
+            {
+              path: '/operandes-multiple-follow',
+              name: 'operandes-multiple-follow',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/operandes-multiple-follow.vue')
+            },
+
+            {
+              path: '/rapport-indicateur',
+              name: 'rapport-indicateur',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/rapport-indicateur.vue')
+            },
+            
           ]
         }
       ]

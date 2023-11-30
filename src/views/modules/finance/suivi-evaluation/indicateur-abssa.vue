@@ -33,17 +33,11 @@
           searchable
           :search-value="searchValue"
         >
-          <template #item-statut="">
-            <span
-              class="inline-flex items-center  rounded-md text-xs font-medium bg-orange-600 text-white"
-            >
-              En cours de validation
-            </span>
-          </template>
+          
           <template #item-action="">
             <div class="flex gap-3 row justify-center items-center">
               <RouterLink
-                to="pta-view"
+                to="cadre-resultat-view"
                 v-if="data.action.update"
                 class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-green-600 hover:opacity-50"
               >
@@ -80,17 +74,19 @@
   
 
   const data = ref({
-    title: 'Plan de Travail Annuel',
+    title: 'Cadre de resultat',
   
     headers: [
-      { text: 'id', sortable: true, value: 'MA' },
-      { text: 'Annee', sortable: true, value: 'NO' },
-      { text: 'Numéro de version', sortable: true, value: 'PR' },
-      { text: 'Version précédante', sortable: true, value: 'SE' },
-      { text: 'version revisitée', sortable: true, value: 'TY' },
-      { text: 'Observation', sortable: true, value: 'ob' },
-      { text: 'Statut', sortable: true, value: 'statut' },
-  
+      { text: 'N°', sortable: true, value: 'MA' },
+      { text: 'code', sortable: true, value: 'NO' },
+      { text: 'Libellé', sortable: true, value: 'PR' },
+      { text: 'Type', sortable: true, value: 'SE' },
+      { text: 'Periodicité', sortable: true, value: 'TY' },
+      { text: 'Responsable', sortable: true, value: 'ob' },
+
+      { text: 'Elément Analytique', sortable: true, value: 'statut' },
+      { text: 'Description', sortable: true, value: 'DE' },
+
       { text: 'Actions', sortable: true, value: 'action' }
     ],
     items: [
@@ -101,19 +97,11 @@
         SE: 'xxxx',
         TY: 'xxxx',
         ob: 'xxxx',
+       'DE': 'xxxx',
 
-        statut: 'Activer'
+        statut: 'xxxx',
       },
-      {
-        MA: '1',
-        NO: 'xxxx',
-        PR: 'xxxx',
-        SE: 'xxxx',
-        TY: 'xxxx',
-        ob: 'xxxx',
-
-        statut: 'Activer'
-      },
+     
     ],
     action: {
       edit: true,
@@ -121,7 +109,7 @@
       delete: true
     },
     buttons: [
-      { title: 'Ajouter un PTA ', color: '#2b9eff', to: 'pta-create' }
+      { title: 'Ajouter un cadre de résultat ', color: '#2b9eff', to: 'cadre-resultat-create' }
     ]
   })
   </script>

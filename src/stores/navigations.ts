@@ -321,7 +321,7 @@ export const useNavigationStore = defineStore('navigation', () => {
     {
       title: 'Rapport indicateurs ',
       icon: icons.HiSolidUserGroup,
-      to: 'plan-strategique'
+      to: 'rapport-indicateur'
     },
   ]
 }
