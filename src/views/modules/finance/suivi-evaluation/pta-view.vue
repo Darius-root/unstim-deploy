@@ -142,7 +142,7 @@ x        </PopoverClose>
 
                     <span class="text-sm font-medium"> Supprimer</span>
                 </RouterLink>
-                <RouterLink to=""
+                <RouterLink to="pta-update"
                     class="flex items-center gap-2 p-2 text-white bg-yellow-600 rounded shadow hover:bg-opacity-60 mx-1">
                     <v-icon :name="icons.EditIcon" scale="1.1" />
 
@@ -150,7 +150,7 @@ x        </PopoverClose>
                 </RouterLink>
 
 
-                <RouterLink to=""
+                <RouterLink to="pta-validate"
                     class="flex items-center gap-2 p-2 text-white bg-green-600 rounded shadow hover:bg-opacity-60 mx-1">
                     <v-icon :name="icons.EditIcon" scale="1.1" />
 

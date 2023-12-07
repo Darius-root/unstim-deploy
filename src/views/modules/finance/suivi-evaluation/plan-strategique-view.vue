@@ -56,7 +56,7 @@
 
     <div class="flex space-x-8 m-6">
       <RouterLink
-        to=""
+        to="plan-strategique-update"
         class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-green-600 hover:opacity-50"
       >
         <v-icon :name="icons.EditIcon" scale="1.0" /> Modifier
@@ -80,7 +80,7 @@
     >
       <v-icon :name="icons.AddIcon" scale="1.1" />
 
-      <span class="text-sm font-medium"> Ajouter un plan stratégique</span>
+      <span class="text-sm font-medium"> Ajouter un élement analityque</span>
     </RouterLink>
   </div>
 

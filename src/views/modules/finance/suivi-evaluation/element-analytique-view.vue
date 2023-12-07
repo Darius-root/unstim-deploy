@@ -35,7 +35,7 @@
 
     <div class="flex space-x-8 m-6">
       <RouterLink
-        to=""
+        to="element-analytique-update"
         class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-green-600 hover:opacity-50"
       >
         <v-icon :name="icons.EditIcon" scale="1.0" /> Modifier
@@ -57,7 +57,7 @@
     >
       <v-icon :name="icons.AddIcon" scale="1.1" />
 
-      <span class="text-sm font-medium"> Sous Elements Analytiques</span>
+      <span class="text-sm font-medium">Ajouter un sous Elements Analytiques</span>
     </RouterLink>
   </div>
 
@@ -88,7 +88,7 @@
           </RouterLink>
 
           <RouterLink
-            to="element-analytique-create"
+            to="element-analytique-update"
             v-if="data.action.edit"
             class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-yellow-600 hover:opacity-50"
           >

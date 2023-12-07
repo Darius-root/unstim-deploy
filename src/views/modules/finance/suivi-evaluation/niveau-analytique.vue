@@ -44,7 +44,7 @@
             </RouterLink>
 
             <RouterLink
-              to="niveau-analytique-create"
+              to="niveau-analytique-update"
               v-if="data.action.edit"
               class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-yellow-600 hover:opacity-50"
             >

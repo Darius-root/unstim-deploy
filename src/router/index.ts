@@ -408,10 +408,10 @@ const router = createRouter({
                 import('@/views/modules/finance/suivi-evaluation/plan-strategique-create.vue')
             },
             {
-              path: '/plan-strategique-edit',
-              name: 'plan-strategique-edit',
+              path: '/plan-strategique-update',
+              name: 'plan-strategique-update',
               component: () =>
-                import('@/views/modules/finance/suivi-evaluation/plan-strategique-edit.vue')
+                import('@/views/modules/finance/suivi-evaluation/plan-strategique-update.vue')
             },
             {
               path: '/plan-strategique-view',
@@ -450,7 +450,12 @@ const router = createRouter({
               component: () =>
                 import('@/views/modules/finance/suivi-evaluation/plan-sectoriel-create.vue')
             },
-
+            {
+              path: '/plan-sectoriel-update',
+              name: 'plan-sectoriel-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/plan-sectoriel-update.vue')
+            },
             {
               path: '/plan-sectoriel-view',
               name: 'plan-sectoriel-view',
@@ -477,6 +482,13 @@ const router = createRouter({
               component: () =>
                 import('@/views/modules/finance/suivi-evaluation/niveau-analytique-create.vue')
             },
+            {
+              path: '/niveau-analytique-update',
+              name: 'niveau-analytique-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/niveau-analytique-update.vue')
+            },
+            
             {
               path: '/niveau-analytique-view',
               name: 'niveau-analytique-view',
@@ -513,7 +525,7 @@ const router = createRouter({
             {
               path: '/bailleur',
               name: 'bailleur',
-              component: () => import('@/views/modules/finance/suivi-evaluation/bailleur.vue')
+              component: () => import('@/views/modules/finance/suivi-evaluation/bailleur-liste.vue')
             },
             {
               path: '/bailleur-update',
@@ -612,13 +624,25 @@ const router = createRouter({
               component: () =>
                 import('@/views/modules/finance/suivi-evaluation/pta-create.vue')
             },
+
+            {
+              path: '/pta-update',
+              name: 'pta-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-update.vue')
+            },
             {
               path: '/pta-view',
               name: 'pta-view',
               component: () =>
                 import('@/views/modules/finance/suivi-evaluation/pta-view.vue')
             },
-
+            {
+              path: '/pta-validate',
+              name: 'pta-validate',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/pta-validate.vue')
+            },
 
 {
   path: '/pta-version-create',
