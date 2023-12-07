@@ -3,10 +3,29 @@ import DashboardHeader from '@/components/dashboard-header.vue'
 import DashboardSidebar from '@/components/dashboard-sidebar.vue'
 import { useNavigationStore } from '@/stores/navigations'
 import { reactive } from 'vue'
+import { useRoute } from 'vue-router';
 
 const navItems = useNavigationStore().navigations
 
 const noSidebarRoute = reactive(['home'])
+
+
+
+
+
+const route = useRoute();
+
+
+    const getNavigationMenu = () => {
+      const matchedRoute = route.matched[1]?.name;
+
+      if (matchedRoute === 'module_rha') {
+        return navItems.module_rha;
+      } else if (matchedRoute === 'module_finance_suivi_evaluation') {
+        return navItems.module_finance_suivi_evaluation;
+      }
+    };
+console.log(getNavigationMenu());
 </script>
 
 <template>
@@ -23,10 +42,9 @@ const noSidebarRoute = reactive(['home'])
         <!--    Le nom de la clé doit correspondre à la route parent
  -->
 
-        <DashboardSidebar :navigations="navItems[$router.currentRoute.value.matched[1]?.name]" />
+        <DashboardSidebar :navigations="getNavigationMenu()" />
       </div>
-
-      <main
+        <main
         :class="{ 'xl:ml-[280px]': !noSidebarRoute.includes($route.name as string) }"
         class="flex-1 px-4 py-5 unstim-main"
       >
@@ -60,3 +78,5 @@ const noSidebarRoute = reactive(['home'])
   transform: translateY(0);
 }
 </style>
+
+
