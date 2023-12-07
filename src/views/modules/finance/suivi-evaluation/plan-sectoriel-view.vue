@@ -21,23 +21,11 @@
       </RouterLink>
     </div>
     <div class="max-w-full p-5 mt-5 border row">
-      <RouterLink
-        to=""
-        class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-red-500 hover:opacity-50"
-      >
-        Désactiver
-      </RouterLink>
+    
 
       <table class="table mt-3 w-full">
         <tbody>
-          <tr class="h-12">
-            <th class="py-2 text-left font-medium border-b">Statut</th>
-            <td class="border-b">
-              <span class="text-white p-1 bg-green-600 text-base font-semibold rounded-md">
-                Activer
-              </span>
-            </td>
-          </tr>
+         
           <tr>
             <th class="py-2 text-left font-medium border-b">ID :</th>
             <td class="border-b">1</td>
@@ -64,7 +52,7 @@
 
     <div class="flex space-x-8 m-6">
       <RouterLink
-        to=""
+        to="plan-sectoriel-update"
         class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-green-600 hover:opacity-50"
       >
         <v-icon :name="icons.EditIcon" scale="1.0" /> Modifier
@@ -86,7 +74,7 @@
     >
       <v-icon :name="icons.AddIcon" scale="1.1" />
 
-      <span class="text-sm font-medium"> Ajouter un plan sectoriel</span>
+      <span class="text-sm font-medium"> Ajouter un élément analytique</span>
     </RouterLink>
   </div>
 
@@ -103,7 +91,7 @@
             <div class="flex justify-between py-1">
               <div class="flex min-w-0 gap-x-0">
                 <v-icon
-                  :name="icons.ChevronDown"
+                  :name="icons.AddIcon"
                   class="text-gray-600 mr-2 AccordionChevron"
                   aria-hidden
                   scale="1.0"
@@ -117,28 +105,24 @@
                 <div class="flex gap-1 row justify-center items-center">
                   <RouterLink
                     to="element-analytique-view"
-                    class="flex items-center gap-10 p-1 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:opacity-50"
-                  >
+                    class="flex items-center gap-10 p-1 my-2"                  >
                     <v-icon :name="icons.FormPWShowIcon" scale="0.8" />
                   </RouterLink>
 
                   <RouterLink
                     to="element-analytique-create"
-                    class="flex items-center gap-10 p-1 my-2 text-white rounded shadow-md w-fit bg-green-600 hover:opacity-50"
-                  >
-                    <v-icon :name="icons.AddIcon" scale="0.8" />
+                    class="flex items-center gap-10 p-1 my-2"                  >
+                    <v-icon :name="icons.AddIcon" scale="0.8" class="text-green-600" />
                   </RouterLink>
                   <RouterLink
                     to="element-analytique-update"
-                    class="flex items-center gap-10 p-1 my-2 text-white rounded shadow-md w-fit bg-yellow-600 hover:opacity-50"
-                  >
-                    <v-icon :name="icons.EditIcon" scale="0.8" />
+                    class="flex items-center gap-10 p-1 my-2"                  >
+                    <v-icon :name="icons.EditIcon" scale="0.8" class="text-yellow-600" />
                   </RouterLink>
                   <RouterLink
                     to=""
-                    class="flex items-center gap-10 p-1 my-2 text-white rounded shadow-md w-fit bg-red-600 hover:opacity-50"
-                  >
-                    <v-icon :name="icons.DeleteIcon" scale="0.8" />
+                    class="flex items-center gap-10 p-1 my-2"                  >
+                    <v-icon :name="icons.DeleteIcon" scale="0.8" class="text-red-600" />
                   </RouterLink>
                 </div>
               </div>
@@ -153,30 +137,26 @@
             <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end mx-9">
               <div class="flex gap-1 row justify-center items-center">
                 <RouterLink
-                  to="element-analytique-view"
-                  class="flex items-center gap-10 p-1 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:opacity-50"
-                >
-                  <v-icon :name="icons.FormPWShowIcon" scale="0.8" />
-                </RouterLink>
+                    to="element-analytique-view"
+                    class="flex items-center gap-10 p-1 my-2"                  >
+                    <v-icon :name="icons.FormPWShowIcon" scale="0.8" />
+                  </RouterLink>
 
-                <RouterLink
-                  to="element-analytique-create"
-                  class="flex items-center gap-10 p-1 my-2 text-white rounded shadow-md w-fit bg-green-600 hover:opacity-50"
-                >
-                  <v-icon :name="icons.AddIcon" scale="0.8" />
-                </RouterLink>
-                <RouterLink
-                  to="element-analytique-update"
-                  class="flex items-center gap-10 p-1 my-2 text-white rounded shadow-md w-fit bg-yellow-600 hover:opacity-50"
-                >
-                  <v-icon :name="icons.EditIcon" scale="0.8" />
-                </RouterLink>
-                <RouterLink
-                  to=""
-                  class="flex items-center gap-10 p-1 my-2 text-white rounded shadow-md w-fit bg-red-600 hover:opacity-50"
-                >
-                  <v-icon :name="icons.DeleteIcon" scale="0.8" />
-                </RouterLink>
+                  <RouterLink
+                    to="element-analytique-create"
+                    class="flex items-center gap-10 p-1 my-2"                  >
+                    <v-icon :name="icons.AddIcon" scale="0.8" class="text-green-600" />
+                  </RouterLink>
+                  <RouterLink
+                    to="element-analytique-update"
+                    class="flex items-center gap-10 p-1 my-2"                  >
+                    <v-icon :name="icons.EditIcon" scale="0.8" class="text-yellow-600" />
+                  </RouterLink>
+                  <RouterLink
+                    to=""
+                    class="flex items-center gap-10 p-1 my-2"                  >
+                    <v-icon :name="icons.DeleteIcon" scale="0.8" class="text-red-600" />
+                  </RouterLink>
               </div>
             </div>
           </div>

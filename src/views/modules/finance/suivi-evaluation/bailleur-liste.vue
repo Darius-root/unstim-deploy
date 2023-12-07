@@ -77,7 +77,7 @@ const parameters = reactive({
   searchable: true
 })
 const data = ref({
-  title: 'Niveau analytique',
+  title: 'Bailleurs',
 
   headers: [
     { text: 'N°', sortable: true, value: 'MA' },

@@ -8,19 +8,9 @@
       <v-icon :name="icons.ChevronUp" class="-rotate-90" scale="1.1" />
       <span class="text-sm font-medium"> Retour </span>
     </RouterLink>
-    <div class="flex justify-end my-3">
-      <RouterLink
-        to="bailleur"
-        class="flex items-center gap-2 p-2 bg-unstim-info text-white rounded shadow hover:bg-opacity-60 mx-1"
-      >
-        <v-icon :name="icons.FormPWShowIcon" scale="1.1" />
-
-        <span class="text-sm font-medium"> Listes bailleurs</span>
-      </RouterLink>
-    </div>
-
+    
     <div class="flex py-2 border-b top-line">
-      <span class="text-base font-normal">Ajout un mode de financement</span>
+      <span class="text-base font-normal">Ajout d'un mode de financement</span>
     </div>
 
     <div class="bg-white shadow-md rounded-lg mt-3 p-6">

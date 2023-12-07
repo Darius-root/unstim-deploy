@@ -52,7 +52,7 @@
   
               <RouterLink
                 v-if="data.action.edit"
-                to="plan-strategique-edit"
+                to="pta-update"
                 class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-yellow-600 hover:opacity-50"
               >
                 <v-icon :name="icons.EditIcon" scale="1.0" />

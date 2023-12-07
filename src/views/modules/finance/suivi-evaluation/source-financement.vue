@@ -196,7 +196,7 @@ const datamode = ref({
     delete: true
   },
   buttons: [
-    { title: ' Modes de financement ', color: '#2b9eff', to: 'Ajouter niveau-analytique-create' }
+    { title: 'Ajouter un mode de financement ', color: '#2b9eff', to: 'mode-financement-create' }
   ]
 })
 </script>
