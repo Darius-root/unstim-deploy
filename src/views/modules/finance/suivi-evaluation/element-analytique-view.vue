@@ -10,7 +10,7 @@
   <div class="mx-auto xl:container">
     <div class="flex py-2 border-b top-line">
       <span class="text-base font-medium">
-        Element Analytique xxx (code: xxx) du Plan Strategique xxx (code: xxx)</span
+        Element Analytique xxx (code: xxx) du Plan {{ id.toString() }} xxx (code: xxx)</span
       >
     </div>
 
@@ -35,7 +35,7 @@
 
     <div class="flex space-x-8 m-6">
       <RouterLink
-        to="element-analytique-update"
+      :to="`/element-analytique-update/${id}`"
         class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-green-600 hover:opacity-50"
       >
         <v-icon :name="icons.EditIcon" scale="1.0" /> Modifier
@@ -52,7 +52,7 @@
 
   <div class="flex justify-end my-3">
     <RouterLink
-      to="element-analytique-create"
+    :to="`/element-analytique-create/${id}`"
       class="flex items-center gap-2 p-2 bg-unstim-primary text-white rounded shadow hover:bg-opacity-60 mx-1"
     >
       <v-icon :name="icons.AddIcon" scale="1.1" />
@@ -80,7 +80,7 @@
       <template #item-action="">
         <div class="flex gap-3 row justify-center items-center">
           <RouterLink
-            to="element-analytique-view"
+          :to="`/element-analytique-view/${id}`"
             v-if="data.action.update"
             class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-green-600 hover:opacity-50"
           >
@@ -88,7 +88,7 @@
           </RouterLink>
 
           <RouterLink
-            to="element-analytique-update"
+          :to="`/element-analytique-update/${id}`"
             v-if="data.action.edit"
             class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-yellow-600 hover:opacity-50"
           >
@@ -109,8 +109,12 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, watch } from 'vue'
+import { ref, } from 'vue'
 import { icons } from '@/assets/icons/oh-vue-icons'
+
+import { useRoute,  } from 'vue-router';
+const route = useRoute()
+const id =route.params.id
 
 const searchValue = ref('')
 

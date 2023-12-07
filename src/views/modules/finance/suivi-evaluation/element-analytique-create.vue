@@ -10,7 +10,7 @@
     </RouterLink>
     <div class="flex py-2 border-b top-line">
       <span class="text-base font-normal"
-        >Ajout d'un Element Analytique au Plan Strategique xxxxxx</span
+        >Ajout d'un Element Analytique au Plan {{ id.toString()}} xxxxxx</span
       >
     </div>
 
@@ -42,11 +42,18 @@ import { icons } from '@/assets/icons/oh-vue-icons'
 
 import imput from '@/components/inputs/unstim-text.vue'
 import { reactive } from 'vue'
+import { useRoute,  } from 'vue-router';
+const route = useRoute()
+
 const parameters = reactive({
   options: ['Darius', 'ZKP', 'JOHN Doe'],
   placeholder: '--Choississez un employe--',
   searchable: true
 })
+
+const id =route.params.id
+
+console.log(id)
 </script>
 
 <style scoped></style>

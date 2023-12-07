@@ -420,20 +420,20 @@ const router = createRouter({
                 import('@/views/modules/finance/suivi-evaluation/plan-strategique-view.vue')
             },
             {
-              path: '/element-analytique-create',
+              path: '/element-analytique-create/:id',
               name: 'element-analytique-create',
               component: () =>
                 import('@/views/modules/finance/suivi-evaluation/element-analytique-create.vue')
             },
             {
-              path: '/element-analytique-update',
+              path: '/element-analytique-update/:id',
               name: 'element-analytique-update',
               component: () =>
                 import('@/views/modules/finance/suivi-evaluation/element-analytique-update.vue')
             },
 
             {
-              path: '/element-analytique-view',
+              path: '/element-analytique-view/:id',
               name: 'element-analytique-view',
               component: () =>
                 import('@/views/modules/finance/suivi-evaluation/element-analytique-view.vue')

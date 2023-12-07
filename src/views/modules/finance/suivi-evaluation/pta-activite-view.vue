@@ -183,7 +183,7 @@
                                     class="flex items-center gap-2 p-2 bg-green-600 text-white rounded shadow hover:bg-opacity-60 mx-1">
                                     <v-icon :name="icons.AddIcon" scale="1.1" />
 
-                                    <span class="text-sm font-medium"> Ajouter </span>
+                                    <span class="text-sm font-medium"> Ajouter  </span>
                                 </RouterLink>
                             </div>
 
@@ -241,7 +241,7 @@
                                     class="flex items-center gap-2 p-2 bg-green-600 text-white rounded shadow hover:bg-opacity-60 mx-1">
                                     <v-icon :name="icons.AddIcon" scale="1.1" />
 
-                                    <span class="text-sm font-medium"> Ajouter </span>
+                                    <span class="text-sm font-medium"> Ajouter une tâche</span>
                                 </RouterLink>
                             </div>
                             <div class="flex justify-end my-3 items-center space-x-2">

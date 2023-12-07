@@ -75,12 +75,12 @@
 
   <div class="flex justify-end my-3 mb-9">
     <RouterLink
-      to="element-analytique-create"
+      to="element-analytique-create/strategique"
       class="flex items-center gap-2 p-2 bg-unstim-primary text-white rounded shadow hover:bg-opacity-60 mx-1"
     >
       <v-icon :name="icons.AddIcon" scale="1.1" />
 
-      <span class="text-sm font-medium"> Ajouter un élement analityque</span>
+      <span class="text-sm font-medium"> Ajouter un élement analytique</span>
     </RouterLink>
   </div>
 
@@ -110,18 +110,18 @@
               <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end mx-9">
                 <div class="flex gap-1 row justify-center items-center">
                   <RouterLink
-                    to="element-analytique-view"
+                    to="element-analytique-view/strategique"
                     class="flex items-center gap-10 p-1 my-2"                  >
                     <v-icon :name="icons.FormPWShowIcon" scale="0.8" />
                   </RouterLink>
 
                   <RouterLink
-                    to="element-analytique-create"
+                    to="element-analytique-create/strategique"
                     class="flex items-center gap-10 p-1 my-2"                  >
                     <v-icon :name="icons.AddIcon" scale="0.8" class="text-green-600" />
                   </RouterLink>
                   <RouterLink
-                    to="element-analytique-update"
+                    to="element-analytique-update/strategique"
                     class="flex items-center gap-10 p-1 my-2"                  >
                     <v-icon :name="icons.EditIcon" scale="0.8" class="text-yellow-600" />
                   </RouterLink>
@@ -143,18 +143,18 @@
             <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end mx-9">
               <div class="flex gap-1 row justify-center items-center">
                 <RouterLink
-                    to="element-analytique-view"
+                    to="element-analytique-view/strategique"
                     class="flex items-center gap-10 p-1 my-2"                  >
                     <v-icon :name="icons.FormPWShowIcon" scale="0.8" />
                   </RouterLink>
 
                   <RouterLink
-                    to="element-analytique-create"
+                    to="element-analytique-create/strategique"
                     class="flex items-center gap-10 p-1 my-2"                  >
                     <v-icon :name="icons.AddIcon" scale="0.8" class="text-green-600" />
                   </RouterLink>
                   <RouterLink
-                    to="element-analytique-update"
+                    to="element-analytique-update/strategique"
                     class="flex items-center gap-10 p-1 my-2"                  >
                     <v-icon :name="icons.EditIcon" scale="0.8" class="text-yellow-600" />
                   </RouterLink>
