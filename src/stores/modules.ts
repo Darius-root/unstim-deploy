@@ -11,13 +11,13 @@ export const useModuleStore = defineStore('module', () => {
       submenus: [
         {
           title: 'Ressource Humaine',
-          icon: icons.HiSolidUserGroup,
+          icon: icons.FaUsers,
           to: 'tableauBord'
         },
 
         {
           title: 'Courriers Administratif',
-          icon: icons.HiSolidUserGroup,
+          icon: icons.FaEnvelope,
           to: 'tableauBord'
         }
       ]
@@ -29,17 +29,17 @@ export const useModuleStore = defineStore('module', () => {
       submenus: [
         {
           title: 'Comptabilté',
-          icon: icons.HiSolidUserGroup,
+          icon: icons.FaCalculator,
           to: ''
         },
         {
           title: 'Suivi-Evaluation',
-          icon: icons.HiSolidUserGroup,
+          icon: icons.FaRegularChartBar,
           to: 'module_finance_suivi_evaluation'
         },
         {
           title: 'Trésoreie',
-          icon: icons.HiSolidUserGroup,
+          icon: icons.FaMoneyBillWave,
           to: 'tableauBord'
         }
       ]
@@ -52,22 +52,22 @@ export const useModuleStore = defineStore('module', () => {
       submenus: [
         {
           title: 'Projet de Recherche',
-          icon: icons.HiSolidUserGroup,
+          icon: icons.FaFlask,
           to: 'tableauBord'
         },
         {
           title: 'Carrières des Enseignants',
-          icon: icons.HiSolidUserGroup,
+          icon: icons.FaChalkboardTeacher,
           to: 'tableauBord'
         },
         {
           title: 'Publication des Travaux',
-          icon: icons.HiSolidUserGroup,
+          icon: icons.FaNewspaper,
           to: 'tableauBord'
         },
         {
           title: 'colloques',
-          icon: icons.HiSolidUserGroup,
+          icon: icons.FaComments,
           to: 'tableauBord'
         }
       ]

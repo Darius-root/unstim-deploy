@@ -24,42 +24,42 @@ export const useNavigationStore = defineStore('navigation', () => {
         underMenu: [
           {
             title: 'Grille indicaire',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.HiTable,
             to: 'salary-scales'
           },
 
           {
             title: 'Voir les salaires',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaMoneyBill,
             to: 'mouth-salary'
           },
 
           {
             title: 'Gains',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaDollarSign,
             to: 'allowance'
           },
 
           {
             title: 'Retenues',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaMinusCircle,
             to: 'personnel'
           },
 
           {
             title: 'Rappels',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaBell,
             to: 'personnel'
           },
           {
             title: 'Prets',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaMoneyCheck,
             to: 'personnel'
           },
 
           {
             title: 'IDR',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaBed,
             to: 'personnel'
           }
         ]
@@ -72,18 +72,18 @@ export const useNavigationStore = defineStore('navigation', () => {
         underMenu: [
           {
             title: 'Evaluations',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaChartBar,
             to: 'evaluation'
           },
           {
             title: 'Objectifs',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaBullseye,
             to: 'objectif-evaluation'
           },
 
           {
             title: 'Suivi des performances',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaChartLine,
             to: 'performance-evaluation'
           }
         ]
@@ -96,12 +96,12 @@ export const useNavigationStore = defineStore('navigation', () => {
         underMenu: [
           {
             title: 'Plan de formation',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaBook,
             to: 'plan-formation'
           },
           {
             title: 'Formations',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaUserGraduate,
             to: 'syste-formation'
           }
         ]
@@ -115,7 +115,7 @@ export const useNavigationStore = defineStore('navigation', () => {
 
       {
         title: 'Sanctions',
-        icon: icons.FaUserClock,
+        icon: icons.FaExclamationTriangle,
         to: 'sanctions'
       },
 
@@ -126,12 +126,12 @@ export const useNavigationStore = defineStore('navigation', () => {
         underMenu: [
           {
             title: 'Utilisateurs',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaUser,
             to: 'users'
           },
           {
             title: 'Roles',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaUserTag,
             to: 'roles'
           }
         ]
@@ -143,100 +143,100 @@ export const useNavigationStore = defineStore('navigation', () => {
         underMenu: [
           {
             title: 'Diplomes',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaCertificate,
             to: 'config',
             params: { id: 'diplomes' }
           },
           {
             title: 'Type de pret',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaHandHoldingUsd,
             to: 'config',
             params: { id: 'typeprets' }
           },
 
           {
             title: 'Distinctions',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaAward,
             to: 'config',
             params: { id: 'distinction' }
           },
 
           {
             title: 'Directions',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaCompass,
             to: 'config',
             params: { id: 'direction' }
           },
           {
             title: 'Départements',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaBuilding,
             to: 'config',
             params: { id: 'departement' }
           },
           {
             title: 'Délégations',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaUserFriends,
             to: 'config',
             params: { id: 'delegation' }
           },
           {
             title: 'Sections',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaLayerGroup,
             to: 'config',
             params: { id: 'section' }
           },
           {
             title: 'Agences',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaIndustry,
             to: 'config',
             params: { id: 'agence' }
           },
 
           {
             title: 'Type de postes',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaBriefcase,
             to: 'config',
             params: { id: 'typeposte' }
           },
 
           {
             title: 'Fiches de postes',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaFileAlt,
             to: 'config',
             params: { id: 'ficheposte' }
           },
 
           {
             title: "Catégorie d'agents",
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaMoneyCheckAlt,
             to: 'config',
             params: { id: 'categorieagent' }
           },
 
           {
             title: 'Type de congés/Permis.',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaCalendarAlt,
             to: 'config',
             params: { id: 'typeconge' }
           },
 
           {
             title: 'Type de cessat. serv.',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaUserTimes,
             to: 'config',
             params: { id: 'typecessation' }
           },
 
           {
             title: 'Banque',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaUniversity,
             to: 'config',
             params: { id: 'banque' }
           },
 
           {
             title: 'Autres paramètres',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaCogs,
             to: 'config',
             params: { id: 'autreparam' }
           }
@@ -246,55 +246,55 @@ export const useNavigationStore = defineStore('navigation', () => {
     module_finance_suivi_evaluation: [
       {
         title: 'Parametrage',
-        icon: icons.MenuFold,
+        icon: icons.FaSlidersH,
         to: 'personnel',
         underMenu: [
           {
             title: 'Plan stratégiques',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaBullseye,
             to: 'plan-strategique'
           },
           {
             title: 'Plan sectoriel',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaSitemap,
             to: 'plan-sectoriel'
           },
           {
             title: 'Niveau analytiques',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaChartBar,
             to: 'niveau-analytique'
           },
 
           {
             title: 'Direction et services',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaBuilding,
             to: 'directions-services'
           },
 
           {
             title: 'Sources de financement',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaMoneyBillWave,
             to: 'source-financement'
           },
           {
             title: 'Unite de mesure',
-            icon: icons.HiSolidUserGroup,
+            icon: icons.FaRuler,
             to: 'unite-mesure'
           }
         ]
       },
       {
         title: 'PTA',
-        icon: icons.MenuFold,
+        icon: icons.FaCalendarCheck,
         to: 'pta',
         underMenu: [
           {
             title: 'PTA',
-            icon: icons.EditIcon,
+            icon: icons.FaCalendarCheck,
             to: 'pta'         },
           {
             title: 'Rapport PTA',
-            icon: icons.SortAscIcon,
+            icon: icons.FaFileAlt,
             to: 'pta-rapport'
           },
         
@@ -304,23 +304,23 @@ export const useNavigationStore = defineStore('navigation', () => {
 
 {
   title: 'Indicateurs',
-  icon: icons.MenuFold,
+  icon: icons.FaFlag,
   to: 'pta',
   underMenu: [
     {
       title: 'Indicateurs ABSSA',
-      icon: icons.HiSolidUserGroup,
+      icon: icons.FaChartArea,
       to: 'indicateur-abssa'
     },
   
     {
       title: 'Indicateurs Sensoriels',
-      icon: icons.HiSolidUserGroup,
+      icon: icons.FaChartArea,
       to: 'plan-strategique'
     },
     {
       title: 'Rapport indicateurs ',
-      icon: icons.HiSolidUserGroup,
+      icon: icons.FaFileAlt,
       to: 'rapport-indicateur'
     },
   ]

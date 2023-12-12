@@ -58,7 +58,7 @@ defineProps({
                       class="flex font-medium transition-all w-full h-[45px] px-5 text-sm"
                     >
                       <div class="flex items-center gap-2 elt-nav">
-                        <v-icon :name="item.icon" :scale="1.0" class="text-black" />
+                        <v-icon :name="elts.icon" :scale="1.0" class="text-black" />
                         <span>{{ elts.title }}</span>
                       </div>
                     </RouterLink>
