@@ -17,9 +17,11 @@ defineProps({
 </script>
 
 <template>
-  <simplebar class="w-full h-[85vh]">
-    <div class="py-5">
-      <AccordionRoot class="w-[280px]" default-value="'item-1'" type="single" :collapsible="true">
+
+
+  <simplebar class="w-full h-[85vh]  bg-cover bg-center" >
+    <div class="py-5 ">
+      <AccordionRoot class="w-[280px]  " default-value="'item-1'" type="single" :collapsible="true">
         <template v-for="(item, index) in navigations" :key="index">
           <AccordionItem class="overflow-hidden" v-if="item.underMenu" :value="item.title">
             <AccordionHeader class="flex">
