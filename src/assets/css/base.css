@@ -42,7 +42,10 @@ body {
   font-family: 'Montserrat Ace', sans-serif; */
   /* font-family: 'SteamFlix-Montserrat', sans-serif; */
 }
-
+.backgroundSygec{
+  background-color: rgba(0, 134, 35, 0.8);
+  
+  }
 .form-unstim {
   @apply py-2 rounded focus:py-2 transition-all border-gray-400 text-sm shadow focus:border focus:border-unstim-primary outline-none focus:ring-0;
 }

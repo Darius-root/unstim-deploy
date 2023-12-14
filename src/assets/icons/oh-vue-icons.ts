@@ -99,7 +99,11 @@ import {
   FaFlask,
   FaChalkboardTeacher,
   FaNewspaper,
-  FaComments
+  FaComments,
+  MdLocalphone,
+  FaDashcube,
+  FaInfo,
+  FaFilePdf
 
 
 
@@ -207,8 +211,11 @@ addIcons(
   FaFlask,
   FaChalkboardTeacher,
   FaNewspaper,
-  FaComments
-
+  FaComments,
+  MdLocalphone,
+  FaDashcube,
+  FaInfo,
+  FaFilePdf
 
 
 
@@ -317,6 +324,11 @@ const icons = {
   FaChalkboardTeacher: 'fa-chalkboard-teacher',
   FaNewspaper: 'fa-newspaper',
   FaComments: 'fa-comments',
+  FaPhone: 'fa-phone',
+  MdLocalphone: 'md-localphone',
+  FaDashcube: 'fa-dashcube',
+  FaInfo:'fa-info',
+  FaFilePdf: 'fa-file-pdf'
 
 
 

@@ -37,6 +37,77 @@ const router = createRouter({
       ]
     },
 
+
+
+     // ROUTE SYGEC
+
+     
+     {
+      path: '/sygec-sign',
+      name: 'sygec-sign',
+      component: () => import('@/layouts/auth-sygec.vue'),
+      children: [
+        {
+          path: 'in',
+          name: 'in-sygec',
+          component: () => import('@/views/auth-sygec/sign-in.vue')
+        },
+
+        {
+          path: 'up',
+          name: 'up-sygec',
+          component: () => import('@/views/auth-sygec/sign-up.vue')
+        }
+      ]
+    },
+    {
+      path: '/sygec',
+      name: 'sygec',
+      component: () => import('@/layouts/global-layout-sygec.vue'),
+      children: [
+        {
+          path: '/sygec',
+          name: 'dash',
+          component: () => import('@/views/sygec/sygec-dash.vue')
+        },
+        {
+          path: '/colloques',
+          name: 'colloques',
+          component: () => import('@/views/sygec/sygec-colloques.vue')
+        },
+
+        {
+          path: '/new-soumission',
+          name: 'new-soumission',
+          component: () => import('@/views/sygec/sygec-new-soumission.vue')
+        },
+
+        {
+          path: 'loard-soumission',
+          name: 'loard-soumission',
+          component: () => import('@/views/sygec/sygec-loard-soumission.vue')
+        },
+
+        {
+          path: 'all-soumission',
+          name: 'all-soumission',
+          component: () => import('@/views/sygec/sygec-all-soumission.vue')
+        },
+
+        {
+          path: 'receipt-payment',
+          name: 'receipt-payment',
+          component: () => import('@/views/sygec/sygec-receipt-payment.vue')
+        },
+       
+      ]
+    },
+
+
+
+
+
+
     // ROUTE DE GESTION DES MODULES
 
     {

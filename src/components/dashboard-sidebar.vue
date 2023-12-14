@@ -87,4 +87,13 @@ defineProps({
   </simplebar>
 </template>
 
-<style></style>
+<style>
+
+.sidebar{
+background-image:url('@/assets/images/unstim-plan1.png') ;
+  filter: blur(1px);
+  background-color: rgb(35, 9, 59);
+}
+
+
+</style>
