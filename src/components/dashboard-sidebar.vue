@@ -17,11 +17,9 @@ defineProps({
 </script>
 
 <template>
-
-
-  <simplebar class="w-full h-[85vh]  bg-cover bg-center" >
-    <div class="py-5 ">
-      <AccordionRoot class="w-[280px]  " default-value="'item-1'" type="single" :collapsible="true">
+  <simplebar class="w-full h-[85vh]">
+    <div class="py-5">
+      <AccordionRoot class="w-[280px]" default-value="'item-1'" type="single" :collapsible="true">
         <template v-for="(item, index) in navigations" :key="index">
           <AccordionItem class="overflow-hidden" v-if="item.underMenu" :value="item.title">
             <AccordionHeader class="flex">
@@ -87,13 +85,4 @@ defineProps({
   </simplebar>
 </template>
 
-<style>
-
-.sidebar{
-background-image:url('@/assets/images/unstim-plan1.png') ;
-  filter: blur(1px);
-  background-color: rgb(35, 9, 59);
-}
-
-
-</style>
+<style></style>
