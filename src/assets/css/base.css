@@ -8,41 +8,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/* [type='text'],
-[type='email'],
-[type='url'],
-[type='password'],
-[type='number'],
-[type='date'],
-[type='datetime-local'],
-[type='month'],
-[type='search'],
-[type='tel'],
-[type='checkbox'],
-[type='radio'],
-[type='time'],
-[type='week'],
-[multiple],
-textarea,
-select {
-  @apply py-2 rounded focus:py-2 transition-all border-gray-400 text-sm shadow focus:border focus:border-unstim-primary outline-none focus:ring-0
-} */
-
-/* [type='text'].multiselect-tags-search {
-  @apply focus:border-none focus:ring-0 outline-none appearance-none;
-} */
-
 :root {
   --easy-table-body-row-font-size: 0.85rem;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-image: url('/src/assets/images/unstim-plan0.jpg');
+  background-size: cover;
+
   /* font-family: 'Montserrat', sans-serif;
   font-family: 'Montserrat Ace', sans-serif; */
   /* font-family: 'SteamFlix-Montserrat', sans-serif; */
 }
-
+.backgroundSygec {
+  background-color: rgba(0, 134, 35, 0.8);
+}
 .form-unstim {
   @apply py-2 rounded focus:py-2 transition-all border-gray-400 text-sm shadow focus:border focus:border-unstim-primary outline-none focus:ring-0;
+}
+
+.custom-back-fulls {
+  background-image: url('/src/assets/images/unstim-plan0.jpg');
+  background-size: cover;
 }

@@ -9,15 +9,15 @@
 </template>
 
 <script setup lang="ts">
-  import TemplatePagesConfig from '@/components/templatePagesTab.vue'
-  import { useDataConfigPages } from '@/stores/dataConfigPages'
+import TemplatePagesConfig from '@/components/templatePagesTab.vue'
+import { useDataConfigPages } from '@/stores/dataConfigPages'
 
-  import { useRoute } from 'vue-router'
-  import { ref, watch } from 'vue'
-  import router from '@/router'
-  const route = useRoute()
-  const currentPage = ref()
-  const datapage = ref(useDataConfigPages().datapages)
+import { useRoute } from 'vue-router'
+import { ref, watch } from 'vue'
+import router from '@/router'
+const route = useRoute()
+const currentPage = ref()
+const datapage = ref(useDataConfigPages().datapages)
 watch(
   () => route.params.id,
   async (newId) => {
@@ -30,6 +30,5 @@ watch(
   },
   { immediate: true }
 )
-
 </script>
 <style scoped></style>
