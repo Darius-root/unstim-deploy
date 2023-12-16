@@ -9,6 +9,9 @@ import { OhVueIcon } from 'oh-vue-icons'
 import Vue3EasyDataTable from 'vue3-easy-data-table'
 import 'vue3-easy-data-table/dist/style.css'
 
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
 import App from './App.vue'
 import router from './router'
 
@@ -21,5 +24,7 @@ app.component('v-icon', OhVueIcon)
 app.component('EasyDataTable', Vue3EasyDataTable)
 
 app.use(router)
+
+app.use(ElementPlus)
 
 app.mount('#app')

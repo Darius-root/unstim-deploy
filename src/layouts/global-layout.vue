@@ -25,7 +25,7 @@ const getNavigationMenu = () => {
 
 <template>
   <div class="min-h-screen  relative ">
-    <div class="-z-30 bg-unstim-white/95 absolute inset-0"></div>
+    <div class="custom-back-full -z-30 bg-unstim-white/95 absolute inset-0"></div>
     <div class="fixed inset-x-0 z-20 w-full shadow-md h-28 header-unstim">
       <DashboardHeader />
     </div>

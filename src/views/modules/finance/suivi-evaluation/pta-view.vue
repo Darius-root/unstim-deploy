@@ -15,7 +15,6 @@
                     <RouterLink to="pta-version-create"
                         class="flex items-center gap-2 p-2 bg-green-600 text-white rounded shadow hover:bg-opacity-60 mx-1">
                         <v-icon :name="icons.MenuFold" scale="1.1" />
-
                         <span class="text-sm font-medium"> Nouvelle version</span>
                     </RouterLink>
 
@@ -25,53 +24,52 @@
 
                         <span class="text-sm font-medium"> Importer</span>
                     </RouterLink>
-                </div>   <PopoverRoot>
-    <PopoverTrigger
-    class="flex items-center gap-2 p-2 bg-gray-600 text-white rounded shadow hover:bg-opacity-60 ">
- Actions
-    </PopoverTrigger>
-    <PopoverPortal>
-      <PopoverContent
-        side="bottom"
-        :side-offset="5"
-        class="rounded p-5 w-[260px] bg-white shadow-[0_10px_38px_-10px_hsla(206,22%,7%,.35),0_10px_20px_-15px_hsla(206,22%,7%,.2)] focus:shadow-[0_10px_38px_-10px_hsla(206,22%,7%,.35),0_10px_20px_-15px_hsla(206,22%,7%,.2),0_0_0_2px_theme(colors.green7)] will-change-[transform,opacity] data-[state=open]:data-[side=top]:animate-slideDownAndFade data-[state=open]:data-[side=right]:animate-slideLeftAndFade data-[state=open]:data-[side=bottom]:animate-slideUpAndFade data-[state=open]:data-[side=left]:animate-slideRightAndFade"
-      >
-        <div class="flex flex-col gap-2.5">
-          <p class="text-mauve12 text-[15px] leading-[19px] font-semibold mb-2.5">
-            Actions dans le PTA
-          </p>
-          <div class="flex min-w-0 gap-x-4">
-            <v-icon :name="icons.PersonW" scale="1.1" />
-      <div class="min-w-0 flex-auto">
-        <p class="text-sm font-semibold leading-6 text-gray-900">Darius john</p>
-        <p class="mt-1 truncate text-xs leading-5 text-gray-500"> A crée le pta xxxx</p>
-      </div>
-    </div>
-    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-      <p class="mt-1 text-xs leading-5 text-gray-500">29/21/2023 <time datetime="2023-01-23T13:23Z">à  9:10:25s</time></p>
-    </div>
+                </div>
+                <PopoverRoot>
+                    <PopoverTrigger
+                        class="flex items-center gap-2 p-2 bg-gray-600 text-white rounded shadow hover:bg-opacity-60 ">
+                        Actions
+                    </PopoverTrigger>
+                    <PopoverPortal>
+                        <PopoverContent side="bottom" :side-offset="5"
+                            class="rounded p-5 w-[260px] bg-white shadow-[0_10px_38px_-10px_hsla(206,22%,7%,.35),0_10px_20px_-15px_hsla(206,22%,7%,.2)] will-change-[transform,opacity] data-[state=open]:data-[side=top]:animate-slideDownAndFade data-[state=open]:data-[side=right]:animate-slideLeftAndFade data-[state=open]:data-[side=bottom]:animate-slideUpAndFade data-[state=open]:data-[side=left]:animate-slideRightAndFade">
+                            <div class="flex flex-col gap-2.5">
+                                <p class="text-mauve12 text-[15px] leading-[19px] font-semibold mb-2.5">
+                                    Actions dans le PTA
+                                </p>
+                                <div class="flex min-w-0 gap-x-4">
+                                    <v-icon :name="icons.PersonW" scale="1.1" />
+                                    <div class="min-w-0 flex-auto">
+                                        <p class="text-sm font-semibold leading-6 text-gray-900">Darius john</p>
+                                        <p class="mt-1 truncate text-xs leading-5 text-gray-500"> A crée le pta xxxx</p>
+                                    </div>
+                                </div>
+                                <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                                    <p class="mt-1 text-xs leading-5 text-gray-500">29/21/2023 <time
+                                            datetime="2023-01-23T13:23Z">à 9:10:25s</time></p>
+                                </div>
 
-    <div class="flex min-w-0 gap-x-4">
-            <v-icon :name="icons.PersonW" scale="1.1" />
-      <div class="min-w-0 flex-auto">
-        <p class="text-sm font-semibold leading-6 text-gray-900">Darius john</p>
-        <p class="mt-1 truncate text-xs leading-5 text-gray-500"> A crée le pta xxxx</p>
-      </div>
-    </div>
-    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-      <p class="mt-1 text-xs leading-5 text-gray-500">29/21/2023 <time datetime="2023-01-23T13:23Z">à  9:10:25s</time></p>
-    </div>
-    
-        </div>
-        <PopoverClose
-          class=" h-[25px] w-[25px] inline-flex items-center justify-center text-grass11 absolute top-[5px] right-[5px] hover:bg-green4 focus:shadow-[0_0_0_2px] focus:shadow-green7 outline-none cursor-default"
-          aria-label="Close"
-        >
-x        </PopoverClose>
-        <PopoverArrow class="fill-white" />
-      </PopoverContent>
-    </PopoverPortal>
-  </PopoverRoot>
+                                <div class="flex min-w-0 gap-x-4">
+                                    <v-icon :name="icons.PersonW" scale="1.1" />
+                                    <div class="min-w-0 flex-auto">
+                                        <p class="text-sm font-semibold leading-6 text-gray-900">Darius john</p>
+                                        <p class="mt-1 truncate text-xs leading-5 text-gray-500"> A crée le pta xxxx</p>
+                                    </div>
+                                </div>
+                                <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                                    <p class="mt-1 text-xs leading-5 text-gray-500">29/21/2023 <time
+                                            datetime="2023-01-23T13:23Z">à 9:10:25s</time></p>
+                                </div>
+
+                            </div>
+                            <PopoverClose
+                                class=" h-[25px] w-[25px] inline-flex items-center justify-center text-grass11 absolute top-[5px] right-[5px] hover:bg-green4 focus:shadow-[0_0_0_2px] focus:shadow-green7 outline-none cursor-default"
+                                aria-label="Close">
+                                x </PopoverClose>
+                            <PopoverArrow class="fill-white" />
+                        </PopoverContent>
+                    </PopoverPortal>
+                </PopoverRoot>
 
 
 
@@ -158,7 +156,7 @@ x        </PopoverClose>
                 </RouterLink>
             </div>
         </div>
-        
+
 
         <div class="p-5 mt-3 border row">
             <AccordionRoot class="w-full border z-10" default-value="'item-1'" type="single" :collapsible="true">
@@ -304,7 +302,7 @@ x        </PopoverClose>
                             <easy-data-table alternating border-cell :headers="dataActivite.headers" class="text-lg"
                                 theme-color="#2f9fff" :items="dataActivite.items" buttons-pagination searchable
                                 :search-value="searchValue">
-                                     <template #item-action="">
+                                <template #item-action="">
                                     <div class="flex gap-3 row justify-start items-start">
                                         <RouterLink to="pta-activite-view" v-if="dataActivite.action.edit"
                                             class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-green-600 hover:opacity-50">
@@ -326,13 +324,11 @@ x        </PopoverClose>
 
 
                                 <template #item-statut="">
-            <span
-              class=" flex rounded-md text-xs font-medium bg-gray-500 text-white"
-            >
-              Non demarrer
-            </span>
-          </template>
-                           
+                                    <span class=" flex rounded-md text-xs font-medium bg-gray-500 text-white">
+                                        Non demarrer
+                                    </span>
+                                </template>
+
 
                             </easy-data-table>
                         </div>
