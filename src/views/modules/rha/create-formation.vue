@@ -19,11 +19,7 @@
           <imput :label="'Date de fin'" :isRequired="true" :type="'date'" class="flex-grow" />
         </div>
 
-<<<<<<< HEAD
-        <button
-          type="submit"
-          class="bg-blue-500 mt-4 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-600"
-        >
+        <button type="submit" class="bg-blue-500 mt-4 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-600">
           Valider
         </button>
       </form>
@@ -31,27 +27,21 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import imput from '@/components/inputs/unstim-text.vue'
-import selecteImput from '@/components/inputs/unstim-select.vue'
-const parameters = { name: '1', direct: '2' }
-</script>
 
 <style scoped></style>
-=======
-   import  imput from '@/components/inputs/unstim-text.vue'
-   import  selecteImput from '@/components/inputs/unstim-select.vue'
+
+<script setup lang="ts">
+
+import imput from '@/components/inputs/unstim-text.vue'
+import selecteImput from '@/components/inputs/unstim-select.vue'
 import { reactive } from 'vue';
-   const parameters=reactive({
+const parameters = reactive({
   options: ['Darius', 'ZKP', 'JOHN Doe'],
   placeholder: '--Choississez un employe--',
   searchable: true
 })
 
+
+</script>
    
-   </script>
-   
-   <style scoped>
-   
-   </style>       
->>>>>>> 4eb1a88edd80a52d831b87fab135730ce76df419
+<style scoped></style>
