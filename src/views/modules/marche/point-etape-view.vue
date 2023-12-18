@@ -85,7 +85,7 @@ const pagedTableData = computed(() => {
 })
 const filterTableData = computed(() =>
   dataTable.filter(
-    (data) => !search.value || data.name.toLowerCase().includes(search.value.toLowerCase())
+    (data) => !search.value || data.delai.toLowerCase().includes(search.value.toLowerCase())
   )
 )
 
