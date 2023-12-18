@@ -12,39 +12,25 @@
 
   
       <div class="flex py-2 border-b top-line">
-        <span class="text-base font-normal">Ajout d'une Execution Financiere a l'Activite yy (code: yy)</span>
+        <span class="text-base font-normal">Ajout d'un marché</span>
       </div>
   
       <div class="bg-white shadow-md rounded-lg mt-3 p-6">
         <form>
           <div class="grid grid-cols-2 gap-6">
-            <selecteImput :label="'Type'" :parameters="parameters" :isRequired="true" />
-            <imput :label="'Montant (CFA) '" :isRequired="true"  class="flex-grow" />
-            <imput :label="'Date d\'exécution'" :isRequired="true" :type="'date'" class="flex-grow" />
-           
-
-            <imput :label="'Pièce justificatif'" :isRequired="true" :type="'file'" class="flex-grow" />
-
-    
+            <selecteImput :label="'PPM'" :parameters="parameters" :isRequired="true" />
+            <selecteImput :label="'Mode d\'édition'" :parameters="parameters" :isRequired="true" />
 
 
-
-
-
-
-
-
-            <imput :label="'Commentaire'" :isRequired="true" :type="'textearea'" class="flex-grow" />
 
            
           </div>
   
-          <button
-            type="submit"
-            class="bg-blue-500 mt-4 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-600"
-          >
-            Enregistrer
-          </button>
+         
+          <RouterLink to="point-recour-view"
+              class="flex items-center text-sm  bg-green-700 my-10 mx-3 h-8 w-fit p-3 border rounded-md shadow text-white  hover:opacity-60">
+              <span class=" font-bold">Enrégistrer</span>
+            </RouterLink>
         </form>
       </div>
     </div>
@@ -56,8 +42,8 @@
   import imput from '@/components/inputs/unstim-text.vue'
   import { reactive } from 'vue'
   const parameters = reactive({
-  options: ['xxx', 'xxxxxxx', 'Chef xxxx', 'Chef xxxxxx'],
-  placeholder: '--Choississez un role--',
+  options: ['Afficher', 'PDF','Excel' ],
+  placeholder: '--Choissir un mode d\'édition--',
   searchable: true,
   mode: 'tags'
 })

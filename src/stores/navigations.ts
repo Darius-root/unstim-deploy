@@ -326,6 +326,70 @@ export const useNavigationStore = defineStore('navigation', () => {
   ]
 }
       
+    ],
+
+
+    module_marche: [
+      {
+        title: 'Parametrage',
+        icon: icons.FaSlidersH,
+        to: 'param-config',
+      
+      },
+      {
+        title: 'Notification',
+        icon: icons.NotifIcon,
+        to: 'notification-contrat',
+      
+      },
+      {
+        title: 'Marché',
+        icon: icons.FaStore,
+        to: 'marche-view',
+      
+      },
+
+      {
+        title: 'Contrat',
+        icon: icons.FaFileContract,
+        to: 'contrat-view',
+      
+      },
+
+      {
+        title: 'Recours',
+        icon: icons.FaGavel,
+        to: 'recour-view',
+      
+      }, 
+
+      {
+        title: 'Edition',
+        icon: icons.FaPencilAlt,
+        to: 'recour-view',
+        underMenu: [
+          {
+            title: 'Evolution des marchés',
+            icon: icons.FaChartPie,
+            to: 'evolution-marche'
+          },
+
+          {
+            title: 'Point étapes marchés',
+            icon: icons.FaMapMarked,
+            to: 'point-etape-marche'
+          }, {
+            title: 'Point recours',
+            icon: icons.FaLifeRing,
+            to: 'point-recour-marche'
+          }, {
+            title: 'Rapport indicateur',
+            icon: icons.PrChartLine,
+            to: 'rapport-indicateur'
+          },
+        ]
+      }
+      
     ]
   })
 

@@ -8,45 +8,39 @@
         <v-icon :name="icons.ChevronUp" class="-rotate-90" scale="1.1" />
         <span class="text-sm font-medium"> Retour </span>
       </RouterLink>
-  
-
-  
       <div class="flex py-2 border-b top-line">
-        <span class="text-base font-normal">Ajout d'une Execution Financiere a l'Activite yy (code: yy)</span>
+        <span class="text-base font-normal">Ajout d'un modèle de passation
+</span>
       </div>
-  
-      <div class="bg-white shadow-md rounded-lg mt-3 p-6">
-        <form>
+
+
+      <div>
+        <RouterLink
+       
+        to="modele-passation"
+        class="flex  items-center my-2 ml-auto gap-2 p-2 border rounded shadow text-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60"
+      >
+        <v-icon :name="icons.FormPWShowIcon" scale="1.1" />
+        <span class="text-sm font-medium"> Voir la liste </span>
+      </RouterLink>
+      </div>
+   <form>
+      <div class="bg-white shadow-b rounded-lg mt-3 p-6">
+       
           <div class="grid grid-cols-2 gap-6">
-            <selecteImput :label="'Type'" :parameters="parameters" :isRequired="true" />
-            <imput :label="'Montant (CFA) '" :isRequired="true"  class="flex-grow" />
-            <imput :label="'Date d\'exécution'" :isRequired="true" :type="'date'" class="flex-grow" />
-           
+            <imput :label="'Code'" :isRequired="true" class="flex-grow" />
+            <selecteImput :label="'Étapes de Passation '"  :parameters="parameters" :isRequired="true" />
+          
 
-            <imput :label="'Pièce justificatif'" :isRequired="true" :type="'file'" class="flex-grow" />
-
-    
-
-
-
-
-
-
-
-
-            <imput :label="'Commentaire'" :isRequired="true" :type="'textearea'" class="flex-grow" />
-
-           
           </div>
   
-          <button
+    <button
             type="submit"
             class="bg-blue-500 mt-4 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-600"
           >
             Enregistrer
           </button>
-        </form>
-      </div>
+      </div></form>
     </div>
   </template>
   
@@ -54,12 +48,11 @@
   import { icons } from '@/assets/icons/oh-vue-icons'
   import selecteImput from '@/components/inputs/unstim-select.vue'
   import imput from '@/components/inputs/unstim-text.vue'
-  import { reactive } from 'vue'
+import { reactive } from 'vue';
   const parameters = reactive({
-  options: ['xxx', 'xxxxxxx', 'Chef xxxx', 'Chef xxxxxx'],
-  placeholder: '--Choississez un role--',
-  searchable: true,
-  mode: 'tags'
+  options: ['xx', 'xxxx', 'xxx'],
+  placeholder: '--Choississez un element xxxx--',
+  searchable: true
 })
   </script>
   

@@ -74,8 +74,9 @@ export const useModuleStore = defineStore('module', () => {
     },
     {
       id: 4,
-      short: 'module-rha',
-      label: 'Marchés '
+      short: 'module-marche',
+      label: 'Marchés ',
+      to: 'param-config'
     }
   ])
 

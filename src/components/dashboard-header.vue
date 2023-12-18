@@ -46,38 +46,12 @@ const handleSelect = (key: string, keyPath: string[]) => {
       </div>
     </div>
 
-    <!-- <div class="flex bg-white space-x-12 relative items-center h-[42px] justify-center w-full">
-      <div class="hidden h-full lg:block group" v-for="(module, item) in modules" :key="item">
-        <button class="flex items-center h-full px-3 py-1 bg-white rounded-sm outline-none focus:outline-none min-w-32">
-          <span class="flex-1 pr-1 font-semibold">{{ module.label }}</span>
-          <span v-if="module.submenus">
-            <svg class="w-4 h-4 transition duration-150 ease-in-out transform fill-current group-hover:-rotate-180"
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-            </svg>
-          </span>
-        </button>
-        <ul
-          class="absolute top-[42px] transition duration-150 ease-in-out origin-top transform scale-0 bg-white border rounded-sm shadow-md rounded-b-md group-hover:scale-100 w-[250px]">
-          <li v-for="(item, index) in module.submenus"
-            class="p-3 font-medium transition-all rounded-sm cursor-pointer hover:bg-unstim-primary hover:bg-opacity-70 hover:text-white"
-            :key="index">
-            <RouterLink :to="{ name: item.to }" active-class="my-link-active" class="flex items-center gap-3"
-              aria-expanded="false">
-              <v-icon :name="item.icon" scale="1.1" />
-              <span class="text-sm"> {{ item.title }} </span>
-            </RouterLink>
-          </li>
-        </ul>
-      </div>
-    </div> -->
-
     <el-menu :router="true" :default-active="activeIndex" class="el-menu-demo  justify-center" mode="horizontal"
       @select="handleSelect">
       <div class="" v-for="(module, item) in modules" :key="item">
 
         <template v-if="!module.submenus">
-          <el-menu-item :route="{ name: module.short }" class="text-xl" :index="item">
+          <el-menu-item :route="{ name: module.to }" class="text-xl" :index="item">
             <template #title>
               <span class="font-semibold text-base">{{ module.label }}</span>
             </template>

@@ -115,7 +115,7 @@ const chartOption = ref({
     <div class="stats-content mx-auto flex gap-3 justify-center py-6 items-center flex-wrap">
       <div
         v-for="(item, index) in rhaStats"
-        class="p-3 border space-y-2 shadow-sm flex-col flex justify-center items-center w-auto h-auto"
+        class="p-3 border space-y-2  bg-white shadow-md flex-col flex justify-center items-center w-auto h-auto"
         :key="index"
       >
         <span :style="{ color: item.couleur }" class="text-center px-2">{{ item.label }}</span>
@@ -130,7 +130,7 @@ const chartOption = ref({
 
     <hr />
 
-    <div class="chart-content my-4 grid grid-cols-1 lg:grid-cols-3 gap-3">
+    <div class="chart-content my-4 grid grid-cols-1 lg:grid-cols-3 bg-white gap-3">
       <div class="px-2 py-2 border h-fit shadow-sm">
         <div class="text-center text-sm">Composition des employés</div>
 

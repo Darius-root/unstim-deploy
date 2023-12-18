@@ -103,7 +103,18 @@ import {
   MdLocalphone,
   FaDashcube,
   FaInfo,
-  FaFilePdf
+  FaFilePdf,
+  FaStore,
+  FaFileContract,
+  FaGavel,
+  FaPencilAlt,
+  FaChartPie,
+  FaMapMarked,
+  GiBullHorns,
+  PrChartLine,
+  BiPlusCircle,
+  FaLifeRing
+
 
 
 
@@ -215,7 +226,18 @@ addIcons(
   MdLocalphone,
   FaDashcube,
   FaInfo,
-  FaFilePdf
+  FaFilePdf,
+  FaStore,
+  FaFileContract,
+  FaGavel,
+  FaPencilAlt,
+  FaChartPie,
+  FaMapMarked,
+  GiBullHorns,
+  PrChartLine,
+  BiPlusCircle,
+  FaLifeRing
+
 
 
 
@@ -328,7 +350,18 @@ const icons = {
   MdLocalphone: 'md-localphone',
   FaDashcube: 'fa-dashcube',
   FaInfo:'fa-info',
-  FaFilePdf: 'fa-file-pdf'
+  FaFilePdf: 'fa-file-pdf',
+  FaStore:'fa-store',
+  FaFileContract: 'fa-file-contract',
+  FaGavel: 'fa-gavel',
+  FaPencilAlt: 'fa-pencil-alt',
+  FaChartPie: 'fa-chart-pie',
+  FaMapMarked: 'fa-map-marked',
+  GiBullHorns: 'gi-bull-horns',
+  PrChartLine: 'pr-chart-line',
+  BiPlusCircle: 'bi-plus-circle',
+  FaLifeRing: 'fa-life-ring'
+  
 
 
 

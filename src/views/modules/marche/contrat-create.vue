@@ -12,29 +12,24 @@
 
   
       <div class="flex py-2 border-b top-line">
-        <span class="text-base font-normal">Ajout d'une Execution Financiere a l'Activite yy (code: yy)</span>
+        <span class="text-base font-normal">Ajout d'un marché</span>
       </div>
   
       <div class="bg-white shadow-md rounded-lg mt-3 p-6">
         <form>
           <div class="grid grid-cols-2 gap-6">
-            <selecteImput :label="'Type'" :parameters="parameters" :isRequired="true" />
-            <imput :label="'Montant (CFA) '" :isRequired="true"  class="flex-grow" />
-            <imput :label="'Date d\'exécution'" :isRequired="true" :type="'date'" class="flex-grow" />
-           
+            <selecteImput :label="'Marché'" :parameters="parameters" :isRequired="true" />
+            <imput :label="'Copie du contrat .pdf '" :isRequired="true" :type="'file'" class="flex-grow" />
+            <imput :label="'Numéro de contrat'" :isRequired="true"  class="flex-grow" />
+            <imput :label="'Numéro de lot'" :isRequired="true"  class="flex-grow" />
+            <selecteImput :label="'Prestataire'" :parameters="parameters" :isRequired="true" />
+            <imput :label="'Montant'" :isRequired="true"  class="flex-grow" />
 
-            <imput :label="'Pièce justificatif'" :isRequired="true" :type="'file'" class="flex-grow" />
+            <imput :label="'Date de début '" :isRequired="true" :type="'date'" class="flex-grow" />
+            <imput :label="'Date de fin prévue '" :isRequired="true" :type="'date'" class="flex-grow" />
+            <imput :label="'Date de fin réelle '" :isRequired="true" :type="'date'" class="flex-grow" />
 
-    
-
-
-
-
-
-
-
-
-            <imput :label="'Commentaire'" :isRequired="true" :type="'textearea'" class="flex-grow" />
+            <imput :label="'Observation '" :isRequired="true" :type="'textearea'" class="flex-grow" />
 
            
           </div>
@@ -56,8 +51,8 @@
   import imput from '@/components/inputs/unstim-text.vue'
   import { reactive } from 'vue'
   const parameters = reactive({
-  options: ['xxx', 'xxxxxxx', 'Chef xxxx', 'Chef xxxxxx'],
-  placeholder: '--Choississez un role--',
+  options: ['xxx', 'xxxxxxx', ],
+  placeholder: '--Choississez un xxx--',
   searchable: true,
   mode: 'tags'
 })

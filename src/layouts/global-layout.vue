@@ -19,6 +19,9 @@ const getNavigationMenu = () => {
   } else if (matchedRoute === 'module_finance_suivi_evaluation') {
     return navItems.module_finance_suivi_evaluation;
   }
+ else if (matchedRoute === 'module_marche') {
+    return navItems.module_marche;
+  }
 };
 // console.log(getNavigationMenu());
 </script>
