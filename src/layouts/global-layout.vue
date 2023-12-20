@@ -29,22 +29,24 @@ const getNavigationMenu = () => {
   return navItemMapping[matchedRoute?.toString() as keyof typeof navItemMapping];
 };
 
+
+
 </script>
 
 <template>
   <div class="min-h-screen  relative ">
-    <div class="custom-back-full -z-30 bg-unstim-white/95 absolute inset-0"></div>
+    <div class="-z-30 bg-unstim-white/95 absolute inset-0"></div>
     <div class="fixed inset-x-0 z-20 w-full shadow-md h-28 header-unstim">
       <DashboardHeader />
     </div>
 
-    <nav v-if="!noSidebarRoute.includes($route.name as string)" class="w-1/5 inset-y-0 fixed">
-      <div class="custom-back  absolute inset-0"></div>
+    <nav v-if="!noSidebarRoute.includes($route.name as string)" class="w-1/5 inset-y-0 shadow-lg fixed">
+      <div class="custom-back absolute inset-0"></div>
       <div class="bg-unstim-info/90 absolute inset-0"></div>
       <DashboardSidebar :navigations="getNavigationMenu()" />
     </nav>
 
-    <main :class="{ 'xl:ml-[20%]': !noSidebarRoute.includes($route.name as string) }" class="pt-32 px-5 overflow-auto ">
+    <main :class="{ 'xl:ml-[20%]': !noSidebarRoute.includes($route.name as string) }" class="pt-36 px-5 overflow-auto ">
       <RouterView v-slot="{ Component }">
         <template v-if="Component">
           <Transition appear name="fade" mode="out-in">
@@ -74,12 +76,4 @@ const getNavigationMenu = () => {
   opacity: 1;
   transform: translateY(0);
 }
-
-.custom-back {
-  background-image: url('/src/assets/images/unstim-plan1.png');
-  background-size: cover;
-
-}
 </style>
-
-

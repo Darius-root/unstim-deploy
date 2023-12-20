@@ -398,7 +398,7 @@ export const useNavigationStore = defineStore('navigation', () => {
           },
 
           {
-            title: 'Modifier mes informations',
+            title: 'Modifier Informations',
             icon: icons.FaMapMarked,
             to: 'point-etape-marche'
           }

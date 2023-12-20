@@ -12,10 +12,15 @@
   --easy-table-body-row-font-size: 0.85rem;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
+.custom-back {
   background-image: url('/src/assets/images/unstim-plan0.jpg');
   background-size: cover;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  /* background-image: url('/src/assets/images/unstim-plan0.jpg');
+  background-size: cover; */
 
   /* font-family: 'Montserrat', sans-serif;
   font-family: 'Montserrat Ace', sans-serif; */

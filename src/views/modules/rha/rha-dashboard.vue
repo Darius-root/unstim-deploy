@@ -84,40 +84,28 @@ const chartOption = ref({
 
 <template>
   <div class="mx-auto xl:container">
-    <div
-      class="top-line border-b py-2 flex flex-col lg:items-center lg:justify-between lg:flex-row"
-    >
+    <div class="top-line border-b py-2 flex flex-col lg:items-center lg:justify-between lg:flex-row">
       <span class="text-base"> Statistiques catégorisées du personnel </span>
 
       <div class="flex flex-col justify-around lg:items-center lg:flex-row lg:gap-3">
         <div class="flex flex-col gap-3 lg:items-center lg:flex-row input-group">
           <label for="" class="text-sm">Du </label>
-          <flat-pickr
-            v-model="startDate"
-            :placeholder="`jj/mm/aaaa`"
-            class="px-6 border-gray-300 text-sm rounded-full shadow-input w-56"
-            :config="searchConfig"
-          />
+          <flat-pickr v-model="startDate" :placeholder="`jj/mm/aaaa`"
+            class="px-6 border-gray-300 text-sm rounded-full shadow-input w-56" :config="searchConfig" />
         </div>
 
         <div class="flex flex-col gap-3 lg:items-center lg:flex-row input-group">
           <label for="" class="text-sm"> Au </label>
-          <flat-pickr
-            v-model="endDate"
-            :placeholder="`jj/mm/aaaa`"
-            class="px-6 border-gray-300 text-sm rounded-full shadow-input w-56"
-            :config="searchConfig"
-          />
+          <flat-pickr v-model="endDate" :placeholder="`jj/mm/aaaa`"
+            class="px-6 border-gray-300 text-sm rounded-full shadow-input w-56" :config="searchConfig" />
         </div>
       </div>
     </div>
 
     <div class="stats-content mx-auto flex gap-3 justify-center py-6 items-center flex-wrap">
-      <div
-        v-for="(item, index) in rhaStats"
+      <div v-for="(item, index) in rhaStats"
         class="p-3 border space-y-2  bg-white shadow-md flex-col flex justify-center items-center w-auto h-auto"
-        :key="index"
-      >
+        :key="index">
         <span :style="{ color: item.couleur }" class="text-center px-2">{{ item.label }}</span>
 
         <hr class="bg-slate-500 w-full" />
@@ -129,6 +117,8 @@ const chartOption = ref({
     </div>
 
     <hr />
+
+
 
     <div class="chart-content my-4 grid grid-cols-1 lg:grid-cols-3 bg-white gap-3">
       <div class="px-2 py-2 border h-fit shadow-sm">
