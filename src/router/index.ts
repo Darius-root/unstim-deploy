@@ -60,6 +60,8 @@ const router = createRouter({
     {
       path: '/sygec',
       name: 'sygec',
+      meta: { requireAuth: true },
+      redirect: { name: 'dash' },
       component: () => import('@/layouts/global-layout-sygec.vue'),
       children: [
         {

@@ -68,7 +68,7 @@ export const useModuleStore = defineStore('module', () => {
         {
           title: 'Colloques',
           icon: icons.FaComments,
-          to: 'tableauBord'
+          to: 'sygec'
         }
       ]
     },
