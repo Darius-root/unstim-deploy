@@ -17,8 +17,8 @@
             <h4 class="col-span-12 font-semibold text-center ">Marchés</h4>
         </div>
         <div class="grid grid-cols-2 gap-4 m-4">
-            <RouterLink to="type-marche" class="border border-unstim-primary p-2  ">
-                <span class="">Types de Marchés</span>
+            <RouterLink to="type-marche" class="border border-unstim-primary p-2 hover:bg-unstim-primary  hover:opacity-50 hover:text-white ">
+                <span class=" ">Types de Marchés</span>
             </RouterLink>
             <RouterLink to="situation-marche" class="border border-unstim-primary p-2  ">
                 <span class="">Situation des Marchés</span>
