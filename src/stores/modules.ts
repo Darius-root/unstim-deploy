@@ -38,7 +38,7 @@ export const useModuleStore = defineStore('module', () => {
           to: 'module_finance_suivi_evaluation'
         },
         {
-          title: 'Trésoreie',
+          title: 'Trésorerie',
           icon: icons.FaMoneyBillWave,
           to: 'tableauBord'
         }
@@ -58,7 +58,7 @@ export const useModuleStore = defineStore('module', () => {
         {
           title: 'Carrières des Enseignants',
           icon: icons.FaChalkboardTeacher,
-          to: 'tableauBord'
+          to: 'dashboard'
         },
         {
           title: 'Publication des Travaux',
@@ -66,7 +66,7 @@ export const useModuleStore = defineStore('module', () => {
           to: 'tableauBord'
         },
         {
-          title: 'colloques',
+          title: 'Colloques',
           icon: icons.FaComments,
           to: 'tableauBord'
         }

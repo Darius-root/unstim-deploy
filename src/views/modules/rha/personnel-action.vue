@@ -151,9 +151,9 @@ const fonctionsParameters = reactive({
   options: ['Agent commercial', 'Agent de Guichet', 'Analyste']
 })
 
-const typeContractParameters = reactive({
-  options: ['Détachement', 'Nomination']
-})
+// const typeContractParameters = reactive({
+//   options: ['Détachement', 'Nomination']
+// })
 </script>
 
 <template>
@@ -162,7 +162,6 @@ const typeContractParameters = reactive({
       <span class="text-lg font-medium"> Liste du personnel </span>
     </div>
 
-    <el-button type="primary">Primary</el-button>
 
     <div class="flex flex-wrap items-center justify-center gap-3 py-6 mx-auto actions-button">
       <div class="w-full">

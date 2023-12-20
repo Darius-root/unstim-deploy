@@ -831,378 +831,359 @@ const router = createRouter({
           ]
         },
 
+        // ROUTES CONCERNANT LE MODULE MARCHE
 
-           // ROUTES CONCERNANT LE MODULE finance-SUIVI-EVELUATION
+        {
+          path: '/module_marche',
+          name: 'module_marche',
+          meta: { requireAuth: true },
+          redirect: { name: 'param-config' },
+          children: [
+            {
+              path: 'param-config',
+              name: 'param-config',
+              component: () => import('@/views/modules/marche/param-config.vue')
+            },
 
-           {
-            path: '/module_marche',
-            name: 'module_marche',
-            meta: { requireAuth: true },
-            redirect: { name: 'param-config' },
-            children: [
-              {
-                path: 'param-config',
-                name: 'param-config',
-                component: () =>
-                  import('@/views/modules/marche/param-config.vue')
-              },
-            
-              {
-                path: 'type-marche',
-                name: 'type-marche',
-                component: () =>
-                  import('@/views/modules/marche/type-marche.vue')
-              } ,
-               {
-                path: 'type-marche-create',
-                name: 'type-marche-create',
-                component: () =>
-                  import('@/views/modules/marche/type-marche-create.vue')
-              },
-              {
-                path: 'type-marche-update',
-                name: 'type-marche-update',
-                component: () =>
-                  import('@/views/modules/marche/type-marche-update.vue')
-              },
-            
+            {
+              path: 'type-marche',
+              name: 'type-marche',
+              component: () => import('@/views/modules/marche/type-marche.vue')
+            },
+            {
+              path: 'type-marche-create',
+              name: 'type-marche-create',
+              component: () => import('@/views/modules/marche/type-marche-create.vue')
+            },
+            {
+              path: 'type-marche-update',
+              name: 'type-marche-update',
+              component: () => import('@/views/modules/marche/type-marche-update.vue')
+            },
 
-              {
-                path: 'situation-marche',
-                name: 'situation-marche',
-                component: () =>
-                  import('@/views/modules/marche/situation-marche.vue')
-              } ,
-               {
-                path: 'situation-marche-create',
-                name: 'situation-marche-create',
-                component: () =>
-                  import('@/views/modules/marche/situation-marche-create.vue')
-              },
-              {
-                path: 'situation-marche-update',
-                name: 'situation-marche-update',
-                component: () =>
-                  import('@/views/modules/marche/situation-marche-update.vue')
-              },
-            
-              
-              {
-                path: 'methode-selection',
-                name: 'methode-selection',
-                component: () =>
-                  import('@/views/modules/marche/methode-selection.vue')
-              } ,
-               {
-                path: 'methode-selection-create',
-                name: 'methode-selection-create',
-                component: () =>
-                  import('@/views/modules/marche/methode-selection-create.vue')
-              },
-              {
-                path: 'methode-selection-update',
-                name: 'methode-selection-update',
-                component: () =>
-                  import('@/views/modules/marche/methode-selection-update.vue')
-              },
-            
-            
+            {
+              path: 'situation-marche',
+              name: 'situation-marche',
+              component: () => import('@/views/modules/marche/situation-marche.vue')
+            },
+            {
+              path: 'situation-marche-create',
+              name: 'situation-marche-create',
+              component: () => import('@/views/modules/marche/situation-marche-create.vue')
+            },
+            {
+              path: 'situation-marche-update',
+              name: 'situation-marche-update',
+              component: () => import('@/views/modules/marche/situation-marche-update.vue')
+            },
 
-              {
-                path: 'bailleur-marche',
-                name: 'bailleur-marche',
-                component: () =>
-                  import('@/views/modules/marche/bailleur-marche.vue')
-              } ,
-               {
-                path: 'bailleur-marche-create',
-                name: 'bailleur-marche-create',
-                component: () =>
-                  import('@/views/modules/marche/bailleur-marche-create.vue')
-              },
-              {
-                path: 'bailleur-marche-update',
-                name: 'bailleur-marche-update',
-                component: () =>
-                  import('@/views/modules/marche/bailleur-marche-update.vue')
-              },
+            {
+              path: 'methode-selection',
+              name: 'methode-selection',
+              component: () => import('@/views/modules/marche/methode-selection.vue')
+            },
+            {
+              path: 'methode-selection-create',
+              name: 'methode-selection-create',
+              component: () => import('@/views/modules/marche/methode-selection-create.vue')
+            },
+            {
+              path: 'methode-selection-update',
+              name: 'methode-selection-update',
+              component: () => import('@/views/modules/marche/methode-selection-update.vue')
+            },
 
+            {
+              path: 'bailleur-marche',
+              name: 'bailleur-marche',
+              component: () => import('@/views/modules/marche/bailleur-marche.vue')
+            },
+            {
+              path: 'bailleur-marche-create',
+              name: 'bailleur-marche-create',
+              component: () => import('@/views/modules/marche/bailleur-marche-create.vue')
+            },
+            {
+              path: 'bailleur-marche-update',
+              name: 'bailleur-marche-update',
+              component: () => import('@/views/modules/marche/bailleur-marche-update.vue')
+            },
 
-              {
-                path: 'methode-passation',
-                name: 'methode-passation',
-                component: () =>
-                  import('@/views/modules/marche/methode-passation.vue')
-              } ,
-               {
-                path: 'methode-passation-create',
-                name: 'methode-passation-create',
-                component: () =>
-                  import('@/views/modules/marche/methode-passation-create.vue')
-              },
-              {
-                path: 'methode-passation-update',
-                name: 'methode-passation-update',
-                component: () =>
-                  import('@/views/modules/marche/methode-passation-update.vue')
-              },
-              
+            {
+              path: 'methode-passation',
+              name: 'methode-passation',
+              component: () => import('@/views/modules/marche/methode-passation.vue')
+            },
+            {
+              path: 'methode-passation-create',
+              name: 'methode-passation-create',
+              component: () => import('@/views/modules/marche/methode-passation-create.vue')
+            },
+            {
+              path: 'methode-passation-update',
+              name: 'methode-passation-update',
+              component: () => import('@/views/modules/marche/methode-passation-update.vue')
+            },
 
-              {
-                path: 'version-marche',
-                name: 'version-marche',
-                component: () =>
-                  import('@/views/modules/marche/version-marche.vue')
-              } ,
-               {
-                path: 'version-marche-create',
-                name: 'version-marche-create',
-                component: () =>
-                  import('@/views/modules/marche/version-marche-create.vue')
-              },
-              {
-                path: 'version-marche-update',
-                name: 'version-marche-update',
-                component: () =>
-                  import('@/views/modules/marche/version-marche-update.vue')
-              },
+            {
+              path: 'version-marche',
+              name: 'version-marche',
+              component: () => import('@/views/modules/marche/version-marche.vue')
+            },
+            {
+              path: 'version-marche-create',
+              name: 'version-marche-create',
+              component: () => import('@/views/modules/marche/version-marche-create.vue')
+            },
+            {
+              path: 'version-marche-update',
+              name: 'version-marche-update',
+              component: () => import('@/views/modules/marche/version-marche-update.vue')
+            },
 
+            {
+              path: 'etape-passation',
+              name: 'etape-passation',
+              component: () => import('@/views/modules/marche/etape-passation.vue')
+            },
+            {
+              path: 'etape-passation-create',
+              name: 'etape-passation-create',
+              component: () => import('@/views/modules/marche/etape-passation-create.vue')
+            },
+            {
+              path: 'etape-passation-update',
+              name: 'etape-passation-update',
+              component: () => import('@/views/modules/marche/etape-passation-update.vue')
+            },
 
+            {
+              path: 'modele-passation',
+              name: 'modele-passation',
+              component: () => import('@/views/modules/marche/modele-passation.vue')
+            },
+            {
+              path: 'modele-passation-create',
+              name: 'modele-passation-create',
+              component: () => import('@/views/modules/marche/modele-passation-create.vue')
+            },
+            {
+              path: 'modele-passation-update',
+              name: 'modele-passation-update',
+              component: () => import('@/views/modules/marche/modele-passation-update.vue')
+            },
 
+            {
+              path: 'type-point-etape',
+              name: 'type-point-etape',
+              component: () => import('@/views/modules/marche/type-point-etape.vue')
+            },
+            {
+              path: 'type-point-etape-create',
+              name: 'type-point-etape-create',
+              component: () => import('@/views/modules/marche/type-point-etape-create.vue')
+            },
+            {
+              path: 'type-point-etape-update',
+              name: 'type-point-etape-update',
+              component: () => import('@/views/modules/marche/type-point-etape-update.vue')
+            },
 
-              {
-                path: 'etape-passation',
-                name: 'etape-passation',
-                component: () =>
-                  import('@/views/modules/marche/etape-passation.vue')
-              } ,
-               {
-                path: 'etape-passation-create',
-                name: 'etape-passation-create',
-                component: () =>
-                  import('@/views/modules/marche/etape-passation-create.vue')
-              },
-              {
-                path: 'etape-passation-update',
-                name: 'etape-passation-update',
-                component: () =>
-                  import('@/views/modules/marche/etape-passation-update.vue')
-              },
+            {
+              path: 'prestataire-marche',
+              name: 'prestataire-marche',
+              component: () => import('@/views/modules/marche/prestataire-marche.vue')
+            },
+            {
+              path: 'prestataire-marche-create',
+              name: 'prestataire-marche-create',
+              component: () => import('@/views/modules/marche/prestataire-marche-create.vue')
+            },
+            {
+              path: 'prestataire-marche-update',
+              name: 'prestataire-marche-update',
+              component: () => import('@/views/modules/marche/prestataire-marche-update.vue')
+            },
 
+            {
+              path: 'indicateur-performance',
+              name: 'indicateur-performance',
+              component: () => import('@/views/modules/marche/indicateur-performance.vue')
+            },
+            {
+              path: 'indicateur-performance-create',
+              name: 'indicateur-performance-create',
+              component: () => import('@/views/modules/marche/indicateur-performance-create.vue')
+            },
+            {
+              path: 'indicateur-performance-update',
+              name: 'indicateur-performance-update',
+              component: () => import('@/views/modules/marche/indicateur-performance-update.vue')
+            },
 
-              {
-                path: 'modele-passation',
-                name: 'modele-passation',
-                component: () =>
-                  import('@/views/modules/marche/modele-passation.vue')
-              } ,
-               {
-                path: 'modele-passation-create',
-                name: 'modele-passation-create',
-                component: () =>
-                  import('@/views/modules/marche/modele-passation-create.vue')
-              },
-              {
-                path: 'modele-passation-update',
-                name: 'modele-passation-update',
-                component: () =>
-                  import('@/views/modules/marche/modele-passation-update.vue')
-              },
+            {
+              path: 'notification-contrat',
+              name: 'notification-contrat',
+              component: () => import('@/views/modules/marche/notification-contrat.vue')
+            },
+            {
+              path: 'marche-view',
+              name: 'marche-view',
+              component: () => import('@/views/modules/marche/marche-view.vue')
+            },
 
-              {
-                path: 'type-point-etape',
-                name: 'type-point-etape',
-                component: () =>
-                  import('@/views/modules/marche/type-point-etape.vue')
-              } ,
-               {
-                path: 'type-point-etape-create',
-                name: 'type-point-etape-create',
-                component: () =>
-                  import('@/views/modules/marche/type-point-etape-create.vue')
-              },
-              {
-                path: 'type-point-etape-update',
-                name: 'type-point-etape-update',
-                component: () =>
-                  import('@/views/modules/marche/type-point-etape-update.vue')
-              },
+            {
+              path: 'marche-create',
+              name: 'marche-create',
+              component: () => import('@/views/modules/marche/marche-create.vue')
+            },
 
+            {
+              path: 'marche-update',
+              name: 'marche-update',
+              component: () => import('@/views/modules/marche/marche-update.vue')
+            },
+            {
+              path: 'contrat-view',
+              name: 'contrat-view',
+              component: () => import('@/views/modules/marche/contrat-view.vue')
+            },
 
+            {
+              path: 'contrat-create',
+              name: 'contrat-create',
+              component: () => import('@/views/modules/marche/contrat-create.vue')
+            },
 
-              {
-                path: 'prestataire-marche',
-                name: 'prestataire-marche',
-                component: () =>
-                  import('@/views/modules/marche/prestataire-marche.vue')
-              } ,
-               {
-                path: 'prestataire-marche-create',
-                name: 'prestataire-marche-create',
-                component: () =>
-                  import('@/views/modules/marche/prestataire-marche-create.vue')
-              },
-              {
-                path: 'prestataire-marche-update',
-                name: 'prestataire-marche-update',
-                component: () =>
-                  import('@/views/modules/marche/prestataire-marche-update.vue')
-              },
+            {
+              path: 'contrat-update',
+              name: 'contrat-update',
+              component: () => import('@/views/modules/marche/contrat-update.vue')
+            },
 
+            {
+              path: 'recour-view',
+              name: 'recour-view',
+              component: () => import('@/views/modules/marche/recour-view.vue')
+            },
 
+            {
+              path: 'recour-create',
+              name: 'recour-create',
+              component: () => import('@/views/modules/marche/recour-create.vue')
+            },
 
+            {
+              path: 'recour-update',
+              name: 'recour-update',
+              component: () => import('@/views/modules/marche/recour-update.vue')
+            },
 
+            {
+              path: 'evolution-marche',
+              name: 'evolution-marche',
+              component: () => import('@/views/modules/marche/evolution-marche.vue')
+            },
+            {
+              path: 'evolution-marche-view',
+              name: 'evolution-marche-view',
+              component: () => import('@/views/modules/marche/evolution-marche-view.vue')
+            },
 
+            {
+              path: 'point-etape-view',
+              name: 'point-etape-view',
+              component: () => import('@/views/modules/marche/point-etape-view.vue')
+            },
+            {
+              path: 'point-etape-marche',
+              name: 'point-etape-marche',
+              component: () => import('@/views/modules/marche/point-etape-marche.vue')
+            },
 
-              {
-                path: 'indicateur-performance',
-                name: 'indicateur-performance',
-                component: () =>
-                  import('@/views/modules/marche/indicateur-performance.vue')
-              } ,
-               {
-                path: 'indicateur-performance-create',
-                name: 'indicateur-performance-create',
-                component: () =>
-                  import('@/views/modules/marche/indicateur-performance-create.vue')
-              },
-              {
-                path: 'indicateur-performance-update',
-                name: 'indicateur-performance-update',
-                component: () =>
-                  import('@/views/modules/marche/indicateur-performance-update.vue')
-              },
+            {
+              path: 'point-recour-marche',
+              name: 'point-recour-marche',
+              component: () => import('@/views/modules/marche/point-recour-marche.vue')
+            },
+            {
+              path: 'point-recour-view',
+              name: 'point-recour-view',
+              component: () => import('@/views/modules/marche/point-recour-view.vue')
+            },
 
-              {
-                path: 'notification-contrat',
-                name: 'notification-contrat',
-                component: () =>
-                  import('@/views/modules/marche/notification-contrat.vue')
-              }, {
-                path: 'marche-view',
-                name: 'marche-view',
-                component: () =>
-                  import('@/views/modules/marche/marche-view.vue')
-              },
+            {
+              path: 'rapport-indicateur',
+              name: 'rapport-indicateur',
+              component: () => import('@/views/modules/marche/rapport-indicateur.vue')
+            },
 
-               {
-                path: 'marche-create',
-                name: 'marche-create',
-                component: () =>
-                  import('@/views/modules/marche/marche-create.vue')
-              },
-
-
-              {
-                path: 'marche-update',
-                name: 'marche-update',
-                component: () =>
-                  import('@/views/modules/marche/marche-update.vue')
-              },
-              {
-                path: 'contrat-view',
-                name: 'contrat-view',
-                component: () =>
-                  import('@/views/modules/marche/contrat-view.vue')
-              },
-
-               {
-                path: 'contrat-create',
-                name: 'contrat-create',
-                component: () =>
-                  import('@/views/modules/marche/contrat-create.vue')
-              },
-
-
-              {
-                path: 'contrat-update',
-                name: 'contrat-update',
-                component: () =>
-                  import('@/views/modules/marche/contrat-update.vue')
-              },
-
-
-              {
-                path: 'recour-view',
-                name: 'recour-view',
-                component: () =>
-                  import('@/views/modules/marche/recour-view.vue')
-              },
-
-               {
-                path: 'recour-create',
-                name: 'recour-create',
-                component: () =>
-                  import('@/views/modules/marche/recour-create.vue')
-              },
-
-
-              {
-                path: 'recour-update',
-                name: 'recour-update',
-                component: () =>
-                  import('@/views/modules/marche/recour-update.vue')
-              },
-
-
-
-              {
-                path: 'evolution-marche',
-                name: 'evolution-marche',
-                component: () =>
-                  import('@/views/modules/marche/evolution-marche.vue')
-              },
-              {
-                path: 'evolution-marche-view',
-                name: 'evolution-marche-view',
-                component: () =>
-                  import('@/views/modules/marche/evolution-marche-view.vue')
-              },
-
-              {
-                path: 'point-etape-view',
-                name: 'point-etape-view',
-                component: () =>
-                  import('@/views/modules/marche/point-etape-view.vue')
-              },
-              {
-                path: 'point-etape-marche',
-                name: 'point-etape-marche',
-                component: () =>
-                  import('@/views/modules/marche/point-etape-marche.vue')
-              },
-
-
-              
-              {
-                path: 'point-recour-marche',
-                name: 'point-recour-marche',
-                component: () =>
-                  import('@/views/modules/marche/point-recour-marche.vue')
-              },
-              {
-                path: 'point-recour-view',
-                name: 'point-recour-view',
-                component: () =>
-                  import('@/views/modules/marche/point-recour-view.vue')
-              },
-
-
-              {
-                path: 'rapport-indicateur',
-                name: 'rapport-indicateur',
-                component: () =>
-                  import('@/views/modules/marche/rapport-indicateur.vue')
-              },
-
-              {
-                path: 'rapport-indicateur-view',
-                name: 'rapport-indicateur-view',
-                component: () =>
-                  import('@/views/modules/marche/rapport-indicateur-view.vue')
-              },
-            ]
+            {
+              path: 'rapport-indicateur-view',
+              name: 'rapport-indicateur-view',
+              component: () => import('@/views/modules/marche/rapport-indicateur-view.vue')
             }
+          ]
+        },
+
+        // ROUTES CONCERNANT LA CARRIERE DES ENSEIGNANTS
+
+        {
+          path: '/carrieres-enseignants',
+          name: 'carrieres_enseignants',
+          meta: { requireAuth: true },
+          redirect: { name: 'carrieres-enseignants' },
+          children: [
+            {
+              path: 'dashboard',
+              name: 'dashboard',
+              component: () =>
+                import('@/views/modules/universitaire/carrieres/carriere-dashboard.vue')
+            },
+
+            {
+              path: 'mes-informations',
+              name: 'mes-informations',
+              component: () => import('@/views/modules/marche/param-config.vue')
+            },
+
+            {
+              path: 'modifier-informations',
+              name: 'modifier-informations',
+              component: () => import('@/views/modules/marche/param-config.vue')
+            },
+
+            {
+              path: 'nouvelle-publication',
+              name: 'nouvelle-publication',
+              component: () => import('@/views/modules/marche/param-config.vue')
+            },
+
+            {
+              path: 'historique-publications',
+              name: 'historique-publications',
+              component: () => import('@/views/modules/marche/param-config.vue')
+            },
+
+            {
+              path: 'soumette-mes-dossiers',
+              name: 'soumette-mes-dossiers',
+              component: () => import('@/views/modules/marche/param-config.vue')
+            },
+
+            {
+              path: 'soumettions-en-cours',
+              name: 'soumettions-en-cours',
+              component: () => import('@/views/modules/marche/param-config.vue')
+            },
+
+            {
+              path: 'historique-soumissions',
+              name: 'historique-soumissions',
+              component: () => import('@/views/modules/marche/param-config.vue')
+            }
+          ]
+        }
       ]
     }
   ]

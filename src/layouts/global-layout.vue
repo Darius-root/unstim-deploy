@@ -11,19 +11,24 @@ const noSidebarRoute = reactive(['home'])
 
 const route = useRoute();
 
-
+/**
++ * Récupère l'élément du menu de navigation associé à la route actuelle.
++ *
++ * @return {string} L'éléments du menu de navigation.
++ */
 const getNavigationMenu = () => {
+  const navItemMapping = {
+    module_rha: navItems.module_rha,
+    module_finance_suivi_evaluation: navItems.module_finance_suivi_evaluation,
+    module_marche: navItems.module_marche,
+    carrieres_enseignants: navItems.module_carriere_enseignant,
+  };
+
+  // console.log(matchedRoute);
   const matchedRoute = route.matched[1]?.name;
-  if (matchedRoute === 'module_rha') {
-    return navItems.module_rha;
-  } else if (matchedRoute === 'module_finance_suivi_evaluation') {
-    return navItems.module_finance_suivi_evaluation;
-  }
- else if (matchedRoute === 'module_marche') {
-    return navItems.module_marche;
-  }
+  return navItemMapping[matchedRoute?.toString() as keyof typeof navItemMapping];
 };
-// console.log(getNavigationMenu());
+
 </script>
 
 <template>

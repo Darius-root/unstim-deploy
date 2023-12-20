@@ -291,77 +291,69 @@ export const useNavigationStore = defineStore('navigation', () => {
           {
             title: 'PTA',
             icon: icons.FaCalendarCheck,
-            to: 'pta'         },
+            to: 'pta'
+          },
           {
             title: 'Rapport PTA',
             icon: icons.FaFileAlt,
             to: 'pta-rapport'
+          }
+        ]
+      },
+
+      {
+        title: 'Indicateurs',
+        icon: icons.FaFlag,
+        to: 'pta',
+        underMenu: [
+          {
+            title: 'Indicateurs ABSSA',
+            icon: icons.FaChartArea,
+            to: 'indicateur-abssa'
           },
-        
+
+          {
+            title: 'Indicateurs Sensoriels',
+            icon: icons.FaChartArea,
+            to: 'plan-strategique'
+          },
+          {
+            title: 'Rapport indicateurs ',
+            icon: icons.FaFileAlt,
+            to: 'rapport-indicateur'
+          }
         ]
       }
-,
-
-{
-  title: 'Indicateurs',
-  icon: icons.FaFlag,
-  to: 'pta',
-  underMenu: [
-    {
-      title: 'Indicateurs ABSSA',
-      icon: icons.FaChartArea,
-      to: 'indicateur-abssa'
-    },
-  
-    {
-      title: 'Indicateurs Sensoriels',
-      icon: icons.FaChartArea,
-      to: 'plan-strategique'
-    },
-    {
-      title: 'Rapport indicateurs ',
-      icon: icons.FaFileAlt,
-      to: 'rapport-indicateur'
-    },
-  ]
-}
-      
     ],
-
 
     module_marche: [
       {
         title: 'Parametrage',
         icon: icons.FaSlidersH,
-        to: 'param-config',
-      
+        to: 'param-config'
       },
       {
         title: 'Notification',
         icon: icons.NotifIcon,
-        to: 'notification-contrat',
-      
+        to: 'notification-contrat'
       },
       {
         title: 'Marché',
         icon: icons.FaStore,
-        to: 'marche-view',
-      
+        to: 'marche-view'
       },
 
       {
         title: 'Contrat',
         icon: icons.FaFileContract,
-        to: 'contrat-view',
-      
+        to: 'contrat-view'
       },
 
       {
         title: 'Recours',
         icon: icons.FaGavel,
-        to: 'recour-view',
-      
-      }, 
+        to: 'recour-view'
+      },
 
       {
         title: 'Edition',
@@ -378,18 +370,84 @@ export const useNavigationStore = defineStore('navigation', () => {
             title: 'Point étapes marchés',
             icon: icons.FaMapMarked,
             to: 'point-etape-marche'
-          }, {
+          },
+          {
             title: 'Point recours',
             icon: icons.FaLifeRing,
             to: 'point-recour-marche'
-          }, {
+          },
+          {
             title: 'Rapport indicateur',
             icon: icons.PrChartLine,
             to: 'rapport-indicateur'
-          },
+          }
         ]
       }
-      
+    ],
+
+    module_carriere_enseignant: [
+      {
+        title: 'Tableau de bord',
+        icon: icons.FaPencilAlt,
+        to: 'carrieres-enseignants',
+        underMenu: [
+          {
+            title: 'Mes informations',
+            icon: icons.FaChartPie,
+            to: 'evolution-marche'
+          },
+
+          {
+            title: 'Modifier mes informations',
+            icon: icons.FaMapMarked,
+            to: 'point-etape-marche'
+          }
+        ]
+      },
+
+      {
+        title: 'Publications',
+        icon: icons.FaPencilAlt,
+        to: 'recour-view',
+        underMenu: [
+          {
+            title: 'Toute les publications',
+            icon: icons.FaChartPie,
+            to: 'evolution-marche'
+          },
+
+          {
+            title: 'Mes publications',
+            icon: icons.FaMapMarked,
+            to: 'point-etape-marche'
+          }
+        ]
+      },
+
+      {
+        title: 'Dossiers CAMES',
+        icon: icons.FaPencilAlt,
+        to: 'recour-view',
+        underMenu: [
+          {
+            title: 'Soumettre mes dossiers',
+            icon: icons.FaChartPie,
+            to: 'evolution-marche'
+          },
+
+          {
+            title: 'Soumissions en cours',
+            icon: icons.FaMapMarked,
+            to: 'point-etape-marche'
+          },
+
+          {
+            title: 'Historiques',
+            icon: icons.FaMapMarked,
+            to: 'point-etape-marche'
+          }
+        ]
+      }
     ]
   })
 

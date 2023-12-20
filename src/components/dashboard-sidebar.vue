@@ -24,9 +24,10 @@ defineProps({
           <AccordionItem class="overflow-hidden" v-if="item.underMenu" :value="item.title">
             <AccordionHeader class="flex">
               <AccordionTrigger
-                class="cursor-pointer data-[state=open]:bg-white group font-bold hover:text-black text-white hover:bg-unstim-white transition-all flex h-[45px] flex-1 items-center justify-between px-5 text-sm group">
+                class="cursor-pointer data-[state=open]:bg-white data-[state=open]:text-black group font-bold hover:text-black text-white hover:bg-unstim-white transition-all flex h-[45px] flex-1 items-center justify-between px-5 text-sm group">
                 <div class="flex items-center gap-2 elt-nav">
-                  <v-icon :name="item.icon" :scale="1.3" class="text-white  group-hover:text-black" />
+                  <v-icon :name="item.icon" :scale="1.3"
+                    class="text-white data-[state=open]:text-black group-hover:text-black" />
                   <span class="">{{ item.title }}</span>
                 </div>
 
