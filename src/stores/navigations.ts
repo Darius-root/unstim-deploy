@@ -448,6 +448,114 @@ export const useNavigationStore = defineStore('navigation', () => {
           }
         ]
       }
+    ],
+
+
+    module_gestion_stock: [
+      {
+        title: 'Opération stock',
+        icon: icons.FaPencilAlt,
+        to: 'carrieres-enseignants',
+        underMenu: [
+          {
+            title: 'Entrées en stock',
+            icon: icons.FaChartPie,
+            to: 'entree-stock'
+          },
+
+          {
+            title: 'sortie de stock',
+            icon: icons.FaMapMarked,
+            to: 'sortie-stock'
+          }
+        ]
+      },
+
+      {
+        title: 'Article',
+        icon: icons.FaPencilAlt,
+        to: 'article-view',
+      
+      },
+
+      {
+        title: 'Demandes',
+        icon: icons.FaPencilAlt,
+        to: 'carrieres-enseignants',
+        underMenu: [
+          {
+            title: 'Liste',
+            icon: icons.FaChartPie,
+            to: 'demande-list'
+          },
+
+          {
+            title: 'Envoyés',
+            icon: icons.FaMapMarked,
+            to: 'demande-send'
+          }
+        ]
+      },
+   
+
+      {
+        title: 'Editions',
+        icon: icons.FaPencilAlt,
+        to: 'carrieres-enseignants',
+        underMenu: [
+          {
+            title: 'Stock fiche',
+            icon: icons.FaChartPie,
+            to: 'stock-fiche'
+          },
+
+          {
+            title: 'Stock mouvement',
+            icon: icons.FaMapMarked,
+            to: 'fiche-mouvement'
+          },
+
+          {
+            title: 'Stock final',
+            icon: icons.FaMapMarked,
+            to: 'fiche-final'
+          }
+        ]
+      },
+
+      {
+        title: 'Catégorie',
+        icon: icons.FaPencilAlt,
+        to: 'categorie-article',
+   
+      }, {
+        title: 'Famille article',
+        icon: icons.FaPencilAlt,
+        to: 'famille-article',
+   
+      },
+
+      {
+        title: 'Entrepot',
+        icon: icons.FaPencilAlt,
+        to: 'entrepot-stock',
+   
+      }, {
+        title: 'Bureau',
+        icon: icons.FaPencilAlt,
+        to: 'bureau-stock',
+   
+      }, {
+        title: 'Founisseur',
+        icon: icons.FaPencilAlt,
+        to: 'fournisseur-stock',
+   
+      }, {
+        title: 'Paramétrage',
+        icon: icons.FaPencilAlt,
+        to: 'parametrage-stock',
+   
+      },
     ]
   })
 

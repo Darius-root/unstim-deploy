@@ -1185,7 +1185,213 @@ const router = createRouter({
               component: () => import('@/views/modules/marche/param-config.vue')
             }
           ]
-        }
+        },
+
+                // ROUTES CONCERNANT DE STOCK
+
+                {
+                  path: '/module_gestion_stock',
+                  name: 'module_gestion_stock',
+                  meta: { requireAuth: true },
+                  redirect: { name: 'entree-stock' },
+                  children: [
+                    {
+                      path: 'entree-stock',
+                      name: 'entree-stock',
+                      component: () =>
+                        import('@/views/modules/stock/entree-stock.vue')
+                    },
+                    {
+                      path: 'entree-create',
+                      name: 'entree-create',
+                      component: () =>
+                        import('@/views/modules/stock/entree-create.vue')
+                    },
+        
+                    {
+                      path: 'entree-update',
+                      name: 'entree-update',
+                      component: () =>
+                        import('@/views/modules/stock/entree-update.vue')
+                    },
+
+                    {
+                      path: 'sortie-stock',
+                      name: 'sortie-stock',
+                      component: () =>
+                        import('@/views/modules/stock/sortie-stock.vue')
+                    },
+                    {
+                      path: 'sortie-create',
+                      name: 'sortie-create',
+                      component: () =>
+                        import('@/views/modules/stock/sortie-create.vue')
+                    },
+                    
+                    {
+                      path: 'sortie-update',
+                      name: 'sortie-update',
+                      component: () =>
+                        import('@/views/modules/stock/sortie-update.vue')
+                    },
+
+                    {
+                      path: 'article-view',
+                      name: 'article-view',
+                      component: () =>
+                        import('@/views/modules/stock/article-view.vue')
+                    },
+
+                    {
+                      path: 'article-create',
+                      name: 'article-create',
+                      component: () =>
+                        import('@/views/modules/stock/article-create.vue')
+                    },
+                    {
+                      path: 'article-update',
+                      name: 'article-update',
+                      component: () =>
+                        import('@/views/modules/stock/article-update.vue')
+                    },
+
+                    {
+                      path: 'demande-list',
+                      name: 'demande-list',
+                      component: () =>
+                        import('@/views/modules/stock/demande-list.vue')
+                    },
+                    {
+                      path: 'demande-create',
+                      name: 'demande-create',
+                      component: () =>
+                        import('@/views/modules/stock/demande-create.vue')
+                    },
+                    {
+                      path: 'demande-update',
+                      name: 'demande-update',
+                      component: () =>
+                        import('@/views/modules/stock/demande-update.vue')
+                    },
+
+                    {
+                      path: 'demande-send',
+                      name: 'demande-send',
+                      component: () =>
+                        import('@/views/modules/stock/demande-send.vue')
+                    },
+
+                    {
+                      path: 'stock-fiche',
+                      name: 'stock-fiche',
+                      component: () =>
+                        import('@/views/modules/stock/stock-fiche.vue')
+                    },
+
+                    {
+                      path: 'fiche-mouvement',
+                      name: 'fiche-mouvement',
+                      component: () =>
+                        import('@/views/modules/stock/fiche-mouvement.vue')
+                    },
+
+                    {
+                      path: 'fiche-final',
+                      name: 'fiche-final',
+                      component: () =>
+                        import('@/views/modules/stock/fiche-final.vue')
+                    },
+                    {
+                      path: 'categorie-article',
+                      name: 'categorie-article',
+                      component: () =>
+                        import('@/views/modules/stock/categorie-article.vue')
+                    },  {
+                      path: 'categorie-create',
+                      name: 'categorie-create',
+                      component: () =>
+                        import('@/views/modules/stock/categorie-create.vue')
+                    },  {
+                      path: 'categorie-update',
+                      name: 'categorie-update',
+                      component: () =>
+                        import('@/views/modules/stock/categorie-update.vue')
+                    },
+
+                    {
+                      path: 'famille-article',
+                      name: 'famille-article',
+                      component: () =>
+                        import('@/views/modules/stock/famille-article.vue')
+                    },  {
+                      path: 'famille-create',
+                      name: 'famille-create',
+                      component: () =>
+                        import('@/views/modules/stock/famille-create.vue')
+                    },  {
+                      path: 'famille-update',
+                      name: 'famille-update',
+                      component: () =>
+                        import('@/views/modules/stock/famille-update.vue')},
+
+
+                        {
+                          path: 'entrepot-stock',
+                          name: 'entrepot-stock',
+                          component: () =>
+                            import('@/views/modules/stock/entrepot-stock.vue')
+                        },  {
+                          path: 'entrepot-create',
+                          name: 'entrepot-create',
+                          component: () =>
+                            import('@/views/modules/stock/entrepot-create.vue')
+                        },  {
+                          path: 'entrepot-update',
+                          name: 'entrepot-update',
+                          component: () =>
+                            import('@/views/modules/stock/entrepot-update.vue')},
+
+                            {
+                              path: 'bureau-stock',
+                              name: 'bureau-stock',
+                              component: () =>
+                                import('@/views/modules/stock/bureau-stock.vue')
+                            },  {
+                              path: 'bureau-create',
+                              name: 'bureau-create',
+                              component: () =>
+                                import('@/views/modules/stock/bureau-create.vue')
+                            },  {
+                              path: 'bureau-update',
+                              name: 'bureau-update',
+                              component: () =>
+                                import('@/views/modules/stock/bureau-update.vue')},
+
+                                {
+                                  path: 'fournisseur-stock',
+                                  name: 'fournisseur-stock',
+                                  component: () =>
+                                    import('@/views/modules/stock/fournisseur-stock.vue')
+                                },  {
+                                  path: 'fournisseur-create',
+                                  name: 'fournisseur-create',
+                                  component: () =>
+                                    import('@/views/modules/stock/fournisseur-create.vue')
+                                },  {
+                                  path: 'fournisseur-update',
+                                  name: 'fournisseur-update',
+                                  component: () =>
+                                    import('@/views/modules/stock/fournisseur-update.vue')},    
+                                    
+                                    
+                                {
+                                  path: 'parametrage-stock',
+                                  name: 'parametrage-stock',
+                                  component: () =>
+                                    import('@/views/modules/stock/parametrage-stock.vue')
+                                },     
+                  ]
+                }
       ]
     }
   ]

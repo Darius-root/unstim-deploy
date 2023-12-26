@@ -40,7 +40,7 @@ export const useModuleStore = defineStore('module', () => {
         {
           title: 'Trésorerie',
           icon: icons.FaMoneyBillWave,
-          to: 'tableauBord'
+          to: 'entree-stock'
         }
       ]
     },

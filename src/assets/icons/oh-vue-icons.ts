@@ -113,7 +113,17 @@ import {
   GiBullHorns,
   PrChartLine,
   BiPlusCircle,
-  FaLifeRing
+  FaLifeRing,
+  FaCubes,
+  FaArrowUp,
+  FaArrowDown,
+  FaFile,
+  FaClipboardList,
+  FaTags,
+  fafilea
+
+
+  
 
 
 
@@ -236,7 +246,8 @@ addIcons(
   GiBullHorns,
   PrChartLine,
   BiPlusCircle,
-  FaLifeRing
+  FaLifeRing;
+  fa-cubes
 
 
 

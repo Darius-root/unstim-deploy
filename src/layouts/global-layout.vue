@@ -22,7 +22,7 @@ const getNavigationMenu = () => {
     module_finance_suivi_evaluation: navItems.module_finance_suivi_evaluation,
     module_marche: navItems.module_marche,
     carrieres_enseignants: navItems.module_carriere_enseignant,
-  };
+    module_gestion_stock:navItems.module_gestion_stock  };
 
   // console.log(matchedRoute);
   const matchedRoute = route.matched[1]?.name;
