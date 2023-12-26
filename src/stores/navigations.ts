@@ -454,18 +454,18 @@ export const useNavigationStore = defineStore('navigation', () => {
     module_gestion_stock: [
       {
         title: 'Opération stock',
-        icon: icons.FaPencilAlt,
+        icon: icons.FaCubes,
         to: 'carrieres-enseignants',
         underMenu: [
           {
             title: 'Entrées en stock',
-            icon: icons.FaChartPie,
+            icon: icons.FaArrowUp,
             to: 'entree-stock'
           },
 
           {
             title: 'sortie de stock',
-            icon: icons.FaMapMarked,
+            icon: icons.FaArrowDown,
             to: 'sortie-stock'
           }
         ]
@@ -473,15 +473,15 @@ export const useNavigationStore = defineStore('navigation', () => {
 
       {
         title: 'Article',
-        icon: icons.FaPencilAlt,
+        icon: icons.FaFile,
         to: 'article-view',
       
       },
 
       {
         title: 'Demandes',
-        icon: icons.FaPencilAlt,
-        to: 'carrieres-enseignants',
+        icon: icons.FaClipboardList,
+        to: 'demande-list',
         underMenu: [
           {
             title: 'Liste',
@@ -505,19 +505,19 @@ export const useNavigationStore = defineStore('navigation', () => {
         underMenu: [
           {
             title: 'Stock fiche',
-            icon: icons.FaChartPie,
+            icon: icons.FaFileAlt,
             to: 'stock-fiche'
           },
 
           {
             title: 'Stock mouvement',
-            icon: icons.FaMapMarked,
+            icon: icons.FaExchangeAlt,
             to: 'fiche-mouvement'
           },
 
           {
             title: 'Stock final',
-            icon: icons.FaMapMarked,
+            icon: icons.FaCheckCircle,
             to: 'fiche-final'
           }
         ]
@@ -525,29 +525,29 @@ export const useNavigationStore = defineStore('navigation', () => {
 
       {
         title: 'Catégorie',
-        icon: icons.FaPencilAlt,
+        icon: icons.FaTags,
         to: 'categorie-article',
    
       }, {
         title: 'Famille article',
-        icon: icons.FaPencilAlt,
+        icon: icons.FaFileContract,
         to: 'famille-article',
    
       },
 
       {
         title: 'Entrepot',
-        icon: icons.FaPencilAlt,
+        icon: icons.FaWarehouse,
         to: 'entrepot-stock',
    
       }, {
         title: 'Bureau',
-        icon: icons.FaPencilAlt,
+        icon: icons.FaBuilding,
         to: 'bureau-stock',
    
       }, {
         title: 'Founisseur',
-        icon: icons.FaPencilAlt,
+        icon: icons.FaTruck,
         to: 'fournisseur-stock',
    
       }, {
