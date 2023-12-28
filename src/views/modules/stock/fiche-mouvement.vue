@@ -32,7 +32,7 @@
               <div class="flex justify-end gap-3 border-t form-btn">
                 <button
                   class="flex items-center gap-2 p-2 px-3 mt-5 text-white rounded shadow bg-unstim-primary w-fit hover:bg-opacity-60">
-                  <v-icon :name="icons.FormPWShowIcon" class="" scale="1.0" />
+                  <v-icon :name="icons.FormPWShowIcon" class=""un d scale="1.0" />
                   <span class="text-sm font-medium"> Afficher </span>
                 </button>
               </div>

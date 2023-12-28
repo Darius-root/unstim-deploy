@@ -41,8 +41,20 @@ export const useModuleStore = defineStore('module', () => {
           title: 'Trésorerie',
           icon: icons.FaMoneyBillWave,
           to: 'entree-stock'
+        },
+        {
+          title: 'Gestion de stock',
+          icon: icons.FaMoneyBillWave,
+          to: 'entree-stock'
         }
       ]
+    },
+
+    {
+      id: 5,
+      short: 'Suivi-Evaluation',
+      label: '  Suivi evaluation ',
+      to: 'module_finance_suivi_evaluation'
     },
 
     {
