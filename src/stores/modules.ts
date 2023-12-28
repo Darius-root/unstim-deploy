@@ -32,11 +32,7 @@ export const useModuleStore = defineStore('module', () => {
           icon: icons.FaCalculator,
           to: ''
         },
-        {
-          title: 'Suivi-Evaluation',
-          icon: icons.FaRegularChartBar,
-          to: 'module_finance_suivi_evaluation'
-        },
+       
         {
           title: 'Trésorerie',
           icon: icons.FaMoneyBillWave,
