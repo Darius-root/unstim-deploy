@@ -86,7 +86,7 @@ const items = ref([
               class="flex items-center gap-2 p-2 rounded-r shadow bg-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60"
             >
               <v-icon :name="icons.PersonPlus" class="text-white" scale="1.1" />
-              <span class="text-sm font-medium text-white"> Enrégistrer </span>
+              <span class="text-sm font-medium text-white"> Enregistrer </span>
             </RouterLink>
           </div>
         </div>
@@ -124,7 +124,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -138,7 +138,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -152,7 +152,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -166,7 +166,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -180,7 +180,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -194,7 +194,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -208,7 +208,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -222,7 +222,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -236,7 +236,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -250,7 +250,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -264,7 +264,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -278,7 +278,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -292,7 +292,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -306,7 +306,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -324,7 +324,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -338,7 +338,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -358,7 +358,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -372,7 +372,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -386,7 +386,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -400,7 +400,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>
@@ -414,7 +414,7 @@ const items = ref([
               class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
             >
               <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enrégistrer </span> -->
+              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
             </RouterLink>
           </div>
         </div>

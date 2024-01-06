@@ -139,16 +139,18 @@ export const useNavigationStore = defineStore('navigation', () => {
       {
         title: 'Configuration',
         icon: icons.IoSettingsSharp,
-        to: 'config-diplomes',
+        to: 'config',
         underMenu: [
           {
-            title: 'Diplomes',
+            title: 'Diplômes',
             icon: icons.FaCertificate,
             to: 'config',
             params: { id: 'diplomes' }
           },
+
+          
           {
-            title: 'Type de pret',
+            title: 'Type de prêt',
             icon: icons.FaHandHoldingUsd,
             to: 'config',
             params: { id: 'typeprets' }

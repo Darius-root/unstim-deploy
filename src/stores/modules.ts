@@ -7,16 +7,16 @@ export const useModuleStore = defineStore('module', () => {
     {
       id: 1,
       short: 'module-rha',
-      label: 'Ressource Humaine & Administration',
+      label: 'Ressources Humaines & Administration',
       submenus: [
         {
-          title: 'Ressource Humaine',
+          title: 'Ressources Humaines',
           icon: icons.FaUsers,
           to: 'tableauBord'
         },
 
         {
-          title: 'Courriers Administratif',
+          title: 'Courriers Administratifs',
           icon: icons.FaEnvelope,
           to: 'tableauBord'
         }

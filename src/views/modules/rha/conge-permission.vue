@@ -219,7 +219,7 @@ const data = ref({
   },
   buttons: [
     { title: 'Voir les point des congés ', color: '#2b9eff', to: 'conge-annuel' },
-    { title: 'Enrégistrement congé/Pemission ', color: '#2b9eff', to: 'save-conge' },
+    { title: 'Enregistrement congé/Pemission ', color: '#2b9eff', to: 'save-conge' },
     { title: 'Voir les types de congés ', color: '#2b9eff', to: 'type-conge' },
     { title: 'Voir les congés arrivant à terme', color: 'red', to: 'end-conge' }
   ]

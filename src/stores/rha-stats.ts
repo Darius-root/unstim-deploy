@@ -76,7 +76,7 @@ export const useRhaStatStore = defineStore('rhaStat', () => {
     },
 
     {
-      label: 'Courriés arrivés',
+      label: 'Courriers arrivés',
       valeur: '17',
       couleur: '#0071f7'
     },
@@ -86,7 +86,7 @@ export const useRhaStatStore = defineStore('rhaStat', () => {
       couleur: ''
     },
     {
-      label: 'Courriés départ',
+      label: 'Courriers départ',
       valeur: '22',
       couleur: '#0071f7'
     }
