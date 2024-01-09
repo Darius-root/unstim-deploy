@@ -252,7 +252,7 @@ export const useNavigationStore = defineStore('navigation', () => {
         to: 'personnel',
         underMenu: [
           {
-            title: 'Plan stratégiques',
+            title: 'Plan stratégique',
             icon: icons.FaBullseye,
             to: 'plan-strategique'
           },
@@ -262,13 +262,13 @@ export const useNavigationStore = defineStore('navigation', () => {
             to: 'plan-sectoriel'
           },
           {
-            title: 'Niveau analytiques',
+            title: 'Niveaux analytiques',
             icon: icons.FaChartBar,
             to: 'niveau-analytique'
           },
 
           {
-            title: 'Direction et services',
+            title: 'Directions et services',
             icon: icons.FaBuilding,
             to: 'directions-services'
           },
@@ -413,7 +413,7 @@ export const useNavigationStore = defineStore('navigation', () => {
         to: 'recour-view',
         underMenu: [
           {
-            title: 'Toute les publications',
+            title: 'Toutes les publications',
             icon: icons.FaChartPie,
             to: 'evolution-marche'
           },
@@ -538,7 +538,7 @@ export const useNavigationStore = defineStore('navigation', () => {
       },
 
       {
-        title: 'Entrepot',
+        title: 'Entrepôt',
         icon: icons.FaWarehouse,
         to: 'entrepot-stock',
    

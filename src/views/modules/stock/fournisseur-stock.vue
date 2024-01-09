@@ -68,7 +68,7 @@
   
 
   const data = ref({
-    title: 'Listes des fournisseur',
+    title: 'Listes des fournisseurS',
   
     headers: [
       { text: 'N°', sortable: true, value: 'MA' },

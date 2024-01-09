@@ -71,8 +71,8 @@
   
     headers: [
       { text: 'N°', sortable: true, value: 'MA' },
-      { text: 'Entrepot initial', sortable: true, value: 'NO' },
-      { text: 'Entrepot final', sortable: true, value: 'PR' },
+      { text: 'Entrepôt initial', sortable: true, value: 'NO' },
+      { text: 'Entrepôt final', sortable: true, value: 'PR' },
       { text: '	Bureau beneficaire ', sortable: true, value: 'SE' },
       { text: '	Utilisateur beneficaire', sortable: true, value: 'TY' },
       { text: '	Motif', sortable: true, value: 'aa' },

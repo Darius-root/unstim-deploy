@@ -13,7 +13,7 @@ import { ref } from 'vue'
 import TemplatePagesConfig from '@/components/templatePagesTab.vue'
 
 const data = ref({
-  title: "Liste des années d'évaluations",
+  title: "Liste des années d'évaluation",
 
   headers: [
     { text: 'Année', sortable: true, value: 'annee' },

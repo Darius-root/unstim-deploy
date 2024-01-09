@@ -9,7 +9,7 @@
 
 
         <div class="flex py-2 border-b top-line">
-            <span class="text-base font-normal">Modifier un entrepot</span>
+            <span class="text-base font-normal">Modifier un entrepôt</span>
         </div>
 
         <div class="bg-white shadow-md rounded-lg mt-3 p-6">

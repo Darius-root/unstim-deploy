@@ -17,7 +17,7 @@
                 <div class="grid grid-cols-2 gap-6">
                     <selecteImput :label="'Type'" :parameters="parameters" :isRequired="true" />
                     <imput :label="'Date'" :type="'date'" :isRequired="true" class="flex-grow" />
-                    <selecteImput :label="'Entrepot initial'" :parameters="parameters" :isRequired="true" />
+                    <selecteImput :label="'Entrepôt initial'" :parameters="parameters" :isRequired="true" />
                     <imput :label="'Motif'" :isRequired="true" class="flex-grow" />
                     <imput :label="'Description'" :isRequired="true" class="flex-grow" />
 

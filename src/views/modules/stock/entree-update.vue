@@ -19,7 +19,7 @@
                     <imput :label="'Numéro bon de commande .pdf'" :isRequired="true" :type="'file'" class="flex-grow" />
                     <imput :label="'Date'" :type="'date'" :isRequired="true" class="flex-grow" />
                     <selecteImput :label="'Fournisseur'" :parameters="parameters" :isRequired="true" />
-                    <selecteImput :label="'Entrepot'" :parameters="parameters" :isRequired="true" />
+                    <selecteImput :label="'Entrepôt'" :parameters="parameters" :isRequired="true" />
                     <imput :label="'Description'" :isRequired="true" class="flex-grow" />
 
 

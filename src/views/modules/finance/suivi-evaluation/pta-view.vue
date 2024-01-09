@@ -325,7 +325,7 @@
 
                                 <template #item-statut="">
                                     <span class=" flex rounded-md text-xs font-medium bg-gray-500 text-white">
-                                        Non demarrer
+                                        non demarré
                                     </span>
                                 </template>
 

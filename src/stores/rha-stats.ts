@@ -32,7 +32,7 @@ export const useRhaStatStore = defineStore('rhaStat', () => {
     },
 
     {
-      label: 'Salaire moyens',
+      label: 'Salaire moyen',
       valeur: '250000',
       couleur: ''
     },

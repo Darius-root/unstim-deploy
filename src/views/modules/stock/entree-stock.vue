@@ -83,7 +83,7 @@
       { text: 'Bon de commande', sortable: true, value: 'NO' },
       { text: 'Description', sortable: true, value: 'PR' },
       { text: 'Fournisseur ', sortable: true, value: 'SE' },
-      { text: 'Entrepot', sortable: true, value: 'TY' },
+      { text: 'Entrepôt', sortable: true, value: 'TY' },
      
 
       { text: 'Actions', sortable: true, value: 'action' }

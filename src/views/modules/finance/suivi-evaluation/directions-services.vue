@@ -9,11 +9,11 @@
 
 
     <div class="flex justify-end my-3">
-      <RouterLink to="element-analytique-create"
+      <RouterLink to="directions-create"
         class="flex items-center gap-2 p-2 bg-unstim-primary text-white rounded shadow hover:bg-opacity-60 mx-1">
         <v-icon :name="icons.AddIcon" scale="1.1" />
 
-        <span class="text-sm font-medium"> Ajouter un plan stratégique</span>
+        <span class="text-sm font-medium"> Ajouter une direction </span>
       </RouterLink>
     </div>
     <accordion :data="accordionsData" />
@@ -32,49 +32,44 @@ const accordionsData = [
     toView: "directions-view",
     title: "UNSTIM",
     toDelete: " String",
-    toAdd: "directions-create",
+    toAdd: "sous-direction-create",
          toUpdate: "directions-update",
     children: [
       {
         value: "RECTORAT",
         type: "",
-        toView: "directions-view"
+        toView: "sous-direction-view"
         ,
-        title: "RECTORAT",
+        title: "Sous direction",
         toDelete: " String",
-        toAdd: "directions-create",
-             toUpdate: "directions-update",
+        toAdd: "service-create",
+             toUpdate: "sous-direction-update",
         children: [
           {
-            value: "VICES RECTORAT CHARGÉ DE LA RECHERCHE UNIVERSITAIRE",
-            type: "", toView: "directions-view"
+            value: "Service",
+            type: "", toView: "service-view"
             ,
-            title: "VICES RECTORAT CHARGÉ DE LA RECHERCHE UNIVERSITAIRE",
+            title: "Service",
             toDelete: " String",
-            toAdd: "directions-create",
-                 toUpdate: "directions-update",
-            children: []
-          },
-          {
-            value: "VICES RECTORAT CHARGÉ DES AFFAIRE ACADÉMIQUES",
-            type: "", toView: "directions-view"
+            toAdd: "fonction-create",
+                 toUpdate: "serviec-update",
+            children: [
+            {
+            value: "fonction",
+            type: "", toView: "fonction-view"
             ,
-            title: "VICES RECTORAT CHARGÉ DES AFFAIRE ACADÉMIQUES",
+            title: "Fonctions",
             toDelete: " String",
-            toAdd: "directions-create",
-                 toUpdate: "directions-update",
-            children: []
-          },
-          {
-            value: "VICES RECTORAT CHARGÉ DE LA COPEREATION ET DE L'INSERTION PROFESSIONNELLE",
-            type: "", toView: "directions-view"
-            ,
-            title: "VICES RECTORAT CHARGÉ DE LA COPEREATION ET DE L'INSERTION PROFESSIONNELLE",
-            toDelete: " String",
-            toAdd: "directions-create",
-                 toUpdate: "directions-update",
-            children: []
+            toAdd: "structure-create",
+                 toUpdate: "fonction-update",
+            children: [
+
+          
+            ]
           }
+            ]
+          },
+        
         ]
       },
 

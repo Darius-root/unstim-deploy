@@ -9,13 +9,13 @@
     </RouterLink>
     <div class="mx-auto xl:container mt-5">
       <div class="flex py-2 border-b top-line">
-        <span class="text-base font-medium"> Direction</span>
+        <span class="text-base font-medium"> Sous direction</span>
       </div>
   
       <div class="max-w-full p-5 mt-5 border row">
 
         <div class="flex py-2 justify-center  border-b top-line">
-        <span class="text-base font-medium"> UNSTIM</span>
+        <span class="text-base font-medium"> RECTORAT</span>
       </div>
         <table class="table mt-3 w-full">
           <tbody>
@@ -29,7 +29,7 @@
             </tr>
            
             <tr>
-              <th class="py-2 text-left font-medium border-b">Occupant :</th>
+              <th class="py-2 text-left font-medium border-b">Direction :</th>
               <td class="border-b">xxxxxxxx</td>
             </tr>
           </tbody>
@@ -38,7 +38,7 @@
   
   
           
-  <RouterLink to="directions-update"
+  <RouterLink to="sous-direction-update"
     class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-green-600 hover:opacity-50">
     <v-icon :name="icons.EditIcon" scale="1.0" /> Modifier
   </RouterLink>
@@ -47,14 +47,14 @@
     class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-red-500 hover:opacity-50">
     <v-icon :name="icons.DeleteIcon" scale="1.0" /> Supprimer
   </RouterLink>
-</div>     
+</div> 
       </div>
   
 
 
       <div class="max-w-full p-5  mt-6 border row">
         <div class="flex py-2 justify-center  border-b top-line">
-        <span class="text-base font-medium"> Directions techniques et cellules
+        <span class="text-base font-medium">Services
 </span>
       </div>
       <div class="flex justify-end my-3 items-center space-x-2">
@@ -75,8 +75,7 @@
         <template #item-action="">
           <div class="flex gap-3 row justify-start items-start">
             <RouterLink
-              to="niveau-analytique-view"
-              v-if="data.action.edit"
+              to=""
               class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-green-600 hover:opacity-50"
             >
               <v-icon :name="icons.FormPWShowIcon" scale="1.0" />
@@ -84,7 +83,6 @@
 
             <RouterLink
               to="source-financement-update"
-              v-if="data.action.update"
               class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-yellow-600 hover:opacity-50"
             >
               <v-icon :name="icons.EditIcon" scale="1.0" />
@@ -92,7 +90,6 @@
 
             <RouterLink
               to=""
-              v-if="data.action.delete"
               class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-red-600 hover:bg-red-400"
             >
               <v-icon :name="icons.DeleteIcon" scale="1.0" />
@@ -130,11 +127,7 @@ import { ref } from 'vue';
         NO: '55-ddd',
       }
     ],
-    action: {
-      edit: true,
-      update: true,
-      delete: true
-    },
+   
     buttons: [{ title: 'Ajouter une Unite de mesure ', color: '#2b9eff', to: 'unite-mesure-create' }]
   })
     

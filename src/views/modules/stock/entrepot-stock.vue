@@ -68,7 +68,7 @@
   
 
   const data = ref({
-    title: 'Listes des entrepots',
+    title: 'Listes des entrepôts',
   
     headers: [
       { text: 'N°', sortable: true, value: 'MA' },
@@ -95,7 +95,7 @@
     ],
    
     buttons: [
-      { title: 'Ajouter un entrepot ', color: '#2b9eff', to: 'entrepot-create' }
+      { title: 'Ajouter un entrepôt ', color: '#2b9eff', to: 'entrepot-create' }
     ]
   })
   </script>

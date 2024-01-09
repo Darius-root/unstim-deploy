@@ -663,6 +663,100 @@ const router = createRouter({
                 import('@/views/modules/finance/suivi-evaluation/directions-update.vue')
             },
 
+
+
+
+
+            {
+              path: 'sous-direction-create',
+              name: 'sous-direction-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/sous-direction-create.vue')
+            },
+
+            {
+              path: 'sous-direction-update',
+              name: 'sous-direction-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/sous-direction-update.vue')
+            },
+            {
+              path: 'sous-direction-view',
+              name: 'sous-direction-view',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/sous-direction-view.vue')
+            },
+
+
+
+            {
+              path: 'service-create',
+              name: 'service-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/service-create.vue')
+            },
+
+            {
+              path: 'service-update',
+              name: 'service-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/service-update.vue')
+            },
+            {
+              path: 'service-view',
+              name: 'service-view',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/service-view.vue')
+            },
+
+
+            {
+              path: 'fonction-create',
+              name: 'fonction-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/fonction-create.vue')
+            },
+
+            {
+              path: 'fonction-update',
+              name: 'fonction-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/fonction-update.vue')
+            },
+            {
+              path: 'fonction-view',
+              name: 'fonction-view',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/fonction-view.vue')
+            },
+
+
+
+     
+
+
+
+
+
+
+            
+            {
+              path: 'directions-create',
+              name: 'directions-create',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/directions-create.vue')
+            },
+            {
+              path: 'directions-update',
+              name: 'directions-update',
+              component: () =>
+                import('@/views/modules/finance/suivi-evaluation/directions-update.vue')
+            },
+
+
+
+
+
             {
               path: 'pta',
               name: 'pta',

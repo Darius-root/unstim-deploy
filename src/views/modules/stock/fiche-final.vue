@@ -20,7 +20,7 @@
               <div class="grid grid-cols-1 gap-4 py-5 md:grid-cols-2 lg:grid-cols-3">
                
 
-                <selecteImput :label="'Entrepots'" :parameters="parameters" :isRequired="true" />
+                <selecteImput :label="'entrepôts'" :parameters="parameters" :isRequired="true" />
                                      <imput :label="'Date de référence'" :type="'date'" :isRequired="true" class="flex-grow" />
 
 
