@@ -388,19 +388,19 @@ export const useNavigationStore = defineStore('navigation', () => {
     module_carriere_enseignant: [
       {
         title: 'Tableau de bord',
-        icon: icons.FaPencilAlt,
+        icon: icons.FaDashcube,
         to: 'carrieres-enseignants',
         underMenu: [
           {
             title: 'Mes informations',
-            icon: icons.FaChartPie,
-            to: 'evolution-marche'
+            icon: icons.PersonR,
+            to: 'dashboard'
           },
 
           {
             title: 'Modifier Informations',
             icon: icons.FaMapMarked,
-            to: 'point-etape-marche'
+            to: 'modifier-informations'
           }
         ]
       },
@@ -408,18 +408,18 @@ export const useNavigationStore = defineStore('navigation', () => {
       {
         title: 'Publications',
         icon: icons.FaPencilAlt,
-        to: 'recour-view',
+        to: '',
         underMenu: [
           {
-            title: 'Toute les publications',
+            title: 'Toutes les publications',
             icon: icons.FaChartPie,
-            to: 'evolution-marche'
+            to: 'all-publications'
           },
 
           {
             title: 'Mes publications',
             icon: icons.FaMapMarked,
-            to: 'point-etape-marche'
+            to: 'mes-publications'
           }
         ]
       },

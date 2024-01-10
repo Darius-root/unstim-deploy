@@ -15,7 +15,7 @@ import { ref } from 'vue'
 const activeIndex = ref('1')
 
 const handleSelect = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
+  // console.log(key, keyPath)
 }
 </script>
 
@@ -46,8 +46,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
       </div>
     </div>
 
-    <el-menu :router="true" :default-active="activeIndex" class="el-menu-demo  justify-center" mode="horizontal"
-      @select="handleSelect">
+    <el-menu :router="true" :default-active="activeIndex" class="justify-center" mode="horizontal" @select="handleSelect">
       <div class="" v-for="(module, item) in modules" :key="item">
 
         <template v-if="!module.submenus">

@@ -25,7 +25,6 @@ import unstimText from '@/components/inputs/unstim-text.vue'
 import { useRhaButtonStore } from '@/stores/rha-buttons'
 import { icons } from '@/assets/icons/oh-vue-icons'
 import { reactive, ref } from 'vue'
-import { ElButton } from 'element-plus'
 
 const rhaPersonnelBtn = useRhaButtonStore().rhaButtons
 

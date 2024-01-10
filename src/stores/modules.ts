@@ -18,7 +18,7 @@ export const useModuleStore = defineStore('module', () => {
         {
           title: 'Courriers Administratif',
           icon: icons.FaEnvelope,
-          to: 'tableauBord'
+          to: ''
         }
       ]
     },
@@ -40,7 +40,7 @@ export const useModuleStore = defineStore('module', () => {
         {
           title: 'Trésorerie',
           icon: icons.FaMoneyBillWave,
-          to: 'tableauBord'
+          to: ''
         }
       ]
     },
@@ -53,7 +53,7 @@ export const useModuleStore = defineStore('module', () => {
         {
           title: 'Projet de Recherche',
           icon: icons.FaFlask,
-          to: 'tableauBord'
+          to: ''
         },
         {
           title: 'Carrières des Enseignants',
@@ -63,12 +63,12 @@ export const useModuleStore = defineStore('module', () => {
         {
           title: 'Publication des Travaux',
           icon: icons.FaNewspaper,
-          to: 'tableauBord'
+          to: ''
         },
         {
           title: 'Colloques',
           icon: icons.FaComments,
-          to: 'tableauBord'
+          to: ''
         }
       ]
     },

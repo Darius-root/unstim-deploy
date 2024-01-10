@@ -1142,21 +1142,29 @@ const router = createRouter({
             },
 
             {
-              path: 'mes-informations',
-              name: 'mes-informations',
-              component: () => import('@/views/modules/marche/param-config.vue')
-            },
-
-            {
               path: 'modifier-informations',
               name: 'modifier-informations',
-              component: () => import('@/views/modules/marche/param-config.vue')
+              component: () => import('@/views/modules/universitaire/carrieres/edit-infos.vue')
             },
 
             {
               path: 'nouvelle-publication',
               name: 'nouvelle-publication',
-              component: () => import('@/views/modules/marche/param-config.vue')
+              component: () =>
+                import('@/views/modules/universitaire/carrieres/nouvelle-publication.vue')
+            },
+
+            {
+              path: 'all-publications',
+              name: 'all-publications',
+              component: () => import('@/views/modules/universitaire/carrieres/all-publication.vue')
+            },
+
+            {
+              path: 'mes-publications',
+              name: 'mes-publications',
+              component: () =>
+                import('@/views/modules/universitaire/carrieres/mes-publications.vue')
             },
 
             {
