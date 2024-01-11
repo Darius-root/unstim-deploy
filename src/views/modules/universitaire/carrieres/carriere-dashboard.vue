@@ -117,7 +117,6 @@ const attributs = reactive([
             </h3>
 
 
-
             <el-descriptions class-name="w-full bg-red-500" direction="horizontal" :column="1" border>
 
               <el-descriptions-item label="Noms & Prénoms">David RANDOM</el-descriptions-item>

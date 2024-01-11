@@ -139,16 +139,18 @@ export const useNavigationStore = defineStore('navigation', () => {
       {
         title: 'Configuration',
         icon: icons.IoSettingsSharp,
-        to: 'config-diplomes',
+        to: 'config',
         underMenu: [
           {
-            title: 'Diplomes',
+            title: 'Diplômes',
             icon: icons.FaCertificate,
             to: 'config',
             params: { id: 'diplomes' }
           },
+
+          
           {
-            title: 'Type de pret',
+            title: 'Type de prêt',
             icon: icons.FaHandHoldingUsd,
             to: 'config',
             params: { id: 'typeprets' }
@@ -250,7 +252,7 @@ export const useNavigationStore = defineStore('navigation', () => {
         to: 'personnel',
         underMenu: [
           {
-            title: 'Plan stratégiques',
+            title: 'Plan stratégique',
             icon: icons.FaBullseye,
             to: 'plan-strategique'
           },
@@ -260,13 +262,13 @@ export const useNavigationStore = defineStore('navigation', () => {
             to: 'plan-sectoriel'
           },
           {
-            title: 'Niveau analytiques',
+            title: 'Niveaux analytiques',
             icon: icons.FaChartBar,
             to: 'niveau-analytique'
           },
 
           {
-            title: 'Direction et services',
+            title: 'Directions et services',
             icon: icons.FaBuilding,
             to: 'directions-services'
           },
@@ -448,6 +450,114 @@ export const useNavigationStore = defineStore('navigation', () => {
           }
         ]
       }
+    ],
+
+
+    module_gestion_stock: [
+      {
+        title: 'Opération stock',
+        icon: icons.FaCubes,
+        to: 'carrieres-enseignants',
+        underMenu: [
+          {
+            title: 'Entrées en stock',
+            icon: icons.FaArrowUp,
+            to: 'entree-stock'
+          },
+
+          {
+            title: 'sortie de stock',
+            icon: icons.FaArrowDown,
+            to: 'sortie-stock'
+          }
+        ]
+      },
+
+      {
+        title: 'Article',
+        icon: icons.FaFile,
+        to: 'article-view',
+      
+      },
+
+      {
+        title: 'Demandes',
+        icon: icons.FaClipboardList,
+        to: 'demande-list',
+        underMenu: [
+          {
+            title: 'Liste',
+            icon: icons.FaChartPie,
+            to: 'demande-list'
+          },
+
+          {
+            title: 'Envoyés',
+            icon: icons.FaMapMarked,
+            to: 'demande-send'
+          }
+        ]
+      },
+   
+
+      {
+        title: 'Editions',
+        icon: icons.FaPencilAlt,
+        to: 'carrieres-enseignants',
+        underMenu: [
+          {
+            title: 'Stock fiche',
+            icon: icons.FaFileAlt,
+            to: 'stock-fiche'
+          },
+
+          {
+            title: 'Stock mouvement',
+            icon: icons.FaExchangeAlt,
+            to: 'fiche-mouvement'
+          },
+
+          {
+            title: 'Stock final',
+            icon: icons.FaCheckCircle,
+            to: 'fiche-final'
+          }
+        ]
+      },
+
+      {
+        title: 'Catégorie',
+        icon: icons.FaTags,
+        to: 'categorie-article',
+   
+      }, {
+        title: 'Famille article',
+        icon: icons.FaFileContract,
+        to: 'famille-article',
+   
+      },
+
+      {
+        title: 'Entrepôt',
+        icon: icons.FaWarehouse,
+        to: 'entrepot-stock',
+   
+      }, {
+        title: 'Bureau',
+        icon: icons.FaBuilding,
+        to: 'bureau-stock',
+   
+      }, {
+        title: 'Founisseur',
+        icon: icons.FaTruck,
+        to: 'fournisseur-stock',
+   
+      }, {
+        title: 'Paramétrage',
+        icon: icons.FaPencilAlt,
+        to: 'parametrage-stock',
+   
+      },
     ]
   })
 

@@ -16,7 +16,7 @@
     <form>
       <div class="xl:container">
         <div class="flex py-2">
-          <span class="text-base font-normal">Enrégistrer une formation</span>
+          <span class="text-base font-normal">Enregistrer une formation</span>
         </div>
 
         <TabsRoot class="flex flex-col w-full">

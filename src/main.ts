@@ -10,7 +10,7 @@ import Vue3EasyDataTable from 'vue3-easy-data-table'
 import 'vue3-easy-data-table/dist/style.css'
 
 import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
+import './assets/css/element-variable.css'
 
 import App from './App.vue'
 import router from './router'

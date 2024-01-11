@@ -4,7 +4,7 @@
   "exclude": ["src/**/__tests__/*"],
 
   "compilerOptions": {
-    "types": ["node", "jsdom"],
+    "types": ["node", "jsdom", "element-plus/global"],
     "composite": true,
     "baseUrl": ".",
     "paths": {

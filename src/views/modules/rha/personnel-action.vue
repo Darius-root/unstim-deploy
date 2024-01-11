@@ -213,7 +213,7 @@ const fonctionsParameters = reactive({
                       </AlertDialogCancel>
                       <AlertDialogAction
                         class="text-red11 bg-red-400 shadow hover:bg-red-500 inline-flex h-[35px] items-center justify-center rounded-[4px] px-[15px] font-semibold">
-                        Enrégistrer
+                        Enregistrer
                       </AlertDialogAction>
                     </div>
                   </AlertDialogContent>

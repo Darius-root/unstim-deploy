@@ -30,7 +30,7 @@
 
           <RouterLink to="evolution-marche-view"
               class="flex items-center text-sm  bg-green-700 my-10 mx-3 h-8 w-fit p-3 border rounded-md shadow text-white  hover:opacity-60">
-              <span class=" font-bold">Enrégistrer</span>
+              <span class=" font-bold">Enregistrer</span>
             </RouterLink>
          
         </form>

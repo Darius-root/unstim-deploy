@@ -39,7 +39,7 @@ export const useSygStatStore = defineStore('sygStat', () => {
     },
 
     {
-      label: 'Résumé rejetés',
+      label: 'Résumés rejetés',
       valeur: '10',
       couleur: '#e43224'
     },

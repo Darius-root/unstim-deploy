@@ -220,7 +220,7 @@ const data = ref({
   },
   buttons: [
     { title: 'Voir les point des congés ', color: '#2b9eff', to: 'conge-annuel' },
-    { title: 'Enrégistrement congé/Pemission ', color: '#2b9eff', to: 'save-conge' }
+    { title: 'Enregistrement congé/Pemission ', color: '#2b9eff', to: 'save-conge' }
   ]
 })
 </script>

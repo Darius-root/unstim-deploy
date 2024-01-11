@@ -22,7 +22,7 @@
           class="bg-gray-100 text-neutral-700 px-5 h-[45px] flex-1 flex items-center justify-center text-[18px] leading-none select-none rounded-t-md hover:bg-slate-100 data-[state=active]:bg-white data-[state=active]:focus:relative data-[state=active]:focus:shadow-[0_0_0_0.5px] data-[state=active]:focus:shadow-black outline-none cursor-default bg-active"
           value="tab1"
         >
-          Enrégistrer un conger
+          Enregistrer un conger
         </TabsTrigger>
         <TabsTrigger
           class="bg-gray-100 sm:w-[550px] text-neutral-700 px-5 h-[45px] flex-1 flex items-center justify-center text-[18px] leading-none select-none rounded-t-md hover:bg-slate-100 data-[state=active]:bg-white data-[state=active]:focus:relative data-[state=active]:focus:shadow-[0_0_0_0.5px] data-[state=active]:focus:shadow-black outline-none cursor-default bg-active"

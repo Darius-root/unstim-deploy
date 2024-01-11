@@ -113,7 +113,20 @@ import {
   GiBullHorns,
   PrChartLine,
   BiPlusCircle,
-  FaLifeRing
+  FaLifeRing,
+  FaCubes,
+  FaArrowUp,
+  FaArrowDown,
+  FaFile,
+  FaClipboardList,
+  FaTags,
+  FaExchangeAlt,
+  FaCheckCircle,
+  FaWarehouse,
+  FaTruck,
+
+
+  
 
 
 
@@ -236,7 +249,18 @@ addIcons(
   GiBullHorns,
   PrChartLine,
   BiPlusCircle,
-  FaLifeRing
+  FaLifeRing,
+  FaCubes,
+  FaArrowUp,
+  FaArrowDown,
+  FaFile,
+  FaClipboardList,
+  FaTags,
+  FaExchangeAlt,
+  FaCheckCircle,
+  FaWarehouse,
+  FaTruck,
+
 
 
 
@@ -360,7 +384,18 @@ const icons = {
   GiBullHorns: 'gi-bull-horns',
   PrChartLine: 'pr-chart-line',
   BiPlusCircle: 'bi-plus-circle',
-  FaLifeRing: 'fa-life-ring'
+  FaLifeRing: 'fa-life-ring',
+  FaCubes: 'fa-cubes',
+  FaArrowUp: 'fa-arrow-up',
+  FaArrowDown: 'fa-arrow-down',
+  FaFile: 'fa-file',
+  FaClipboardList: 'fa-clipboard-list',
+  FaTags: 'fa-tags',
+  FaExchangeAlt: 'fa-exchange-alt',
+  FaCheckCircle: 'fa-check-circle',
+  FaWarehouse: 'fa-warehouse',
+  FaTruck:'fa-truck'
+
   
 
 

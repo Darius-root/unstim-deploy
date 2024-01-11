@@ -7,16 +7,16 @@ export const useModuleStore = defineStore('module', () => {
     {
       id: 1,
       short: 'module-rha',
-      label: 'Ressource Humaine & Administration',
+      label: 'Ressources Humaines & Administration',
       submenus: [
         {
-          title: 'Ressource Humaine',
+          title: 'Ressources Humaines',
           icon: icons.FaUsers,
           to: 'tableauBord'
         },
 
         {
-          title: 'Courriers Administratif',
+          title: 'Courriers Administratifs',
           icon: icons.FaEnvelope,
           to: ''
         }
@@ -32,17 +32,25 @@ export const useModuleStore = defineStore('module', () => {
           icon: icons.FaCalculator,
           to: ''
         },
-        {
-          title: 'Suivi-Evaluation',
-          icon: icons.FaRegularChartBar,
-          to: 'module_finance_suivi_evaluation'
-        },
+
         {
           title: 'Trésorerie',
           icon: icons.FaMoneyBillWave,
-          to: ''
+          to: 'entree-stock'
+        },
+        {
+          title: 'Gestion de stock',
+          icon: icons.FaMoneyBillWave,
+          to: 'entree-stock'
         }
       ]
+    },
+
+    {
+      id: 5,
+      short: 'Suivi-Evaluation',
+      label: '  Suivi evaluation ',
+      to: 'module_finance_suivi_evaluation'
     },
 
     {
@@ -68,7 +76,7 @@ export const useModuleStore = defineStore('module', () => {
         {
           title: 'Colloques',
           icon: icons.FaComments,
-          to: ''
+          to: 'sygec'
         }
       ]
     },

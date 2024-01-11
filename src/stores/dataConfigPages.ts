@@ -7,7 +7,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
       id: 'diplomes',
       data: [
         {
-          title: 'Diplome',
+          title: 'Diplôme',
 
           headers: [
             { text: 'Nom', sortable: true, value: 'nom' },
@@ -27,7 +27,7 @@ export const useDataConfigPages = defineStore('dataConfigPages', () => {
             delete: true
           },
 
-          buttons: [{ title: 'Ajouter un diplome', color: '#2b9eff', to: 'create-diplome  ' }]
+          buttons: [{ title: 'Ajouter un diplôme', color: '#2b9eff', to: 'create-diplome' }]
         }
       ]
     },

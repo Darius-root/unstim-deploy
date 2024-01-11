@@ -15,12 +15,8 @@ import DiplomeAgent from '@/components/rha/diplome-agent.vue'
 import DistinctionAgent from '@/components/rha/diplome-agent.vue'
 
 const headers = ref([
-  { text: 'Actions', sortable: true, value: 'action' },
-  { text: 'Numéro', sortable: true, value: 'numero' },
-  { text: 'Matricule', sortable: true, value: 'matricule' },
-  { text: 'Employe', sortable: true, value: 'employe' },
-  { text: 'Cumul', sortable: true, value: 'cumul' },
-  { text: 'Trimestre', sortable: true, value: 'trimestre' }
+  { text: 'Actions', sortable: true, width: '30', value: 'action' },
+  { text: 'Documents', sortable: true, value: 'numero' },
 ])
 
 const items = ref([
@@ -145,11 +141,8 @@ const infosTabAgent = reactive([
     </div>
 
     <div class="flex gap-3">
-      <RouterLink
-        @click.prevent="$router.back()"
-        to=""
-        class="flex items-center gap-2 p-2 mt-5 border rounded shadow text-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60"
-      >
+      <RouterLink @click.prevent="$router.back()" to=""
+        class="flex items-center gap-2 p-2 mt-5 border rounded shadow text-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60">
         <v-icon :name="icons.ChevronUp" class="-rotate-90" scale="1.1" />
         <span class="text-sm font-medium"> Retour </span>
       </RouterLink>
@@ -158,22 +151,15 @@ const infosTabAgent = reactive([
     <div class="tab-content mt-5">
       <TabsRoot class="flex flex-col w-full" default-value="infos-agent">
         <TabsList class="flex items-center flex-wrap gap-3" aria-label="Manage your account">
-          <TabsTrigger
-            v-for="item in infosTabAgent"
-            :key="item.tag"
+          <TabsTrigger v-for="item in infosTabAgent" :key="item.tag"
             class="flex cursor-pointer data-[state=active]:bg-green-500 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow text-sm items-center rounded bg-gray-200 gap-2 p-2 w-fit hover:bg-opacity-60"
-            :value="item.tag"
-          >
+            :value="item.tag">
             {{ item.label }}
           </TabsTrigger>
         </TabsList>
 
-        <TabsContent
-          v-for="(item, index) in infosTabAgent"
-          :key="index"
-          class="mt-5 bg-white rounded-b-md"
-          :value="item.tag"
-        >
+        <TabsContent v-for="(item, index) in infosTabAgent" :key="index" class="mt-5 bg-white rounded-b-md"
+          :value="item.tag">
           <component :is="item.component"> </component>
         </TabsContent>
       </TabsRoot>
@@ -181,10 +167,8 @@ const infosTabAgent = reactive([
 
     <div class="flex justify-between items-center mt-5">
       <h3 class="text-xl font-semibold">Documents</h3>
-      <RouterLink
-        to="{ name: item.to }"
-        class="flex items-center gap-2 p-2 rounded shadow bg-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60"
-      >
+      <RouterLink to="{ name: item.to }"
+        class="flex items-center gap-2 p-2 rounded shadow bg-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60">
         <v-icon :name="icons.PersonPlus" class="text-white" scale="1.1" />
         <span class="text-sm font-medium text-white"> Joindre un document </span>
       </RouterLink>
@@ -196,29 +180,22 @@ const infosTabAgent = reactive([
       </div>
 
       <div class="card-content">
-        <easy-data-table
-          alternating
-          border-cell
-          :headers="headers"
-          class="text-lg"
-          theme-color="#2f9fff"
-          :items="items"
-          buttons-pagination
-        >
+        <easy-data-table alternating border-cell :headers="headers" class="text-lg" theme-color="#2f9fff" :items="items"
+          buttons-pagination>
           <template #item-action="">
             <div class="flex gap-3">
-              <!-- 
-            <RouterLink to=""
-              class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
-              <v-icon :name="icons.EditIcon" scale="1.0" />
 
-            </RouterLink>
+              <RouterLink to=""
+                class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
+                <v-icon :name="icons.EditIcon" scale="1.0" />
 
-            <RouterLink to=""
-              class="flex items-center gap-2 p-2 my-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500">
-              <v-icon :name="icons.DeleteIcon" scale="1.0" />
+              </RouterLink>
 
-            </RouterLink> -->
+              <RouterLink to=""
+                class="flex items-center gap-2 p-2 my-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500">
+                <v-icon :name="icons.DeleteIcon" scale="1.0" />
+
+              </RouterLink>
             </div>
           </template>
         </easy-data-table>

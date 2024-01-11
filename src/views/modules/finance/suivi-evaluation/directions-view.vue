@@ -34,6 +34,20 @@
             </tr>
           </tbody>
         </table>
+        <div class="flex space-x-8 m-6">
+  
+  
+          
+  <RouterLink to="directions-update"
+    class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-green-600 hover:opacity-50">
+    <v-icon :name="icons.EditIcon" scale="1.0" /> Modifier
+  </RouterLink>
+
+  <RouterLink to=""
+    class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-red-500 hover:opacity-50">
+    <v-icon :name="icons.DeleteIcon" scale="1.0" /> Supprimer
+  </RouterLink>
+</div>     
       </div>
   
 
