@@ -191,7 +191,7 @@
         <template #item-action="">
             <div class="flex gap-3 row justify-center items-center">
             <RouterLink
-              to="rappel-view"
+              to="idr-view"
               v-if="data.action.update"
               class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-green-600 hover:opacity-50"
             >
@@ -263,11 +263,7 @@
     update: true,
     delete: true
   },
-  buttons: [
-    { title: 'Ajouter un rappel ', color: '#2b9eff', to: 'rappel-create', icon: icons.AddIcon  },
-    { title: 'Imprimer un mois ', color: 'rgb(255, 193, 7)', to: '', icon:icons.CoPrint },
-
-  ]
+ 
 })
 
 
