@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+
+import { Search } from '@element-plus/icons-vue'
 import {
   AccordionContent,
   AccordionHeader,
@@ -19,8 +21,6 @@ import {
   AlertDialogTrigger
 } from 'radix-vue'
 
-import unstimSelect from '@/components/inputs/unstim-select.vue'
-import unstimText from '@/components/inputs/unstim-text.vue'
 
 import { useRhaButtonStore } from '@/stores/rha-buttons'
 import { icons } from '@/assets/icons/oh-vue-icons'
@@ -29,16 +29,6 @@ import { reactive, ref } from 'vue'
 const rhaPersonnelBtn = useRhaButtonStore().rhaButtons
 
 const rhaButtonsType = useRhaButtonStore().rhaButtonsType
-
-const headers = ref([
-  { text: 'Actions', sortable: true, value: 'action' },
-  { text: 'Matricule', sortable: true, value: 'matricule' },
-  { text: 'Nom', sortable: true, value: 'nom' },
-  { text: 'Prénom', sortable: true, value: 'prenom' },
-  { text: 'Sexe', sortable: true, value: 'sexe' },
-  { text: 'Catégorie', sortable: true, value: 'categorie' },
-  { text: 'Date de naissance', sortable: true, value: 'date_naissance' }
-])
 
 const items = ref([
   {
@@ -134,6 +124,16 @@ const searchOption = reactive({
   showAgentsInactifs: ''
 })
 
+const formInline = reactive({
+  user: '',
+  region: '',
+  date: '',
+})
+
+const onSubmit = () => {
+  console.log('submit!')
+}
+
 const optionsParameters = reactive({
   options: ['Nom Complet', 'Prénoms', 'Noms']
 })
@@ -150,17 +150,32 @@ const fonctionsParameters = reactive({
   options: ['Agent commercial', 'Agent de Guichet', 'Analyste']
 })
 
-// const typeContractParameters = reactive({
-//   options: ['Détachement', 'Nomination']
-// })
+import { ElLoading } from 'element-plus'
+
+const fullscreenLoading = ref(false)
+const openFullScreen1 = () => {
+  const loading = ElLoading.service({
+    lock: true,
+    text: 'Chargement des données',
+    background: 'rgba(0, 0, 0, 0.7)',
+  })
+  setTimeout(() => {
+    loading.close()
+  }, 8000)
+}
+
+
 </script>
 
 <template>
   <div class="mx-auto xl:container">
-    <div class="flex py-2 border-b top-line">
-      <span class="text-lg font-medium"> Liste du personnel </span>
-    </div>
-
+    <el-page-header title="Retour">
+      <template #content>
+        <div class="flex items-center">
+          <span class="text-base font-medium"> Liste du personnel </span>
+        </div>
+      </template>
+    </el-page-header>
 
     <div class="flex flex-wrap items-center justify-center gap-3 py-6 mx-auto actions-button">
       <div class="w-full">
@@ -238,50 +253,95 @@ const fonctionsParameters = reactive({
           </AccordionHeader>
           <AccordionContent
             class="data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp -z-20 overflow-hidden text-[15px]">
-            <div class="px-5 py-4">
-              <div class="grid grid-cols-1 gap-4 py-5 md:grid-cols-2 lg:grid-cols-3">
-                <unstim-select label="Option" @valueChanged="(e) => (searchOption.options = e)"
-                  :parameters="optionsParameters" />
 
-                <unstim-text label="Valeur" @valueChanged="(e) => (searchOption.valeur = e)" />
+            <div class="p-4 w-full">
 
-                <unstim-select label="Sexe" @valueChanged="(e) => (searchOption.sexe = e)" :parameters="sexeParameters" />
+              <el-form label-position="top" :model="formInline"
+                class="demo-form-inline grid grid-cols-1 gap-4 py-5 md:grid-cols-2 lg:grid-cols-3">
 
-                <unstim-select label="Catégorie" @valueChanged="(e) => (searchOption.categorie = e)"
-                  :parameters="categorieParameters" />
+                <el-form-item label="Option">
 
-                <div class="flex flex-col space-y-2 input-group">
-                  <unstim-select label="Fonction" @valueChanged="(e) => (searchOption.fonction = e)"
-                    :parameters="fonctionsParameters" />
-
-                  <div class="flex items-center gap-3">
-                    <input type="checkbox" name="" id="" />
-                    <label for="" class="text-sm">Fonction courante</label>
+                  <div class="max-w-full w-full">
+                    <el-input v-model="formInline.user" placeholder="Approved by" size="large" />
                   </div>
+
+                </el-form-item>
+
+                <el-form-item label="Valeur">
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="formInline.user" placeholder="Approved by" size="large" />
+
+                  </div>
+                </el-form-item>
+
+                <el-form-item label="Sexe">
+                  <div class="max-w-full w-full">
+                    <el-select v-model="formInline.region" placeholder="Activity zone" size="large" clearable>
+                      <el-option label="Zone one" value="shanghai" />
+                      <el-option label="Zone two" value="beijing" />
+                    </el-select>
+                  </div>
+                </el-form-item>
+
+                <el-form-item label="Catégorie">
+                  <div class="max-w-full w-full">
+                    <el-select v-model="formInline.region" placeholder="Activity zone" size="large" clearable>
+                      <el-option label="Zone one" value="shanghai" />
+                      <el-option label="Zone two" value="beijing" />
+                    </el-select>
+                  </div>
+                </el-form-item>
+
+                <el-form-item label="Fonction">
+                  <div class="max-w-full w-full">
+                    <el-select v-model="formInline.region" placeholder="Activity zone" size="large" clearable>
+                      <el-option label="Zone one" value="shanghai" />
+                      <el-option label="Zone two" value="beijing" />
+                    </el-select>
+
+                    <el-checkbox label="Fonction Courante" size="large" />
+                  </div>
+                </el-form-item>
+
+                <el-form-item label="Type de contrat">
+                  <div class="max-w-full w-full">
+                    <el-select v-model="formInline.region" placeholder="Activity zone" size="large" clearable>
+                      <el-option label="Zone one" value="shanghai" />
+                      <el-option label="Zone two" value="beijing" />
+                    </el-select>
+                  </div>
+                </el-form-item>
+
+                <el-form-item label="Direction">
+                  <div class="max-w-full w-full">
+                    <el-select v-model="formInline.region" placeholder="Activity zone" size="large" clearable>
+                      <el-option label="Zone one" value="shanghai" />
+                      <el-option label="Zone two" value="beijing" />
+                    </el-select>
+                  </div>
+                </el-form-item>
+
+                <el-form-item label="Situation matrimoniale">
+                  <div class="max-w-full w-full">
+                    <el-select v-model="formInline.region" placeholder="Activity zone" size="large" clearable>
+                      <el-option label="Zone one" value="shanghai" />
+                      <el-option label="Zone two" value="beijing" />
+                    </el-select>
+                  </div>
+                </el-form-item>
+
+                <!-- <el-checkbox label="Fonction Courante" size="large" /> -->
+
+                <div class="flex col-span-full py-4 justify-end gap-3 border-t form-btn">
+                  <el-button :icon="Search" type="primary" size="large">Rechercher </el-button>
                 </div>
 
-                <unstim-select label="Type de contract" @valueChanged="(e) => (searchOption.typeContrat = e)"
-                  :parameters="fonctionsParameters" />
 
-                <unstim-select label="Direction" @valueChanged="(e) => (searchOption.direction = e)"
-                  :parameters="fonctionsParameters" />
+              </el-form>
 
-                <unstim-select label="Situation matrimoniale" @valueChanged="(e) => (searchOption.situation = e)"
-                  :parameters="fonctionsParameters" />
-
-                <div class="flex justify-center items-center gap-3">
-                  <input v-model="searchOption.showAgentsInactifs" type="checkbox" name="" id="" />
-                  <label for="" class="text-sm text-gray-600">Affichez tous les agents non actifs</label>
-                </div>
-              </div>
-              <div class="flex justify-end gap-3 border-t form-btn">
-                <button
-                  class="flex items-center gap-2 p-2 px-3 mt-5 text-white rounded shadow bg-unstim-primary w-fit hover:bg-opacity-60">
-                  <v-icon :name="icons.UserSearch" class="" scale="1.0" />
-                  <span class="text-sm font-medium"> Rechercher </span>
-                </button>
-              </div>
             </div>
+
           </AccordionContent>
         </AccordionItem>
       </AccordionRoot>
@@ -324,61 +384,41 @@ const fonctionsParameters = reactive({
           <v-icon :name="icons.PersonPlus" class="" scale="1.1" />
           <span class="text-sm font-medium"> Imprimer </span>
         </RouterLink>
+
+        <el-button v-loading.fullscreen.lock="fullscreenLoading" type="primary" @click="openFullScreen1">
+          As a directive
+        </el-button>
       </div>
 
-      <easy-data-table alternating border-cell :headers="headers" class="text-lg" theme-color="#2f9fff" :items="items"
-        v-model:items-selected="itemsSelected" buttons-pagination>
-        <template #item-action="">
-          <div class="flex gap-3">
-            <RouterLink :to="{ name: 'infos-employee' }"
-              class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
-              <v-icon :name="icons.EditIcon" scale="1.0" />
-            </RouterLink>
+      <el-table :data="items" :lazy="true" :border="true" style="width: 100%" table-layout="auto">
 
-            <!-- <RouterLink to=""
-              class="flex items-center gap-2 p-2 my-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500">
-              <v-icon :name="icons.DeleteIcon" scale="1.0" />
+        <el-table-column type="selection" width="50" />
+        <el-table-column prop="matricule" label="Matricule" />
+        <el-table-column prop="nom" sortable label="Nom" />
+        <el-table-column prop="prenom" sortable label="Prénom" />
+        <el-table-column prop="sexe" label="Sexe" />
+        <el-table-column prop="categorie" label="Catégorie" />
+        <el-table-column prop="date_naissance" sortable label="Date de naissance" />
 
-            </RouterLink> -->
-          </div>
+        <el-table-column label="Actions">
+          <template #default>
+            <div class="flex gap-2">
+              <RouterLink :to="{ name: 'infos-employee' }"
+                class="flex items-center gap-2 p-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
+                <v-icon :name="icons.EditIcon" scale="1.0" />
+              </RouterLink>
 
-          <!-- <AlertDialogRoot>
-            <AlertDialogTrigger
-              class="flex items-center gap-2 p-2 my-2 text-white rounded shadow w-fit bg-unstim-info hover:bg-unstim-primary">
-              <v-icon :name="icons.EditIcon" scale="1.0" />
-            </AlertDialogTrigger>
+              <RouterLink to=""
+                class="flex items-center gap-2 p-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500">
+                <v-icon :name="icons.DeleteIcon" scale="1.0" />
+              </RouterLink>
+            </div>
+          </template>
+        </el-table-column>
 
-            <AlertDialogPortal>
-              <AlertDialogOverlay
-                class="bg-black/50 backdrop-blur-sm data-[state=open]:animate-overlayShow fixed inset-0 z-30" />
-              <AlertDialogContent
-                class="z-[100] text-[15px] data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[500px] translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none">
-                <AlertDialogTitle class="text-mauve12 m-0 text-[17px] font-semibold">
-                  Actions personnalisé
-                </AlertDialogTitle>
-                <AlertDialogDescription class="text-mauve11 mt-4 mb-5 text-[15px] leading-normal">
-                  This action cannot be undone. This will permanently delete your account and remove
-                  your data from our servers.
-                </AlertDialogDescription>
-                <div class="flex justify-end gap-[25px]">
-                  <AlertDialogCancel
-                    class="bg-slate-400 shadow hover:bg-slate-500 inline-flex h-[35px] items-center justify-center rounded-[4px] px-[15px] font-semibold">
-                    Cancel
-                  </AlertDialogCancel>
-                  <AlertDialogAction
-                    class="text-red11 bg-red-400 shadow hover:bg-red-500 inline-flex h-[35px] items-center justify-center rounded-[4px] px-[15px] font-semibold">
-                    Yes, delete account
-                  </AlertDialogAction>
-                </div>
-              </AlertDialogContent>
-            </AlertDialogPortal>
-          </AlertDialogRoot> -->
-        </template>
-      </easy-data-table>
+      </el-table>
+
+
     </div>
   </div>
 </template>
-
-<style>
-@import url('@/assets/css/easy-table.css');
-</style>

@@ -44,256 +44,408 @@ const employeFormData = reactive({
 
 <template>
   <div class="mx-auto xl:container">
-    <div class="flex py-2 border-b top-line">
-      <span class="text-lg font-medium"> Enregistrement des informations de l'employé </span>
-    </div>
 
-    <RouterLink
-      @click.prevent="$router.back()"
-      to=""
-      class="flex items-center gap-2 p-2 mt-5 border rounded shadow text-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60"
-    >
-      <v-icon :name="icons.ChevronUp" class="-rotate-90" scale="1.1" />
-      <span class="text-sm font-medium"> Retour </span>
-    </RouterLink>
+    <el-page-header title="Retour">
+      <template #content>
+        <div class="flex items-center">
+          <span class="text-base font-medium"> Enrégistrement des informations de l'employé </span>
+        </div>
+      </template>
 
-    <div class="w-full p-5 mt-5 border border-gray-300 bg-unstim-light card">
-      <p class="flex items-center gap-3">
+    </el-page-header>
+
+
+    <el-card class=" space-y-4 my-5 border border-gray-300 bg-slate-500">
+
+      <div class="text-sm flex gap-3 font-medium items-center">
         <span class="text-red-400">*</span>
-
-        <span class="text-sm">Champs obligatoire</span>
-      </p>
-
-      <Transition name="fade" mode="out-in">
-        <div class="personal-infos-group" v-if="currentFormStep === 1">
-          <!-- INFOS PERSON -->
-
-          <h3 class="pt-5 text-xl font-semibold">Informations Générales</h3>
-
-          <div class="grid grid-cols-1 gap-4 py-5 md:grid-cols-2 lg:grid-cols-4">
-            <!-- NOM -->
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Nom</label>
-              <input type="text" :name="employeFormData.nom" class="form-unstim" />
-            </div>
-
-            <!-- PRENOM -->
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Prénom</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Date de naissance</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Lieu de naissance</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Sexe</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Numéro de téléphone</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Situation matrimoniale</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Numéro de la pièce d'identité</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Addresse</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Numero IFU</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Email privé</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm"> Email Professionnel</label>
-              <input type="text" class="form-unstim" />
-            </div>
-          </div>
-
-          <!-- INFOS PRO -->
-
-          <h3 class="pt-5 text-xl font-semibold">Informations professionnelles</h3>
-
-          <div class="grid grid-cols-1 gap-4 py-5 md:grid-cols-2 lg:grid-cols-4">
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Matricule</label>
-              <input type="text" :name="employeFormData.nom" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Categorie professionnelle</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Echelon</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 col-span-full input-group">
-              <label for="" class="text-sm">Qualifications professionnelles</label>
-              <input type="text" class="form-unstim" />
-            </div>
-          </div>
-
-          <!-- AUTRES -->
-
-          <h3 class="pt-5 text-xl font-semibold">Autres</h3>
-
-          <div class="grid grid-cols-1 gap-4 py-5 md:grid-cols-2 lg:grid-cols-4">
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Nom de la banque </label>
-              <input type="text" :name="employeFormData.nom" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Numero de compte bancaire</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">N° CNSS</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Date de la déclaration CNSS</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 col-span-full input-group">
-              <label for="" class="text-sm">Code Comptable</label>
-              <input type="text" class="form-unstim" />
-            </div>
-          </div>
-        </div>
-      </Transition>
-
-      <Transition name="fade" mode="out-in">
-        <div class="contrat-group" v-if="currentFormStep === 2">
-          <h3 class="pt-5 text-xl font-semibold">Enregistrer le contrat</h3>
-
-          <div class="grid grid-cols-1 gap-4 py-5 md:grid-cols-3">
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Type de contrat</label>
-              <input type="text" :name="employeFormData.nom" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Date de debut du contrat</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Date de fin du contrat</label>
-              <input type="text" class="form-unstim" />
-            </div>
-          </div>
-        </div>
-      </Transition>
-
-      <Transition name="fade" mode="out-in">
-        <div class="contrat-group" v-if="currentFormStep === totalStep">
-          <h3 class="pt-5 text-xl font-semibold">Enregistrement des états de service</h3>
-
-          <div class="grid grid-cols-1 gap-4 py-5 md:grid-cols-2">
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Fonction</label>
-              <input type="text" :name="employeFormData.nom" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Date de démarrage</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Libellé de la fonction</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Nom du Département/Section/Agence</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Ville</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Logement</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Est une promotion ?</label>
-              <input type="text" class="form-unstim" />
-            </div>
-
-            <div class="flex flex-col space-y-2 input-group">
-              <label for="" class="text-sm">Description</label>
-              <input type="text" class="form-unstim" />
-            </div>
-          </div>
-        </div>
-      </Transition>
-
-      <div class="flex gap-3 border-t form-btn">
-        <button
-          v-if="currentFormStep > 1"
-          @click.prevent="currentFormStep--"
-          class="flex items-center gap-2 p-2 px-3 mt-5 text-white rounded shadow bg-unstim-black-pan w-fit hover:bg-opacity-60"
-        >
-          <v-icon :name="icons.ChevronUp" class="-rotate-90" scale="1.0" />
-          <span class="text-sm font-medium"> Précédent </span>
-        </button>
-
-        <button
-          v-if="currentFormStep >= 1 && currentFormStep < totalStep"
-          @click.prevent="currentFormStep++"
-          class="flex items-center gap-2 p-2 px-3 mt-5 text-white rounded shadow bg-unstim-primary w-fit hover:bg-opacity-60"
-        >
-          <span class="text-sm font-medium"> Suivant </span>
-          <v-icon :name="icons.ChevronUp" class="rotate-90" scale="1.0" />
-        </button>
-
-        <button
-          v-if="currentFormStep === totalStep"
-          class="flex items-center gap-2 p-2 px-3 mt-5 text-white rounded shadow bg-unstim-primary w-fit hover:bg-opacity-60"
-        >
-          <span class="text-sm font-medium"> Enregistrer </span>
-          <!-- <v-icon :name="icons.ChevronUp" class="rotate-90" scale="1.0" /> -->
-        </button>
+        Champs obligatoires
       </div>
-    </div>
+
+      <el-tabs class="demo-tabs mt-4">
+        <el-tab-pane>
+          <template #label>
+            <span class="custom-tabs-label">
+              <span>Informations personnel</span>
+            </span>
+          </template>
+
+          <div class="persol space-y-4">
+
+            <div class="w-full">
+
+              <h3 class="py-3 text-xl font-medium">Informations générales</h3>
+
+              <el-form label-position="top" require-asterisk-position="right" :model="employeFormData"
+                class="demo-form-inline mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+
+                <el-form-item label="Nom" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.nom" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Prénom" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.prenom" placeholder="" size="large" />
+                  </div>
+                </el-form-item>
+
+                <el-form-item label="Date de naissance" required>
+                  <div class="max-w-full w-full">
+                    <el-date-picker class="w-full" type="date" placeholder="" size="large" />
+                  </div>
+                </el-form-item>
+
+                <el-form-item label="Lieu de naissance" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.lieu_naissance" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Sexe">
+                  <div class="max-w-full w-full">
+                    <el-select v-model="employeFormData.adresse" placeholder="" size="large" clearable>
+                      <el-option label="Zone one" value="shanghai" />
+                      <el-option label="Zone two" value="beijing" />
+                    </el-select>
+                  </div>
+                </el-form-item>
+
+                <el-form-item label="Téléphone" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.lieu_naissance" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Situation matrimoniale" required>
+
+                  <div class="max-w-full w-full">
+                    <el-select v-model="employeFormData.situation_matrimoniale" placeholder="" size="large" clearable>
+                      <el-option label="Zone one" value="shanghai" />
+                      <el-option label="Zone two" value="beijing" />
+                    </el-select>
+                  </div>
+
+                </el-form-item>
+
+
+                <el-form-item label="CNI" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.numero_cni" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Adresse" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.adresse" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Numéro IFU" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.adresse" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Email privé" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.lieu_naissance" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Email professionnel" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.lieu_naissance" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+
+              </el-form>
+
+
+
+            </div>
+
+            <div class="w-full mt-4">
+
+              <h3 class="py-3 text-xl font-medium">Informations professionnelles</h3>
+
+              <el-form label-position="top" require-asterisk-position="right" :model="employeFormData"
+                class="demo-form-inline mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+
+                <el-form-item label="Matricule" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.matricule" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+
+                <el-form-item label="Categorie professionnelle" required>
+                  <div class="max-w-full w-full">
+                    <el-select v-model="employeFormData.adresse" placeholder="" size="large" clearable>
+                      <el-option label="Zone one" value="shanghai" />
+                      <el-option label="Zone two" value="beijing" />
+                    </el-select>
+                  </div>
+                </el-form-item>
+
+                <el-form-item label="Echelon" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.echelon" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+
+                <el-form-item label="Qualifications professionnelles">
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.qualif_pro" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+
+              </el-form>
+
+
+
+            </div>
+
+            <div class="w-full mt-4">
+
+              <h3 class="py-3 text-xl font-medium">Autres</h3>
+
+              <el-form label-position="top" require-asterisk-position="right" :model="employeFormData"
+                class="demo-form-inline mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+
+                <el-form-item label="Nom de la banque" required>
+                  <div class="max-w-full w-full">
+                    <el-select v-model="employeFormData.adresse" placeholder="" size="large" clearable>
+                      <el-option label="Zone one" value="shanghai" />
+                      <el-option label="Zone two" value="beijing" />
+                    </el-select>
+                  </div>
+                </el-form-item>
+
+
+                <el-form-item label="Numero de compte bancaire">
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.matricule" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="N° CNSS">
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.echelon" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+
+                <el-form-item label="Date de la déclaration CNSS">
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.qualif_pro" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Code Comptable">
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.qualif_pro" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+              </el-form>
+
+            </div>
+          </div>
+
+        </el-tab-pane>
+
+        <el-tab-pane>
+          <template #label>
+            <span class="custom-tabs-label">
+              <span>Contrat de travail</span>
+            </span>
+          </template>
+
+          <div class="persol space-y-4">
+
+            <div class="w-full">
+
+              <h3 class="py-3 text-xl font-medium">Enrégister le contrat</h3>
+
+              <el-form label-position="top" require-asterisk-position="right" :model="employeFormData"
+                class="demo-form-inline mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+
+                <el-form-item label="Type de contrat" required>
+
+                  <div class="max-w-full w-full">
+                    <el-select v-model="employeFormData.adresse" placeholder="" size="large" clearable>
+                      <el-option label="Zone one" value="shanghai" />
+                      <el-option label="Zone two" value="beijing" />
+                    </el-select>
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Dates du contrat" required>
+
+                  <div class="max-w-full w-full">
+                    <el-date-picker type="daterange" start-placeholder="Date de debut" end-placeholder="Date de fin"
+                      size="large" />
+                  </div>
+
+                </el-form-item>
+
+
+
+              </el-form>
+
+
+
+            </div>
+
+
+          </div>
+
+        </el-tab-pane>
+
+
+        <el-tab-pane>
+          <template #label>
+            <span class="custom-tabs-label">
+              <span>Etats de services</span>
+            </span>
+          </template>
+
+
+          <div class="persol space-y-4">
+
+            <div class="w-full">
+
+              <h3 class="py-3 text-xl font-medium">Enrégistrement des états de services</h3>
+
+              <el-form label-position="top" require-asterisk-position="right" :model="employeFormData"
+                class="demo-form-inline mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+
+                <el-form-item label="Fonction" required>
+
+                  <div class="max-w-full w-full">
+                    <el-select v-model="employeFormData.adresse" placeholder="" size="large" clearable>
+                      <el-option label="Zone one" value="shanghai" />
+                      <el-option label="Zone two" value="beijing" />
+                    </el-select>
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Date de démarrage" required>
+                  <div class="max-w-full w-full">
+                    <el-date-picker class="w-full" type="date" placeholder="" size="large" />
+                  </div>
+                </el-form-item>
+
+
+                <el-form-item label="Libelle de la fonction" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.echelon" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Non/département/service/Agence" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.echelon" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Ville" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.echelon" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Logement" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.echelon" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Promotion" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.echelon" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+                <el-form-item label="Description" required>
+
+                  <div class="max-w-full w-full">
+                    <el-input v-model="employeFormData.echelon" placeholder="" size="large" />
+                  </div>
+
+                </el-form-item>
+
+
+
+              </el-form>
+
+
+            </div>
+
+
+          </div>
+
+        </el-tab-pane>
+
+      </el-tabs>
+
+
+      <div class="flex mt-5 col-span-full py-4 justify-end gap-3 border-t form-btn">
+        <el-button type="primary" size="large">Rechercher </el-button>
+      </div>
+
+    </el-card>
+
+
+
   </div>
 </template>
 

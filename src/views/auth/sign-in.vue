@@ -3,6 +3,7 @@ import { useStaticStore } from '@/stores/statics'
 import { Form } from 'vee-validate'
 import { icons } from '@/assets/icons/oh-vue-icons'
 import { notyf } from '@/composables/notyf'
+
 const statics = useStaticStore()
 
 /**
@@ -13,8 +14,12 @@ const statics = useStaticStore()
  */
 
 const submitLoginForm = () => {
+
   notyf.error('Identifiants incorrects')
 }
+
+
+
 </script>
 
 <template>

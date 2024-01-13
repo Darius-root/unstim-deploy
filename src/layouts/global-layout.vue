@@ -22,7 +22,8 @@ const getNavigationMenu = () => {
     module_finance_suivi_evaluation: navItems.module_finance_suivi_evaluation,
     module_marche: navItems.module_marche,
     carrieres_enseignants: navItems.module_carriere_enseignant,
-    module_gestion_stock:navItems.module_gestion_stock  };
+    module_gestion_stock: navItems.module_gestion_stock
+  };
 
   // console.log(matchedRoute);
   const matchedRoute = route.matched[1]?.name;
@@ -40,7 +41,7 @@ const getNavigationMenu = () => {
       <DashboardHeader />
     </div>
 
-    <nav v-if="!noSidebarRoute.includes($route.name as string)" class="w-1/5 inset-y-0 shadow-lg fixed">
+    <nav v-if="!noSidebarRoute.includes($route.name as string)" class="w-1/5 hidden xl:block inset-y-0 shadow-lg fixed">
       <div class="custom-back absolute inset-0"></div>
       <div class="bg-unstim-info/90 absolute inset-0"></div>
       <DashboardSidebar :navigations="getNavigationMenu()" />

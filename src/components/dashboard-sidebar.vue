@@ -17,7 +17,7 @@ defineProps({
 </script>
 
 <template>
-  <simplebar class="w-full h-[100vh]">
+  <simplebar class="w-full h-[100vh] ">
     <div class="py-5 pt-36 z-10">
       <AccordionRoot class="w-full " default-value="'item-1'" type="single" :collapsible="true">
         <template v-for="(item, index) in navigations" :key="index">

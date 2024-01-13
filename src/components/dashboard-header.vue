@@ -12,7 +12,7 @@ const modules = useModuleStore().modules
 
 import { ref } from 'vue'
 
-const activeIndex = ref('1')
+const activeIndex = ref('0')
 
 const handleSelect = (key: string, keyPath: string[]) => {
   // console.log(key, keyPath)
@@ -46,20 +46,20 @@ const handleSelect = (key: string, keyPath: string[]) => {
       </div>
     </div>
 
-    <el-menu :router="true" :default-active="activeIndex" class="justify-center" mode="horizontal" @select="handleSelect">
+    <el-menu :router="true" :default-active="activeIndex" class="justisfy-center" mode="horizontal"
+      @select="handleSelect">
       <div class="" v-for="(module, item) in modules" :key="item">
 
         <template v-if="!module.submenus">
-          <el-menu-item :route="{ name: module.to }" class="text-xl" :index="item">
+          <el-menu-item :route="{ name: module.to }" class="text-xl" :index="item.toString()">
             <template #title>
               <span class="font-semibold text-base">{{ module.label }}</span>
             </template>
           </el-menu-item>
-
         </template>
 
         <template v-else>
-          <el-sub-menu :index="item">
+          <el-sub-menu :index="item.toString()">
 
             <template #title>
               <span class="font-semibold text-base">{{ module.label }}</span>

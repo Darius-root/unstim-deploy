@@ -6,9 +6,9 @@ import { French } from 'flatpickr/dist/l10n/fr.js'
 import type { BaseOptions } from 'flatpickr/dist/types/options'
 import { useRhaStatStore } from '@/stores/rha-stats'
 
-const startDate = ref(null)
+const startDate = ref('')
 
-const endDate = ref(null)
+const endDate = ref('')
 
 const searchConfig = ref<Partial<BaseOptions>>({
   wrap: true,
@@ -84,23 +84,21 @@ const chartOption = ref({
 
 <template>
   <div class="mx-auto xl:container">
-    <div class="top-line border-b py-2 flex flex-col lg:items-center lg:justify-between lg:flex-row">
-      <span class="text-base"> Statistiques catégorisées du personnel </span>
 
-      <div class="flex flex-col justify-around lg:items-center lg:flex-row lg:gap-3">
-        <div class="flex flex-col gap-3 lg:items-center lg:flex-row input-group">
-          <label for="" class="text-sm">Du </label>
-          <flat-pickr v-model="startDate" :placeholder="`jj/mm/aaaa`"
-            class="px-6 border-gray-300 text-sm rounded-full shadow-input w-56" :config="searchConfig" />
+    <el-page-header title="Retour">
+      <template #content>
+        <div class="flex items-center">
+          <span class="text-base font-medium"> Statistiques catégorisées du personnel </span>
         </div>
+      </template>
+      <template #extra>
+        <div class="flex gap-3 items-center">
+          <el-date-picker v-model="startDate" type="daterange" start-placeholder="Date de debut"
+            end-placeholder="Date de fin" />
+        </div>
+      </template>
+    </el-page-header>
 
-        <div class="flex flex-col gap-3 lg:items-center lg:flex-row input-group">
-          <label for="" class="text-sm"> Au </label>
-          <flat-pickr v-model="endDate" :placeholder="`jj/mm/aaaa`"
-            class="px-6 border-gray-300 text-sm rounded-full shadow-input w-56" :config="searchConfig" />
-        </div>
-      </div>
-    </div>
 
     <div class="stats-content mx-auto flex gap-3 justify-center py-6 items-center flex-wrap">
       <div v-for="(item, index) in rhaStats"
@@ -115,6 +113,7 @@ const chartOption = ref({
         </div>
       </div>
     </div>
+
 
     <hr />
 
