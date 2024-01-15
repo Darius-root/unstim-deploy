@@ -1,0 +1,2508 @@
+{
+  "variable": [
+    {
+      "id": "baseUrl",
+      "key": "baseUrl",
+      "type": "string",
+      "name": "string",
+      "value": "http://laravel.sc1cjlx6136.universe.wf/"
+    }
+  ],
+  "info": {
+    "name": "Laravel",
+    "_postman_id": "8be33d26-0031-4d0f-a955-5c9d22c5ac01",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Endpoints",
+      "description": "",
+      "item": [
+        {
+          "name": "POST api/login",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/login",
+              "query": [],
+              "raw": "{{baseUrl}}/api/login"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\":\"uratke@example.org\",\"password\":\"Oa3\\\\M:\"}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST api/register",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/register",
+              "query": [],
+              "raw": "{{baseUrl}}/api/register"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"employee_id\":5,\"email\":\"von.beth@example.net\",\"role_id\":5}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST api/user_update/{id}",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/user_update/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/user_update/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "vero",
+                  "description": "The ID of the user update."
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"user_id\":12,\"email\":\"larissa89@example.net\",\"role_id\":12,\"password\":\"<gqCvv3vT-\"}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST api/logout",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/logout",
+              "query": [],
+              "raw": "{{baseUrl}}/api/logout"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET api/user/{id}",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/user/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/user/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "doloremque",
+                  "description": "The ID of the user."
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Display a listing of the resource.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/role",
+              "query": [],
+              "raw": "{{baseUrl}}/api/role"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Show the form for creating a new resource.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/role/create",
+              "query": [],
+              "raw": "{{baseUrl}}/api/role/create"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Store a newly created resource in storage.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/role",
+              "query": [],
+              "raw": "{{baseUrl}}/api/role"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"vel\"}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Display the specified resource.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/role/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/role/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "rem",
+                  "description": "The ID of the role."
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Show the form for editing the specified resource.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/role/:role/edit",
+              "query": [],
+              "raw": "{{baseUrl}}/api/role/:role/edit",
+              "variable": [
+                {
+                  "id": "role",
+                  "key": "role",
+                  "value": "sed",
+                  "description": "The role."
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Update the specified resource in storage.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/role/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/role/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "ipsam",
+                  "description": "The ID of the role."
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"dolorem\"}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Remove the specified resource from storage.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/role/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/role/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "facilis",
+                  "description": "The ID of the role."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Display a listing of the resource.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/employee",
+              "query": [],
+              "raw": "{{baseUrl}}/api/employee"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Show the form for creating a new resource.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/employee/create",
+              "query": [],
+              "raw": "{{baseUrl}}/api/employee/create"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Store a newly created resource in storage.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/employee",
+              "query": [],
+              "raw": "{{baseUrl}}/api/employee"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"lastname\":\"vel\",\"firstname\":\"ab\",\"date_birth\":\"2024-01-12T14:10:18\",\"place_birth\":\"et\",\"gender\":\"perferendis\",\"phone\":\"non\",\"marital_status\":\"aut\",\"cid\":\"in\",\"ifu\":\"rerum\",\"email_private\":\"quisquam\",\"email_professional\":\"reiciendis\",\"matricule\":\"aut\",\"grade_id\":3,\"step\":\"ipsam\",\"qualification\":\"aut\",\"bank_name\":\"facilis\",\"bank_account\":\"rem\",\"cnss\":\"aut\",\"date_cnss_declaration\":\"2024-01-12T14:10:18\",\"account_code\":\"maiores\",\"address\":\"esse\"}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Display the specified resource.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/employee/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/employee/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "cum",
+                  "description": "The ID of the employee."
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Show the form for editing the specified resource.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/employee/:employee/edit",
+              "query": [],
+              "raw": "{{baseUrl}}/api/employee/:employee/edit",
+              "variable": [
+                {
+                  "id": "employee",
+                  "key": "employee",
+                  "value": "commodi",
+                  "description": "The employee."
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Update the specified resource in storage.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/employee/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/employee/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "consequatur",
+                  "description": "The ID of the employee."
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Remove the specified resource from storage.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/employee/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/employee/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "et",
+                  "description": "The ID of the employee."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Display a listing of the resource.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/person",
+              "query": [],
+              "raw": "{{baseUrl}}/api/person"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Show the form for creating a new resource.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/person/create",
+              "query": [],
+              "raw": "{{baseUrl}}/api/person/create"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Store a newly created resource in storage.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/person",
+              "query": [],
+              "raw": "{{baseUrl}}/api/person"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"lastname\":\"doloremque\",\"firstname\":\"porro\",\"date_birth\":\"2024-01-12T14:10:18\",\"place_birth\":\"officia\",\"gender\":\"sapiente\",\"phone\":\"magni\",\"marital_status\":\"tenetur\",\"cid\":\"qui\",\"ifu\":\"necessitatibus\",\"email_private\":\"minima\",\"email_professional\":\"dolorem\"}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Display the specified resource.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/person/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/person/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "illo",
+                  "description": "The ID of the person."
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Show the form for editing the specified resource.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/person/:person/edit",
+              "query": [],
+              "raw": "{{baseUrl}}/api/person/:person/edit",
+              "variable": [
+                {
+                  "id": "person",
+                  "key": "person",
+                  "value": "quae",
+                  "description": "The person."
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Update the specified resource in storage.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/person/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/person/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "ut",
+                  "description": "The ID of the person."
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Remove the specified resource from storage.",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/person/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/person/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "saepe",
+                  "description": "The ID of the person."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Liste des publications",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/publication",
+              "query": [],
+              "raw": "{{baseUrl}}/api/publication"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Ajout d'une publication",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/publication",
+              "query": [],
+              "raw": "{{baseUrl}}/api/publication"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "aut",
+                  "type": "text",
+                  "description": "Titre"
+                },
+                {
+                  "key": "summary",
+                  "value": "exercitationem",
+                  "type": "text",
+                  "description": "R\u00e9sum\u00e9"
+                },
+                {
+                  "key": "doi",
+                  "value": "ab",
+                  "type": "text",
+                  "description": "DOI"
+                },
+                {
+                  "key": "keywords",
+                  "value": "dolor",
+                  "type": "text",
+                  "description": "Mots cl\u00e9s"
+                },
+                {
+                  "key": "date",
+                  "value": "minima",
+                  "type": "text",
+                  "description": "Date de publication"
+                },
+                {
+                  "key": "speciality",
+                  "value": 9,
+                  "type": "text",
+                  "description": "Sp\u00e9cialit\u00e9"
+                },
+                {
+                  "key": "type",
+                  "value": 8,
+                  "type": "text",
+                  "description": "Type"
+                },
+                {
+                  "key": "journal",
+                  "value": 2,
+                  "type": "text",
+                  "description": "Journal"
+                },
+                {
+                  "key": "authors[0]",
+                  "value": "sint",
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "files",
+                  "src": [],
+                  "type": "file"
+                }
+              ]
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D\u00e9tail d'une publication",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/publication/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/publication/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "1",
+                  "description": "The ID of the publication."
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Mise \u00e0 jour d'une publication",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/publication/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/publication/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "19",
+                  "description": "The ID of the publication."
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "dolorem",
+                  "type": "text",
+                  "description": "Titre"
+                },
+                {
+                  "key": "summary",
+                  "value": "a",
+                  "type": "text",
+                  "description": "R\u00e9sum\u00e9"
+                },
+                {
+                  "key": "doi",
+                  "value": "nihil",
+                  "type": "text",
+                  "description": "DOI"
+                },
+                {
+                  "key": "keywords",
+                  "value": "dolor",
+                  "type": "text",
+                  "description": "Mots cl\u00e9s"
+                },
+                {
+                  "key": "date",
+                  "value": "est",
+                  "type": "text",
+                  "description": "Date de publication"
+                },
+                {
+                  "key": "speciality",
+                  "value": 6,
+                  "type": "text",
+                  "description": "Sp\u00e9cialit\u00e9"
+                },
+                {
+                  "key": "type",
+                  "value": 8,
+                  "type": "text",
+                  "description": "Type"
+                },
+                {
+                  "key": "journal",
+                  "value": 14,
+                  "type": "text",
+                  "description": "Journal"
+                },
+                {
+                  "key": "authors[0]",
+                  "value": "quo",
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "files",
+                  "src": [],
+                  "type": "file"
+                },
+                {
+                  "key": "_method",
+                  "value": "PUT",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Suppression d'une publication",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/publication/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/publication/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "8",
+                  "description": "The ID of the publication."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Liste des journaux",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/journals",
+              "query": [],
+              "raw": "{{baseUrl}}/api/journals"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Ajout d'un journal",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/journals",
+              "query": [],
+              "raw": "{{baseUrl}}/api/journals"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"non\",\"isbn\":\"explicabo\"}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D\u00e9tail d'un journal",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/journals/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/journals/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "20",
+                  "description": "The ID of the journal."
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Mise \u00e0 jour d'un journal",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/journals/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/journals/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "16",
+                  "description": "The ID of the journal."
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"blanditiis\",\"isbn\":\"rerum\"}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Suppression d'un journal",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/journals/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/journals/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "3",
+                  "description": "The ID of the journal."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Liste des auteurs",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/authors",
+              "query": [],
+              "raw": "{{baseUrl}}/api/authors"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Ajout d'un auteur",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/authors",
+              "query": [],
+              "raw": "{{baseUrl}}/api/authors"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"lastname\":\"delectus\",\"firstname\":\"illum\"}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D\u00e9tail d'un auteur",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/authors/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/authors/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "10",
+                  "description": "The ID of the author."
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Mise \u00e0 jour d'un auteur",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/authors/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/authors/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "7",
+                  "description": "The ID of the author."
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"lastname\":\"dicta\",\"firstname\":\"rerum\"}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Suppression d'un auteur",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/authors/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/authors/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "16",
+                  "description": "The ID of the author."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Liste des sp\u00e9cialit\u00e9s",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/specialities",
+              "query": [],
+              "raw": "{{baseUrl}}/api/specialities"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Ajout d'une sp\u00e9cialit\u00e9",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/specialities",
+              "query": [],
+              "raw": "{{baseUrl}}/api/specialities"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"illum\"}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D\u00e9tail d'une sp\u00e9cialit\u00e9",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/specialities/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/specialities/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "14",
+                  "description": "The ID of the speciality."
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Modifier une sp\u00e9cialit\u00e9",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/specialities/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/specialities/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "20",
+                  "description": "The ID of the speciality."
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"rerum\"}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Suppression d'une sp\u00e9cialit\u00e9",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/specialities/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/specialities/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "15",
+                  "description": "The ID of the speciality."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Liste des publications",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/publication_types",
+              "query": [],
+              "raw": "{{baseUrl}}/api/publication_types"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Ajout d'une publication",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/publication_types",
+              "query": [],
+              "raw": "{{baseUrl}}/api/publication_types"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"sequi\"}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D\u00e9tail d'une publication",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/publication_types/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/publication_types/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "14",
+                  "description": "The ID of the publication type."
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": [
+            {
+              "header": [
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "location",
+                  "value": "https://laravel.sc1cjlx6136.universe.wf"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, PUT, DELETE, OPTIONS"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+                }
+              ],
+              "code": 302,
+              "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='https://laravel.sc1cjlx6136.universe.wf'\" />\n\n        <title>Redirecting to https://laravel.sc1cjlx6136.universe.wf</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"https://laravel.sc1cjlx6136.universe.wf\">https://laravel.sc1cjlx6136.universe.wf</a>.\n    </body>\n</html>",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "Modification d'une publication",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/publication_types/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/publication_types/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "7",
+                  "description": "The ID of the publication type."
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"alias\"}"
+            },
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Suppression d'une publication",
+          "request": {
+            "url": {
+              "host": "{{baseUrl}}",
+              "path": "api/publication_types/:id",
+              "query": [],
+              "raw": "{{baseUrl}}/api/publication_types/:id",
+              "variable": [
+                {
+                  "id": "id",
+                  "key": "id",
+                  "value": "9",
+                  "description": "The ID of the publication type."
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": null,
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "noauth"
+  }
+}

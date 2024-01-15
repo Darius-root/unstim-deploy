@@ -1,23 +1,39 @@
 <script lang="ts" setup>
 import { useStaticStore } from '@/stores/statics'
-import { Form } from 'vee-validate'
-import { icons } from '@/assets/icons/oh-vue-icons'
 import { notyf } from '@/composables/notyf'
+import { reactive, ref } from 'vue';
+
+import { useAxios } from '@vueuse/integrations/useAxios'
+import axiosLaravelInstance from '@/composables/axios'
 
 const statics = useStaticStore()
 
-/**
- * Soumet le formulaire de connexion et
- * affiche une notification d'erreur si les identifiants sont incorrects.
- *
- * @return {void}
- */
+const loginData = reactive({
+  email: '',
+  password: ''
+})
 
-const submitLoginForm = () => {
+const loginRequestError = ref({} as {
+  email?: Array<string>,
+  password?: Array<string>
+})
 
-  notyf.error('Identifiants incorrects')
-}
+const loginRequest = useAxios('/api/login', { method: 'POST' }, axiosLaravelInstance, {
+  immediate: false,
+  shallow: false,
+  initialData: loginData,
+  onError: (e: any) => {
+    loginRequestError.value = e.response.data.errors
+    notyf.error('Authentification echouée')
+  },
 
+  onSuccess: (data) => {
+    console.log(data);
+  }
+
+})
+
+const submitLoginForm = () => loginRequest.execute();
 
 
 </script>
@@ -37,45 +53,47 @@ const submitLoginForm = () => {
         {{ statics.appCompleteName }}
       </h3>
 
-      <Form @submit="submitLoginForm"
+
+      <div
         class="flex flex-col px-3 pb-4 mx-auto border-2 border-white rounded-md bg-unstim-light shadow-unstim-shadow w-[350px]">
         <div class="flex flex-col items-center justify-center">
-          <img class="h-44" src="@/assets/logo/logo.png" alt="UNSTIM logo" />
+          <img class="h-32" src="@/assets/logo/logo.png" alt="UNSTIM logo" />
           <p class="text-lg">Veuillez vous connecter</p>
         </div>
 
-        <div class="w-24 h-1 mx-auto my-4 bg-black"></div>
+        <div class="w-24 h-1 mx-auto my-2 bg-black"></div>
 
-        <div class="flex flex-col w-full py-3 space-y-6 form-field">
-          <div class="relative w-full">
-            <v-icon :name="icons.FormUNIcon" :scale="1.3" class="absolute icon top-1.5 left-4" />
-            <input type="text"
-              class="w-full pl-12 text-base transition-all border-none rounded-full outline-none ring-0 shadow-input"
-              placeholder="Email" />
-          </div>
+        <el-form :status-icon="true" v-model="loginData" label-position="top" require-asterisk-position="right"
+          class="demo-form-inline gap-4 mx-3 grid grid-cols-1">
 
-          <div class="relative w-full">
-            <v-icon :name="icons.FormPWIcon" :scale="1.3" class="absolute icon top-1.5 left-4" />
 
-            <input type="password"
-              class="w-full pl-12 text-base transition-all border-none rounded-full outline-none ring-0 shadow-input"
-              placeholder="Mot de passe" />
+          <el-form-item label="Email" required :error="loginRequestError.email?.at(0)">
 
-            <v-icon :name="icons.FormPWShowIcon" :scale="1.3" class="absolute icon top-1.5 cursor-pointer right-4" />
-          </div>
-        </div>
+            <div class="max-w-full w-full">
+              <el-input v-model="loginData.email" type="email" placeholder="" size="large" />
+            </div>
 
-        <RouterLink class="py-2 ml-3 text-base font-medium underline text-unstim-primary" to="">Mot de passe oublié ?
+          </el-form-item>
+
+          <el-form-item label="Mot de passe" required :error="loginRequestError.password?.at(0)">
+
+            <div class="max-w-full w-full">
+              <el-input v-model="loginData.password" type="password" placeholder="" size="large" />
+            </div>
+          </el-form-item>
+
+        </el-form>
+
+        <RouterLink class="py-2 ml-3 text-sm font-medium underline text-unstim-primary" to="">Mot de passe oublié ?
         </RouterLink>
 
         <div class="grid mx-auto place-items-center">
-          <button type="submit"
-            class="px-4 py-2.5 hover:bg-unstim-primary-pan transition-all shadow-btn rounded-full mx-auto mt-4 text-base font-semibold text-white bg-unstim-primary"
-            to="">
+          <button type="submit" @click.prevent="submitLoginForm"
+            class="px-5 py-2.5 hover:bg-unstim-primary-pan transition-all shadow-btn rounded-full mx-auto mt-4 text-base font-semibold text-white bg-unstim-primary">
             Se connecter
           </button>
         </div>
-      </Form>
+      </div>
 
       <div class="flex flex-col items-center justify-center w-full">
         <span class="mx-auto text-base font-medium"> Copyright &copy; UNSTIM {{ 2023 }} </span>
