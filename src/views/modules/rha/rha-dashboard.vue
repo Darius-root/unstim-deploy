@@ -73,7 +73,7 @@ const chartOption = ref({
 <template>
   <div class="mx-auto xl:container">
 
-    <el-page-header title="Retour" @click="$router.go(-1)">
+    <el-page-header title="Retour">
       <template #content>
         <div class="flex items-center">
           <span class="text-base font-medium"> Statistiques catégorisées du personnel </span>
