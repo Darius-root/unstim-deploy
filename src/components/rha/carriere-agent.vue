@@ -36,6 +36,87 @@ const searchOption = reactive({
   showAgentsInactifs: ''
 })
 
+const items = ref([
+  {
+    matricule: '#64035',
+    nom: 'HOUNDJO M',
+    prenom: 'Stephen',
+    sexe: 'M',
+    categorie: 'M1',
+    date_naissance: '01/01/2000',
+    action: ''
+  },
+  {
+    matricule: '#64035',
+    nom: 'HOUNDJO M',
+    prenom: 'Stephen',
+    sexe: 'M',
+    categorie: 'M1',
+    date_naissance: '01/01/2000',
+    action: ''
+  },
+  {
+    matricule: '#64035',
+    nom: 'HOUNDJO M',
+    prenom: 'Stephen',
+    sexe: 'M',
+    categorie: 'M1',
+    date_naissance: '01/01/2000',
+    action: ''
+  },
+  // Repeat the object 17 more times
+  {
+    matricule: '#64035',
+    nom: 'HOUNDJO M',
+    prenom: 'Stephen',
+    sexe: 'M',
+    categorie: 'M1',
+    date_naissance: '01/01/2000',
+    action: ''
+  },
+
+  {
+    matricule: '#64034',
+    nom: 'BIAOU',
+    prenom: 'Hamidou',
+    sexe: 'M',
+    categorie: 'M1',
+    date_naissance: '01/01/2000',
+    action: ''
+  },
+
+  {
+    matricule: '#64032',
+    nom: 'TOSSOU',
+    prenom: 'Valentin',
+    sexe: 'M',
+    categorie: 'M1',
+    date_naissance: '01/01/2000',
+    action: ''
+  },
+
+  {
+    matricule: '#64031',
+    nom: 'CODJIA',
+    prenom: 'Orens Eudie',
+    sexe: 'F',
+    categorie: 'M1',
+    date_naissance: '01/01/2000',
+    action: ''
+  },
+
+  {
+    matricule: '#64131',
+    nom: "D'ALMEIDA",
+    prenom: 'Mensen Gilberte',
+    sexe: 'F',
+    categorie: 'M1',
+    date_naissance: '01/01/2000',
+    action: ''
+  }
+])
+
+
 const tableData = reactive([
   {
     id: '12987122',
@@ -94,10 +175,10 @@ const fonctionsParameters = reactive({
 </script>
 
 <template>
-  <div class="p-5 mt-3 border space-y-4 row">
+  <el-card class="space-y-4 my-5">
 
     <RouterLink :to="{ name: 'modifier-informations' }"
-      class="flex items-center gap-2 p-2 text-sm font-medium text-white  bg-unstim-primary rounded shadow border-unstim-primary w-fit hover:bg-opacity-60">
+      class="flex items-center mb-4 gap-2 p-2 text-sm font-medium text-white  bg-unstim-primary rounded shadow border-unstim-primary w-fit hover:bg-opacity-60">
       Faire un nouveau contrat
     </RouterLink>
 
@@ -106,7 +187,7 @@ const fonctionsParameters = reactive({
         <AccordionHeader class="flex">
           <AccordionTrigger
             class="text-base bg-slate-100 font-medium hover:bg-slate-200 transition-all flex h-[45px] flex-1 cursor-pointer items-center justify-between px-5 text-[15px] group">
-            <span>Recherche avancées</span>
+            <span class="text-sm font-medium"> CDI / Début (1998-01-01 00:00:00) - Fin (2027-01-01 00:00:00) </span>
             <v-icon :name="icons.ChevronDown" :scale="0.8"
               class="text-black ease-[cubic-bezier(0.87,_0,_0.13,_1)] transition-transform duration-300 group-data-[state=open]:rotate-180" />
           </AccordionTrigger>
@@ -115,124 +196,126 @@ const fonctionsParameters = reactive({
           class="data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp -z-20 overflow-hidden text-[15px]">
           <div class="px-5 py-4 space-y-4">
 
-            <!-- <el-descriptions class-name="w-full bg-red-500" direction="horizontal" :column="1" border>
+            <el-descriptions title="Informations de base" class-name="w-full bg-red-500" direction="horizontal"
+              :column="1" :border="true">
 
-              <el-descriptions-item label="Nom de l'agent">Nom de l'agent</el-descriptions-item>
-              <el-descriptions-item label="Type de contrat">Type de contrat</el-descriptions-item>
-              <el-descriptions-item label="Date de démarrage">Date de d</el-descriptions-item>
-              <el-descriptions-item label="Date de fin"></el-descriptions-item>
-              <el-descriptions-item label="Statut"> Cotonou </el-descriptions-item>
-              <el-descriptions-item label="Date de création">00 22 55 00</el-descriptions-item>
-              <el-descriptions-item label="Date de dernière modification">00 22 55 00</el-descriptions-item>
-              <el-descriptions-item label="Date de dernière disponibilité">00 22 55 00</el-descriptions-item>
-              <el-descriptions-item label="Date de dernière réhabilitation">00 22 55 00</el-descriptions-item>
+              <el-descriptions-item width="150" label="Nom de l'agent">Nom de l'agent</el-descriptions-item>
+              <el-descriptions-item width="150" label="Type de contrat">Type de contrat</el-descriptions-item>
+              <el-descriptions-item width="150" label="Date de démarrage">Date de d</el-descriptions-item>
+              <el-descriptions-item width="150" label="Date de fin"></el-descriptions-item>
+              <el-descriptions-item width="150" label="Statut"> Cotonou </el-descriptions-item>
+              <el-descriptions-item width="150" label="Date de création">00 22 55 00</el-descriptions-item>
+              <el-descriptions-item width="150" label="Date de dernière modification">00 22 55 00</el-descriptions-item>
+              <el-descriptions-item width="150" label="Date de dernière disponibilité">00 22 55
+                00</el-descriptions-item>
+              <el-descriptions-item width="150" label="Date de dernière réhabilitation">00 22 55
+                00</el-descriptions-item>
 
-            </el-descriptions> -->
-
-            <el-descriptions class="" title="Informations de base" :column="1" border>
-              <template #extra>
-                <el-button type="primary">Operation</el-button>
-              </template>
-              <el-descriptions-item>
-                <template #label>
-                  <div class="cell-item">
-                    <el-icon>
-                      <user />
-                    </el-icon>
-                    Username
-                  </div>
-                </template>
-                kooriookami
-              </el-descriptions-item>
-              <el-descriptions-item>
-                <template #label>
-                  <div class="cell-item">
-                    <el-icon>
-                      <iphone />
-                    </el-icon>
-                    Telephone
-                  </div>
-                </template>
-                18100000000
-              </el-descriptions-item>
-              <el-descriptions-item>
-                <template #label>
-                  <div class="cell-item">
-                    <el-icon>
-                      <location />
-                    </el-icon>
-                    Place
-                  </div>
-                </template>
-                Suzhou
-              </el-descriptions-item>
-              <el-descriptions-item>
-                <template #label>
-                  <div class="cell-item">
-                    <el-icon>
-                      <tickets />
-                    </el-icon>
-                    Remarks
-                  </div>
-                </template>
-                <el-tag size="small">School</el-tag>
-              </el-descriptions-item>
-              <el-descriptions-item>
-                <template #label>
-                  <div class="cell-item">
-                    <el-icon>
-                      <office-building />
-                    </el-icon>
-                    Address
-                  </div>
-                </template>
-                No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province
-              </el-descriptions-item>
             </el-descriptions>
 
+            <el-button-group size="large">
+              <el-button type="primary"> Modifier le contrat </el-button>
+              <el-button type="danger"> Suspendre le contrat </el-button>
+              <el-button type="primary"> Nouvel Acte </el-button>
+              <el-button type="primary"> Intérim </el-button>
+            </el-button-group>
 
-            <div class="flex gap-2">
 
-              <RouterLink :to="{ name: 'modifier-informations' }"
-                class="flex items-center gap-2 p-2 text-sm font-medium text-white  bg-unstim-primary rounded shadow border-unstim-primary w-fit hover:bg-opacity-60">
-                Modifier le contrat
-              </RouterLink>
 
-              <RouterLink :to="{ name: 'modifier-informations' }"
-                class="flex items-center gap-2 p-2 text-sm font-medium text-white  bg-unstim-primary rounded shadow border-unstim-primary w-fit hover:bg-opacity-60">
-                Suspendre le contrat
-              </RouterLink>
-
-              <RouterLink :to="{ name: 'modifier-informations' }"
-                class="flex items-center gap-2 p-2 text-sm font-medium text-white  bg-unstim-primary rounded shadow border-unstim-primary w-fit hover:bg-opacity-60">
-                Nouvel Acte
-              </RouterLink>
-
-              <RouterLink :to="{ name: 'modifier-informations' }"
-                class="flex items-center gap-2 p-2 text-sm font-medium text-white  bg-unstim-primary rounded shadow border-unstim-primary w-fit hover:bg-opacity-60">
-                Intérim
-              </RouterLink>
-
-            </div>
 
             <h3 class="text-xl font-semibold">Déroulement de la carrière</h3>
 
-            <el-table :data="tableData" :border="true" style="width: 100%">
-              <el-table-column prop="Status" label="ID" width="180" />
-              <el-table-column prop="Fonction" label="Name" />
-              <el-table-column prop="amount1" sortable label="Amount 1" />
-              <el-table-column prop="amount2" sortable label="Amount 2" />
-              <el-table-column prop="amount3" sortable label="Amount 3" />
-              <el-table-column prop="amount3" sortable label="Amount 3" />
-              <el-table-column prop="amount3" sortable label="Amount 3" />
-              <el-table-column prop="amount3" sortable label="Amount 3" />
-              <el-table-column prop="amount3" sortable label="Amount 3" />
-              <el-table-column prop="amount3" sortable label="Amount 3" />
-              <el-table-column prop="amount3" sortable label="Amount 3" />
-              <el-table-column prop="amount3" sortable label="Amount 3" />
+            <el-table :data="items" size="small" :lazy="true" :border="true" style="width: 100%" table-layout="auto">
+
+              <el-table-column type="selection" width="50" />
+              <el-table-column prop="matricule" label="Matricule" />
+              <el-table-column prop="nom" sortable label="Nom" />
+              <el-table-column prop="prenom" sortable label="Prénom" />
+              <el-table-column prop="sexe" label="Sexe" />
+              <el-table-column prop="categorie" label="Catégorie" />
+              <el-table-column prop="date_naissance" sortable label="Date de naissance" />
+              <!-- 
+                <el-table-column label="Actions">
+                  <template #default>
+                    <div class="flex gap-2">
+                      <RouterLink :to="{ name: 'infos-employee' }"
+                        class="flex items-center gap-2 p-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
+                        <v-icon :name="icons.EditIcon" scale="1.0" />
+                      </RouterLink>
+  
+                      <RouterLink to=""
+                        class="flex items-center gap-2 p-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500">
+                        <v-icon :name="icons.DeleteIcon" scale="1.0" />
+                      </RouterLink>
+                    </div>
+                  </template>
+                </el-table-column> -->
 
             </el-table>
 
+
+            <h3 class="text-xl font-semibold">Déroulement de la carrière</h3>
+
+            <el-table :data="items" size="small" :lazy="true" :border="true" style="width: 100%" table-layout="auto">
+
+              <el-table-column type="selection" width="50" />
+              <el-table-column prop="matricule" label="Matricule" />
+              <el-table-column prop="nom" sortable label="Nom" />
+              <el-table-column prop="prenom" sortable label="Prénom" />
+              <el-table-column prop="sexe" label="Sexe" />
+              <el-table-column prop="categorie" label="Catégorie" />
+              <el-table-column prop="date_naissance" sortable label="Date de naissance" />
+              <!-- 
+                <el-table-column label="Actions">
+                  <template #default>
+                    <div class="flex gap-2">
+                      <RouterLink :to="{ name: 'infos-employee' }"
+                        class="flex items-center gap-2 p-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
+                        <v-icon :name="icons.EditIcon" scale="1.0" />
+                      </RouterLink>
+  
+                      <RouterLink to=""
+                        class="flex items-center gap-2 p-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500">
+                        <v-icon :name="icons.DeleteIcon" scale="1.0" />
+                      </RouterLink>
+                    </div>
+                  </template>
+                </el-table-column> -->
+
+            </el-table>
+
+
+
+
+            <h3 class="text-xl font-semibold">Echelons</h3>
+
+            <el-table :data="items" size="small" :lazy="true" :border="true" style="width: 100%" table-layout="auto">
+
+              <el-table-column type="selection" width="50" />
+              <el-table-column prop="matricule" label="Matricule" />
+              <el-table-column prop="nom" sortable label="Nom" />
+              <el-table-column prop="prenom" sortable label="Prénom" />
+              <el-table-column prop="sexe" label="Sexe" />
+              <el-table-column prop="categorie" label="Catégorie" />
+              <el-table-column prop="date_naissance" sortable label="Date de naissance" />
+
+              <el-table-column label="Actions">
+                <template #default>
+                  <div class="flex gap-2">
+                    <RouterLink :to="{ name: 'infos-employee' }"
+                      class="flex items-center gap-2 p-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
+                      <v-icon :name="icons.EditIcon" scale="1.0" />
+                    </RouterLink>
+
+                    <RouterLink to=""
+                      class="flex items-center gap-2 p-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500">
+                      <v-icon :name="icons.DeleteIcon" scale="1.0" />
+                    </RouterLink>
+                  </div>
+                </template>
+              </el-table-column>
+
+            </el-table>
 
           </div>
         </AccordionContent>
@@ -240,7 +323,7 @@ const fonctionsParameters = reactive({
     </AccordionRoot>
 
 
-  </div>
+  </el-card>
 </template>
 
 <style></style>

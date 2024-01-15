@@ -115,6 +115,18 @@ const employeFormData = reactive({
 
         <h3 class="pt-3 text-xl font-semibold">Informations Générales</h3>
 
+        <div class="mt-5">
+
+          <el-descriptions class-name="w-full mt-5 bg-red-500" direction="vertical" :column="3" :border="true">
+
+            <el-descriptions-item label="Fonction">ASSISTANT</el-descriptions-item>
+            <el-descriptions-item label="Service"> Délégation Régionale Atlantique-Littoral</el-descriptions-item>
+            <el-descriptions-item label="Entité">Direction Générale</el-descriptions-item>
+
+          </el-descriptions>
+
+        </div>
+
         <el-form label-position="top" require-asterisk-position="right" :model="employeFormData"
           class="demo-form-inline mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
 

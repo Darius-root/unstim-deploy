@@ -11,7 +11,7 @@ import ExperienceAgent from '@/components/rha/experience-agent.vue'
 import CompetenceAgent from '@/components/rha/competence-agent.vue'
 import SalaireAgent from '@/components/rha/salaire-agent.vue'
 import DiplomeAgent from '@/components/rha/diplome-agent.vue'
-import DistinctionAgent from '@/components/rha/diplome-agent.vue'
+import DistinctionAgent from '@/components/rha/distinction-agent.vue'
 
 import {
   Delete,
@@ -155,8 +155,6 @@ const visible = ref(false)
       </el-tab-pane>
     </el-tabs>
 
-
-
     <div class="tab-content hidden mt-5">
       <TabsRoot class="flex flex-col w-full" default-value="infos-agent">
         <TabsList class="flex items-center flex-wrap gap-3" aria-label="Manage your account">
@@ -175,7 +173,7 @@ const visible = ref(false)
     </div>
 
 
-    <el-card class="box-card mt-5">
+    <!-- <el-card class="box-card mt-5">
       <template #header>
         <div class="flex items-center justify-between">
           <h3 class="text-xl font-semibold">Liste des documents</h3>
@@ -184,7 +182,7 @@ const visible = ref(false)
       </template>
 
 
-      <el-table :data="items" size="small" :lazy="true" :border="true" style="width: 100%">
+      <el-table :data="items" size="large" :lazy="true" :border="true" style="width: 100%">
 
 
         <el-table-column type="selection" width="50" />
@@ -201,7 +199,7 @@ const visible = ref(false)
 
       </el-table>
 
-    </el-card>
+    </el-card> -->
 
     <el-dialog v-model="visible" :show-close="false">
       <template #header="{ close, titleId, titleClass }">

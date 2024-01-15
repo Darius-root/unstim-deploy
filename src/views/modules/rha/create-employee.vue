@@ -62,19 +62,27 @@ const employeFormData = reactive({
         Champs obligatoires
       </div>
 
+
+
       <el-tabs class="demo-tabs mt-4">
         <el-tab-pane>
+
+
           <template #label>
             <span class="custom-tabs-label">
               <span>Informations personnel</span>
             </span>
           </template>
 
+
+
           <div class="persol space-y-4">
 
             <div class="w-full">
 
               <h3 class="py-3 text-xl font-medium">Informations générales</h3>
+
+
 
               <el-form label-position="top" require-asterisk-position="right" :model="employeFormData"
                 class="demo-form-inline mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
