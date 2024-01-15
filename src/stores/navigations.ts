@@ -49,7 +49,7 @@ export const useNavigationStore = defineStore('navigation', () => {
           {
             title: 'Rappels',
             icon: icons.FaBell,
-            to: 'personnel'
+            to: 'rappel'
           },
           {
             title: 'Prets',
@@ -60,7 +60,7 @@ export const useNavigationStore = defineStore('navigation', () => {
           {
             title: 'IDR',
             icon: icons.FaBed,
-            to: 'personnel'
+            to: 'idr'
           }
         ]
       },
@@ -322,7 +322,7 @@ export const useNavigationStore = defineStore('navigation', () => {
           {
             title: 'Rapport indicateurs ',
             icon: icons.FaFileAlt,
-            to: 'rapport-indicateur'
+            to: 'rapport-indicateur-suivi'
           }
         ]
       }

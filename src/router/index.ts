@@ -447,7 +447,34 @@ const router = createRouter({
               path: 'edit-congepermission',
               name: 'edit-congepermission',
               component: () => import('@/views/modules/rha/edit-congepermission.vue')
-            }
+            },
+            {
+              path: 'rappel',
+              name: 'rappel',
+              component: () => import('@/views/modules/rha/rappel-paie.vue')
+            },
+            {
+              path: 'rappel-view',
+              name: 'rappel-view',
+              component: () => import('@/views/modules/rha/rappel-view.vue')
+            },
+            {
+              path: 'rappel-create',
+              name: 'rappel-create',
+              component: () => import('@/views/modules/rha/rappel-create.vue')
+            },
+            {
+              path: 'idr',
+              name: 'idr',
+              component: () => import('@/views/modules/rha/idr-paie.vue')
+            },
+            
+            {
+              path: 'idr-view',
+              name: 'idr-view',
+              component: () => import('@/views/modules/rha/idr-view.vue')
+            },
+
           ]
         },
 
@@ -894,8 +921,8 @@ const router = createRouter({
             },
 
             {
-              path: 'rapport-indicateur',
-              name: 'rapport-indicateur',
+              path: 'rapport-indicateur-suivi',
+              name: 'rapport-indicateur-suivi',
               component: () =>
                 import('@/views/modules/finance/suivi-evaluation/rapport-indicateur.vue')
             }
