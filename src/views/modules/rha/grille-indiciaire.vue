@@ -407,48 +407,30 @@ const items = ref([
 
 <template>
   <div class="mx-auto xl:container">
-    <div class="flex py-2 border-b top-line">
-      <span class="text-lg font-medium"> Grille indiciaire des salaires </span>
-    </div>
 
-    <div class="w-full mt-5 border border-gray-300 bg-unstim-light card">
-      <div class="card-content">
-        <easy-data-table
-          alternating
-          hide-footer
-          border-cell
-          :headers="headers"
-          class="text-lg"
-          theme-color="#2f9fff"
-          :items="items"
-        >
-          <template #item-action="">
-            <div class="flex gap-3">
-              <RouterLink
-                :to="{ name: 'permissions-roles' }"
-                class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary"
-              >
-                <v-icon :name="icons.FormPWShowIcon" scale="1.0" />
-              </RouterLink>
+    <el-page-header title="Retour" @click="$router.go(-1)">
+      <template #content>
+        <div class="flex items-center">
+          <span class="text-base font-medium"> Grille indiciaire des salaires </span>
+        </div>
+      </template>
 
-              <RouterLink
-                :to="{ name: 'edit-role' }"
-                class="flex items-center gap-2 p-2 my-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500"
-              >
-                <v-icon :name="icons.EditIcon" scale="1.0" />
-              </RouterLink>
 
-              <RouterLink
-                to=""
-                class="flex items-center gap-2 p-2 my-2 text-white bg-black/75 rounded shadow-md w-fit hover:bg-black/75"
-              >
-                <v-icon :name="icons.DeleteIcon" scale="1.0" />
-              </RouterLink>
-            </div>
-          </template>
-        </easy-data-table>
-      </div>
-    </div>
+    </el-page-header>
+
+    <el-card class="box-card mt-5">
+
+      <el-table :span-method="arraySpanMethod" :data="items" size="small" :lazy="true" :border="true" style="width: 100%">
+
+        <!-- <el-table-column type="selection" width="50" /> -->
+
+        <el-table-column width="80" prop="echelons" label="Echelons" />
+        <el-table-column v-for="i in 21" width="100" :prop="`action_${i}`" :label="i" :key="i" />
+
+      </el-table>
+
+    </el-card>
+
   </div>
 </template>
 

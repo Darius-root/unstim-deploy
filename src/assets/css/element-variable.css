@@ -10426,6 +10426,7 @@
 }
 .el-select {
   display: block;
+  width: 100%;
   position: relative;
   vertical-align: middle;
   line-height: 32px;

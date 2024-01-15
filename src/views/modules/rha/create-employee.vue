@@ -45,7 +45,7 @@ const employeFormData = reactive({
 <template>
   <div class="mx-auto xl:container">
 
-    <el-page-header title="Retour">
+    <el-page-header title="Retour" @click="$router.go(-1)">
       <template #content>
         <div class="flex items-center">
           <span class="text-base font-medium"> Enrégistrement des informations de l'employé </span>
@@ -55,7 +55,7 @@ const employeFormData = reactive({
     </el-page-header>
 
 
-    <el-card class=" space-y-4 my-5 border border-gray-300 bg-slate-500">
+    <el-card class="space-y-4 my-5 border border-gray-300 bg-slate-500">
 
       <div class="text-sm flex gap-3 font-medium items-center">
         <span class="text-red-400">*</span>

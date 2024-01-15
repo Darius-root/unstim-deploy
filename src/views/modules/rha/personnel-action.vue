@@ -169,7 +169,7 @@ const openFullScreen1 = () => {
 
 <template>
   <div class="mx-auto xl:container">
-    <el-page-header title="Retour">
+    <el-page-header title="Retour" @click="$router.go(-1)">
       <template #content>
         <div class="flex items-center">
           <span class="text-base font-medium"> Liste du personnel </span>
@@ -390,7 +390,7 @@ const openFullScreen1 = () => {
         </el-button>
       </div>
 
-      <el-table :data="items" :lazy="true" :border="true" style="width: 100%" table-layout="auto">
+      <el-table :data="items" size="small" :lazy="true" :border="true" style="width: 100%" table-layout="auto">
 
         <el-table-column type="selection" width="50" />
         <el-table-column prop="matricule" label="Matricule" />

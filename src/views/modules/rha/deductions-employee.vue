@@ -78,99 +78,64 @@ const items = ref([
 
 <template>
   <div class="mx-auto xl:container">
-    <div class="flex py-2 border-b top-line">
-      <span class="text-lg font-medium"> Liste des déductions </span>
-    </div>
 
-    <div class="flex justify-between">
-      <RouterLink
-        @click.prevent="$router.back()"
-        to=""
-        class="flex items-center gap-2 p-2 mt-5 border rounded shadow text-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60"
-      >
-        <v-icon :name="icons.ChevronUp" class="-rotate-90" scale="1.1" />
-        <span class="text-sm font-medium"> Retour </span>
-      </RouterLink>
+    <el-page-header title="Retour" @click="$router.go(-1)">
+      <template #content>
+        <div class="flex items-center">
+          <span class="text-base font-medium"> Liste des Déductions </span>
+        </div>
+      </template>
 
-      <RouterLink
-        to="{ name: item.to }"
-        class="flex items-center gap-2 p-2 mt-5 bg-yellow-500 rounded shadow border-unstim-primary w-fit hover:bg-opacity-60"
-      >
-        <v-icon :name="icons.PersonPlus" class="" scale="1.1" />
-        <span class="text-sm font-medium"> Imprimer </span>
-      </RouterLink>
-    </div>
+      <template #extra>
+        <div class="flex gap-2">
+          <RouterLink to="{ name: item.to }"
+            class="flex items-center gap-2 py-1.5 px-2 rounded shadow bg-yellow-500 w-fit hover:bg-opacity-60">
+            <v-icon :name="icons.PersonPlus" class="" scale="1.0" />
+            <span class="text-sm font-medium"> Par période </span>
+          </RouterLink>
 
-    <div class="w-full mt-5 border border-gray-300 bg-unstim-light card">
-      <div class="flex items-center gap-3 px-4 py-3 card-header">
-        <span class="">Exporter</span>
-      </div>
+          <RouterLink to="{ name: item.to }"
+            class="flex items-center gap-2 py-1.5 px-2 rounded shadow bg-unstim-primary w-fit hover:bg-opacity-60">
+            <v-icon :name="icons.PersonPlus" class="" scale="1.0" />
+            <span class="text-sm font-medium"> Imprimer </span>
+          </RouterLink>
+        </div>
+      </template>
 
-      <div class="card-content">
-        <easy-data-table
-          alternating
-          border-cell
-          :headers="headers"
-          class="text-lg"
-          theme-color="#2f9fff"
-          :items="items"
-          buttons-pagination
-        >
-          <template #item-action="">
-            <div class="flex gap-3">
-              <!-- 
-            <RouterLink to=""
-              class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
-              <v-icon :name="icons.EditIcon" scale="1.0" />
+    </el-page-header>
 
-            </RouterLink>
+    <el-card class="box-card my-5">
 
-            <RouterLink to=""
-              class="flex items-center gap-2 p-2 my-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500">
-              <v-icon :name="icons.DeleteIcon" scale="1.0" />
+      <el-table :span-method="arraySpanMethod" :data="items" size="small" :lazy="true" :border="true">
 
-            </RouterLink> -->
-            </div>
+        <!-- <el-table-column type="selection" width="50" /> -->
 
-            <AlertDialogRoot>
-              <AlertDialogTrigger
-                class="flex items-center gap-2 p-2 my-2 text-white rounded shadow w-fit bg-unstim-info hover:bg-unstim-primary"
-              >
+        <el-table-column width="80" type="index" :index="(index) => index + 1" label="Numéros" />
+        <el-table-column width="130" prop="matricule" label="Matricule" />
+        <el-table-column width="400" prop="employe" label="Employe" />
+        <el-table-column width="80" prop="cumul" label="Cumul" />
+        <el-table-column width="100" prop="trimestre" label="Trimestre" />
+
+        <el-table-column label="Actions">
+          <template #default>
+            <div class="flex gap-2">
+              <RouterLink :to="{ name: 'infos-employee' }"
+                class="flex items-center gap-2 p-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
                 <v-icon :name="icons.EditIcon" scale="1.0" />
-              </AlertDialogTrigger>
-              <AlertDialogPortal>
-                <AlertDialogOverlay
-                  class="bg-black/50 backdrop-blur-sm data-[state=open]:animate-overlayShow fixed inset-0 z-30"
-                />
-                <AlertDialogContent
-                  class="z-[100] text-[15px] data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[500px] translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none"
-                >
-                  <AlertDialogTitle class="text-mauve12 m-0 text-[17px] font-semibold">
-                    Actions personnalisé
-                  </AlertDialogTitle>
-                  <AlertDialogDescription class="text-mauve11 mt-4 mb-5 text-[15px] leading-normal">
-                    This action cannot be undone. This will permanently delete your account and
-                    remove your data from our servers.
-                  </AlertDialogDescription>
-                  <div class="flex justify-end gap-[25px]">
-                    <AlertDialogCancel
-                      class="bg-slate-400 shadow hover:bg-slate-500 inline-flex h-[35px] items-center justify-center rounded-[4px] px-[15px] font-semibold"
-                    >
-                      Cancel
-                    </AlertDialogCancel>
-                    <AlertDialogAction
-                      class="text-red11 bg-red-400 shadow hover:bg-red-500 inline-flex h-[35px] items-center justify-center rounded-[4px] px-[15px] font-semibold"
-                    >
-                      Yes, delete account
-                    </AlertDialogAction>
-                  </div>
-                </AlertDialogContent>
-              </AlertDialogPortal>
-            </AlertDialogRoot>
+              </RouterLink>
+
+              <RouterLink to=""
+                class="flex items-center gap-2 p-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500">
+                <v-icon :name="icons.DeleteIcon" scale="1.0" />
+              </RouterLink>
+            </div>
           </template>
-        </easy-data-table>
-      </div>
-    </div>
+        </el-table-column>
+
+      </el-table>
+
+    </el-card>
+
   </div>
 </template>
 

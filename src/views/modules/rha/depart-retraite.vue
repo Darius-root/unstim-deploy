@@ -79,7 +79,7 @@ const items = ref([
 
 <template>
   <div class="mx-auto xl:container">
-    <el-page-header title="Retour">
+    <el-page-header title="Retour" @click="$router.go(-1)">
       <template #content>
         <div class="flex items-center">
           <span class="text-base font-medium"> Départ des retraite </span>

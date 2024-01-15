@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { icons } from '@/assets/icons/oh-vue-icons'
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
+import { Delete, Edit, Search, Share, Upload } from '@element-plus/icons-vue'
 
 const headers = ref([
   { text: 'Actions', sortable: true, value: 'action' },
@@ -65,362 +66,316 @@ const items = ref([
 ])
 
 // const itemsSelected = ref([])
+
+
+const employeFormData = reactive({
+  nom: '',
+  prenom: '',
+  date_naissance: '',
+  lieu_naissance: '',
+  sexe: '',
+  numero_telephone: '',
+  situation_matrimoniale: '',
+  numero_cni: '',
+  adresse: '',
+  numero_ifu: '',
+  email_prive: '',
+  email_professionnel: '',
+  matricule: '',
+  categorie_pro: '',
+  echelon: '',
+  qualif_pro: '',
+  nom_banque: '',
+  numero_compte_bancaire: '',
+  numero_cnss: '',
+  date_declaration_cnss: '',
+  code_comptable: '',
+  type_contrat: '',
+  date_debut_contrat: '',
+  date_fin_contrat: '',
+  fonction: '',
+  libelle_fonction: '',
+  ville: '',
+  isPromotion: '',
+  date_demarrage: '',
+  nom_departement: '',
+  logement: '',
+  description: ''
+})
+
+
 </script>
 
 <template>
-  <div class="w-full p-5 border border-gray-300 bg-unstim-light card">
-    <div class="infos-group">
-      <h3 class="pt-5 text-xl font-semibold">Informations Générales</h3>
+  <el-card class="space-y-4 my-5 border border-gray-300 bg-slate-500">
 
-      <div class="grid grid-cols-1 gap-4 py-5 md:grid-cols-2">
-        <div class="flex flex-col col-span-full space-y-2 input-group">
-          <label for="" class="text-sm">Photo de profil</label>
-          <div class="flex item-center">
-            <input
-              type="file"
-              class="form-unstim focus:border-none focus:outline-none bg-white lg:w-1/3 px-3"
-            />
+    <div class="persol space-y-4">
 
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center gap-2 p-2 rounded-r shadow bg-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.PersonPlus" class="text-white" scale="1.1" />
-              <span class="text-sm font-medium text-white"> Enregistrer </span>
-            </RouterLink>
-          </div>
-        </div>
+      <div class="w-full">
+
+        <h3 class="pt-3 text-xl font-semibold">Informations Générales</h3>
+
+        <el-form label-position="top" require-asterisk-position="right" :model="employeFormData"
+          class="demo-form-inline mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+
+          <el-form-item label="Nom" required>
+
+            <div class="max-w-full flex items-center gap-2  w-full">
+              <el-input v-model="employeFormData.nom" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
+            </div>
+
+          </el-form-item>
+
+          <el-form-item label="Prénom" required>
+
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-input v-model="employeFormData.prenom" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
+            </div>
+          </el-form-item>
+
+          <el-form-item label="Date de naissance" required>
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-date-picker class="w-full" type="date" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
+
+            </div>
+          </el-form-item>
+
+          <el-form-item label="Lieu de naissance" required>
+
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-input v-model="employeFormData.lieu_naissance" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
+            </div>
+
+          </el-form-item>
+
+          <el-form-item label="Sexe">
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-select v-model="employeFormData.adresse" placeholder="" size="large" clearable>
+                <el-option label="Zone one" value="shanghai" />
+                <el-option label="Zone two" value="beijing" />
+              </el-select>
+              <el-button type="primary" size="large" :icon="Edit" />
+
+            </div>
+          </el-form-item>
+
+          <el-form-item label="Téléphone" required>
+
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-input v-model="employeFormData.lieu_naissance" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
+
+            </div>
+
+          </el-form-item>
+
+          <el-form-item label="Situation matrimoniale" required>
+
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-select v-model="employeFormData.situation_matrimoniale" placeholder="" size="large" clearable>
+                <el-option label="Zone one" value="shanghai" />
+                <el-option label="Zone two" value="beijing" />
+              </el-select>
+              <el-button type="primary" size="large" :icon="Edit" />
+
+            </div>
+
+          </el-form-item>
+
+
+          <el-form-item label="CNI" required>
+
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-input v-model="employeFormData.numero_cni" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
+
+            </div>
+
+          </el-form-item>
+
+          <el-form-item label="Adresse" required>
+
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-input v-model="employeFormData.adresse" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
+
+            </div>
+
+          </el-form-item>
+
+          <el-form-item label="Numéro IFU" required>
+
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-input v-model="employeFormData.adresse" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
+
+            </div>
+
+          </el-form-item>
+
+          <el-form-item label="Email privé" required>
+
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-input v-model="employeFormData.lieu_naissance" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
+
+            </div>
+
+          </el-form-item>
+
+          <el-form-item label="Email professionnel" required>
+
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-input v-model="employeFormData.lieu_naissance" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
+
+            </div>
+
+          </el-form-item>
+
+
+        </el-form>
+
       </div>
 
-      <div
-        class="grid grid-cols-1 border-y border-gray-300 gap-4 py-5 md:grid-cols-2 lg:grid-cols-3"
-      >
-        <div class="infos-item flex flex-col">
-          <span class="text-lg font-medium"> Fonction : </span>
+      <div class="w-full mt-4">
 
-          <span class="text-base"> ASSISTANT </span>
-        </div>
+        <h3 class="pt-3 text-xl font-semibold">Informations professionnelles</h3>
 
-        <div class="infos-item flex flex-col">
-          <span class="text-lg font-medium"> Service : </span>
+        <el-form label-position="top" require-asterisk-position="right" :model="employeFormData"
+          class="demo-form-inline mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
 
-          <span class="text-base"> Agence Commerciale Nikki </span>
-        </div>
+          <el-form-item label="Matricule" required>
 
-        <div class="infos-item flex flex-col">
-          <span class="text-lg font-medium"> Entité : </span>
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-input v-model="employeFormData.matricule" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
 
-          <span class="text-base"> Direction de l'Exploitation Commerciale </span>
-        </div>
+            </div>
+
+          </el-form-item>
+
+
+          <el-form-item label="Categorie professionnelle" required>
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-select v-model="employeFormData.adresse" placeholder="" size="large" clearable>
+                <el-option label="Zone one" value="shanghai" />
+                <el-option label="Zone two" value="beijing" />
+              </el-select>
+              <el-button type="primary" size="large" :icon="Edit" />
+
+            </div>
+          </el-form-item>
+
+          <div class="col-span-full">
+
+            <el-descriptions class-name="w-full bg-red-500" direction="horizontal" :column="1" :border="true">
+
+              <el-descriptions-item label="Salaire de base"> 450 000 FCFA </el-descriptions-item>
+              <el-descriptions-item label="Avantage en nature">
+                <div class="max-w-full w-full flex items-center gap-2">
+                  <el-input v-model="employeFormData.matricule" placeholder="" size="large" />
+                  <el-button type="primary" size="large" :icon="Edit" />
+                </div>
+              </el-descriptions-item>
+              <el-descriptions-item label="Date de départ à la retraite">
+                <div class="max-w-full w-full flex items-center gap-2">
+                  <el-date-picker class="w-full" type="date" placeholder="" size="large" />
+                  <el-button type="primary" size="large" :icon="Edit" />
+                </div>
+              </el-descriptions-item>
+              <el-descriptions-item label="Code Comptable">
+                <div class="max-w-full w-full flex items-center gap-2">
+                  <el-input v-model="employeFormData.matricule" placeholder="" size="large" />
+                  <el-button type="primary" size="large" :icon="Edit" />
+                </div>
+              </el-descriptions-item>
+              <el-descriptions-item label="Qualifications professionnelles">
+                <div class="max-w-full w-full flex items-center gap-2">
+                  <el-input v-model="employeFormData.matricule" placeholder="" size="large" />
+                  <el-button type="primary" size="large" :icon="Edit" />
+                </div>
+              </el-descriptions-item>
+
+            </el-descriptions>
+
+
+
+          </div>
+
+        </el-form>
+
+
+
       </div>
 
-      <div class="grid grid-cols-1 gap-4 py-5 md:grid-cols-2">
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Nom </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+      <div class="w-full mt-4">
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Prénom </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+        <h3 class="py-3 text-xl font-semibold">Autres</h3>
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Date de naissance : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+        <el-form label-position="top" require-asterisk-position="right" :model="employeFormData"
+          class="demo-form-inline mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Lieu de naissance : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+          <el-form-item label="Nom de la banque" required>
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-select v-model="employeFormData.adresse" placeholder="" size="large" clearable>
+                <el-option label="Zone one" value="shanghai" />
+                <el-option label="Zone two" value="beijing" />
+              </el-select>
+              <el-button type="primary" size="large" :icon="Edit" />
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Sexe : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+            </div>
+          </el-form-item>
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Nombre d'enfants : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Numéro de téléphone : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+          <el-form-item label="Numero de compte bancaire">
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Situation matrimoniale : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-input v-model="employeFormData.matricule" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Numéro de la pièce d'identité : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+            </div>
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Addresse : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+          </el-form-item>
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Email privé : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+          <el-form-item label="N° CNSS">
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Email Professionnel : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-input v-model="employeFormData.echelon" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Numero IFU : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+            </div>
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Etrennes : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
-      </div>
+          </el-form-item>
 
-      <h3 class="pt-5 text-xl font-semibold">Informations professionnelles</h3>
 
-      <div class="grid grid-cols-1 gap-4 py-5 md:grid-cols-2">
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Matricule : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+          <el-form-item label="Date de la déclaration CNSS">
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Catégorie professionnelle : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-input v-model="employeFormData.qualif_pro" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
 
-        <div class="col-span-full"></div>
-      </div>
+            </div>
 
-      <h3 class="pt-5 text-xl font-semibold">Autres</h3>
+          </el-form-item>
 
-      <div class="grid grid-cols-1 gap-4 py-5 md:grid-cols-2">
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Nom de la banque : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+          <el-form-item label="Code Comptable">
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Numéro de compte bancaire: </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+            <div class="max-w-full w-full flex items-center gap-2">
+              <el-input v-model="employeFormData.qualif_pro" placeholder="" size="large" />
+              <el-button type="primary" size="large" :icon="Edit" />
+            </div>
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Echelon: </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+          </el-form-item>
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> CNSS : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
+        </el-form>
 
-        <div class="flex flex-col space-y-2 input-group">
-          <label for="" class="text-sm"> Date de la déclaration CNSS : </label>
-          <div class="flex w-full gap-2 item-center">
-            <input type="text" class="form-unstim w-full" />
-            <RouterLink
-              to="{ name: item.to }"
-              class="flex items-center justify-center p-2 rounded shadow bg-unstim-primary border-unstim-primary hover:bg-opacity-60"
-            >
-              <v-icon :name="icons.EditIcon" class="text-white" scale="1.1" />
-              <!-- <span class="text-sm font-medium"> Enregistrer </span> -->
-            </RouterLink>
-          </div>
-        </div>
       </div>
     </div>
-  </div>
-</template>
 
-<style></style>
+  </el-card>
+</template>

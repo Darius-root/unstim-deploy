@@ -12,6 +12,8 @@ import 'vue3-easy-data-table/dist/style.css'
 import ElementPlus from 'element-plus'
 import './assets/css/element-variable.css'
 
+import fr from 'element-plus/dist/locale/fr.mjs'
+
 import App from './App.vue'
 import router from './router'
 
@@ -25,6 +27,8 @@ app.component('EasyDataTable', Vue3EasyDataTable)
 
 app.use(router)
 
-app.use(ElementPlus)
+app.use(ElementPlus, {
+  locale: fr
+})
 
 app.mount('#app')

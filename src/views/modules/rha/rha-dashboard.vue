@@ -1,20 +1,8 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import 'flatpickr/dist/flatpickr.css'
-import flatPickr from 'vue-flatpickr-component'
-import { French } from 'flatpickr/dist/l10n/fr.js'
-import type { BaseOptions } from 'flatpickr/dist/types/options'
 import { useRhaStatStore } from '@/stores/rha-stats'
 
 const startDate = ref('')
-
-const endDate = ref('')
-
-const searchConfig = ref<Partial<BaseOptions>>({
-  wrap: true,
-  dateFormat: 'j/m/Y',
-  locale: French
-})
 
 const rhaStats = useRhaStatStore().rhaStats
 
@@ -85,7 +73,7 @@ const chartOption = ref({
 <template>
   <div class="mx-auto xl:container">
 
-    <el-page-header title="Retour">
+    <el-page-header title="Retour" @click="$router.go(-1)">
       <template #content>
         <div class="flex items-center">
           <span class="text-base font-medium"> Statistiques catégorisées du personnel </span>
