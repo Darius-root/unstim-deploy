@@ -24,11 +24,32 @@ import {
 
 import { useRhaButtonStore } from '@/stores/rha-buttons'
 import { icons } from '@/assets/icons/oh-vue-icons'
-import { reactive, ref } from 'vue'
+import { onMounted, reactive, ref } from 'vue'
+
+import { useAxios } from '@vueuse/integrations/useAxios'
+import axiosLaravelInstance from '@/composables/axios'
+import { useRouter } from 'vue-router';
 
 const rhaPersonnelBtn = useRhaButtonStore().rhaButtons
-
 const rhaButtonsType = useRhaButtonStore().rhaButtonsType
+
+const employeRequest = useAxios('/api/employee', { method: 'GET' }, axiosLaravelInstance, {
+  immediate: true,
+  shallow: false,
+  onError: (e: any) => {
+
+  },
+
+  onSuccess: (data) => {
+
+  }
+
+})
+
+onMounted(() => {
+  console.log(employeRequest.data);
+
+})
 
 const items = ref([
   {
@@ -152,7 +173,6 @@ const fonctionsParameters = reactive({
 
 import { ElLoading } from 'element-plus'
 
-const fullscreenLoading = ref(false)
 const openFullScreen1 = () => {
   const loading = ElLoading.service({
     lock: true,
@@ -385,7 +405,7 @@ const openFullScreen1 = () => {
           <span class="text-sm font-medium"> Imprimer </span>
         </RouterLink>
 
-        <el-button v-loading.fullscreen.lock="fullscreenLoading" type="primary" @click="openFullScreen1">
+        <el-button type="primary" @click="openFullScreen1">
           As a directive
         </el-button>
       </div>

@@ -60,7 +60,6 @@ const router = createRouter({
     {
       path: '/sygec',
       name: 'sygec',
-      meta: { requireAuth: true },
       redirect: { name: 'dash' },
       component: () => import('@/layouts/global-layout-sygec.vue'),
       children: [
@@ -110,6 +109,7 @@ const router = createRouter({
         {
           path: '',
           name: 'home',
+          meta: { authRequired: true },
           component: () => import('@/views/home/dashboard-home.vue')
         },
 
@@ -118,17 +118,18 @@ const router = createRouter({
         {
           path: '/module-rha',
           name: 'module_rha',
-          meta: { requireAuth: true },
           redirect: { name: 'tableauBord' },
           children: [
             {
               path: 'tableau-de-bord',
               name: 'tableauBord',
+              meta: { authRequired: true },
               component: () => import('@/views/modules/rha/rha-dashboard.vue')
             },
             {
               path: 'personnel',
               name: 'personnel',
+              meta: { authRequired: true },
               component: () => import('@/views/modules/rha/personnel-action.vue')
             },
 
@@ -468,13 +469,12 @@ const router = createRouter({
               name: 'idr',
               component: () => import('@/views/modules/rha/idr-paie.vue')
             },
-            
+
             {
               path: 'idr-view',
               name: 'idr-view',
               component: () => import('@/views/modules/rha/idr-view.vue')
-            },
-
+            }
           ]
         },
 
@@ -1479,6 +1479,20 @@ const router = createRouter({
       ]
     }
   ]
+})
+
+// Creer un middleware qui verifie si la authToken est dans la sessionStorage
+
+router.beforeEach((to, from, next) => {
+  const authToken = sessionStorage.getItem('authToken')
+
+  const authRequired = to.matched.some((record) => record.meta.authRequired)
+
+  if (authRequired && !authToken && to.name !== 'signin') {
+    next({ name: 'signin' })
+  } else {
+    next()
+  }
 })
 
 export default router

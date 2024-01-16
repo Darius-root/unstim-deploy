@@ -21,10 +21,10 @@ const submitLoginForm = () => {
 
 
       <Form @submit="submitLoginForm"
-        class="flex  flex-col px-7   pb-4 items-center  border-1 border-green-700 rounded-xl bg-unstim-light shadow-unstim-shadow ">
+        class="flex flex-col px-7 pb-4 items-center border-1 border-green-700 rounded-xl bg-unstim-light shadow-unstim-shadow ">
 
 
-        <div class=" mt-4 justify-center text-green-700 font-bold items-center">Système de Gestion de Conférence de
+        <div class="mt-4 justify-center text-green-700 font-bold items-center">Système de Gestion de Conférence de
           l'UNSTIM <br>
         </div>
         <div class="text-green-700 font-bold"> (SyGeC-UNSTIM)</div>
@@ -72,7 +72,9 @@ const submitLoginForm = () => {
       </Form>
 
       <div class="fixed bottom-0 left-0  ml-5">
-        <span class="mx-auto text-base font-medium text-white"> Copyright &copy; UNSTIM {{ 2023 }} </span>
+        <span class="mx-auto text-base font-medium text-white">
+          Copyright &copy; UNSTIM {{ 2023 }}
+        </span>
       </div>
     </div>
   </div>
