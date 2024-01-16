@@ -108,7 +108,8 @@ const submitLoginForm = () => {
   </Form>
 
   <div class="fixed bottom-0 left-0  ml-5">
-        <span class="mx-auto text-base font-medium text-white"> Copyright &copy; UNSTIM {{ 2023 }} </span>
+        <span class="mx-auto text-base font-medium text-white"> 
+Copyright &copy; UNSTIM {{ 2023 }} </span>
 </div>    
         </div>
     </div>

@@ -212,7 +212,7 @@ const router = createRouter({
             },
 
             {
-              path: 'edit-role',
+              path: 'edit-role/:id',
               name: 'edit-role',
               component: () => import('@/views/modules/rha/edit-role.vue')
             },
