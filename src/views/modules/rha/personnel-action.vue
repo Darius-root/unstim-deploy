@@ -28,12 +28,11 @@ import { onMounted, reactive, ref } from 'vue'
 
 import { useAxios } from '@vueuse/integrations/useAxios'
 import axiosLaravelInstance from '@/composables/axios'
-import { useRouter } from 'vue-router';
 
 const rhaPersonnelBtn = useRhaButtonStore().rhaButtons
 const rhaButtonsType = useRhaButtonStore().rhaButtonsType
 
-const employeRequest = useAxios('/api/employee', { method: 'GET' }, axiosLaravelInstance, {
+const employeRequest = useAxios('api/authors', { method: 'GET' }, axiosLaravelInstance, {
   immediate: true,
   shallow: false,
   onError: (e: any) => {

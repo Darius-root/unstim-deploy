@@ -166,7 +166,7 @@ const arraySpanMethod = ({
 <template>
   <div class="mx-auto xl:container">
 
-    <el-page-header title="Retour" @click="$router.go(-1)">
+    <el-page-header title="Retour">
       <template #content>
         <div class="flex items-center">
           <span class="text-base font-medium"> Avancements 2025 </span>
@@ -221,7 +221,6 @@ const arraySpanMethod = ({
       </el-table>
 
     </el-card>
-
 
     <el-card class="box-card mt-5">
       <template #header>

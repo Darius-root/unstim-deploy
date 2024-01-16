@@ -1,9 +1,12 @@
-// Une fonction qui retourne sur la route précedente avec router
+export interface ResponseType<T> {
+  success: boolean
+  message: string
+  body: T[]
+}
 
-import { useRouter } from 'vue-router'
-
-export function usePreviousRoute() {
-  //const route = useRoute()
-  const router = useRouter()
-  return () => router.go(-1)
+export interface Role {
+  id: number
+  name: string
+  created_at: string
+  updated_at: string
 }
