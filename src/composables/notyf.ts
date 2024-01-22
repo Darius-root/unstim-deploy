@@ -15,7 +15,7 @@ export const notyf = new Notyf({
       className: 'text-sm w-full',
       position: {
         x: 'right',
-        y: 'bottom'
+        y: 'top'
       }
     }
   ],

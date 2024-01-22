@@ -1,7 +1,7 @@
 export interface ResponseType<T> {
   success: boolean
   message: string
-  body: T[]
+  body: T 
 }
 
 export interface Role {
