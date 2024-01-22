@@ -1,9 +1,11 @@
 <script lang="ts" setup>
+import { ref, h } from 'vue';
 import { icons } from '@/assets/icons/oh-vue-icons'
 import { useAxios } from '@vueuse/integrations/useAxios'
 import axiosLaravelInstance from '@/composables/axios'
 import type { ResponseType, Role } from '@/composables/helpers';
-import { ref } from 'vue';
+import { ElMessageBox } from 'element-plus'
+import { notyf } from '@/composables/notyf';
 
 
 const roles = ref<Role[]>([]);
@@ -16,12 +18,6 @@ const roleRequest = useAxios('api/role', { method: 'GET' }, axiosLaravelInstance
   }
 
 })
-
-
-
-import { h } from 'vue'
-import { ElMessage, ElMessageBox } from 'element-plus'
-import { notyf } from '@/composables/notyf';
 
 
 const open = (id: string, name: string) => {
@@ -44,29 +40,19 @@ const open = (id: string, name: string) => {
 
           onSuccess: (data: ResponseType<Role[]>) => {
             roles.value = data.body
-          }, 
-          onFinish:()=> {
-            instance.confirmButtonLoading = false
-              roleRequest.execute()
-              done()
-
           },
-
+          onFinish: () => {
+            instance.confirmButtonLoading = false
+            roleRequest.execute()
+            done()
+          },
         })
 
-
         roleDeleteRequest.execute()
-
-
-       
       }
 
     },
-  }).then(() => {
-
-    notyf.success('Supprimer')
-
-  })
+  }).then(() => notyf.success('Supprimer'))
 }
 
 </script>
@@ -111,10 +97,11 @@ const open = (id: string, name: string) => {
         <el-table-column width="200" label="Actions">
           <template #default="scope">
             <div class="flex gap-2">
-              <RouterLink :to="{ name: 'permissions-roles' }"
+
+              <!-- <RouterLink :to="{ name: 'permissions-roles' }"
                 class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
                 <v-icon :name="icons.FormPWShowIcon" scale="1.0" />
-              </RouterLink>
+              </RouterLink> -->
 
               <RouterLink :to="{ name: 'edit-role', params: { id: scope.row.id } }"
                 class="flex items-center gap-2 p-2 my-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500">
