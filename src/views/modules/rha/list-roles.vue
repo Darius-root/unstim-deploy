@@ -1,22 +1,38 @@
 <script lang="ts" setup>
+
+import { NotyfEvent } from "notyf"
+import { ref } from 'vue';
+import { notyf } from '@/composables/notyf'
+import type { AxiosRequestConfig } from 'axios';
 import { icons } from '@/assets/icons/oh-vue-icons'
 import { useAxios } from '@vueuse/integrations/useAxios'
-import axiosLaravelInstance from '@/composables/axios'
+import { axiosLaravelInstance } from '@/composables/axios'
 import type { ResponseType, Role } from '@/composables/helpers';
-import { ref } from 'vue';
 
 
 const roles = ref<Role[]>([]);
-const roleRequest = useAxios('api/role', { method: 'GET' }, axiosLaravelInstance, {
-  immediate: true,
-  shallow: false,
 
+const roleRequestConfig = ref<AxiosRequestConfig>({
+  method: 'GET',
+  headers: { "Authorization": `Bearer ${sessionStorage.getItem('authToken')}` }
+})
+
+
+const roleRequest = useAxios('api/role', roleRequestConfig.value, axiosLaravelInstance, {
+  immediate: true,
   onSuccess: (data: ResponseType<Role>) => {
     roles.value = data.body
+  },
+
+  onError: () => {
+    notyf.error({
+      message: "Une erreur s'est produite ! Cliquer pour rafraichir",
+      dismissible: false
+    }).on(NotyfEvent.Click, () => roleRequest.execute())
+
   }
 
 })
-
 
 </script>
 

@@ -420,12 +420,11 @@ const items = ref([
 
     <el-card class="box-card mt-5">
 
-      <el-table :span-method="arraySpanMethod" :data="items" size="small" :lazy="true" :border="true" style="width: 100%">
+      <el-table :data="items" size="small" :lazy="true" :border="true" style="width: 100%">
 
         <!-- <el-table-column type="selection" width="50" /> -->
-
         <el-table-column width="80" prop="echelons" label="Echelons" />
-        <el-table-column v-for="i in 21" width="100" :prop="`action_${i}`" :label="i" :key="i" />
+        <el-table-column v-for="i in 21" width="100" :prop="`action_${i}`" :label="i.toString()" :key="i" />
 
       </el-table>
 

@@ -4,7 +4,7 @@ import { notyf } from '@/composables/notyf'
 import { reactive, ref } from 'vue';
 
 import { useAxios } from '@vueuse/integrations/useAxios'
-import axiosLaravelInstance from '@/composables/axios'
+import { axiosLaravelInstance } from '@/composables/axios'
 import { useRouter } from 'vue-router';
 import { useSessionStorage } from '@vueuse/core'
 

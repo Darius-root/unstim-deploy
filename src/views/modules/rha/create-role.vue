@@ -9,11 +9,8 @@ import { icons } from '@/assets/icons/oh-vue-icons'
     </div>
 
     <div class="flex justify-between">
-      <RouterLink
-        @click.prevent="$router.back()"
-        to=""
-        class="flex items-center gap-2 p-2 mt-5 border rounded shadow text-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60"
-      >
+      <RouterLink @click.prevent="$router.back()" to=""
+        class="flex items-center gap-2 p-2 mt-5 border rounded shadow text-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60">
         <v-icon :name="icons.ChevronUp" class="-rotate-90" scale="1.1" />
         <span class="text-sm font-medium"> Retour </span>
       </RouterLink>
@@ -35,8 +32,7 @@ import { icons } from '@/assets/icons/oh-vue-icons'
 
         <div class="flex gap-3 border-t form-btn">
           <button
-            class="flex items-center gap-2 p-2 px-3 mt-5 text-white rounded shadow bg-unstim-primary w-fit hover:bg-opacity-60"
-          >
+            class="flex items-center gap-2 p-2 px-3 mt-5 text-white rounded shadow bg-unstim-primary w-fit hover:bg-opacity-60">
             <span class="text-sm font-medium"> Enregistrer </span>
             <!-- <v-icon :name="icons.ChevronUp" class="rotate-90" scale="1.0" /> -->
           </button>

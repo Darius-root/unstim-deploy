@@ -21,7 +21,7 @@ export const useModuleStore = defineStore('module', () => {
           to: 'e'
         }
       ]
-    }
+    },
 
     // {
     //   id: 2,
@@ -47,12 +47,12 @@ export const useModuleStore = defineStore('module', () => {
     //   ]
     // },
 
-    // {
-    //   id: 5,
-    //   short: 'Suivi-Evaluation',
-    //   label: '  Suivi evaluation ',
-    //   to: 'module_finance_suivi_evaluation'
-    // },
+    {
+      id: 5,
+      short: 'Suivi-Evaluation',
+      label: '  Suivi evaluation ',
+      to: 'module_finance_suivi_evaluation'
+    }
 
     // {
     //   id: 3,
