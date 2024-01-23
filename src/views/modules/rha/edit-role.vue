@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { icons } from '@/assets/icons/oh-vue-icons'
 import { axiosLaravelInstance } from '@/composables/axios';
 import { useAxios } from '@vueuse/integrations/useAxios.mjs';
 import { notyf } from '@/composables/notyf'
@@ -7,11 +6,12 @@ import { type Ref, watch } from 'vue'
 import { reactive, ref } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import type { ResponseType, Role } from '@/composables/helpers';
+import type { AxiosRequestConfig } from 'axios';
+
+
 const route = useRoute()
 const router = useRouter()
 
-
-//retrieve id 
 
 const id: Ref<string | string[]> = ref('');
 
@@ -30,10 +30,20 @@ const roleName = reactive({
   name: '',
 })
 
-const getRoleRequest = useAxios(`api/role/${id.value}`, { method: 'GET' }, axiosLaravelInstance, {
+const getRoleRequestConfig = ref<AxiosRequestConfig>({
+  method: 'GET',
+  headers: { "Authorization": `Bearer ${sessionStorage.getItem('authToken')}` }
+})
 
+const roleRequestConfig = ref<AxiosRequestConfig>({
+  method: 'PUT',
+  data: roleName,
+  headers: { "Authorization": `Bearer ${sessionStorage.getItem('authToken')}` }
+})
+
+
+const getRoleRequest = useAxios(`api/role/${id.value}`, getRoleRequestConfig.value, axiosLaravelInstance, {
   immediate: true,
-
   onSuccess: (data: ResponseType<Role>) => {
     roleName.name = data.body.name
   }
@@ -41,15 +51,13 @@ const getRoleRequest = useAxios(`api/role/${id.value}`, { method: 'GET' }, axios
 })
 
 
-
 const roleRequestError = ref({} as {
   name?: Array<string>,
 })
 
 
-const roleRequest = useAxios(`api/role/${id.value}`, { method: 'PUT', data: roleName }, axiosLaravelInstance, {
+const roleRequest = useAxios(`api/role/${id.value}`, roleRequestConfig.value, axiosLaravelInstance, {
   immediate: false,
-  shallow: false,
 
   onError: (e: any) => {
     roleRequestError.value = e.response.data.errors
@@ -58,7 +66,6 @@ const roleRequest = useAxios(`api/role/${id.value}`, { method: 'PUT', data: role
   onSuccess: (data) => {
     router.push({ name: 'roles' })
     notyf.success(data.message)
-
   }
 })
 
@@ -69,26 +76,32 @@ const submitCreateRole = () => roleRequest.execute();
 
 <template>
   <div class="mx-auto xl:container">
-    <div class="flex py-2 border-b top-line">
-      <span class="text-lg font-medium"> Modifier le role </span>
-    </div>
 
-    <div class="flex justify-between">
-      <RouterLink @click.prevent="$router.back()" to=""
-        class="flex items-center gap-2 p-2 mt-5 border rounded shadow text-unstim-primary border-unstim-primary w-fit hover:bg-opacity-60">
-        <v-icon :name="icons.ChevronUp" class="-rotate-90" scale="1.1" />
-        <span class="text-sm font-medium"> Retour </span>
-      </RouterLink>
-    </div>
+    <el-page-header title="Retour">
+      <template #content>
+        <div class="flex items-center">
+          <span class="text-base font-medium"> Modifier le role </span>
+        </div>
+      </template>
 
-    <div class="w-full p-5 mt-5 border border-gray-300 bg-unstim-light card">
+    </el-page-header>
+
+    <el-card class="w-full  my-5 border border-gray-300 bg-unstim-light card">
 
 
-      <div class="personal-infos-group">
+      <div class="personal-infos-group space-y-3">
+
+        <Suspense>
+
+          <template #fallback>
+            Loading...
+          </template>
+
+        </Suspense>
 
 
         <el-form :status-icon="true" label-position="top" require-asterisk-position="right"
-          class="demo-form-inline gap-4 mx-3 grid grid-cols-1">
+          class="demo-form-inline gap-4  grid grid-cols-1">
 
           <el-form-item label="Nom du rôle" required :error="roleRequestError.name?.at(0)">
 
@@ -101,7 +114,7 @@ const submitCreateRole = () => roleRequest.execute();
 
         </el-form>
 
-        <div class="flex ml-4 gap-3  mt-6 form-btn">
+        <div class="flex gap-3">
           <el-button type="primary" size="large" @click="submitCreateRole" :loading="roleRequest.isLoading.value">
 
             <template #loading>
@@ -123,20 +136,14 @@ const submitCreateRole = () => roleRequest.execute();
             </template>
 
 
-            <span class="text-white text-base">Enregistrer</span>
+            <span class="text-white text-sm">Enregistrer</span>
           </el-button>
-
-
-
-
 
 
         </div>
       </div>
-    </div>
+    </el-card>
   </div>
 </template>
 
-<style>
-@import url('@/assets/css/easy-table.css');
-</style>
+

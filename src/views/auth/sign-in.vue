@@ -71,7 +71,6 @@ const submitLoginForm = () => loginRequest.execute();
         <el-form :status-icon="true" v-model="loginData" label-position="top" require-asterisk-position="right"
           class="demo-form-inline gap-4 mx-3 grid grid-cols-1">
 
-          home
           <el-form-item label="Email" required :error="loginRequestError.email?.at(0)">
 
             <div class="max-w-full w-full">
