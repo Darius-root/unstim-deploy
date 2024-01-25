@@ -558,6 +558,107 @@ export const useNavigationStore = defineStore('navigation', () => {
         to: 'parametrage-stock',
    
       },
+    ],
+
+
+
+    module_compta: [
+
+      {
+        title: 'Saisie',
+        icon: icons.FaDashcube,
+        to: '',
+        underMenu: [
+          {
+            title: 'Editions comptable',
+            icon: icons.PersonR,
+            to: 'edition-compta'
+          },
+
+        ]
+      },
+      {
+        title: 'Compte',
+        icon: icons.FaDashcube,
+        to: '',
+        underMenu: [
+          {
+            title: 'Editions comptable',
+            icon: icons.PersonR,
+            to: 'edition-compta'
+          },
+
+        ]
+      },
+      {
+        title: 'Journal',
+        icon: icons.FaDashcube,
+        to: '',
+        underMenu: [
+          {
+            title: 'Editions comptable',
+            icon: icons.PersonR,
+            to: 'edition-compta'
+          },
+
+        ]
+      },
+
+
+      {
+        title: 'Edition',
+        icon: icons.FaDashcube,
+        to: '',
+        underMenu: [
+          {
+            title: 'Editions comptable',
+            icon: icons.PersonR,
+            to: 'edition-compta'
+          },
+
+          {
+            title: 'Etats financiers',
+            to: 'etat-financier'
+          }
+        ]
+      },
+    
+      {
+        title: 'Plan de tiers',
+        icon: icons.FaDashcube,
+        to: '',
+        underMenu: [
+          {
+            title: 'Créer un compte de tiers',
+            icon: icons.PersonR,
+            to: 'edition-compta'
+          },
+          {
+            title: 'Plan de tiers',
+            icon: icons.PersonR,
+            to: 'edition-compta'
+          },
+          {
+            title: 'Créer une catégorie de tiers',
+            icon: icons.PersonR,
+            to: 'edition-compta'
+          },
+          {
+            title: 'Catégorie de tiers',
+            icon: icons.PersonR,
+            to: 'edition-compta'
+          },
+
+        ]
+      },
+
+     {
+      title: 'Paramètres',
+      icon: icons.FaDashcube,
+      to: '',
+    
+    },
+
     ]
   })
 

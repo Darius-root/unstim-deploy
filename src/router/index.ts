@@ -1475,7 +1475,33 @@ const router = createRouter({
               component: () => import('@/views/modules/stock/parametrage-stock.vue')
             }
           ]
-        }
+        },
+
+
+
+
+                // ROUTES COMPTabilité
+
+                {
+                  path: '/module_compta',
+                  name: 'module_compta',
+                  meta: { requireAuth: true },
+                  redirect: { name: 'edition-compta' },
+                  children: [
+                    {
+                      path: 'edition-compta',
+                      name: 'edition-compta',
+                      component: () => import('@/views/modules/comptabilite/edition-compta.vue')
+                    },
+                    {
+                      path: 'etat-financier',
+                      name: 'etat-financier',
+                      component: () => import('@/views/modules/comptabilite/etat-financier.vue')
+                    },
+                  ]
+                  }
+
+
       ]
     }
   ]
