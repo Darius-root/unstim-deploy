@@ -12,7 +12,7 @@ const statics = useStaticStore()
 
 const router = useRouter()
 
-const loginData = reactive({
+const loginData = ref({
   email: '',
   password: ''
 })
@@ -22,9 +22,8 @@ const loginRequestError = ref({} as {
   password?: Array<string>
 })
 
-const loginRequest = useAxios('/api/login', { method: 'POST', data: loginData }, axiosLaravelInstance, {
+const loginRequest = useAxios('/api/login', { method: 'POST', data: loginData.value }, axiosLaravelInstance, {
   immediate: false,
-  shallow: false,
   onError: (e: any) => {
     loginRequestError.value = e.response.data.errors
     notyf.error('Authentification echouée')

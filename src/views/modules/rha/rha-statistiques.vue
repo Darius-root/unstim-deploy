@@ -128,7 +128,7 @@ const items = ref([
 
                 <!-- <el-table-column type="selection" width="50" /> -->
 
-                <el-table-column width="50" type="index" :index="(index) => index + 1" label="N" />
+                <el-table-column width="50" type="index" :index="(index: number) => index + 1" label="N" />
                 <el-table-column width="130" prop="matricule" label="Matricule" />
                 <el-table-column width="400" prop="employe" label="Employe" />
                 <el-table-column width="80" prop="cumul" label="Cumul" />
@@ -174,7 +174,7 @@ const items = ref([
 
                 <!-- <el-table-column type="selection" width="50" /> -->
 
-                <el-table-column width="50" type="index" :index="(index) => index + 1" label="N" />
+                <el-table-column width="50" type="index" :index="(index: number) => index + 1" label="N" />
                 <el-table-column width="130" prop="matricule" label="Matricule" />
                 <el-table-column width="400" prop="employe" label="Employe" />
                 <el-table-column width="80" prop="cumul" label="Cumul" />
@@ -221,7 +221,7 @@ const items = ref([
 
                 <!-- <el-table-column type="selection" width="50" /> -->
 
-                <el-table-column width="50" type="index" :index="(index) => index + 1" label="N" />
+                <el-table-column width="50" type="index" :index="(index: number) => index + 1" label="N" />
                 <el-table-column width="130" prop="matricule" label="Matricule" />
                 <el-table-column width="400" prop="employe" label="Employe" />
                 <el-table-column width="80" prop="cumul" label="Cumul" />
@@ -267,7 +267,7 @@ const items = ref([
 
                 <!-- <el-table-column type="selection" width="50" /> -->
 
-                <el-table-column width="50" type="index" :index="(index) => index + 1" label="N" />
+                <el-table-column width="50" type="index" :index="(index: number) => index + 1" label="N" />
                 <el-table-column width="130" prop="matricule" label="Matricule" />
                 <el-table-column width="400" prop="employe" label="Employe" />
                 <el-table-column width="80" prop="cumul" label="Cumul" />
