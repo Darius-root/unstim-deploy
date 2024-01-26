@@ -554,7 +554,7 @@ export const useNavigationStore = defineStore('navigation', () => {
    
       }, {
         title: 'Paramétrage',
-        icon: icons.FaPencilAlt,
+        icon: icons.FaSlidersH,
         to: 'parametrage-stock',
    
       },
@@ -626,36 +626,29 @@ export const useNavigationStore = defineStore('navigation', () => {
       {
         title: 'Plan de tiers',
         icon: icons.FaDashcube,
-        to: '',
+        to: 'plan-tiers',
         underMenu: [
-          {
-            title: 'Créer un compte de tiers',
-            icon: icons.PersonR,
-            to: 'edition-compta'
-          },
+        
           {
             title: 'Plan de tiers',
             icon: icons.PersonR,
-            to: 'edition-compta'
+            to: 'plan-tiers'
           },
-          {
-            title: 'Créer une catégorie de tiers',
-            icon: icons.PersonR,
-            to: 'edition-compta'
-          },
+         
           {
             title: 'Catégorie de tiers',
             icon: icons.PersonR,
-            to: 'edition-compta'
+            to: 'categorie-tiers'
           },
 
         ]
       },
 
-     {
-      title: 'Paramètres',
-      icon: icons.FaDashcube,
-      to: '',
+   
+    {
+      title: 'Paramètre',
+      icon: icons.FaSlidersH,
+      to: 'param-compta',
     
     },
 

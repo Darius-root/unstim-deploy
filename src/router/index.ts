@@ -1498,9 +1498,38 @@ const router = createRouter({
                       name: 'etat-financier',
                       component: () => import('@/views/modules/comptabilite/etat-financier.vue')
                     },
+
+                    {
+                      path: 'plan-tiers',
+                      name: 'plan-tiers',
+                      component: () => import('@/views/modules/comptabilite/plan-tiers.vue')
+                    },
+
+                    {
+                      path: 'create-tiers',
+                      name: 'create-tiers',
+                      component: () => import('@/views/modules/comptabilite/create-tiers.vue')
+                    },
+
+                    {
+                      path: 'categorie-tiers',
+                      name: 'categorie-tiers',
+                      component: () => import('@/views/modules/comptabilite/categorie-tiers.vue')
+                    },
+                    {
+                      path: 'create-categorie-tiers',
+                      name: 'create-categorie-tiers',
+                      component: () => import('@/views/modules/comptabilite/create-categorie-tiers.vue')
+                    },
+
+                    {
+                      path: 'param-compta',
+                      name: 'param-compta',
+                      component: () => import('@/views/modules/comptabilite/param-compta.vue')
+                    },
                   ]
                   }
-
+                  
 
       ]
     }
