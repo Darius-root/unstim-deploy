@@ -1527,6 +1527,12 @@ const router = createRouter({
                       name: 'param-compta',
                       component: () => import('@/views/modules/comptabilite/param-compta.vue')
                     },
+
+                    {
+                      path: 'saisie-compta',
+                      name: 'saisie-compta',
+                      component: () => import('@/views/modules/comptabilite/saisie-compta.vue')
+                    },
                   ]
                   }
                   

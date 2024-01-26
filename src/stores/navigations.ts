@@ -572,7 +572,7 @@ export const useNavigationStore = defineStore('navigation', () => {
           {
             title: 'Editions comptable',
             icon: icons.PersonR,
-            to: 'edition-compta'
+            to: 'saisie-compta'
           },
 
         ]

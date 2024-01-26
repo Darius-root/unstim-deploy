@@ -69,7 +69,9 @@
 
     <div class="flex justify-end my-3 items-center space-x-2">
       <span class="text-base font-medium">Filtrer:</span>
-      <input type="text" v-model="search" class="border-gray-300 rounded-md" />
+
+      <el-input v-model="search"  class="mx-auto !w-52  " type="text" autocomplete="off" />
+
     </div>
 
     <el-table
@@ -123,8 +125,6 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 
-import { ElTable, ElTableColumn, ElPagination } from 'element-plus'
-import 'element-plus/dist/index.css'
 
 const search = ref('')
 
