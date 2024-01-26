@@ -27,7 +27,8 @@ const loginRequest = useAxios('/api/login', { method: 'POST', data: loginData.va
   onError: (e: any) => {
     loginRequestError.value = e.response.data.errors
     notyf.error('Authentification echouée')
-  },
+    console.log(e);
+      },
 
   onSuccess: (data) => {
     useSessionStorage('authToken', data.body.token)
