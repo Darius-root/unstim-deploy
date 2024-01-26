@@ -13,7 +13,8 @@ export const axiosSymfonyInstance = Axios.create({
   baseURL: import.meta.env.VITE_SYMFONY_API_BASE,
   headers: {
     'Content-Type': 'application/json',
-    Accept: 'application/json'
+    Accept: 'application/json',
+    codeUnique: 'useradmin'
     // Authorization: token ? `Bearer ${token}` : ''
   }
 })

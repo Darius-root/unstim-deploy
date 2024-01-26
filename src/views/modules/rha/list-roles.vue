@@ -19,6 +19,12 @@ const roleRequestConfig = ref<AxiosRequestConfig>({
   headers: { "Authorization": `Bearer ${sessionStorage.getItem('authToken')}` }
 })
 
+const roleDeleteRequestConfig = ref<AxiosRequestConfig>({
+  method: 'DELETE',
+  headers: { "Authorization": `Bearer ${sessionStorage.getItem('authToken')}` }
+})
+
+
 
 const roleRequest = useAxios('api/role', roleRequestConfig.value, axiosLaravelInstance, {
   immediate: true,
@@ -49,7 +55,7 @@ const open = (id: string, name: string) => {
       if (action === 'confirm') {
         instance.confirmButtonLoading = true
         instance.confirmButtonText = 'suppression...'
-        const roleDeleteRequest = useAxios(`api/role/${id}`, { method: 'DELETE' }, axiosLaravelInstance, {
+        const roleDeleteRequest = useAxios(`api/role/${id}`, roleDeleteRequestConfig.value, axiosLaravelInstance, {
           immediate: false,
           shallow: false,
 
@@ -109,10 +115,13 @@ const open = (id: string, name: string) => {
         <el-table-column type="selection" width="50" />
 
         <el-table-column width="100" prop="id" label="Identifiant" />
+
         <el-table-column prop="name" label="Libelle du role" />
 
         <el-table-column width="200" label="Actions">
+
           <template #default="scope">
+
             <div class="flex gap-2">
 
               <!-- <RouterLink :to="{ name: 'permissions-roles' }"

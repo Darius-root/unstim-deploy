@@ -8,7 +8,7 @@ import type { AxiosRequestConfig } from 'axios';
 
 const router = useRouter()
 
-const dataRole = reactive({
+const dataRole = ref({
   name: '',
 })
 
@@ -19,7 +19,7 @@ const roleRequestError = ref({} as {
 
 const roleRequestConfig = ref<AxiosRequestConfig>({
   method: 'POST',
-  data: dataRole,
+  data: dataRole.value,
   headers: { "Authorization": `Bearer ${sessionStorage.getItem('authToken')}` }
 })
 
@@ -95,6 +95,7 @@ const submitCreateRole = () => roleRequest.execute();
             <span class="text-white text-sm">Enregistrer</span>
           </el-button>
         </div>
+
       </div>
 
     </el-card>
