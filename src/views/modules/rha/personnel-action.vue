@@ -26,27 +26,27 @@ import { useRhaButtonStore } from '@/stores/rha-buttons'
 import { icons } from '@/assets/icons/oh-vue-icons'
 import { onMounted, reactive, ref } from 'vue'
 
-import { useAxios } from '@vueuse/integrations/useAxios'
-import axiosLaravelInstance from '@/composables/axios'
+// import { useAxios } from '@vueuse/integrations/useAxios'
+// import { axiosLaravelInstance } from '@/composables/axios'
 
 const rhaPersonnelBtn = useRhaButtonStore().rhaButtons
 const rhaButtonsType = useRhaButtonStore().rhaButtonsType
 
-const employeRequest = useAxios('api/authors', { method: 'GET' }, axiosLaravelInstance, {
-  immediate: true,
-  shallow: false,
-  onError: (e: any) => {
+// const employeRequest = useAxios('api/authors', { method: 'GET' }, axiosLaravelInstance, {
+//   immediate: true,
+//   shallow: false,
+//   // onError: (e: any) => {
 
-  },
+//   // },
 
-  onSuccess: (data) => {
+//   // onSuccess: (data) => {
 
-  }
+//   // }
 
-})
+// })
 
 onMounted(() => {
-  console.log(employeRequest.data);
+  // console.log(employeRequest.data);
 
 })
 

@@ -1,11 +1,14 @@
 <script lang="ts" setup>
-import { icons } from '@/assets/icons/oh-vue-icons'
-import axiosLaravelInstance from '@/composables/axios';
+import { axiosLaravelInstance } from '@/composables/axios';
 import { useAxios } from '@vueuse/integrations/useAxios.mjs';
 import { notyf } from '@/composables/notyf'
-import { reactive, ref, watch, type Ref } from 'vue';
+import { type Ref, watch } from 'vue'
+import { reactive, ref } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import type { ResponseType, Role } from '@/composables/helpers';
+import type { AxiosRequestConfig } from 'axios';
+
+
 const route = useRoute()
 const router = useRouter()
 
@@ -21,13 +24,26 @@ watch(() => route.params.id, async (newId) => {
 }, { immediate: true });
 
 
+
+// retrieve of id
 const roleName = reactive({
   name: '',
 })
 
-const getRoleRequest = useAxios(`api/role/${id.value}`, { method: 'GET' }, axiosLaravelInstance, {
+const getRoleRequestConfig = ref<AxiosRequestConfig>({
+  method: 'GET',
+  headers: { "Authorization": `Bearer ${sessionStorage.getItem('authToken')}` }
+})
+
+const roleRequestConfig = ref<AxiosRequestConfig>({
+  method: 'PUT',
+  data: roleName,
+  headers: { "Authorization": `Bearer ${sessionStorage.getItem('authToken')}` }
+})
+
+
+const getRoleRequest = useAxios(`api/role/${id.value}`, getRoleRequestConfig.value, axiosLaravelInstance, {
   immediate: true,
-  shallow: false,
   onSuccess: (data: ResponseType<Role>) => {
     roleName.name = data.body.name
   }
@@ -35,15 +51,13 @@ const getRoleRequest = useAxios(`api/role/${id.value}`, { method: 'GET' }, axios
 })
 
 
-
 const roleRequestError = ref({} as {
   name?: Array<string>,
 })
 
 
-const roleRequest = useAxios(`api/role/${id.value}`, { method: 'PUT', data: roleName }, axiosLaravelInstance, {
+const roleRequest = useAxios(`api/role/${id.value}`, roleRequestConfig.value, axiosLaravelInstance, {
   immediate: false,
-  shallow: false,
 
   onError: (e: any) => {
     roleRequestError.value = e.response.data.errors
@@ -56,9 +70,6 @@ const roleRequest = useAxios(`api/role/${id.value}`, { method: 'PUT', data: role
 })
 
 const submitCreateRole = () => roleRequest.execute();
-
-
-
 
 
 </script>
@@ -80,6 +91,14 @@ const submitCreateRole = () => roleRequest.execute();
 
       <div class="personal-infos-group space-y-3">
 
+        <Suspense>
+
+          <template #fallback>
+            Loading...
+          </template>
+
+        </Suspense>
+
 
         <el-form :status-icon="true" label-position="top" require-asterisk-position="right"
           class="demo-form-inline gap-4  grid grid-cols-1">
@@ -95,7 +114,7 @@ const submitCreateRole = () => roleRequest.execute();
 
         </el-form>
 
-        <div class="flex  gap-3 ">
+        <div class="flex gap-3">
           <el-button type="primary" size="large" @click="submitCreateRole" :loading="roleRequest.isLoading.value">
 
             <template #loading>

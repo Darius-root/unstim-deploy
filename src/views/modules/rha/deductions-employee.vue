@@ -106,11 +106,11 @@ const items = ref([
 
     <el-card class="box-card my-5">
 
-      <el-table :span-method="arraySpanMethod" :data="items" size="small" :lazy="true" :border="true">
+      <el-table :data="items" size="small" :lazy="true" :border="true">
 
         <!-- <el-table-column type="selection" width="50" /> -->
 
-        <el-table-column width="80" type="index" :index="(index) => index + 1" label="Numéros" />
+        <el-table-column width="80" type="index" :index="(index: number) => index + 1" label="Numéros" />
         <el-table-column width="130" prop="matricule" label="Matricule" />
         <el-table-column width="400" prop="employe" label="Employe" />
         <el-table-column width="80" prop="cumul" label="Cumul" />
@@ -139,6 +139,4 @@ const items = ref([
   </div>
 </template>
 
-<style>
-@import url('@/assets/css/easy-table.css');
-</style>
+

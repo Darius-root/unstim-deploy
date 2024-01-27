@@ -133,10 +133,6 @@ const items = ref([
     augmentation: '62 804',
   },
 
-
-
-
-
 ])
 
 const arraySpanMethod = ({

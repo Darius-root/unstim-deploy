@@ -1,24 +1,31 @@
 <script lang="ts" setup>
-import axiosLaravelInstance from '@/composables/axios';
+import { axiosLaravelInstance } from '@/composables/axios';
 import { useAxios } from '@vueuse/integrations/useAxios.mjs';
 import { notyf } from '@/composables/notyf'
 import { reactive, ref } from 'vue';
 import { useRouter } from 'vue-router';
+import type { AxiosRequestConfig } from 'axios';
 
 const router = useRouter()
 
-const dataRole = reactive({
+const dataRole = ref({
   name: '',
 })
+
+
 const roleRequestError = ref({} as {
   name?: Array<string>,
 })
 
+const roleRequestConfig = ref<AxiosRequestConfig>({
+  method: 'POST',
+  data: dataRole.value,
+  headers: { "Authorization": `Bearer ${sessionStorage.getItem('authToken')}` }
+})
 
-const roleRequest = useAxios('api/role', { method: 'POST', data: dataRole }, axiosLaravelInstance, {
+
+const roleRequest = useAxios('api/role', roleRequestConfig.value, axiosLaravelInstance, {
   immediate: false,
-  shallow: false,
-
   onError: (e: any) => {
     roleRequestError.value = e.response.data.errors
     notyf.error('Échec de création')
@@ -88,6 +95,7 @@ const submitCreateRole = () => roleRequest.execute();
             <span class="text-white text-sm">Enregistrer</span>
           </el-button>
         </div>
+
       </div>
 
     </el-card>

@@ -1,24 +1,45 @@
 <script lang="ts" setup>
+
+import { NotyfEvent } from "notyf"
 import { ref, h } from 'vue';
+import { notyf } from '@/composables/notyf'
+import type { AxiosRequestConfig } from 'axios';
 import { icons } from '@/assets/icons/oh-vue-icons'
 import { useAxios } from '@vueuse/integrations/useAxios'
-import axiosLaravelInstance from '@/composables/axios'
+import { axiosLaravelInstance } from '@/composables/axios'
 import type { ResponseType, Role } from '@/composables/helpers';
+
 import { ElMessageBox } from 'element-plus'
-import { notyf } from '@/composables/notyf';
 
 
 const roles = ref<Role[]>([]);
-const roleRequest = useAxios('api/role', { method: 'GET' }, axiosLaravelInstance, {
-  immediate: true,
-  shallow: false,
 
+const roleRequestConfig = ref<AxiosRequestConfig>({
+  method: 'GET',
+  headers: { "Authorization": `Bearer ${sessionStorage.getItem('authToken')}` }
+})
+
+const roleDeleteRequestConfig = ref<AxiosRequestConfig>({
+  method: 'DELETE',
+  headers: { "Authorization": `Bearer ${sessionStorage.getItem('authToken')}` }
+})
+
+
+
+const roleRequest = useAxios('api/role', roleRequestConfig.value, axiosLaravelInstance, {
+  immediate: true,
   onSuccess: (data: ResponseType<Role[]>) => {
     roles.value = data.body
+  },
+
+  onError: () => {
+    notyf.error({
+      message: "Une erreur s'est produite ! Cliquer pour rafraichir",
+      dismissible: false
+    }).on(NotyfEvent.Click, () => roleRequest.execute())
   }
 
 })
-
 
 const open = (id: string, name: string) => {
   ElMessageBox({
@@ -34,7 +55,7 @@ const open = (id: string, name: string) => {
       if (action === 'confirm') {
         instance.confirmButtonLoading = true
         instance.confirmButtonText = 'suppression...'
-        const roleDeleteRequest = useAxios(`api/role/${id}`, { method: 'DELETE' }, axiosLaravelInstance, {
+        const roleDeleteRequest = useAxios(`api/role/${id}`, roleDeleteRequestConfig.value, axiosLaravelInstance, {
           immediate: false,
           shallow: false,
 
@@ -45,10 +66,12 @@ const open = (id: string, name: string) => {
             instance.confirmButtonLoading = false
             roleRequest.execute()
             done()
-          },
+
+          }
         })
 
         roleDeleteRequest.execute()
+
       }
 
     },
@@ -92,6 +115,7 @@ const open = (id: string, name: string) => {
         <el-table-column type="selection" width="50" />
 
         <el-table-column width="100" prop="id" label="Identifiant" />
+
         <el-table-column prop="name" label="Libelle du role" />
 
         <el-table-column width="200" label="Actions">
