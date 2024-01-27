@@ -1,6 +1,3 @@
-
-
-
 <script lang="ts" setup>
 import { icons } from '@/assets/icons/oh-vue-icons'
 import { reactive, ref } from 'vue'
@@ -17,7 +14,7 @@ import {
 
 const items = ref([
   {
-    matricule: 'estimation',
+    matricule: '6638200010',
     demandeur: 'AHOYO ELVIS ROCK',
     type: 'C104',
     statut: 'C106',
@@ -30,7 +27,7 @@ const items = ref([
   },
 
   {
-    matricule: 'estimation',
+    matricule: '6638200010',
     demandeur: 'OGBU ELISABETH OGOMA',
     type: '144',
     statut: 'Variable',
@@ -42,7 +39,7 @@ const items = ref([
   },
 
   {
-    matricule: 'estimation',
+    matricule: '6638200010',
     demandeur: 'OGBU ELISABETH OGOMA',
     type: '144',
     statut: 'Variable',
@@ -57,20 +54,20 @@ const items = ref([
 ])
 
 const columns = [
+  { data: 'matricule', title: 'Matricule' },
+  { data: 'demandeur', title: 'Nom du demandeur' },
   { data: 'type', title: 'Type de pret' },
-  { data: 'employe', title: 'Nom & Prénom' },
-  { data: 'salaire', title: 'Salaire' },
-  { data: 'indemnite_ancien', title: 'Indemnité d\'ancienneté' },
-  { data: 'indemnite_retraite', title: 'Indemnité de départ' },
-  { data: 'total_coef', title: 'Total Coefficié' },
-  { data: 'total', title: 'Total' },
-  { data: 'enregistrement', title: 'Date d\'enrégistrement' },
+  { data: 'statut', title: 'Statut' },
+  { data: 'montant', title: 'Montant' },
+  { data: 'paye', title: 'Restant' },
+  { data: 'saisie', title: 'Date de la saisie' },
+  { data: 'enregistrement', title: 'Enregistrée le' },
   { data: 'actions', title: 'Actions' },
 
 ];
 
 const options = {
-  // responsive: true,
+  responsive: true,
   select: true,
 };
 
@@ -84,31 +81,13 @@ const options = {
     <el-page-header title="Retour">
       <template #content>
         <div class="flex items-center">
-          <span class="text-base font-medium"> Liste des Indemnités de Départ à la Retraite </span>
-        </div>
-      </template>
-
-      <template #extra>
-        <div class="flex gap-2">
-
-          <RouterLink to="{ name: item.to }"
-            class="flex items-center gap-2 py-1.5 px-2 rounded shadow text-white bg-unstim-primary w-fit hover:bg-opacity-60">
-            <v-icon :name="icons.AddIcon" class="" scale="1.0" />
-            <span class="text-sm font-medium"> Ajouter un état </span>
-          </RouterLink>
-
-          <RouterLink to="{ name: item.to }"
-            class="flex items-center gap-2 py-1.5 px-2 rounded shadow text-white bg-unsitm-primary-pan w-fit hover:bg-opacity-60">
-            <v-icon :name="icons.AddIcon" class="" scale="1.0" />
-            <span class="text-sm font-medium"> Faire une estimation </span>
-          </RouterLink>
-
+          <span class="text-base font-medium"> Prets </span>
         </div>
       </template>
 
     </el-page-header>
 
-    <!-- <div class="my-5">
+    <div class="my-5">
 
       <el-button-group size="large">
         <el-button type="primary"> Enrégistrer une nouvelle demande </el-button>
@@ -117,7 +96,7 @@ const options = {
         <el-button type="info"> Point/Année </el-button>
       </el-button-group>
 
-    </div> -->
+    </div>
 
 
     <el-card class="box-card my-5">
@@ -125,48 +104,43 @@ const options = {
 
       </template>
 
-      <el-scrollbar>
+      <DataTable :columns="columns" :options="options" class="py-5 text-sm stripe hover cell-border">
+        <tbody>
+          <tr v-for="item in items" :key="item.matricule">
+            <td> {{ item.matricule }} </td>
+            <td> {{ item.demandeur }}</td>
+            <td> {{ item.type }}</td>
+            <td> {{ item.statut }}</td>
+            <td> {{ item.montant }}</td>
 
-        <DataTable :columns="columns" :options="options" class="py-5 text-sm stripe hover cell-border">
-          <tbody>
-            <tr v-for="item in items" :key="item.matricule">
-              <td> {{ item.matricule }} </td>
-              <td> {{ item.demandeur }}</td>
-              <td> {{ item.type }}</td>
-              <td> {{ item.statut }}</td>
-              <td> {{ item.montant }}</td>
+            <td>{{ item.paye }}</td>
+            <td>{{ item.saisie }}</td>
 
-              <td>{{ item.paye }}</td>
-              <td>{{ item.saisie }}</td>
+            <td>{{ item.enregistrement }}</td>
 
-              <td>{{ item.enregistrement }}</td>
+            <td>
+              <div class="flex gap-1">
 
-              <td>
-                <div class="flex gap-1">
+                <RouterLink :to="{ name: 'permissions-roles' }"
+                  class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
+                  <v-icon :name="icons.FormPWShowIcon" scale="1.0" />
+                </RouterLink>
 
-                  <RouterLink :to="{ name: 'permissions-roles' }"
-                    class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
-                    <v-icon :name="icons.FormPWShowIcon" scale="1.0" />
-                  </RouterLink>
+                <RouterLink to=""
+                  class="flex items-center gap-2 p-2 my-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500">
 
-                  <RouterLink to=""
-                    class="flex items-center gap-2 p-2 my-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500">
+                  <v-icon :name="icons.EditIcon" scale="1.0" />
+                </RouterLink>
 
-                    <v-icon :name="icons.EditIcon" scale="1.0" />
-                  </RouterLink>
-
-                  <RouterLink to=""
-                    class="flex items-center gap-2 p-2 my-2 text-white bg-black/75 rounded shadow-md w-fit hover:bg-black/75">
-                    <v-icon :name="icons.DeleteIcon" scale="1.0" />
-                  </RouterLink>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </DataTable>
-      </el-scrollbar>
-
-
+                <RouterLink to=""
+                  class="flex items-center gap-2 p-2 my-2 text-white bg-black/75 rounded shadow-md w-fit hover:bg-black/75">
+                  <v-icon :name="icons.DeleteIcon" scale="1.0" />
+                </RouterLink>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </DataTable>
 
 
       <!-- <el-table :data="items" size="small" :lazy="true" :border="true" style="width: 100%">

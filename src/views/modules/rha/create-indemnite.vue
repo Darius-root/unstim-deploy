@@ -20,10 +20,8 @@
           <selectInput label="Mois" :parameters="parameters" :isRequired="true" />
         </div>
 
-        <button
-          type="submit"
-          class="flex items-center text-sm font-medium gap-2 p-2 px-3 mt-5 text-white rounded shadow bg-unstim-primary w-fit hover:bg-opacity-60"
-        >
+        <button type="submit"
+          class="flex items-center text-sm font-medium gap-2 p-2 px-3 mt-5 text-white rounded shadow bg-unstim-primary w-fit hover:bg-opacity-60">
           Enregistrer
         </button>
       </form>

@@ -95,7 +95,9 @@ const open = (id: string, name: string) => {
         <el-table-column prop="name" label="Libelle du role" />
 
         <el-table-column width="200" label="Actions">
+
           <template #default="scope">
+
             <div class="flex gap-2">
 
               <!-- <RouterLink :to="{ name: 'permissions-roles' }"

@@ -373,6 +373,18 @@ const router = createRouter({
             },
 
             {
+              path: 'retains',
+              name: 'retains',
+              component: () => import('@/views/modules/rha/list-retenues.vue')
+            },
+
+            {
+              path: 'reminders',
+              name: 'reminders',
+              component: () => import('@/views/modules/rha/list-rappels.vue')
+            },
+
+            {
               path: 'objectif-evaluation',
               name: 'objectif-evaluation',
               component: () => import('@/views/modules/rha/objectif-evaluation.vue')
@@ -453,6 +465,11 @@ const router = createRouter({
               path: 'rappel',
               name: 'rappel',
               component: () => import('@/views/modules/rha/rappel-paie.vue')
+            },
+            {
+              path: 'loans',
+              name: 'loans',
+              component: () => import('@/views/modules/rha/list-prets.vue')
             },
             {
               path: 'rappel-view',

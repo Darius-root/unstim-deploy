@@ -2,6 +2,7 @@
 import { icons } from '@/assets/icons/oh-vue-icons'
 import { ref } from 'vue'
 
+
 const items = ref([
   {
     comptabilite: '6638200010',
@@ -101,7 +102,7 @@ const items = ref([
     <el-page-header title="Retour">
       <template #content>
         <div class="flex items-center">
-          <span class="text-base font-medium"> Liste des Indemnités de salaire </span>
+          <span class="text-base font-medium"> Liste des retenues de salaire </span>
         </div>
       </template>
 
@@ -111,7 +112,7 @@ const items = ref([
           <RouterLink to="{ name: item.to }"
             class="flex items-center gap-2 py-1.5 px-2 rounded shadow text-white bg-unstim-primary w-fit hover:bg-opacity-60">
             <v-icon :name="icons.AddIcon" class="" scale="1.0" />
-            <span class="text-sm font-medium"> Ajouter un Gain </span>
+            <span class="text-sm font-medium"> Ajouter une retenue </span>
           </RouterLink>
 
         </div>

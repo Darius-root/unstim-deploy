@@ -256,6 +256,3 @@ const arraySpanMethod = ({
   </div>
 </template>
 
-<style>
-@import url('@/assets/css/easy-table.css');
-</style>
