@@ -46,14 +46,14 @@ const handleSelect = (key: string, keyPath: string[]) => {
       </div>
     </div>
 
-    <el-menu :router="true" :default-active="activeIndex" class="justisfy-center" mode="horizontal"
+    <el-menu :router="true" :default-active="activeIndex" class="justify-center -space-x-2" mode="horizontal"
       @select="handleSelect">
       <div class="" v-for="(module, item) in modules" :key="item">
 
         <template v-if="!module.submenus">
-          <el-menu-item :route="{ name: module.to }" class="text-xl" :index="item.toString()">
+          <el-menu-item :route="{ name: module.to }" class="text-sm" :index="item.toString()">
             <template #title>
-              <span class="font-semibold text-base">{{ module.label }}</span>
+              <span class="font-semibold text-sm">{{ module.label }}</span>
             </template>
           </el-menu-item>
         </template>
@@ -62,11 +62,11 @@ const handleSelect = (key: string, keyPath: string[]) => {
           <el-sub-menu :index="item.toString()">
 
             <template #title>
-              <span class="font-semibold text-base">{{ module.label }}</span>
+              <span class="font-semibold text-sm">{{ module.label }}</span>
             </template>
 
             <template v-for="(item, index) in module.submenus" :key="index">
-              <el-menu-item :route="{ name: item.to }" class="text-xl" :index="`under-${index}`">
+              <el-menu-item :route="{ name: item.to }" class="text-sm" :index="`under-${index}`">
                 {{ item.title }}
               </el-menu-item>
             </template>

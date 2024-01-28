@@ -124,15 +124,7 @@ import {
   FaCheckCircle,
   FaWarehouse,
   FaTruck,
-
-
-  
-
-
-
-
-
-
+  LaHandshakeSolid
 } from 'oh-vue-icons/icons'
 
 addIcons(
@@ -260,14 +252,7 @@ addIcons(
   FaCheckCircle,
   FaWarehouse,
   FaTruck,
-
-
-
-
-
-
-
-
+  LaHandshakeSolid
 )
 
 const icons = {
@@ -327,7 +312,7 @@ const icons = {
   BiPaperclip: 'bi-paperclip',
   HiTable: 'hi-table',
   FaMoneyBill: 'fa-money-bill',
-  FaDollarSign:'fa-dollar-sign',
+  FaDollarSign: 'fa-dollar-sign',
   FaMinusCircle: 'fa-minus-circle',
   FaBell: 'fa-bell',
   FaMoneyCheck: 'fa-money-check',
@@ -373,9 +358,9 @@ const icons = {
   FaPhone: 'fa-phone',
   MdLocalphone: 'md-localphone',
   FaDashcube: 'fa-dashcube',
-  FaInfo:'fa-info',
+  FaInfo: 'fa-info',
   FaFilePdf: 'fa-file-pdf',
-  FaStore:'fa-store',
+  FaStore: 'fa-store',
   FaFileContract: 'fa-file-contract',
   FaGavel: 'fa-gavel',
   FaPencilAlt: 'fa-pencil-alt',
@@ -394,13 +379,8 @@ const icons = {
   FaExchangeAlt: 'fa-exchange-alt',
   FaCheckCircle: 'fa-check-circle',
   FaWarehouse: 'fa-warehouse',
-  FaTruck:'fa-truck'
-
-  
-
-
-
-  
+  FaTruck: 'fa-truck',
+  LaHandshakeSolid: 'la-handshake-solid'
 }
 
 export { icons }

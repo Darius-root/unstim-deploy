@@ -147,27 +147,6 @@ const open = (id: string, name: string) => {
 
     </el-card>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </div>
 </template>
 <style scoped>

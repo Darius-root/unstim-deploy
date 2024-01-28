@@ -1311,7 +1311,7 @@ const router = createRouter({
         // ROUTES CONCERNANT DE STOCK
 
         {
-          path: '/module_gestion_stock',
+          path: '/module-gestion-stock',
           name: 'module_gestion_stock',
           meta: { requireAuth: true },
           redirect: { name: 'entree-stock' },
@@ -1490,6 +1490,37 @@ const router = createRouter({
               path: 'parametrage-stock',
               name: 'parametrage-stock',
               component: () => import('@/views/modules/stock/parametrage-stock.vue')
+            }
+          ]
+        },
+
+        // ROUTES CONCERNANT LE MODULE COOPERATION
+
+        {
+          path: '/module-cooperation',
+          name: 'module_cooperation',
+          // meta: { requireAuth: true },
+          redirect: { name: 'coop-tableau-bord' },
+          children: [
+            {
+              path: 'tableau-bord',
+              name: 'coop-tableau-bord',
+              component: () => import('@/views/modules/cooperation/coop-dashboard.vue')
+            },
+            {
+              path: 'bilan-accords',
+              name: 'bilan-accords',
+              component: () => import('@/views/modules/cooperation/coop-accords.vue')
+            },
+            {
+              path: 'initier-accord',
+              name: 'initier-accord',
+              component: () => import('@/views/modules/cooperation/initier-accord.vue')
+            },
+            {
+              path: 'partenaires',
+              name: 'coop-partenaires',
+              component: () => import('@/views/modules/cooperation/coop-partenaire.vue')
             }
           ]
         }

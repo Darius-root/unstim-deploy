@@ -552,6 +552,29 @@ export const useNavigationStore = defineStore('navigation', () => {
         icon: icons.FaPencilAlt,
         to: 'parametrage-stock'
       }
+    ],
+
+    module_cooperation: [
+      {
+        title: 'Tableau de bord',
+        icon: icons.FaDashcube,
+        to: 'coop-tableau-bord'
+      },
+      {
+        title: 'Accords',
+        icon: icons.LaHandshakeSolid,
+        to: 'bilan-accords'
+      },
+      {
+        title: 'Partenaires',
+        icon: icons.FaTruck,
+        to: 'coop-partenaires'
+      },
+      {
+        title: 'Alumnis',
+        icon: icons.FaWarehouse,
+        to: ''
+      }
     ]
   })
 

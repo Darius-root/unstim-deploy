@@ -194,7 +194,4 @@ const options = {
   </div>
 </template>
 
-<style>
-@import url("@/assets/css/datatable.css");
-@import 'datatables.net-responsive-dt';
-</style>
+<style></style>
