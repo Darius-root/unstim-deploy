@@ -5,13 +5,6 @@ import { ref } from 'vue';
 
 
 
-import {
-  AccordionContent,
-  AccordionHeader,
-  AccordionItem,
-  AccordionRoot,
-  AccordionTrigger
-} from 'radix-vue'
 
 const items = ref([
   {

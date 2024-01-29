@@ -680,7 +680,7 @@ export const useNavigationStore = defineStore('navigation', () => {
       },
       {
         title: 'Accords',
-        icon: icons.FaHandHoldingUsd,
+        icon: icons.LaHandshakeSolid,
         to: 'bilan-accords'
       },
       {

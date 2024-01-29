@@ -124,7 +124,6 @@ import {
   FaCheckCircle,
   FaWarehouse,
   FaTruck,
-<<<<<<< HEAD
   FaKeyboard,
   FaFileInvoice,
   FaListAlt,
@@ -139,9 +138,7 @@ import {
 
 
 
-=======
   LaHandshakeSolid
->>>>>>> clean-sig-unstim
 } from 'oh-vue-icons/icons'
 
 addIcons(
@@ -269,7 +266,6 @@ addIcons(
   FaCheckCircle,
   FaWarehouse,
   FaTruck,
-<<<<<<< HEAD
   FaKeyboard,
   FaFileInvoice,
   FaListAlt,
@@ -283,9 +279,7 @@ addIcons(
 
 
 
-=======
   LaHandshakeSolid
->>>>>>> clean-sig-unstim
 )
 
 const icons = {
@@ -412,24 +406,12 @@ const icons = {
   FaExchangeAlt: 'fa-exchange-alt',
   FaCheckCircle: 'fa-check-circle',
   FaWarehouse: 'fa-warehouse',
-<<<<<<< HEAD
   FaTruck:'fa-truck',
   FaKeyboard:'fa-keyboard',
   FaFileInvoice:'fa-file-invoice',
-  FaListAlt: 'fa-list-alt'
+  FaListAlt: 'fa-list-alt',
 
-  
-  
-
-  
-
-
-
-  
-=======
-  FaTruck: 'fa-truck',
   LaHandshakeSolid: 'la-handshake-solid'
->>>>>>> clean-sig-unstim
 }
 
 export { icons }
