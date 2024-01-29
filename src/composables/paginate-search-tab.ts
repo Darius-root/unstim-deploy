@@ -20,7 +20,7 @@ export default function useTablePagination(tableData:Ref<{}[]>) {
     tableData.value.filter(
       (data) => !search.value 
       
-      || data.code.toLowerCase().includes(search.value.toLowerCase())
+   //   || data.code.toLowerCase().includes(search.value.toLowerCase())
     )
   );
 
