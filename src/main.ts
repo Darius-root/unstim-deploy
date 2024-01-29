@@ -17,6 +17,13 @@ import fr from 'element-plus/dist/locale/fr.mjs'
 import App from './App.vue'
 import router from './router'
 
+import DataTable from 'datatables.net-vue3'
+import DataTablesCore from 'datatables.net'
+import 'datatables.net-select'
+import 'datatables.net-responsive'
+
+DataTable.use(DataTablesCore)
+
 const app = createApp(App)
 
 app.use(createPinia())
@@ -24,6 +31,8 @@ app.use(createPinia())
 app.component('v-icon', OhVueIcon)
 
 app.component('EasyDataTable', Vue3EasyDataTable)
+
+app.component('DataTable', DataTable)
 
 app.use(router)
 

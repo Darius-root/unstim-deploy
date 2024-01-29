@@ -50,7 +50,7 @@ export const useModuleStore = defineStore('module', () => {
     {
       id: 5,
       short: 'Suivi-Evaluation',
-      label: '  Suivi evaluation ',
+      label: 'Suivi evaluation',
       to: 'module_finance_suivi_evaluation'
     },
 
@@ -86,6 +86,13 @@ export const useModuleStore = defineStore('module', () => {
       short: 'module-marche',
       label: 'Marchés ',
       to: 'param-config'
+    },
+
+    {
+      id: 5,
+      short: 'module-coop',
+      label: 'Coopération',
+      to: 'coop-tableau-bord'
     }
   ])
 

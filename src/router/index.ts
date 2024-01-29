@@ -373,6 +373,18 @@ const router = createRouter({
             },
 
             {
+              path: 'retains',
+              name: 'retains',
+              component: () => import('@/views/modules/rha/list-retenues.vue')
+            },
+
+            {
+              path: 'reminders',
+              name: 'reminders',
+              component: () => import('@/views/modules/rha/list-rappels.vue')
+            },
+
+            {
               path: 'objectif-evaluation',
               name: 'objectif-evaluation',
               component: () => import('@/views/modules/rha/objectif-evaluation.vue')
@@ -453,6 +465,11 @@ const router = createRouter({
               path: 'rappel',
               name: 'rappel',
               component: () => import('@/views/modules/rha/rappel-paie.vue')
+            },
+            {
+              path: 'loans',
+              name: 'loans',
+              component: () => import('@/views/modules/rha/list-prets.vue')
             },
             {
               path: 'rappel-view',
@@ -1294,7 +1311,7 @@ const router = createRouter({
         // ROUTES CONCERNANT DE STOCK
 
         {
-          path: '/module_gestion_stock',
+          path: '/module-gestion-stock',
           name: 'module_gestion_stock',
           meta: { requireAuth: true },
           redirect: { name: 'entree-stock' },
@@ -1603,9 +1620,39 @@ const router = createRouter({
                       component: () => import('@/views/modules/comptabilite/create-default-journal.vue')
                     },
                   ]
-                  }
+                  },
                   
 
+        // ROUTES CONCERNANT LE MODULE COOPERATION
+
+        {
+          path: '/module-cooperation',
+          name: 'module_cooperation',
+          // meta: { requireAuth: true },
+          redirect: { name: 'coop-tableau-bord' },
+          children: [
+            {
+              path: 'tableau-bord',
+              name: 'coop-tableau-bord',
+              component: () => import('@/views/modules/cooperation/coop-dashboard.vue')
+            },
+            {
+              path: 'bilan-accords',
+              name: 'bilan-accords',
+              component: () => import('@/views/modules/cooperation/coop-accords.vue')
+            },
+            {
+              path: 'initier-accord',
+              name: 'initier-accord',
+              component: () => import('@/views/modules/cooperation/initier-accord.vue')
+            },
+            {
+              path: 'partenaires',
+              name: 'coop-partenaires',
+              component: () => import('@/views/modules/cooperation/coop-partenaire.vue')
+            }
+          ]
+        }
       ]
     }
   ]

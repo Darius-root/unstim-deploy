@@ -23,8 +23,12 @@ const getNavigationMenu = () => {
     module_marche: navItems.module_marche,
     carrieres_enseignants: navItems.module_carriere_enseignant,
     module_gestion_stock: navItems.module_gestion_stock,
+<<<<<<< HEAD
     module_compta: navItems.module_compta
 
+=======
+    module_cooperation: navItems.module_cooperation,
+>>>>>>> clean-sig-unstim
   };
 
   // console.log(matchedRoute);
