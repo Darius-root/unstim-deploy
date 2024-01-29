@@ -33,34 +33,33 @@
     {
       title: 'Compte',
       links: [
-        { label: 'Plan comptable', to: '/plan-comptable' },
-        { label: 'Importer des comptes', to: '/importer-comptes' },
-        { label: 'Méthode de sélection', to: '/methode-selection' },
-        { label: 'Importer le plan comptable général', to: '/importer-plan-general' }
+        { label: 'Plan comptable', to: 'param-compta' },
+        { label: 'Importer des comptes', to: 'import-compte' },
+        { label: 'Importer le plan comptable général', to: '' }
       ]
     },
     {
       title: 'Journaux',
       links: [
-        { label: 'Liste des journaux', to: '/liste-journaux' },
-        { label: 'Importer journaux par défaut', to: '/importer-journaux' },
-        { label: 'Importer des journaux (csv. xlsx)', to: '/importer-journaux-csv-xlsx' },
-        { label: 'Importer des saisies comptables (csv)', to: '/importer-saisies-comptables' },
-        { label: 'Détruire tous les journaux', to: '/detruire-journaux' },
-        { label: 'Détruire toutes les saisies', to: '/detruire-saisies' }
+        { label: 'Liste des journaux', to: 'journal-compta' },
+        { label: 'Importer journaux par défaut', to: '' },
+        { label: 'Importer des journaux (csv. xlsx)', to: '' },
+        { label: 'Importer des saisies comptables (csv)', to: '' },
+        { label: 'Détruire tous les journaux', to: '' },
+        { label: 'Détruire toutes les saisies', to: '' }
       ]
     },
     {
       title: 'Categories tiers',
       links: [
-        { label: 'Liste des catégories tiers', to: '/liste-categories-tiers' }
+        { label: 'Liste des catégories tiers', to: 'categorie-tiers' }
       ]
     },
     {
       title: 'Clôture comptable',
       links: [
-        { label: 'Clôture périodique', to: '/cloture-periodique' },
-        { label: 'Clôture annuelle', to: '/cloture-annuelle' }
+        { label: 'Clôture périodique', to: '' },
+        { label: 'Clôture annuelle', to: '' }
       ]
     }
   ];

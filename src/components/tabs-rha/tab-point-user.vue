@@ -141,7 +141,8 @@ const pagedTableData = computed(() => {
 })
 const filterTableData = computed(() =>
   props.datatable.filter(
-    (data) => !search.value || data.name.toLowerCase().includes(search.value.toLowerCase())
+    (data) => !search.value ||
+     data.name.toLowerCase().includes(search.value.toLowerCase())
   )
 )
 

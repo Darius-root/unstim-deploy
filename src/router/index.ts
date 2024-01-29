@@ -1533,6 +1533,75 @@ const router = createRouter({
                       name: 'saisie-compta',
                       component: () => import('@/views/modules/comptabilite/saisie-compta.vue')
                     },
+
+                    {
+                      path: 'create-saisie',
+                      name: 'create-saisie',
+                      component: () => import('@/views/modules/comptabilite/create-saisie.vue')
+                    },
+                    {
+                      path: 'plan-comptable',
+                      name: 'plan-comptable',
+                      component: () => import('@/views/modules/comptabilite/plan-comptable.vue')
+                    },
+                    {
+                      path: 'liste-compte',
+                      name: 'liste-compte',
+                      component: () => import('@/views/modules/comptabilite/liste-compte.vue')
+                    },
+                    {
+                      path: 'recherche-compta',
+                      name: 'recherche-compta',
+                      component: () => import('@/views/modules/comptabilite/recherche-compta.vue')
+                    },
+                    {
+                      path: 'import-compte',
+                      name: 'import-compte',
+                      component: () => import('@/views/modules/comptabilite/import-compte.vue')
+                    },
+
+
+
+                    {
+                      path: 'journal-compta',
+                      name: 'journal-compta',
+                      component: () => import('@/views/modules/comptabilite/journal-compta.vue')
+                    },
+                    {
+                      path: 'default-journal',
+                      name: 'default-journal',
+                      component: () => import('@/views/modules/comptabilite/default-journal.vue')
+                    },
+                    {
+                      path: 'create-journal',
+                      name: 'create-journal',
+                      component: () => import('@/views/modules/comptabilite/create-journal.vue')
+                    },
+                    {
+                      path: 'view-journal',
+                      name: 'view-journal',
+                      component: () => import('@/views/modules/comptabilite/view-journal.vue')
+                    },
+                    {
+                      path: 'show-journal',
+                      name: 'show-journal',
+                      component: () => import('@/views/modules/comptabilite/show-journal.vue')
+                    },
+                    {
+                      path: 'edit-journal',
+                      name: 'edit-journal',
+                      component: () => import('@/views/modules/comptabilite/edit-journal.vue')
+                    },
+                    {
+                      path: 'update-default-journal',
+                      name: 'update-default-journal',
+                      component: () => import('@/views/modules/comptabilite/update-default-journal.vue')
+                    },
+                    {
+                      path: 'create-default-journal',
+                      name: 'create-default-journal',
+                      component: () => import('@/views/modules/comptabilite/create-default-journal.vue')
+                    },
                   ]
                   }
                   

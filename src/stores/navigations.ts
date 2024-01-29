@@ -566,39 +566,48 @@ export const useNavigationStore = defineStore('navigation', () => {
 
       {
         title: 'Saisie',
-        icon: icons.FaDashcube,
-        to: '',
-        underMenu: [
-          {
-            title: 'Editions comptable',
-            icon: icons.PersonR,
-            to: 'saisie-compta'
-          },
-
-        ]
+        icon: icons.FaKeyboard,
+        to: 'saisie-compta',
+       
       },
       {
         title: 'Compte',
-        icon: icons.FaDashcube,
+        icon: icons.FaUniversity,
         to: '',
         underMenu: [
           {
-            title: 'Editions comptable',
-            icon: icons.PersonR,
-            to: 'edition-compta'
+            title: 'Plan comptable',
+            icon: icons.FaFileInvoice,
+            to: 'plan-comptable'
+          },
+          {
+            title: 'Listes des comptes',
+            icon: icons.FaListAlt,
+            to: 'liste-compte'
+          },
+          {
+            title: 'Recherche',
+            icon: icons.UserSearch,
+            to: 'recherche-compta'
           },
 
         ]
       },
+     
       {
         title: 'Journal',
-        icon: icons.FaDashcube,
+        icon: icons.FaNewspaper,
         to: '',
         underMenu: [
           {
-            title: 'Editions comptable',
-            icon: icons.PersonR,
-            to: 'edition-compta'
+            title: 'Listes des journaux',
+            icon: icons.FaListAlt,
+            to: 'journal-compta'
+          },
+          {
+            title: 'Journaux par defaut',
+            icon: icons.FaListAlt,
+            to: 'default-journal'
           },
 
         ]
@@ -607,17 +616,18 @@ export const useNavigationStore = defineStore('navigation', () => {
 
       {
         title: 'Edition',
-        icon: icons.FaDashcube,
+        icon: icons.FaPencilAlt,
         to: '',
         underMenu: [
           {
             title: 'Editions comptable',
-            icon: icons.PersonR,
+            icon: icons.FaPencilAlt,
             to: 'edition-compta'
           },
 
           {
             title: 'Etats financiers',
+            icon: icons.FaMoneyBillWave,
             to: 'etat-financier'
           }
         ]
@@ -625,28 +635,40 @@ export const useNavigationStore = defineStore('navigation', () => {
     
       {
         title: 'Plan de tiers',
-        icon: icons.FaDashcube,
+        icon: icons.FaSitemap,
         to: 'plan-tiers',
         underMenu: [
         
           {
             title: 'Plan de tiers',
-            icon: icons.PersonR,
+            icon: icons.FaSitemap,
             to: 'plan-tiers'
           },
          
           {
             title: 'Catégorie de tiers',
-            icon: icons.PersonR,
+            icon: icons.FaTags,
             to: 'categorie-tiers'
           },
 
         ]
       },
-
+ {
+        title: 'Autres',
+        icon: icons.FaCogs,
+        to: '',
+        underMenu: [
+          {
+            title: 'Importer compte',
+            icon: icons.PersonR,
+            to: 'import-compte'
+          },
+         
+        ]
+      },
    
     {
-      title: 'Paramètre',
+      title: 'Paramètres',
       icon: icons.FaSlidersH,
       to: 'param-compta',
     

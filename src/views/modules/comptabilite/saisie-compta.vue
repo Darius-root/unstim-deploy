@@ -10,9 +10,9 @@
   
   
       <div class="flex justify-end my-3">
-          <RouterLink  to="create-categorie-tiers" class="flex items-center gap-2 p-2 bg-unstim-info  text-white rounded shadow hover:bg-opacity-60 mx-1">
+          <RouterLink  to="create-saisie" class="flex items-center gap-2 p-2 bg-unstim-primary  text-white rounded shadow hover:bg-opacity-60 mx-1">
             <v-icon :name="icons.AddIcon" scale="1.1" />
-            <span class="text-sm font-medium">Ajouter une catégorie tiers</span>
+            <span class="text-sm font-medium">Ajouter une saisie</span>
           </RouterLink>
       </div>
       <div class="flex items-center">
@@ -22,8 +22,14 @@
       <div class="bg-white shadow-md rounded-lg mt-3 p-6">
   
   
+        <div class="flex justify-end my-3 items-center space-x-2">
+      <span class="text-base font-medium">Filtrer:</span>
+
+      <el-input v-model="search"  class="mx-auto !w-52  " type="text" autocomplete="off" />
+
+    </div>
   
-        <el-table :data="tableData"
+        <el-table :data="pagedTableData"
          :border="true" 
          style="width: 100%"
       :show-header="true"
@@ -31,13 +37,15 @@
       :pagination="true"
       :current-page="currentPage"
       :page-size="pageSize"
+      stripe
+
          >
-            <el-table-column prop="date" label="Date " />
-            <el-table-column prop="description" label="Code de saisie" />
-            <el-table-column prop="code" label="N° compte"/>
-            <el-table-column prop="credit" label="Intitulé"/>
-            <el-table-column prop="credit" label="Montant débit"/>
-            <el-table-column prop="credit" label="Montant crédit"/>
+            <el-table-column  sortable  prop="date" label="Date " />
+            <el-table-column sortable prop="description" label="Code de saisie" />
+            <el-table-column  sortable prop="code" label="N° compte"/>
+            <el-table-column sortable  prop="credit" label="Intitulé"/>
+            <el-table-column  sortable prop="credit" label="Montant débit"/>
+            <el-table-column  sortable prop="credit" label="Montant crédit"/>
 
             <el-table-column fixed="right" label="Action" width="170">
               
@@ -57,7 +65,15 @@
           </template>
         </el-table-column>
         </el-table>
-  
+        <el-pagination
+      background
+      layout="prev, pager, next"
+      :total="filterTableData.length"
+      v-model:current-page="page"
+      :page-size="pageSize"
+      @current-change="setPage"
+    >
+    </el-pagination>
       </div>
   
   
@@ -72,8 +88,9 @@
   
   import { icons } from '@/assets/icons/oh-vue-icons'
 import { ref } from 'vue';
-  
-  const tableData = [
+import  useTablePagination  from '@/composables/paginate-search-tab';
+
+  const tableData = ref ([
     {
       date: '2016-05-03',
       description: 'Tom',
@@ -89,31 +106,21 @@ import { ref } from 'vue';
       credit: 'xxxx',
     },
   
-  ]
+  ])
 
 
 
 
-  const search = ref('')
+  const {
+  page,
+  pageSize,
+  setPage,
+  pagedTableData,
+  filterTableData,
+  currentPage,
+  search
+} = useTablePagination(tableData);
 
-const page = ref(1)
-const pageSize = ref(10)
-const setPage = (val: number) => {
-  page.value = val
-}
-const pagedTableData = computed(() => {
-  return filterTableData.value.slice(
-    pageSize.value * page.value - pageSize.value,
-    pageSize.value * page.value
-  )
-})
-const filterTableData = computed(() =>
-  props.datatable.filter(
-    (data) => !search.value || data.name.toLowerCase().includes(search.value.toLowerCase())
-  )
-)
-
-const currentPage = 1
   </script>
     
   <style scoped></style>

@@ -124,6 +124,11 @@ import {
   FaCheckCircle,
   FaWarehouse,
   FaTruck,
+  FaKeyboard,
+  FaFileInvoice,
+  FaListAlt,
+  
+  
 
 
   
@@ -260,6 +265,11 @@ addIcons(
   FaCheckCircle,
   FaWarehouse,
   FaTruck,
+  FaKeyboard,
+  FaFileInvoice,
+  FaListAlt,
+
+
 
 
 
@@ -394,7 +404,13 @@ const icons = {
   FaExchangeAlt: 'fa-exchange-alt',
   FaCheckCircle: 'fa-check-circle',
   FaWarehouse: 'fa-warehouse',
-  FaTruck:'fa-truck'
+  FaTruck:'fa-truck',
+  FaKeyboard:'fa-keyboard',
+  FaFileInvoice:'fa-file-invoice',
+  FaListAlt: 'fa-list-alt'
+
+  
+  
 
   
 
