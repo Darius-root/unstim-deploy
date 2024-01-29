@@ -1,4 +1,7 @@
 @charset "UTF-8";
+@import url('@/assets/css/datatable.css');
+@import 'datatables.net-responsive-dt';
+
 :root {
   --el-color-white: #ffffff;
   --el-color-black: #000000;

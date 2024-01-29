@@ -5,7 +5,7 @@
     </div>
 
     <div class="flex justify-end my-3" v-if="data.buttons">
-      <template v-for="(btn, item) in data.buttons">
+      <template v-for="(btn, item) in data.buttons" :key="item">
         <RouterLink
           :style="{ backgroundColor: btn.color }"
           :to="btn.to"

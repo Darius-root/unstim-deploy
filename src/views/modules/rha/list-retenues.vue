@@ -2,6 +2,7 @@
 import { icons } from '@/assets/icons/oh-vue-icons'
 import { ref } from 'vue'
 
+
 const items = ref([
   {
     comptabilite: '6638200010',
@@ -92,22 +93,6 @@ const items = ref([
     action: ''
   }
 ])
-
-const columns = [
-  { data: 'comptabilite', title: 'Comptabilite' },
-  { data: 'nom', title: 'Nom' },
-  { data: 'rubrique', title: 'Rubrique' },
-  { data: 'type', title: 'Type' },
-  { data: 'statut', title: 'Non' },
-  { data: 'mois', title: 'Tout les mois' },
-  { data: 'actions', title: 'Actions' },
-];
-
-const options = {
-  responsive: true,
-  select: true,
-};
-
 </script>
 
 <template>
@@ -117,7 +102,7 @@ const options = {
     <el-page-header title="Retour">
       <template #content>
         <div class="flex items-center">
-          <span class="text-base font-medium"> Liste des Indemnités de salaire </span>
+          <span class="text-base font-medium"> Liste des retenues de salaire </span>
         </div>
       </template>
 
@@ -127,7 +112,7 @@ const options = {
           <RouterLink to="{ name: item.to }"
             class="flex items-center gap-2 py-1.5 px-2 rounded shadow text-white bg-unstim-primary w-fit hover:bg-opacity-60">
             <v-icon :name="icons.AddIcon" class="" scale="1.0" />
-            <span class="text-sm font-medium"> Ajouter un Gain </span>
+            <span class="text-sm font-medium"> Ajouter une retenue </span>
           </RouterLink>
 
         </div>
@@ -135,7 +120,7 @@ const options = {
 
     </el-page-header>
 
-    <el-card class="box-card my-5">
+    <el-card class="box-card mt-5">
       <template #header>
         <div class="flex items-center justify-between">
           <!-- <span> Dans 08 mois </span>
@@ -147,42 +132,8 @@ const options = {
         </div>
       </template>
 
-      <DataTable :columns="columns" :options="options" class="py-5 text-sm stripe hover cell-border">
-        <tbody>
-          <tr v-for="item in items" :key="item.comptabilite">
-            <td> {{ item.nom }} </td>
-            <td> {{ item.rubrique }}</td>
-            <td> {{ item.type }}</td>
-            <td> {{ item.statut }}</td>
-            <td> {{ item.statut }}</td>
-            <td> {{ item.mois }}</td>
 
-            <td>
-              <div class="flex gap-1">
-
-                <RouterLink :to="{ name: 'permissions-roles' }"
-                  class="flex items-center gap-2 p-2 my-2 text-white rounded shadow-md w-fit bg-unstim-info hover:bg-unstim-primary">
-                  <v-icon :name="icons.FormPWShowIcon" scale="1.0" />
-                </RouterLink>
-
-                <RouterLink to=""
-                  class="flex items-center gap-2 p-2 my-2 text-white bg-red-400 rounded shadow-md w-fit hover:bg-red-500">
-
-                  <v-icon :name="icons.EditIcon" scale="1.0" />
-                </RouterLink>
-
-                <RouterLink to=""
-                  class="flex items-center gap-2 p-2 my-2 text-white bg-black/75 rounded shadow-md w-fit hover:bg-black/75">
-                  <v-icon :name="icons.DeleteIcon" scale="1.0" />
-                </RouterLink>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </DataTable>
-
-
-      <!-- <el-table :data="items" size="small" :lazy="true" :border="true" style="width: 100%">
+      <el-table :data="items" size="small" :lazy="true" :border="true" style="width: 100%">
 
         <el-table-column width="150" prop="comptabilite" label="Comptabilite" />
         <el-table-column width="250" prop="nom" label="Nom" />
@@ -217,7 +168,7 @@ const options = {
 
         </el-table-column>
 
-      </el-table> -->
+      </el-table>
 
     </el-card>
 
